@@ -379,7 +379,72 @@
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
 
-      <section class="round" aria-labelledby="round-1020-2030">
+      <section class="round" aria-labelledby="round-1021-1230">
+        <header class="round-header">
+          <h2 id="round-1021-1230">10 月 21 日 12:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Deepgram 讲了实时语音 agent 如何保留语气、停顿、重音等非文本语境信号："That's fine" 到底是同意、不满还是中间状态，决定了 agent 是"听到了"还是"听懂了"。帖子还顺带推广 10 月 29 日旧金山 #deepgramspeak 大会（报名送 $500 credits；大会本身今晨早报已推）。做语音 agent 语义理解的人可以看一眼这套语境建模的思路。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7518747983203508226/">Deepgram：语音 agent 的语境信号</a>
+          </li>
+        </ol>
+      </section>
+<section class="round" aria-labelledby="round-1021-0830">
+        <header class="round-header">
+          <h2 id="round-1021-0830">10 月 21 日 08:30 轮</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Chris Nunez 演示了用克隆语音做销售触达的工具 Relay：先 clone 自己的声音，然后批量生成个性化语音消息，并附上了用他自己真实声音的克隆样本。语音克隆在 outbound 销售场景的又一个落地方向，对做销售 agent/语音触达产品的人有参考价值。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7518693034704941057/">Relay：克隆语音销售触达演示</a>
+          </li>
+          <li class="item">
+            <p>临床语音 AI 公司 Abridge 发布 Abridge Assistant：主打上下文感知的临床决策支持新能力，帖子引用了 El Rio Health、UPMC、约翰·霍普金斯社区医生集团和 UNC Health 的客户评价。从"语音记录"向"临床决策支持"扩展——医疗语音 AI 的产品路线又往前走了一步。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7518692217616617473/">Abridge Assistant 临床决策支持</a>
+          </li>
+          <li class="item">
+            <p>WebRTC 分析师 Tsahi Levent-Levi 更新了 WebRTC Impact 月度通讯：否定了"用 Claude 两周从零重写 libwebrtc"的想法，整理了 WebRTC 开发者用 AI 做的五件聪明事。实时语音/视频底层与 AI 结合的方向，这份通讯一向是可靠的信息源。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7513332261061025792/">WebRTC 开发者用 AI 的五件聪明事</a>
+          </li>
+        </ol>
+      </section>
+<section class="round" aria-labelledby="round-1021-morning">
+        <header class="round-header">
+          <h2 id="round-1021-morning">10 月 21 日早报</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>客服 AI 实验室 Scaled Cognition 昨日发布了专为企业客服场景设计的 TTS 模型 Voice：70 毫秒语音生成延迟、内置文本规范化（日期/地址/账号/金额自动读对）、支持 25+ 语言与声音克隆；托管 API $9/百万字符、自托管 $1/百万字符，并邀请买家参加盲听对比测试。这是继 APT 之后他们补齐"说"的一环。</p>
+            <a class="source-link" href="https://customerthink.com/scaled-cognition-launches-voice-premium-quality-voice-built-for-enterprise-cx-at-ultra-low-latency-and-a-fraction-of-the-cost/">Scaled Cognition 官方新闻稿</a>
+          </li>
+          <li class="item">
+            <p>AssemblyAI 在官方博客发布了《上线前如何给 voice agent 做负载测试》：主张用最难的真实通话（8kHz 电话压缩、账号/确认码等实体密集内容、真实口音与背景噪音）全链路压测，明确"实体准确率优先于词准确率"；并给出四种负载画像（稳态/爬坡/尖峰/浸泡）与 P95 目标，附生产就绪检查清单。</p>
+            <a class="source-link" href="https://www.assemblyai.com/blog/voice-agent-load-testing">AssemblyAI 官方博客</a>
+          </li>
+          <li class="item">
+            <p>InferenceBench 在 H100 上独立复测了 Cohere 今年 3 月发布的 cohere-transcribe-03-2026：LibriSpeech-clean 上 1.46% WER 很强，但四数据集平均 13.65%、是官方宣称 5.42% 的 2.5 倍，差距几乎全在 AMI 会议集（约 28%）；多语言评测因测试框架故障未能验证。</p>
+            <a class="source-link" href="https://inferencebench.io/blog/cohere-transcribe-03-2026-benchmark">InferenceBench 实测报告</a>
+          </li>
+          <li class="item">
+            <p>IBM 在 HF 官方博客更新了 Granite Speech 系列：新增 granite-speech-5.0-2b（2B 语音语言模型，抗噪/混响 ASR、语言 ID 提示、2000 词关键词偏置、长音频翻译增强），另更新了 470M turboctc（多语言+原生标点大小写）与 4.1-2b-plus（说话人归属与时间戳增强）。企业级语音转写/翻译一条线又多了个 Apache 2.0 选项。</p>
+            <a class="source-link" href="https://huggingface.co/blog/ibm-granite/granite-speech-5">IBM Granite 官方博客</a>
+          </li>
+          <li class="item">
+            <p>ElevenLabs 继本周发布 Eleven Realtime S2S 系列后，又推出了 Eleven Realtime Translation：通话双方各说自己的语言、听到实时翻译结果；可针对不同场景（账单/理赔 vs 低延迟通话）独立配置速度与精度；通过 SOC 2、PCI DSS L1、ISO 27001、HIPAA、GDPR 等企业合规。目前仅向企业客户开放 Alpha 体验——这是 ElevenLabs 从 TTS 厂商转向实时语音 agent 基础设施的又一步。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7518687588057157632/">ElevenLabs 官方 LinkedIn 发布帖</a>
+          </li>
+          <li class="item">
+            <p>Deepgram 宣布 10 月 29 日在旧金山办语音智能体开发者大会（#deepgramspeak），报名送 $500 Deepgram 积分；Coval 创始人 Brooke Hopkins 称"2026 是语音 AI 规模化之年"。Daily CEO、Pipecat 维护者 Kwindla Hultman Kramer 确认参会并发言，预告有 Pipecat 相关发布，还提前录制了与语音生态人物的访谈。关注语音 agent 生态的人可以留意这场的日程。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7518688021559308288/">Deepgram 大会预告帖</a>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7518037348006301696/">Kwindla Hultman Kramer 参会预告</a>
+          </li>
+        </ol>
+      </section>
+<section class="round" aria-labelledby="round-1020-2030">
         <header class="round-header">
           <h2 id="round-1020-2030">10 月 20 日 20:30 轮</h2>
           <span class="count">1 条</span>
@@ -443,72 +508,10 @@
         </ol>
       </section>
 
-      <section class="round" aria-labelledby="round-1021-1230">
-        <header class="round-header">
-          <h2 id="round-1021-1230">10 月 21 日 12:30 轮</h2>
-          <span class="count">1 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>Deepgram 讲了实时语音 agent 如何保留语气、停顿、重音等非文本语境信号："That's fine" 到底是同意、不满还是中间状态，决定了 agent 是"听到了"还是"听懂了"。帖子还顺带推广 10 月 29 日旧金山 #deepgramspeak 大会（报名送 $500 credits；大会本身今晨早报已推）。做语音 agent 语义理解的人可以看一眼这套语境建模的思路。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7518747983203508226/">Deepgram：语音 agent 的语境信号</a>
-          </li>
-        </ol>
-      </section>
+      
 
-      <section class="round" aria-labelledby="round-1021-0830">
-        <header class="round-header">
-          <h2 id="round-1021-0830">10 月 21 日 08:30 轮</h2>
-          <span class="count">3 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>Chris Nunez 演示了用克隆语音做销售触达的工具 Relay：先 clone 自己的声音，然后批量生成个性化语音消息，并附上了用他自己真实声音的克隆样本。语音克隆在 outbound 销售场景的又一个落地方向，对做销售 agent/语音触达产品的人有参考价值。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7518693034704941057/">Relay：克隆语音销售触达演示</a>
-          </li>
-          <li class="item">
-            <p>临床语音 AI 公司 Abridge 发布 Abridge Assistant：主打上下文感知的临床决策支持新能力，帖子引用了 El Rio Health、UPMC、约翰·霍普金斯社区医生集团和 UNC Health 的客户评价。从"语音记录"向"临床决策支持"扩展——医疗语音 AI 的产品路线又往前走了一步。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7518692217616617473/">Abridge Assistant 临床决策支持</a>
-          </li>
-          <li class="item">
-            <p>WebRTC 分析师 Tsahi Levent-Levi 更新了 WebRTC Impact 月度通讯：否定了"用 Claude 两周从零重写 libwebrtc"的想法，整理了 WebRTC 开发者用 AI 做的五件聪明事。实时语音/视频底层与 AI 结合的方向，这份通讯一向是可靠的信息源。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7513332261061025792/">WebRTC 开发者用 AI 的五件聪明事</a>
-          </li>
-        </ol>
-      </section>
-      <section class="round" aria-labelledby="round-1021-morning">
-        <header class="round-header">
-          <h2 id="round-1021-morning">10 月 21 日早报</h2>
-          <span class="count">6 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>客服 AI 实验室 Scaled Cognition 昨日发布了专为企业客服场景设计的 TTS 模型 Voice：70 毫秒语音生成延迟、内置文本规范化（日期/地址/账号/金额自动读对）、支持 25+ 语言与声音克隆；托管 API $9/百万字符、自托管 $1/百万字符，并邀请买家参加盲听对比测试。这是继 APT 之后他们补齐"说"的一环。</p>
-            <a class="source-link" href="https://customerthink.com/scaled-cognition-launches-voice-premium-quality-voice-built-for-enterprise-cx-at-ultra-low-latency-and-a-fraction-of-the-cost/">Scaled Cognition 官方新闻稿</a>
-          </li>
-          <li class="item">
-            <p>AssemblyAI 在官方博客发布了《上线前如何给 voice agent 做负载测试》：主张用最难的真实通话（8kHz 电话压缩、账号/确认码等实体密集内容、真实口音与背景噪音）全链路压测，明确"实体准确率优先于词准确率"；并给出四种负载画像（稳态/爬坡/尖峰/浸泡）与 P95 目标，附生产就绪检查清单。</p>
-            <a class="source-link" href="https://www.assemblyai.com/blog/voice-agent-load-testing">AssemblyAI 官方博客</a>
-          </li>
-          <li class="item">
-            <p>InferenceBench 在 H100 上独立复测了 Cohere 今年 3 月发布的 cohere-transcribe-03-2026：LibriSpeech-clean 上 1.46% WER 很强，但四数据集平均 13.65%、是官方宣称 5.42% 的 2.5 倍，差距几乎全在 AMI 会议集（约 28%）；多语言评测因测试框架故障未能验证。</p>
-            <a class="source-link" href="https://inferencebench.io/blog/cohere-transcribe-03-2026-benchmark">InferenceBench 实测报告</a>
-          </li>
-          <li class="item">
-            <p>IBM 在 HF 官方博客更新了 Granite Speech 系列：新增 granite-speech-5.0-2b（2B 语音语言模型，抗噪/混响 ASR、语言 ID 提示、2000 词关键词偏置、长音频翻译增强），另更新了 470M turboctc（多语言+原生标点大小写）与 4.1-2b-plus（说话人归属与时间戳增强）。企业级语音转写/翻译一条线又多了个 Apache 2.0 选项。</p>
-            <a class="source-link" href="https://huggingface.co/blog/ibm-granite/granite-speech-5">IBM Granite 官方博客</a>
-          </li>
-          <li class="item">
-            <p>ElevenLabs 继本周发布 Eleven Realtime S2S 系列后，又推出了 Eleven Realtime Translation：通话双方各说自己的语言、听到实时翻译结果；可针对不同场景（账单/理赔 vs 低延迟通话）独立配置速度与精度；通过 SOC 2、PCI DSS L1、ISO 27001、HIPAA、GDPR 等企业合规。目前仅向企业客户开放 Alpha 体验——这是 ElevenLabs 从 TTS 厂商转向实时语音 agent 基础设施的又一步。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7518687588057157632/">ElevenLabs 官方 LinkedIn 发布帖</a>
-          </li>
-          <li class="item">
-            <p>Deepgram 宣布 10 月 29 日在旧金山办语音智能体开发者大会（#deepgramspeak），报名送 $500 Deepgram 积分；Coval 创始人 Brooke Hopkins 称"2026 是语音 AI 规模化之年"。Daily CEO、Pipecat 维护者 Kwindla Hultman Kramer 确认参会并发言，预告有 Pipecat 相关发布，还提前录制了与语音生态人物的访谈。关注语音 agent 生态的人可以留意这场的日程。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7518688021559308288/">Deepgram 大会预告帖</a>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7518037348006301696/">Kwindla Hultman Kramer 参会预告</a>
-          </li>
-        </ol>
-      </section>
+      
+      
 
       <section class="round" aria-labelledby="round-1020-0830">
         <header class="round-header">
