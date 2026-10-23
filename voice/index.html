@@ -378,6 +378,34 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1023-morning">
+        <header class="round-header">
+          <h2 id="round-1023-morning">10 月 23 日早报</h2>
+          <span class="count">5 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Speechify 推出了新一代 TTS 模型 Simba 3.5，支持 48 种语言（含中文、日语、阿拉伯语等），API 调用名为 simba-3.5，兼容旧版语音 ID、SSML 与克隆音色；定价高于前代（Starter $20/百万字符），11 月 21 日前按旧价计费。做多语种朗读/配音产品的可以直接切过去试。</p>
+            <a class="source-link" href="https://speechify.ai/blog/simba-3-5">Speechify 官方博客</a>
+          </li>
+          <li class="item">
+            <p>印度语音 lab Chariot（DeepMind/FAIR 出身创始团队、IndiaAI Mission 入选）发布了 Chariot-1-ASR Realtime：覆盖印地语等 10 种印度语言加印度英语，流式实时转录；在 79 个公开测试集上自称全面优于 Sarvam Saaras v4、Google Gemini 3.5 Transcribe 与 ElevenLabs Scribe v2（含批量模型）。印度市场语音产品的有力新玩家；均为公司自报成绩，待独立验证。</p>
+            <a class="source-link" href="https://chariot.in/news/introducing-chariot-1-asr-realtime/">Chariot 官方发布</a>
+          </li>
+          <li class="item">
+            <p>VoxArk（多语言语音通讯工具，带语音克隆）创始人 YOSHINORI OGAWA 发帖推演端侧语音克隆的时间表：按芯片算力增长曲线，2029 年旗舰 iPhone 可进入实验阶段、2030 年达到实用水平；同时提到 Fish Audio 新发布的 Drama 3 这类云端高表现力模型短期内仍不可替代。他自己的 VoxArk 已做成引擎可插拔架构，为将来从服务端切换到端侧做准备。端侧 TTS 路线规划可参考这套量化推演思路。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7519206725221052416/">YOSHINORI OGAWA 的 LinkedIn 帖子</a>
+          </li>
+          <li class="item">
+            <p>语音招聘 agent 公司 HYRRE 创始人 Matthew Alsop 分享了 ElevenLabs 本周发布的端到端语音对话模型 Eleven Realtime 的生产环境反馈：他们已率先接入，据称首字响应约 0.5 秒、音频推理基准 98.8%，还能区分&quot;说完&quot;与&quot;mm-hmm&quot;式停顿，从根本上消除了传统 STT-LLM-TTS 接力链路的停顿感。来自 12.5 万通真实电话的落地数据，是实时语音 API 选型的重要参考。（Eleven Realtime 本体 10-21 已推，这是生产反馈新角度）</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7519331521678344192/">Matthew Alsop 的 LinkedIn 帖子</a>
+          </li>
+          <li class="item">
+            <p>纳米比亚独立开发者 Derick Kwandu 发布了自家产品 Avanot 的实拍演示：AI 代表 Ava 可加入 Zoom 初筛会议，用克隆语音实时回答问题，并会主动声明自己是 AI。产品定位&quot;替你开会&quot;，先切招聘场景。又一个&quot;语音替身开会&quot;方向的独立产品样本，可与同类竞品横向对比。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7519358833073483776/">Derick Kwandu 的 LinkedIn 帖子</a>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1022-1630">
         <header class="round-header">
           <h2 id="round-1022-1630">10 月 22 日 16:30 轮</h2>
@@ -537,6 +565,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（10 月 20 日及之前）</summary>
 <section class="round" aria-labelledby="round-1020-2030">
         <header class="round-header">
           <h2 id="round-1020-2030">10 月 20 日 20:30 轮</h2>
@@ -672,8 +702,7 @@
 
 
 
-      <details class="archive">
-        <summary>历史归档（10 月 19 日及之前）</summary>
+      
 <section class="round" aria-labelledby="round-1019-2030">
         <header class="round-header">
           <h2 id="round-1019-2030">10 月 19 日 20:30 轮</h2>
@@ -2957,6 +2986,38 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1023-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1023-morning-academic">10 月 23 日早报</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：科大讯飞 Spark Audio 团队（iFlytek）<br>核心价值问题：语音基础模型需要从&quot;听得清&quot;转向&quot;听得懂&quot;——多语种 ASR、语音翻译、音频理解与语音对话的一体化，以及国产算力上的训练可行性<br>方法：0.65B dense 音频编码器（representation-enhanced BEST-RQ 预训练 + 多任务监督微调）+ 30B-A3B MoE 大模型；1300 万小时音频训练；SFT + on-policy distillation 后训练<br>为什么值得看：99 语种、202 方言，支持 ASR/语音翻译/音频理解/语音对话；自称用更少音频数据达到与 Qwen3.5-Omni-Flash 相当、部分任务更优——国产语音大模型的最新技术报告，选型可参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.31292">arXiv</a>
+          </li>
+          <li class="item">
+            <p>机构：HeyGen Research<br>核心价值问题：现有语音克隆只复制参考录音的声学环境——用手机录的音色放到大教堂场景的视频里还是手机味；talking video 需要&quot;图里的人在图里的地方说话&quot;的声音<br>方法：多模态自回归 transformer，解耦&quot;谁在说&quot;与&quot;在哪说&quot;：说话人音色来自日常录音，目标图像决定表达与声学环境；五阶段训练（多语 TTS 预训练→仿真/真实跨场景适配→强化与偏好优化）；双克隆策略权衡场景适配与保真<br>为什么值得看：Artificial Analysis 受控音色 TTS 榜 Elo 1201 第一，第三方 arena 与真人生产投票均领先商业系统——视频生成/数字人场景的语音克隆新标杆。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.30470">arXiv</a>
+          </li>
+          <li class="item">
+            <p>机构：BitmanagerAI（迪拜）/ lab260（埃里温）<br>核心价值问题：TTS 评测常用 ASR 转录输出算 WER，但 ASR 本身对罕见词就有大量漏识——测出来的&quot;TTS 错误&quot;里有多少其实是评测器的错<br>方法：在人工录音上量化评测器误差：LibriSpeech/FLEURS 上评测 ASR 对极罕见词 33–67% 漏识；用多识别器交叉 adjudication，把表观错误从 10–13% 降到 3–5%<br>为什么值得看：给 TTS 评测方法论泼了冷水——单 ASR 打分会系统性高估罕见词错误；做 TTS 评测/榜单的人应该看看这套 adjudication 做法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.31470">arXiv</a>
+          </li>
+          <li class="item">
+            <p>机构：Sunbird AI（乌干达）<br>核心价值问题：自回归 ASR 的 teacher forcing 带来 exposure bias，低资源语言、噪声/退化音频上尤其明显；GRPO 之前只在 LLM 系语音模型上验证过<br>方法：把 GRPO 扩展到非 LLM 的小 encoder-decoder ASR（以 Whisper-large-v3 为例），在 51 种非洲语言上训练；开源 SunflowerASR<br>为什么值得看：AfriVox-v2 与 SimbaBench 上已发表最佳 macro WER（0.227 / 0.372），模型公开——低资源 ASR 的实用路线，且是非洲团队的工作。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.30663">arXiv</a>
+          </li>
+          <li class="item">
+            <p>机构：BitmanagerAI（迪拜）/ MTUCI（莫斯科）/ lab260（埃里温）<br>核心价值问题：大家用 LLM 纠 ASR 错误只看总 WER，但没人量化它&quot;修好了多少、修坏了多少&quot;——音频 grounding 到底起了什么作用<br>方法：把 WER 变化精确拆成 repaired / damaged / insertions 三项，对比&quot;有无音频&quot;两种纠错；在 3 个语料上用 Gemini 2.5 Flash 与 Voxtral 做对照<br>为什么值得看：结论扎实——纯文本纠错会把 13–32% 本来正确的转录改错，接入音频后降到 1–3%；做 ASR 后处理/纠错 pipeline 的人必读。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.30385">arXiv</a>
+          </li>
+          <li class="item">
+            <p>机构：中国电信<br>核心价值问题：通用语音修复（GSR）与目标说话人提取（TSE）通常各用一套模型，缺少统一的生成式前端<br>方法：双流编码器（SSL 语义特征 + 可学习声学分支）+ 双向交叉注意力融合，条件化大音频语言模型做离散语音 token 生成，融合任务与说话人信息<br>为什么值得看：一个模型同时做修复与目标说话人提取，在未见过的退化条件下泛化稳——语音增强/前端处理向统一生成式架构走的又一个实例。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.29164">arXiv</a>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1022-1630-academic">
         <header class="round-header">
           <h2 id="round-1022-1630-academic">10 月 22 日 16:30 轮</h2>
@@ -3081,7 +3142,9 @@
         </ol>
       </section>
 
-      <section class="round" aria-labelledby="round-1020-0830-academic">
+      <details class="archive">
+        <summary>历史归档（10 月 20 日及之前）</summary>
+<section class="round" aria-labelledby="round-1020-0830-academic">
         <header class="round-header">
           <h2 id="round-1020-0830-academic">10 月 20 日 08:30 轮</h2>
           <span class="count">1 条</span>
@@ -3172,8 +3235,7 @@
 
       
 
-      <details class="archive">
-        <summary>历史归档（10 月 19 日及之前）</summary>
+      
 <section class="round" aria-labelledby="round-1019-1630-academic">
         <header class="round-header">
           <h2 id="round-1019-1630-academic">10 月 19 日 16:30 轮</h2>
