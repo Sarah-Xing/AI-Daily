@@ -383,6 +383,49 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1026-0830">
+        <header class="round-header">
+          <h2 id="round-1026-0830">10 月 26 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Vivun 介绍了 Hero，一个在销售通话进行时实时旁听并给出建议的 AI 助手；他们援引 AMI 会议数据的观点是，实时助手的关键不是抢先作答，而是在销售说话的同时把恰当的事实递到手边。做实时语音助手、关心“旁听式辅助”这种产品形态的人，这条值得看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/building-live-ai-assistance-has-made-us-at-share-7520502077501022208-0G1V/">Vivun：Hero 实时销售通话助手</a>
+            <p class="keywords">关键词：实时销售助手（real-time sales assistant）、通话旁听（call listening）、语音 agent（voice agent）</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="round" aria-labelledby="round-1026-morning-supplement">
+        <header class="round-header">
+          <h2 id="round-1026-morning-supplement">10 月 26 日早报补推</h2>
+          <span class="count">4 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Dennis Fucci 在 EMNLP 2026 上展示 SPES：一种面向自回归语音转文本模型的可解释性方法，用谱图扰动做特征归因，解释每个生成 token 如何依赖输入音频与已生成 token；同系列还包括语音模型可解释性的特征选择难题、用 SPES 找 ASR 依赖的声学线索等工作。做语音可解释性的人值得去海报现场或读 TACL 论文。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7520486963569651712/">Dennis Fucci — SPES：可解释的语音转文本生成</a>
+            <p class="keywords">关键词：语音可解释性（speech interpretability）、谱图归因（spectrogram attribution）、语音转文本（speech-to-text）、ASR</p>
+          </li>
+          <li class="item">
+            <p>PolyAI 的 Matt Henderson 演示了 Dialog-RSN-1 的“能听见的提示词”：让模型在通话中记录说话人数、背景噪声、口音，耳语来电时改发短信；药房代打电话被 hold 时能安静等待、对方接起后 0.34 秒即开口。同样的提示与音频给 OpenAI gpt-realtime 与 gpt-live-1 时，两者都没注意到背景杂音、第二说话人或耳语。核心观点是：只有模型在训练中真正学会“听见”音高、语调、说话人与环境，而不只是转录，才能用一句话提示实现这些能力。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7520422337528201216/">Matt Henderson — PolyAI RSN-1 的音频感知提示词演示</a>
+            <p class="keywords">关键词：实时语音助手（real-time voice assistant）、音频感知（audio perception）、提示词（prompting）、语音 agent（voice agent）</p>
+          </li>
+          <li class="item">
+            <p>Hugging Face 的 Lysandre Debut 宣布重建 Transformers 音频预处理栈：告别每个模型自带 FeatureExtractor 的做法，统一为 AudioProcessor 架构——模型只描述前端，共享后端做实际计算；已覆盖约 30 个音频前端与 62 个模型映射（Whisper、Wav2Vec2、Parakeet、SeamlessM4T、Qwen、Gemma、编解码器、TTS 等），新入口为 AutoAudioProcessor.from_pretrained(...)，并显式区分 backend="torch" 与 backend="numpy"。用 Transformers 做音频的人，迁移与新后端优化都值得跟进。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7520486994817490944/">Lysandre Debut — Transformers 音频预处理栈重建</a>
+            <p class="keywords">关键词：Transformers、音频预处理（audio preprocessing）、AudioProcessor、Whisper</p>
+          </li>
+          <li class="item">
+            <p>Allys Parsons 新开每周专栏 Hear &amp; Now，每周一回顾上周语音/音频 AI 动态；首期回顾了 Voxtral 3、Dessa、Rime Coda v2、Eleven Realtime 等已推过的发布，其中两条此前未推过：会“呼吸与笑”的语音 LLM 研究（Speech LLMs That Breathe，13 类非语言发声数据集）与 Audible 的有声书可控 TTS（用 LLM 识别角色、分配一致音色，BookLLM 对话归属准确率英语 97%、西班牙语 94%）。想每周跟进语音动态的人可以关注这个专栏。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7520482287411613697/">Allys Parsons — Hear &amp; Now 语音 AI 周报首期</a>
+            <p class="keywords">关键词：语音周报（speech weekly）、语音 LLM（speech LLM）、有声书 TTS（audiobook TTS）、非语言发声（non-verbal vocalization）</p>
+          </li>
+        </ol>
+      </section>
+
       <section class="round" aria-labelledby="round-1025-1630">
         <header class="round-header">
           <h2 id="round-1025-1630">10 月 25 日 16:30 轮</h2>
@@ -461,6 +504,8 @@
         </ol>
       </section>
 
+<details class="archive">
+        <summary>历史归档（10 月 23 日及之前）</summary>
       <section class="round" aria-labelledby="round-1023-1230">
         <header class="round-header">
           <h2 id="round-1023-1230">10 月 23 日 12:30 轮</h2>
@@ -481,7 +526,6 @@
           </li>
         </ol>
       </section>
-
       <section class="round" aria-labelledby="round-1023-morning">
         <header class="round-header">
           <h2 id="round-1023-morning">10 月 23 日早报</h2>
@@ -510,8 +554,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（10 月 22 日及之前）</summary>
       <section class="round" aria-labelledby="round-1022-1630">
         <header class="round-header">
           <h2 id="round-1022-1630">10 月 22 日 16:30 轮</h2>
@@ -3095,6 +3137,60 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1026-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1026-morning-academic">10 月 26 日早报</h2>
+          <span class="count">9 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Meta、Reality Labs Research、Google、三星研究院美国、都柏林圣三一学院<br>核心价值问题：高阶 Ambisonics（HOA）沉浸式空间音频通道数随阶数平方增长，逐通道编码码率很快失控；如何在不牺牲方向感知的前提下压缩 HOA？<br>方法：SEMAC 只传量化的全阶方向能量包络作为边信息，波形本身只用较少的 CELT 传输通道（如 36 通道传 16 通道），解码端再把包络 imposed 回去恢复全阶方向能量分布。<br>为什么值得看：把 CELT“包络+形状分离”的经典思想推广到了方向域；五阶素材 MUSHRA 评测中，16/36 传输通道的 SEMAC 在 512 与 768 kbit/s 下均优于全阶 Opus CMF 3，给沉浸式音频编码提供了一条可落地的降码率路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32981">arXiv</a>
+            <p class="keywords">关键词：高阶 Ambisonics（higher-order Ambisonics）、空间音频编码（spatial audio coding）、方向能量包络（directional energy envelope）、低码率（low bitrate）</p>
+          </li>
+          <li class="item">
+            <p>机构：Idiap 研究所、洛桑联邦理工学院（EPFL）、布尔诺理工大学、Uniphore<br>核心价值问题：只有无标注的目标领域音频时，常用伪标签微调（SFT）会把教师的错误一字不差地学进去，学生反而继承甚至放大教师误差。<br>方法：不改标签集、改目标函数——把同一批伪标签从 SFT 的“目标”改成 GRPO 的奖励参照（WER 奖励），利用 on-policy 采样天然过滤标签噪声：教师错词很少出现在学生自己的采样里，组内优势归一化后其影响被抵消。<br>为什么值得看：结论很反直觉且实用：最弱教师（Whisper Tiny）标签训出的 GRPO 学生（14.06% WER）反而优于最强教师标签训出的 SFT 学生（17.21%）；SFT 几乎 100% 复现教师错误，GRPO 只透传 27%。做无标注域适应的人可以直接换目标函数，不用先花力气洗标签。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32572">arXiv</a>
+            <p class="keywords">关键词：半监督 ASR（semi-supervised ASR）、伪标签（pseudo-labeling）、GRPO、域适应（domain adaptation）</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST<br>核心价值问题：多流同步语音翻译模型（如 Hibiki）把“说什么”和“何时说”耦合在同一生成过程里，训完后没有独立的读写策略可调，延迟档位定死。<br>方法：DIAL-S2ST 用带前视（lookahead）的冻结预训练模型当教师、做 on-policy 自蒸馏，让学生提前输出；并把大文本蒸馏损失截断以弥合模仿鸿沟；单个 LoRA 适配器按尺度配对不同前视长度，推理时只调适配器尺度就能调延迟。<br>为什么值得看：仅用约 10 小时源语言语音、500 步优化，就让一个适配器覆盖一段连续的延迟-质量权衡曲线，且在匹配延迟下优于推理时 logit 偏置的老办法；对需要“同一模型、多档延迟”的实时翻译产品很实用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32214">arXiv</a>
+            <p class="keywords">关键词：同步语音翻译（simultaneous speech translation）、延迟控制（latency control）、自蒸馏（self-distillation）、LoRA 适配器（LoRA adapter）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学 X-LANCE 实验室、科大讯飞（AISpeech）、深圳大学、南京大学<br>核心价值问题：语音 caption 用自然语言自由描述，同一属性在不同录音里时有时无、措辞不一，没法跨数据集做系统性的组合条件评测（比如“多人+重叠语音”下模型到底错在哪）。<br>方法：SURE-Tagger 用半结构化表征代替自由 caption：每个属性有显式取值，证据不足时明确记 null 而非含糊省略；专家感知模型先给观测、语言模型再按 schema 整合；并配套 Tag-Bench（含真实录音与可控合成场景）评测标注质量。<br>为什么值得看：它把“标注—评测—选数据”串起来了：真实语音 29 维中 25 维最优；用它指导选数据，1 小时微调预算下 Qwen3-ASR-1.7B 的 WER 相对降低 14.3%，而 caption 指导与随机选数据反而使误差上升。做语音评测与数据工程的人值得细读这套 schema 设计。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32198">arXiv</a>
+            <p class="keywords">关键词：语音标注（speech annotation）、结构化表征（structured representation）、组合评测（compositional evaluation）、数据筛选（data selection）</p>
+          </li>
+          <li class="item">
+            <p>机构：南加州大学、日本国立情报学研究所、MIT、杜比实验室<br>核心价值问题：统一语音语言模型大多离线、要等完整输入；流式 ASR 与流式 TTS 又各用各的模型。能否一个共享解码器同时流式地“听”和“说”，且不输给单任务模型？<br>方法：Uni-Stream 基于 VibeVoice 家族（TTS 与 ASR 变体共享声学/语义 tokenizer），用时间对齐的语音-文本交错格式，两阶段训练：先把 TTS/ASR 分别适配为流式格式，再从适配后的 TTS 模型出发联合训练，配以合成锚定与识别蒸馏目标保住两端能力。<br>为什么值得看：统一模型在两项任务上都达到与单任务流式模型相当的水平，且作者将公开约 4 万小时 Emilia-EN 的投票转录与词级时间戳（另含 GigaSpeech、LibriSpeech 的时间戳），对流式语音建模研究是实用的数据贡献；文中的表征探针结论（语音与文本表征始终分属不同潜空间）也值得做统一模型的人对照。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32187">arXiv</a>
+            <p class="keywords">关键词：流式语音模型（streaming speech model）、统一模型（unified model）、语音识别（speech recognition）、语音合成（speech synthesis）</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST、中央大学（韩国）<br>核心价值问题：跨语言配音不只是翻对意思，还要让译文在原视频的时长、停顿与口型约束下自然地说出来；语言时长、节奏本来就不同，固定脚本硬套会语速失真。<br>方法：X-Dubbing 把配音拆成两部分协同：Dubbing Translator 生成带停顿标记的时间结构化脚本，Voice Actor 按源视频帧级视觉线索渲染；再用合成语音的反馈优化翻译器，选出“本身就适合在约束下说”的译文，全程不需要成对配音数据。<br>为什么值得看：它把“翻译选词”与“语音实现”打通了，而不是各做各的再硬拼；在等时性与音画对应等多项指标上优于近期基线。对做视频本地化、配音产品的人，这套“无配对数据 + 合成语音反馈”的路线可复用性很强。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32042">arXiv</a>
+            <p class="keywords">关键词：跨语言配音（cross-lingual dubbing）、语音翻译（speech translation）、等时性（isochrony）、音画同步（audio-visual synchronization）</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST（综合视觉与语言实验室）<br>核心价值问题：心理咨询场景里，全双工模型常只盯着最新一句话，丢了求助者几轮前透露的核心困扰（比如创伤），回应变得“很暖心但文不对题”——作者称之为 Stressor Blindness。<br>方法：CounselPlex 在求助者沉默间隙更新一个 1–7 词的简短 stressor 状态（如“丧亲”），在下一轮倾听时把该状态强制注入到 &lt;PAD&gt; 位置；另用 RoPE 位置平移增广（RPSA）拓宽训练位置覆盖，改善长轮次稳定性。<br>为什么值得看：这是一个很具体的全双工长程记忆机制：状态极短、注入位置明确、推理时不改架构；GPT-4.1 评测显示咨询质量与 stressor grounding 均优于强基线。做长对话语音 agent（客服、陪伴、咨询）的人可以借鉴“短状态 + 静默期更新 + 监听时注入”这套设计，但注意评测以 LLM 打分为主。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32702">arXiv</a>
+            <p class="keywords">关键词：全双工对话（full-duplex dialogue）、心理咨询（counseling）、长程记忆（long-term memory）、压力源追踪（stressor tracking）</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST（综合视觉与语言实验室）、庆熙大学<br>核心价值问题：全双工模型每帧都生成 token，哪怕在听的时候也在写，上下文几分钟内就被静音与 backchannel 填满——它能撑住几十分钟的对话吗？现有评测只看单轮或几轮，根本测不出长程崩溃。<br>方法：作者提出 FD-LHB 长程评测（40 段 CANDOR 长对话回放至 60 分钟 + 40 场与 LLM 伙伴的自适应对话至 20 分钟），测了 5 个近期全双工模型；诊断出两类机制：滑动窗口丢弃首个 KV 条目导致的 Initialization-Anchor Eviction（引发静默与胡言），以及模型被自己刚说过的话强化的 Self-Reinforcing Repetition。<br>为什么值得看：结论带可直接用的修复：不重训，只需固定首个 KV 条目（IAP）+ 双工重复惩罚（DRP），就能把 Moshi 的胡言从 100% 降到 0%、重复从 65% 降到 0%。做长对话语音 agent 的人，上线前值得先用这类长程回放测一遍自己的模型。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32349">arXiv</a>
+            <p class="keywords">关键词：全双工模型（full-duplex model）、长对话（long conversation）、重复抑制（repetition suppression）、KV 缓存（KV cache）</p>
+          </li>
+          <li class="item">
+            <p>机构：Idiap 研究所、洛桑联邦理工学院（EPFL）、布尔诺理工大学、Uniphore<br>核心价值问题：因子化 Transducer 的非 blank 预测器只用目标领域文本微调后，目标域变好了、源域却变差；一个全局插值权重没法同时伺候一句话里的不同位置——有的前缀需要专家、有的不需要。<br>方法：保守残差路由：专家只作为对基底预测器的残差修正，一个仅 1.6 万参数的门按每个前缀时基底与专家分布的分歧程度决定放行多少；门关死时精确还原基底模型。<br>为什么值得看：40 小时对话语料上，路由基本保住了全部纯文本增益（两个未见域 WER 从 19.89→16.74、20.91→16.21），源域 WER 几乎不动（12.90→12.93），而直接用专家要付出 1.08 个点；且不需要目标域音频调参。对已部署 Transducer ASR、想用纯文本做域适应又不想牺牲通用性能的团队，这是个改动极小、可直接落地的方案。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.32637">arXiv</a>
+            <p class="keywords">关键词：Transducer、纯文本域适应（text-only domain adaptation）、残差路由（residual routing）、语音识别（speech recognition）</p>
+          </li>
+        </ol>
+      </section>
+
       <section class="round" aria-labelledby="round-1024-1230-academic">
         <header class="round-header">
           <h2 id="round-1024-1230-academic">10 月 24 日 12:30 轮</h2>
@@ -3121,6 +3217,8 @@
         </ol>
       </section>
 
+<details class="archive">
+        <summary>历史归档（10 月 23 日及之前）</summary>
       <section class="round" aria-labelledby="round-1023-1230-academic">
         <header class="round-header">
           <h2 id="round-1023-1230-academic">10 月 23 日 12:30 轮</h2>
@@ -3137,7 +3235,6 @@
           </li>
         </ol>
       </section>
-
       <section class="round" aria-labelledby="round-1023-morning-academic">
         <header class="round-header">
           <h2 id="round-1023-morning-academic">10 月 23 日早报</h2>
@@ -3170,8 +3267,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（10 月 22 日及之前）</summary>
       <section class="round" aria-labelledby="round-1022-1630-academic">
         <header class="round-header">
           <h2 id="round-1022-1630-academic">10 月 22 日 16:30 轮</h2>
