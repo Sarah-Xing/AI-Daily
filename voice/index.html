@@ -383,6 +383,73 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1028-morning-supplement">
+        <header class="round-header">
+          <h2 id="round-1028-morning-supplement">10 月 28 日早报（LinkedIn 补刷补充）</h2>
+          <span class="count">4 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>AssemblyAI 正式推出 TTS-1：为语音 agent 打造的自然语音模型，流式首音频约 90 毫秒，支持即时语音克隆与 4000 多个声音，定价 15 美元/百万字符。10 月 20 日轮推过它的预告与直播试听，这次是带规格与定价的正式上线；做语音 agent 选型、关心 TTS 延迟与成本的人可以直接对照这组数字。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7521208910452695041/">AssemblyAI：AssemblyAI-TTS-1 正式上线</a>
+            <p class="keywords">关键词：TTS、流式语音合成（streaming speech synthesis）、语音克隆（voice cloning）、语音 agent（voice agent）</p>
+          </li>
+          <li class="item">
+            <p>SoundHound 称与美国公用事业公司 Evergy 自 2020 年的合作已让 1270 万通电话无需进入人工客服中心，AI 全程解决率 67%，高于公用事业行业平均 containment 水平。做电话客服语音 agent 落地、想看“长期跑下来到底拦下多少量”的人，这组 6 年实测数字可作对照。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7521217420233969664/">SoundHound AI：与 Evergy 的 AI 电话合作数据</a>
+            <p class="keywords">关键词：电话客服（phone customer service）、AI 解决率（AI resolution rate）、公用事业（utilities）、长期落地（long-term deployment）</p>
+          </li>
+          <li class="item">
+            <p>Speak 分享 AI Tutor Call 的后续工程细节：不再只依赖单个语音对语音模型，而是加了一个在真实学员通话上训练的自研轮次检测器，让学员想词停顿时不被打断，误纠正率从 25% 降到 2%。做口语辅导、实时语音交互轮次管理的人，这个“停顿≠结束”的处理值得参考。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7520581177573986304/">Speak：AI Tutor Call 轮次检测细节</a>
+            <p class="keywords">关键词：轮次检测（turn detection）、口语辅导（speaking tutoring）、实时语音交互（real-time voice interaction）、误纠正率（false correction rate）</p>
+          </li>
+          <li class="item">
+            <p>Jihoon Jeong 分享的 Audio-R1 用强化学习训练大音频语言模型做音频推理：任务来自自监督、可自动验证的构造，不依赖昂贵的人工标注推理数据。做音频理解、想把 RL 推理范式从文本搬到音频的人，可以看这条方法分享。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7521214284253700096/">Jihoon Jeong：Audio-R1</a>
+            <p class="keywords">关键词：音频推理（audio reasoning）、强化学习（reinforcement learning）、大音频语言模型（large audio language model）、自监督任务（self-supervised tasks）</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="round" aria-labelledby="round-1028-morning">
+        <header class="round-header">
+          <h2 id="round-1028-morning">10 月 28 日早报</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>NVIDIA 发布开源权重转录模型 Nemotron 3.5 Transcribe：一个检查点同时做 40 种语言转录、31 个语种与英语互译、13 种语言说话人归属（最多 8 人），处理最长 1 小时的录音，并可用自然语言提示控制输出格式与领域词汇；在 HF Open ASR 英文榜上居开源模型第一（平均 WER 5.33%）；配套开源 Granary v2 数据与微调管线。做会议/医疗转录、需要可定制词表与说话人标签的人，这个单卡可跑的开源组合值得直接试。</p>
+            <a class="source-link" href="https://huggingface.co/blog/nvidia/nemotron-transcribe-granary">NVIDIA：Nemotron 3.5 Transcribe 与 Granary v2</a>
+            <p class="keywords">关键词：语音转录（speech transcription）、多语种 ASR（multilingual ASR）、说话人归属（speaker attribution）、开源模型（open-source model）</p>
+          </li>
+          <li class="item">
+            <p>Rime 推出 Prism，定位为企业用的语音对语音模型：先出文本再出音频（文本检查点可在 caller 听到前核查），可在自有通话数据上微调、跑在企业自己的基础设施里，首音频延迟 570 毫秒，Dialpad 为设计合作方。做医疗、金融等合规要求高的电话语音 agent、受够了“黑盒通用模型”的人，可以看这条“模型归企业所有”的路线。</p>
+            <a class="source-link" href="https://www.rime.ai/">Rime：Prism</a>
+            <p class="keywords">关键词：语音对语音模型（speech-to-speech model）、企业语音 agent（enterprise voice agent）、文本检查点（text checkpoint）、低延迟（low latency）</p>
+          </li>
+          <li class="item">
+            <p>据媒体报道，Gnani AI 发布 Prisma v3.0：针对印度电话音频与句内多语混说训练，单个模型覆盖 9 种印度语言与印度英语，并提供 Verbatim、Transcribe、Code-mix、Transliterate 四种转录模式（同一通电话可按合规、客服等需求出不同版本）。公司称在 Vistaar 基准上宏平均 WER 为 16.9%，低于 ElevenLabs Scribe v2 的 19.98%。做印度市场电话客服、合规转录的人值得看；官方页面未找到，此条为媒体消息。</p>
+            <a class="source-link" href="https://www.thehindubusinessline.com/info-tech/gnani-ai-launches-prisma-v30-a-speech-to-text-model-trained-on-indian-phone-calls/article71634786.ece">The Hindu BusinessLine：Gnani Prisma v3.0</a>
+            <p class="keywords">关键词：印度电话音频（Indian phone audio）、多语混说（code-mixing）、转录模式（transcription modes）、WER 基准（WER benchmark）</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="round" aria-labelledby="round-1027-2030">
+        <header class="round-header">
+          <h2 id="round-1027-2030">10 月 27 日 20:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Winning Team AI 推出了一项 24/7 AI 语音接待员服务，面向休斯顿企业，帮企业接住更多来电、预约客户并挽回流失收入。做电话客服或中小企业来电接待的人，可以看这条小型语音 agent 产品动态。</p>
+            <a class="source-link" href="https://www.linkedin.com/groups/7037632/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7521048722982494208">Joseph Lewis：Winning Team AI 24/7 语音接待员</a>
+            <p class="keywords">关键词：AI 语音接待员（AI voice receptionist）、电话客服（phone customer service）、中小企业（small business）、来电预约（call appointment scheduling）</p>
+          </li>
+        </ol>
+      </section>
+
       <section class="round" aria-labelledby="round-1027-1230">
         <header class="round-header">
           <h2 id="round-1027-1230">10 月 27 日 12:30 轮</h2>
@@ -521,6 +588,8 @@
         </ol>
       </section>
 
+<details class="archive">
+        <summary>历史归档（10 月 25 日及之前）</summary>
       <section class="round" aria-labelledby="round-1025-1630">
         <header class="round-header">
           <h2 id="round-1025-1630">10 月 25 日 16:30 轮</h2>
@@ -548,8 +617,6 @@
         </ol>
       </section>
 
-<details class="archive">
-        <summary>历史归档（10 月 24 日及之前）</summary>
       <section class="round" aria-labelledby="round-1024-1630">
         <header class="round-header">
           <h2 id="round-1024-1630">10 月 24 日 16:30 轮</h2>
@@ -3232,6 +3299,45 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1028-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1028-morning-academic">10 月 28 日早报</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：上海交通大学 X-LANCE 实验室、上海创新研究院、阿里巴巴 Token Foundry<br>核心价值问题：流式语音翻译必须在只听到部分输入时决定是否开口译，但整句级语料只给最终译文、不告诉“哪段输入支撑哪段译文”；且说出去的语音无法像文字那样悄悄修改，时机一旦错了就无法挽回。<br>方法：把整句级语音对切成语义对齐的增量训练样本，学习一个 READ/WRITE 门控策略（640 毫秒固定输入网格上可调阈值），Thinker 生成译文、Talker 生成语音，阈值调高即要求更强证据再开口，无需重训。<br>为什么值得看：一个检查点即可在质量-延迟间换挡，英中方向在 FLEURS 上有竞争力、在内部 9 语对测试上领先所比流式系统，且作者承诺开源模型与代码；这是“流式翻译何时译”从固定等待策略走向语义证据驱动的一步。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.36777">arXiv</a>
+            <p class="keywords">关键词：流式语音翻译（streaming speech translation）、语义监督（semantic supervision）、READ/WRITE 门控（READ/WRITE gating）、质量-延迟权衡（quality-latency tradeoff）</p>
+          </li>
+          <li class="item">
+            <p>机构：韩国成均馆大学<br>核心价值问题：生成式语音增强音质好，但非因果处理与迭代采样使其无法用于流式、端侧推理；电话、助听器、端侧语音助手同时要求因果与单帧预算。<br>方法：20M 参数的流式模型放在冻结的神经音频编解码器潜空间里：每帧直接回归干净连续潜变量（而非逐层预测离散码），单次前向、无前视；并把 RVQ 截断到粗粒度层级，token 数减半且更抗混响。<br>为什么值得看：它是所比系统中唯一的流式生成模型，却在感知质量上达到或超过离线生成基线；整条 int8 管线在 Galaxy S22 单核 CPU 上实时运行（StreamSE 本身仅 5.46 毫秒），给端侧生成式增强提供了一条可落地的路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.37024">arXiv</a>
+            <p class="keywords">关键词：流式语音增强（streaming speech enhancement）、神经音频编解码器（neural audio codec）、端侧推理（on-device inference）、因果模型（causal model）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学、科大讯飞、南京大学<br>核心价值问题：多语种 ASR 的数据采样长期依赖人工启发式、且只在单一粒度上优化；评测给出的 WER/CER 只告诉“错了多少”，不告诉“该补什么数据”。<br>方法：在训练循环里引入数据采样 LLM agent：先用语言学量规从语音、形态、句法三维分析识别错误，再结合训练统计、预算与算法档案，在领域级、样本级、token 级三层同时出采样方案。<br>为什么值得看：在 12 种 Common Voice 语言、Whisper-medium 主干上，用更少数据与算力取得了优于全量数据训练的成绩且收敛更快；把“误差诊断”变成“数据决策”的闭环，对多语种 ASR 产品化有直接参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.36538">arXiv</a>
+            <p class="keywords">关键词：多语种 ASR（multilingual ASR）、数据采样（data sampling）、误差驱动（error-driven）、LLM agent</p>
+          </li>
+          <li class="item">
+            <p>机构：西班牙巴斯克大学 HiTZ 巴斯克语言技术中心、Aholab 信号处理实验室<br>核心价值问题：现有开放语音语言模型几乎只覆盖英语与中文，巴斯克语等少数语言在口语交互上被进一步拉开差距，而口语指令数据极度稀缺。<br>方法：沿用 LLaMA-Omni 模块化架构（Latxa 巴斯克大模型为主干），把英语 VoiceAssistant-400K 语料译成巴斯克语、再用巴斯克语 TTS 合成语音，造出约 45 万条口语指令数据做两阶段训练。<br>为什么值得看：内容质量 3.86/5、口语可懂度 WER 9.94%、UTMOS 3.07，证明“翻译+合成+模块嫁接”这条低成本路线对低资源语言是走得通的，方法可迁移到其他同类语言。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.36911">arXiv</a>
+            <p class="keywords">关键词：低资源语言（low-resource language）、巴斯克语（Basque）、语音语言模型（speech language model）、口语指令数据（spoken instruction data）</p>
+          </li>
+          <li class="item">
+            <p>机构：孟加拉国 KUET、BUET<br>核心价值问题：孟加拉语有 2.3 亿使用者，但已有开源语料多为短句朗读或众包录音，缺说话人标注与长音频，训不出贴近真实对话的模型。<br>方法：可复现的四阶段管线——按领域精选 YouTube 频道、过滤带孟加拉语字幕的视频、抽取音频与字幕、用 pyannote Precision-2 做说话人日志，产出 SSTT（说话人、语音、转录、时间戳）标注；最终 885 小时、998 个视频、596 个频道、17 个领域，并附 17 名志愿者人工校验的 gold 评测集。<br>为什么值得看：这是首个同时做到大规模、带说话人标注、长音频三者的孟加拉语语料；管线本身与语言无关，对其他低资源语言建库有借鉴意义；基准显示 4 个常用 ASR 模型在情感、方言、长音频内容上一致退化，点出了现有模型的短板。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.36184">arXiv</a>
+            <p class="keywords">关键词：孟加拉语语料（Bengali corpus）、说话人标注（speaker annotation）、长音频（long-form audio）、低资源语言（low-resource language）</p>
+          </li>
+          <li class="item">
+            <p>机构：美国密歇根州立大学、克莱姆森大学<br>核心价值问题：TTS 与语音转换的 MOS 预测器只给点估计，不说自己有多不确定；在分布外语音上过度自信时，模型选型与上线决策就不可靠。<br>方法：在冻结的上游表征（M2D2/wav2vec2）上加轻量序数感知预测头（高斯平滑的序数标签分布），再用 split conformal 标定给出有限样本覆盖保证的预测区间。<br>为什么值得看：BVCC 上系统级 MSE 0.08，比 FUSE-MOS 好约 7%，同时给出经验验证过的覆盖率；对“TTS 评测分数到底可不可信”这个日常痛点，提供了带保证的回答方式。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.36126">arXiv</a>
+            <p class="keywords">关键词：MOS 预测（MOS prediction）、不确定性量化（uncertainty quantification）、共形预测（conformal prediction）、TTS 评测（TTS evaluation）</p>
+          </li>
+        </ol>
+      </section>
+
       <section class="round" aria-labelledby="round-1027-morning-academic">
         <header class="round-header">
           <h2 id="round-1027-morning-academic">10 月 27 日早报</h2>
