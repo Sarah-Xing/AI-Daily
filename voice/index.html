@@ -383,6 +383,39 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1031-morning">
+        <header class="round-header">
+          <h2 id="round-1031-morning">10 月 31 日早报</h2>
+          <span class="count">5 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Deepgram 在 10 月 29 日首届 Deepgram Speak 上宣布收购 Daily——Pipecat 开源语音 agent 框架的创作者，把语音模型、Daily 全球实时网络与 Pipecat 编排收进同一家公司，并同步推出 Real-Time Context Standard 开放协议，让语气、说话人等音频上下文在模型间传递而不丢失。Pipecat 将继续完全开源免费（BSD V2），并成立独立的 Pipecat 基金会；Daily 团队加入 Deepgram，联合创始人 Kwindla Hultman Kramer 出任开源负责人。正在搭生产级语音 agent、关心“编排层会不会被收编后变封闭”的人，可以看官方公告确认开源承诺与平台路线。</p>
+            <a class="source-link" href="https://deepgram.com/blog/daily-pipecat-deepgram">Deepgram：收购 Daily 与 Pipecat 基金会</a>
+            <p class="keywords">关键词：语音 agent（voice agent）、Pipecat、开源框架（open-source framework）、实时上下文（real-time context）</p>
+          </li>
+          <li class="item">
+            <p>ServiceNow 在 10 月 30 日开源 Apriel Voice 27B Preview：Whisper large-v3-turbo 编码器接 Gemma 4 26B-A4B，理解语音请求、做推理并输出文本回复与工具调用，支持转录、翻译与语音问答，但本身不发声，需另配语音合成器才能组成完整语音助手。公司自报成绩：EVA-A 51.27、EVA-X 74.13、τ-Voice 65.51、平均延迟 1.91 秒，LibriSpeech test-clean WER 2.23%。想自托管语音理解加工具调用、又不想被原生语音模型绑定的团队，可以直接看模型页与 vLLM 部署示例。</p>
+            <a class="source-link" href="https://huggingface.co/ServiceNow-AI/Apriel-Voice-27B-preview">ServiceNow：Apriel Voice 27B Preview</a>
+            <p class="keywords">关键词：语音理解（speech understanding）、开源模型（open-source model）、工具调用（tool calling）、语音问答（voice QA）</p>
+          </li>
+          <li class="item">
+            <p>Gnani AI 在 10 月 28 日发布 Prisma v3.0：针对印度电话音频与句中混语训练的语音转文本模型，单模型覆盖 9 种印度语言与印度英语，提供 4 种转录模式与 5 项转录写法控制，让合规、客服与语音 agent 读同一通电话时各取所需。公司按 Vistaar 评分自报 9 语宏观 WER 16.9%，低于 ElevenLabs Scribe v2 的 19.98%。做印度市场电话语音、或处理混语转录的人，可以看这篇发布（注：Gnani 官方博客链接经核实已 404，故此处链媒体报道，属媒体消息）。</p>
+            <a class="source-link" href="https://www.passionateinmarketing.com/gnani-ai-launches-prisma-v3-0-a-speech-to-text-model-trained-on-indian-phone-calls-with-four-transcription-modes/">Gnani AI：Prisma v3.0 发布报道（媒体消息）</a>
+            <p class="keywords">关键词：印度语言（Indian languages）、电话语音（telephony speech）、混语转录（code-mixed transcription）、语音转文本（speech-to-text）</p>
+          </li>
+          <li class="item">
+            <p>Voice Arena 的法语与德语 TTS 榜单上，Cartesia 的 Sonic-3.6 在客服场景实时模型中排名第一，法语 1088 Elo、德语 1048 Elo，基于 1,200 次母语听众盲测两两对比；ElevenLabs 的 Eleven v4 Turbo 在两张榜上均处于同一统计区间内。关心多语 TTS 实测排名、法语/德语客服语音选型的人，可以看这条榜单结果。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7521963149475110912/">Voice Arena：Cartesia Sonic-3.6 登顶法德 TTS 榜单</a>
+            <p class="keywords">关键词：TTS 榜单、法语（French）、德语（German）、盲测（blind testing）</p>
+          </li>
+          <li class="item">
+            <p>Voice Arena 的印度英语 TTS 榜单上，Inworld AI 的 Realtime TTS 2 在客服场景 7 个模型中排名第一，1090 Elo，紧随其后的是 ElevenLabs Eleven v4 Turbo（1070）与 Google DeepMind Gemini 3.8 Flash-Lite TTS（1037），基于 590 多次母语听众盲测对比。关心印度英语 TTS 选型、想看实时模型在该语种上实测差距的人，可以看这条榜单结果。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7521602830907133954/">Voice Arena：Inworld Realtime TTS 2 登顶印度英语 TTS 榜单</a>
+            <p class="keywords">关键词：TTS 榜单、印度英语（Indian English）、实时模型（real-time models）、盲测（blind testing）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1030-1630">
         <header class="round-header">
           <h2 id="round-1030-1630">10 月 30 日 16:30 轮</h2>
@@ -3498,6 +3531,37 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1031-0830-academic">
+        <header class="round-header">
+          <h2 id="round-1031-0830-academic">10 月 31 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Muhammad S. Abdo 用二维超声分析了阿拉伯语强调音 /dʶ/ 在语流里的协同发音：词首向右扩展、词中方向有别、词末向左扩展强烈。这是一项语音学研究而非模型发布，做阿拉伯语语音合成/识别、关心发音建模的人，可以看这项研究了解强调音在语流里到底怎么互相影响。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7522311051032600576/">Muhammad S. Abdo：阿拉伯语强调音协同发音研究</a>
+            <p class="keywords">关键词：阿拉伯语（Arabic）、协同发音（coarticulation）、语音学（phonetics）、强调音（emphasis）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1030-2030-academic">
+        <header class="round-header">
+          <h2 id="round-1030-2030-academic">10 月 30 日 20:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Ting Dang 分享了一篇 EMNLP 口头报告论文 EnvMem，研究音频语言模型在多轮对话里对环境声的表征与检索，目标是让语音 AI 不只识别语音、还能理解环境声。做音频语言模型、多轮语音理解的人，可以看这篇工作了解它怎么评测“记不记得住环境声”。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7522130270330920960">Ting Dang：EnvMem 环境声记忆评测</a>
+            <p class="keywords">关键词：环境声（environmental sounds）、音频语言模型（audio language models）、多轮对话（multi-turn dialogue）、记忆评测（memory evaluation）</p>
+          </li>
+          <li class="item">
+            <p>Wei Chu 在 MIT 的 SANE 2026 上展示了 FA-Bench 海报，研究 ASR 词级时间戳的精度问题：许多 ASR API 的时间戳没有想象中准，例如 Whisper 会把词放早约 150 毫秒；FA-Bench 2.0 的评分代码已按 Apache 2.0 开源，文中还提到 IBM Research 的 Granite 5.0 TurboCTC 模型。做 ASR 评测、词级对齐或字幕时间戳的人，可以看这张海报了解“时间戳到底差多少”。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7522140522652721152/">Wei Chu：FA-Bench ASR 时间戳精度海报</a>
+            <p class="keywords">关键词：ASR 时间戳（ASR timestamps）、词级对齐（word-level alignment）、评测基准（evaluation benchmark）、开源（open source）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1030-1630-academic">
         <header class="round-header">
           <h2 id="round-1030-1630-academic">10 月 30 日 16:30 轮</h2>
