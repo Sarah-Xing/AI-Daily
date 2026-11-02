@@ -383,6 +383,32 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1102-1130">
+        <header class="round-header">
+          <h2 id="round-1102-1130">11 月 2 日 11:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Inworld AI 回顾了 10 月 23 日在柏林举办的 Backchannel 语音 AI Meetup，50 人到场，其中 ElevenLabs 的 Aylin Caliskan 分享了富有表现力的语音如何改变语音 AI。内容涉及语音 agent、speech-to-speech 模型、情感表达与实时对话编排，关心表现力语音与实时对话设计的人可以看这篇回顾，也可顺带留意后续柏林线下活动。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/on-october-23-we-brought-50-people-together-ugcPost-7523100429178609664-w80v/">Inworld AI：柏林语音 AI Meetup 回顾</a>
+            <p class="keywords">关键词：语音 AI 线下活动（voice AI meetup）、表现力语音（expressive speech）、实时对话编排（real-time conversation orchestration）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1102-morning">
+        <header class="round-header">
+          <h2 id="round-1102-morning">11 月 2 日早报</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Applied Brain Research 今日宣布，其语音 AI SDK 已在 Zephyr RTOS 的 Alif Ensemble 系列边缘处理器上正式可用，把流式全词汇 ASR（Niagara）与流式 TTS（Nith）都搬到端侧、无需联网。亮点在功耗与延迟的组合：Ensemble E8 上 Niagara 从首段音频到首个 token 平均 133 毫秒、额外功耗仅 15 毫瓦，适合电池供电与气隙设备上的常驻语音；该 SDK 将于 11 月 10–13 日慕尼黑 electronica 展 Alif 展位现场演示。</p>
+            <a class="source-link" href="https://www.prnewswire.com/news-releases/applied-brain-research-announces-general-availability-of-its-speech-ai-sdk-for-zephyr-rtos-on-the-alif-ensemble-family-of-processors-302925510.html">Applied Brain Research：语音 AI SDK for Zephyr RTOS on Alif Ensemble GA</a>
+            <p class="keywords">关键词：端侧语音 AI（on-device speech AI）、流式 ASR（streaming ASR）、流式 TTS（streaming TTS）、低功耗（low power）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1101-1530">
         <header class="round-header">
           <h2 id="round-1101-1530">11 月 1 日 15:30 轮</h2>
@@ -460,6 +486,29 @@
           </li>
         </ol>
       </section>
+
+
+
+
+
+
+
+
+
+      
+
+      
+
+      
+
+      
+
+
+
+
+
+<details class="archive">
+        <summary>历史归档（10 月 30 日及之前）</summary>
       <section class="round" aria-labelledby="round-1030-1630">
         <header class="round-header">
           <h2 id="round-1030-1630">10 月 30 日 16:30 轮</h2>
@@ -547,29 +596,6 @@
           </li>
         </ol>
       </section>
-
-
-
-
-
-
-
-
-
-      
-
-      
-
-      
-
-      
-
-
-
-
-
-<details class="archive">
-        <summary>历史归档（10 月 29 日及之前）</summary>
 <section class="round" aria-labelledby="round-1029-2030">
         <header class="round-header">
           <h2 id="round-1029-2030">10 月 29 日 20:30 轮</h2>
@@ -3575,6 +3601,24 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1102-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1102-morning-academic">11 月 2 日早报</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：中国电信星辰 AGI Lab、西北工业大学语音语言处理组（ASLP@NPU）<br>核心价值问题：语音语言模型已经不只做逐字转录，还会输出可读、带格式、面向任务的文本，但现有基准仍假设每段语音只有一个标准转录、用词错率打分——这会误罚合理的改写，也测不出生成内容是否真的扎根于语音。<br>方法：论文提出 Grounded Generative Speech Recognition（GSR），把识别定义为生成“语音支撑的文本实现”而非单一转录，并建立四级改写层次；配套发布 GSR-Bench，覆盖精修会议转录、跨方言翻译、上下文理解、静音/噪声鲁棒等场景，评估结合语音扎根度检查与 LLM-as-judge 语义判断。<br>为什么值得看：实测揭示了转录保真与生成改写能力之间的权衡，以及声学幻觉、无依据生成、指令漂移等失败模式，补上了“生成式 ASR 该怎么评”这一环。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.41292">From Transcription to Reformulation: Defining and Benchmarking Grounded Generative Speech Recognition</a>
+            <p class="keywords">关键词：生成式语音识别（generative speech recognition）、语音扎根（speech grounding）、评测基准（evaluation benchmark）、改写层次（reformulation hierarchy）</p>
+          </li>
+          <li class="item">
+            <p>机构：密歇根州立大学<br>核心价值问题：以往音频对抗攻击大多要针对单条语音定制、且需与受害波形精确同步，在流式场景下根本不成立——攻击者既不知道未来的语音内容，也对不准时间。<br>方法：GhostPrefix 在流式输入边界拼接一段学习到的短前缀，用 token 级损失加表征级目标做统一优化，使同一前缀对任意后续语音都稳定生效；支持语义引导、目标转录劫持、无目标降质三种模式，并向良性环境声分布正则化以保持隐蔽、对空中播放失真做鲁棒训练。<br>为什么值得看：在 13 个开源 ASR 模型、4 个架构家族上，数字域引导成功率 97.6%、劫持 93.4%，空中播放仍有 91.5%/89.5%，且篡改会传导进语音助手、AI 笔记等下游应用；做实时 ASR、会议转录产品的人应重视转录层这一攻击面。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.42026">GhostPrefix: Synchronization-Free Universal Prefix Attacks for ASR Manipulation</a>
+            <p class="keywords">关键词：音频对抗攻击（audio adversarial attacks）、流式 ASR（streaming ASR）、通用前缀攻击（universal prefix attacks）、空中播放鲁棒性（over-the-air robustness）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1101-1930-academic">
         <header class="round-header">
           <h2 id="round-1101-1930-academic">11 月 1 日 19:30 轮</h2>
@@ -3632,6 +3676,15 @@
           </li>
         </ol>
       </section>
+
+
+
+      
+
+
+
+<details class="archive">
+        <summary>历史归档（10 月 30 日及之前）</summary>
       <section class="round" aria-labelledby="round-1030-2030-academic">
         <header class="round-header">
           <h2 id="round-1030-2030-academic">10 月 30 日 20:30 轮</h2>
@@ -3719,15 +3772,6 @@
           </li>
         </ol>
       </section>
-
-
-
-      
-
-
-
-<details class="archive">
-        <summary>历史归档（10 月 29 日及之前）</summary>
 <section class="round" aria-labelledby="round-1029-1230">
         <header class="round-header">
           <h2 id="round-1029-1230">10 月 29 日 12:30 轮</h2>
