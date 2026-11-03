@@ -383,6 +383,54 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1103-1230">
+        <header class="round-header">
+          <h2 id="round-1103-1230">11 月 3 日 12:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Coval 的实测显示，Murf AI 的 Falcon 2 在几周内把 TTS 的首音时间提升了约 4 倍，而且是按首次可听音频、而非首字节来衡量的。做实时语音应用、在意用户实际听到声音的速度的人可以看这篇。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/weve-said-it-before-some-of-the-most-impactful-share-7523469075713413120-IESU/">Coval：Murf Falcon 2 首音时间约快 4 倍</a>
+            <p class="keywords">关键词：TTS 首音时间（time-to-first-audio）、实时语音应用（real-time voice applications）、TTS 评测（TTS evaluation）</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="round" aria-labelledby="round-1103-supplement">
+        <header class="round-header">
+          <h2 id="round-1103-supplement">11 月 3 日补推</h2>
+          <span class="count">5 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Youtu-Parsing-Omni：腾讯 Youtu 团队的 5B 全模态解析器，一个 checkpoint 统一处理文档、图像、音频、视频，转成带时空锚点的结构化记录，给 agent 做感知层；OmniDocBench v1.6 得 96.96（论文称 SOTA），代码与权重已公开。做多模态 agent 感知层的人值得看。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.39301">Youtu-Parsing-Omni arXiv</a>
+            <p class="keywords">关键词：全模态解析（multimodal parsing）、结构化记录（structured records）、agent 感知层（agent perception layer）</p>
+          </li>
+          <li class="item">
+            <p>VoxLock：面向语音 agent 的目标说话人提取工具，无需事先注册说话人，从通话前几秒自动锁定主叫人声音、滤掉房间其他人声再送 ASR；基于 27M 参数的 REAL-TSE 微调，作者自测 Krisp 基准上 WER 从 23.21% 降到 4.95%，CPU/浏览器可流式运行。做实时通话降噪、语音 agent 输入处理的人可以直接试。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.40727">VoxLock arXiv</a>
+            <p class="keywords">关键词：目标说话人提取（target speaker extraction）、实时通话降噪（real-time call denoising）、语音 agent 输入（voice agent input）</p>
+          </li>
+          <li class="item">
+            <p>Humaneness Voice Large：LAION 的表现力多语 TTS（Alpha 实验版），把文本加英文表演指令变成带情感的语音，支持参考音频克隆或无身份条件生成，输出 48kHz。注意它和此前推过的 Humaneness Voice Converter 不是同一东西：那个是音频→音频变声，这个是文本→语音生成。</p>
+            <a class="source-link" href="https://huggingface.co/laion/Humane-Voice-Large-Alpha-1.4">LAION HF 模型页</a>
+            <p class="keywords">关键词：表现力 TTS（expressive TTS）、多语语音合成（multilingual speech synthesis）、语音克隆（voice cloning）</p>
+          </li>
+          <li class="item">
+            <p>Maya-2 Native：Maya Research 的开源流式 TTS，覆盖 11 种印度语言加英语，24kHz、80ms 帧流式输出，3–10 秒参考音频可零样本克隆（含跨语言克隆）；2.5B 参数、Apache-2.0，VoiceArena 印地语实时榜第 2。做印度语言语音 agent、IVR 自托管的人值得看。</p>
+            <a class="source-link" href="https://huggingface.co/maya-research/maya2-native">Maya Research HF 模型页</a>
+            <p class="keywords">关键词：流式 TTS（streaming TTS）、印度语言（Indian languages）、零样本克隆（zero-shot cloning）</p>
+          </li>
+          <li class="item">
+            <p>Ming-3.0-TTS：蚂蚁 inclusionAI 的开源 TTS 家族，两档（0.5B dense 与 7.9B tiny MoE），7 语种加川渝话、广粤话，44.1kHz，零样本克隆、自然语言 voice design、14 个中英副语言标签，tiny 版还有多人播客模式；官方引用的 10 月榜单称开源 Controlled Voice 第 1。注意别和此前推过的 126B 音频理解模型 Ming-3.0-audio-flash 混淆。</p>
+            <a class="source-link" href="https://github.com/inclusionAI/Ming-3.0-tts">inclusionAI GitHub</a>
+            <p class="keywords">关键词：开源 TTS（open-source TTS）、零样本克隆（zero-shot cloning）、多方言语音合成（multi-dialect speech synthesis）</p>
+          </li>
+        </ol>
+      </section>
+
       <section class="round" aria-labelledby="round-1103-0830">
         <header class="round-header">
           <h2 id="round-1103-0830">11 月 3 日 08:30 轮</h2>
