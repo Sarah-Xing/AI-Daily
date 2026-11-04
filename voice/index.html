@@ -383,6 +383,24 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1104-morning">
+        <header class="round-header">
+          <h2 id="round-1104-morning">11 月 4 日早报</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Soniox 在 11 月 3 日发布了新一代语音转文本 API STT v6，分流式 stt-rt-v6 与批量 stt-async-v6 两个版本，覆盖 60 多种语言。核心是 agent 文本输入：把 agent 自己说的话以文本形式随音频一起送入模型，模型据此识别用户的短回复、过滤 agent 自身回声，解决电话机器人里长期存在的误打断与回声串话问题。v5 将于 12 月 15 日下线，之后自动路由到 v6；注意官方目前尚未公布 v6 的精度与延迟数字，升级前建议先实测。昨天扫描轮推过的是 Famulor 平台集成 v6 的消息，今天是 Soniox 官方 v6 发布本身。</p>
+            <a class="source-link" href="https://docs.soniox.com/stt/models">Soniox STT 模型文档</a>
+            <p class="keywords">关键词：STT v6、语音 agent（voice agents）、回声过滤（echo filtering）、实时语音转文本（real-time speech-to-text）</p>
+          </li>
+          <li class="item">
+            <p>南京大学 Shuai Wang 分享的说话人识别基准 OpenSVBench 上线两周已获得 1 万多次访问，覆盖 83 个国家与地区，并收到多支知名团队的提交。团队正在扩展基准的分析工具，初步结果显示说话人表征在不同条件与任务下的表现差异，超出单一排行榜的意义。做说话人识别、语音评测的人可以关注这个基准并提交模型。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/shuai-wang-941524189_opensvbench-speakerrecognition-speechprocessing-share-7523775971825557504-bJzl/">Shuai Wang：OpenSVBench 上线两周进展</a>
+            <p class="keywords">关键词：说话人识别（speaker recognition）、语音基准（speech benchmark）、说话人表征（speaker representation）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1103-1630">
         <header class="round-header">
           <h2 id="round-1103-1630">11 月 3 日 16:30 轮</h2>
@@ -514,6 +532,9 @@
           </li>
         </ol>
       </section>
+
+<details class="archive">
+        <summary>历史归档（11 月 1 日及之前）</summary>
       <section class="round" aria-labelledby="round-1101-1530">
         <header class="round-header">
           <h2 id="round-1101-1530">11 月 1 日 15:30 轮</h2>
@@ -546,28 +567,6 @@
         </ol>
       </section>
 
-
-
-
-
-
-
-
-
-      
-
-      
-
-      
-
-      
-
-
-
-
-
-<details class="archive">
-        <summary>历史归档（10 月 31 日及之前）</summary>
       <section class="round" aria-labelledby="round-1031-1230">
         <header class="round-header">
           <h2 id="round-1031-1230">10 月 31 日 12:30 轮</h2>
@@ -3706,6 +3705,34 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1104-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1104-morning-academic">11 月 4 日早报</h2>
+          <span class="count">4 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：字节跳动抖音内容团队（ByteDance Douyin Content Group）<br>核心价值问题：现在的 TTS 各有所长，但零样本合成、语音克隆、韵律克隆、指令控制、音色设计往往各需一个专门模型——能否用同一套共享模块组合出所有能力，而不牺牲质量与可控性？<br>方法：先训一个语义-声学解耦的语音 tokenizer（ASR 监督的语义学习加生成式精修，有限标量量化），再由 Text-to-Semantic 自回归模型做语义与韵律规划、流匹配声学模型渲染音质，另加 CoT 引导的指令规划与 Text2Timbre 音色设计模块，按任务组合条件信号。<br>为什么值得看：同一框架覆盖零样本 TTS、语音克隆、韵律克隆、可控克隆、语音转换与噪声参考克隆，并在多语言、跨语言、指令跟随、音色设计等多项实验中表现有竞争力；对想把多种语音生成能力收进一个底座的人，这是可直接参考的架构路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.04282">TTSonic: A Unified Framework for Composable and Controllable Speech Generation</a>
+            <p class="keywords">关键词：零样本 TTS（zero-shot TTS）、语音克隆（voice cloning）、语义-声学解耦（semantic-acoustic disentanglement）、流匹配（flow matching）</p>
+          </li>
+          <li class="item">
+            <p>机构：墨尔本大学<br>核心价值问题：语音 deepfake 检测器只给一个真假分数，但取证分析师还要问：哪套系统生成的、两段录音是否同源、结论的证据是什么——而现有模型的解释往往无法逐句核验。<br>方法：用一个音频语言模型（Qwen3-ASR 编码器加 MiniCPM5-2B）统一五项任务——检测、生成器归因、录音条件分析、合成片段定位与同源验证，所有问题都写成候选答案句、用句子似然打分；每条推理都按固定字段写出，且每句话都可用波形测量、片段标签或生成器元数据独立核查，并用反事实样本训练决策跟随证据。<br>为什么值得看：VeriSpoof-Plus 在 14 个 Speech-DF-Arena 测试集上综合等错率 2.14%，28 个系统里排第三、开源权重系统里第一；仅用官方训练集的 Base 版为 4.43%，不到下一个开源检测器的一半；模型、代码与演示均已公开，对做语音防伪与取证的人可直接复用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.04634">VeriSpoof: Beyond Real or Fake with One Audio LLM</a>
+            <p class="keywords">关键词：语音 deepfake 检测（voice deepfake detection）、生成器归因（generator attribution）、音频大模型（audio LLM）、取证验证（forensic verification）</p>
+          </li>
+          <li class="item">
+            <p>机构：米兰理工大学电子、信息与生物工程系（Politecnico di Milano, DEIB）<br>核心价值问题：以往的语音 deepfake 对抗攻击多靠事后加噪声或扰动，既增加推理成本、又可能留下可被利用的痕迹——能否让合成语音在生成时就自带对抗性？<br>方法：固定声学模型（改进版 FastSpeech2），只微调 BigVGAN 声码器，把目标检测器的损失加进声码器训练目标；单检测器与多检测器两种设置下分别在白盒（RawNet2、TSSD）与黑盒（未参与训练的 AASIST）条件下验证。<br>为什么值得看：对抗微调只在离线训练时花成本，推理时与原声码器完全相同的延迟与开销，且主观听感测试显示合成音质反而提升；对做语音检测与反制的人，这是检测器鲁棒性评估必须面对的新攻击面。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.04511">Detector-Guided Vocoder Training for Adversarial Text-to-Speech Synthesis</a>
+            <p class="keywords">关键词：对抗 TTS（adversarial TTS）、声码器（vocoder）、deepfake 检测（deepfake detection）、BigVGAN</p>
+          </li>
+          <li class="item">
+            <p>机构：阿尔托大学信息与通信工程系、东京国立信息学研究所<br>核心价值问题：合成语音水印能扛传统信号处理攻击，却常被神经音频编解码器重编码洗掉——而编解码器恰是成本极低的现实洗标手段，训练时用哪种编解码器做信道增强，是否决定了泛化能力？<br>方法：以 Descript Audio Codec（DAC）为零比特水印生成器，系统比较用 EnCodec、DAC、SpeechTokenizer、Mimi、SNAC 等不同编解码器做信道增强的模型，在未见过的神经编解码器与传统攻击下的表现。<br>为什么值得看：结论是增强编解码器的选择确实决定泛化——低码率高音质的 Mimi 与 SNAC 联合增强，在未见编解码器与传统攻击下都表现稳健、音质损失有限；做合成语音标识与合规水印的人可以直接借用这套增强配方与开源代码。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.04716">Cross-Codec Robustness in Speech Watermarking</a>
+            <p class="keywords">关键词：语音水印（speech watermarking）、神经音频编解码器（neural audio codec）、信道增强（channel augmentation）、Mimi、SNAC</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1103-morning-academic">
         <header class="round-header">
           <h2 id="round-1103-morning-academic">11 月 3 日早报</h2>
@@ -3772,6 +3799,9 @@
           </li>
         </ol>
       </section>
+
+<details class="archive">
+        <summary>历史归档（11 月 1 日及之前）</summary>
       <section class="round" aria-labelledby="round-1101-1930-academic">
         <header class="round-header">
           <h2 id="round-1101-1930-academic">11 月 1 日 19:30 轮</h2>
@@ -3817,14 +3847,6 @@
         </ol>
       </section>
 
-
-
-      
-
-
-
-<details class="archive">
-        <summary>历史归档（10 月 31 日及之前）</summary>
       <section class="round" aria-labelledby="round-1031-0830-academic">
         <header class="round-header">
           <h2 id="round-1031-0830-academic">10 月 31 日 08:30 轮</h2>
