@@ -383,6 +383,29 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1104-morning">
+        <header class="round-header">
+          <h2 id="round-1104-morning">11 月 4 日早报</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>字节跳动与杜克大学、马里兰大学、布法罗大学团队 11 月 2 日开源的 agent 基础模型 Axion 1.0，只用两段轻量 SFT 加异步 GRPO 强化学习、约 1.8 万条轨迹，不做专门 mid-training、DPO 或 on-policy 蒸馏；122B 版在完整 HLE 上达 59.0 分，35B 版 SEAL-0 达 62.2 分，且数据构造、提示词、训练与评测代码全部 Apache 2.0 开源。</p>
+            <a class="source-link" href="https://github.com/bytedance/axion1_0">Axion 1.0 开源仓库</a>
+            <p class="keywords">关键词：agent 基础模型（agent foundation models）、GRPO、开源（open source）、HLE</p>
+          </li>
+          <li class="item">
+            <p>企业 AI 平台 Oumi 11 月 4 日发布 agent 开发全流程自动化：其 Frontier AI Engineer（FAiE）帮助定义目标、设计评测、分析失败并执行训练，新版把线上失败用例转成评测集与训练数据，并新增 DPO、GRPO 与多阶段串联训练，客户原有编排可通过 Bring Your Own Harness 接入。</p>
+            <a class="source-link" href="https://www.businesswire.com/news/home/20261104154139/en/Oumi-Launches-the-Agent-That-Builds-Trains-and-Continuously-Improves-AI-Agents">Oumi 官方发布</a>
+            <p class="keywords">关键词：agent 开发自动化（agent development automation）、训练数据（training data）、DPO、GRPO</p>
+          </li>
+          <li class="item">
+            <p>据公司 11 月 4 日公告，ExperienceFlow 推出由强化学习 agent 网络组成的企业自有“去中心化超级智能”，学习成果留在企业自己的云、数据中心与边缘环境，并迎来持续学习领域创始人 Mark Ring 担任首席创新官，其研究实验室由强化学习奠基人之一、图灵奖得主 Richard Sutton 领衔。</p>
+            <a class="source-link" href="https://www.prnewswire.com/news-releases/experienceflow-introduces-the-first-decentralized-super-intelligence-and-welcomes-dr-mark-ring-founder-of-the-field-of-continual-learning-as-chief-of-innovations-302928808.html">ExperienceFlow 官方公告</a>
+            <p class="keywords">关键词：去中心化超级智能（decentralized superintelligence）、持续学习（continual learning）、企业 AI（enterprise AI）、Richard Sutton</p>
+          </li>
+        </ol>
+      </section>
       
       
       
@@ -693,6 +716,65 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1105-0830-academic">
+        <header class="round-header">
+          <h2 id="round-1105-0830-academic">11 月 5 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Nathan Lambert 在他的《RLHF 与后训练》一书的 RL 章节里新增了 score-centering 的内容，这是缓解训练-推理失配的常用技术，帖子同时讲了现代异步 RL 的理解。对照着书学 RLHF、后训练或异步 RL 方法的人可以直接去看新增章节。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7524126077573812224">Nathan Lambert：RLHF 书的 RL 章节新增 score-centering</a>
+            <p class="keywords">关键词：RLHF、后训练（post-training）、score-centering、异步 RL（asynchronous RL）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1105-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1105-morning-academic">11 月 5 日早报</h2>
+          <span class="count">5 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>斯坦福在线的深度强化学习课 XCS224R 已于 11 月 2 日开课，内容与斯坦福研究生课 CS224R 相同，涵盖模仿学习、策略梯度、奖励学习等，用 PyTorch 从视觉等高维输入训练策略，适合想系统补 RL 基础的读者。</p>
+            <a class="source-link" href="https://lnkd.in/gr5Fu2qH">斯坦福在线 XCS224R 课程</a>
+            <p class="keywords">关键词：强化学习课程（reinforcement learning course）、斯坦福（Stanford）、策略梯度（policy gradients）、PyTorch</p>
+          </li>
+          <li class="item">
+            <p>中科院自动化所团队 11 月 4 日发表论文，追问多轮强化学习到底提升了 LLM agent 的什么能力：用 Pass@(K,T) 二维评估发现，RL 并未普遍提升单步决策质量，优势集中在出错后的恢复能力与长程韧性上，且高度依赖交互轮次预算；提出的 BudgetMix RL 在 25% 预算下平均提升 7.5 个百分点。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06483">多轮强化学习到底提升了 LLM agent 的什么能力？</a>
+            <p class="keywords">关键词：多轮强化学习（multi-turn RL）、LLM agent、恢复能力（recovery ability）、BudgetMix</p>
+          </li>
+          <li class="item">
+            <p>苏黎世联邦理工学院牵头的团队 11 月 4 日发表论文，首次系统验证通用机器人策略（VLA）可以靠在线强化学习实现多任务同步改进并泛化到未见任务：比较三类方案后发现 critic 学习是关键，训练任务的解法多样性比数量更重要。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06905">通用机器人策略能否靠强化学习实现多任务同步改进？</a>
+            <p class="keywords">关键词：通用机器人策略（generalist robot policies）、在线强化学习（online RL）、VLA、泛化（generalization）</p>
+          </li>
+          <li class="item">
+            <p>新加坡国立大学团队 11 月 3 日发表 DARS：用组内结果局部密度的倒数缩放奖励、再接入标准 GRPO，让强化学习按奖励比例采样、缓解模式坍缩；改动只在奖励处理一步，无需学密度模型或 critic，在导航任务上避免了 GRPO 的单模坍缩。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.04792">DARS：让强化学习按奖励比例采样</a>
+            <p class="keywords">关键词：GRPO、奖励采样（reward-proportional sampling）、模式坍缩（mode collapse）、密度奖励（density-based rewards）</p>
+          </li>
+          <li class="item">
+            <p>复旦大学、上海人工智能实验室与京东等团队 11 月 4 日发表 TurnWise：针对流式视频理解中 GRPO 轨迹级共享 advantage 错配逐轮决策的问题，用静默补全前缀打分得到逐轮剩余回报优势，无需 critic 或额外 rollout，在三个流式基准上取得最好成绩。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06728">TurnWise：流式视频 RL 的逐轮信用分配</a>
+            <p class="keywords">关键词：流式视频理解（streaming video understanding）、信用分配（credit assignment）、GRPO、逐轮优势（per-turn advantage）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1104-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1104-morning-academic">11 月 4 日早报</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>CoreWeave、You.com 与 NVIDIA 将于 11 月 19 日合办线上研讨会，讲如何用 SFT、强化学习与 RL Rollouts 检查点热加载把 Nemotron 3.5 Lightning 定制为复杂网络研究 agent，并给出 HGX B200 上的完整前后对比、算力成本与时间线。</p>
+            <a class="source-link" href="https://www.coreweave.com/events/closing-the-loop-between-inference-and-post-training">CoreWeave 研讨会页面</a>
+            <p class="keywords">关键词：Nemotron、SFT、RL Rollouts、模型定制（model customization）</p>
+          </li>
+        </ol>
+      </section>
       
       
       

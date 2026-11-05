@@ -383,6 +383,72 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1105-0830">
+        <header class="round-header">
+          <h2 id="round-1105-0830">11 月 5 日 08:30 轮</h2>
+          <span class="count">4 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>这篇帖子提醒，用小模型做文档处理 agent 时必须拿出可检查的证据：下一个 agent 步骤会继承上一步的歧义，含糊的输出会在流程里放大。作者贴了三个 SIE Serverless 工作流实例并公开了核查结果（文档转 Markdown 25/25、OCR 加结构化抽取 45/45 字段、字段抽取 180/223 提升到 204/223）。做文档处理 agent 或评估小模型落地效果的人可以直接参考这套验证思路。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7524137982493085697">小模型做文档处理 agent：先拿出可检查的证据</a>
+            <p class="keywords">关键词：小模型（small models）、文档处理（document processing）、可检查证据（verifiable evidence）、OCR</p>
+          </li>
+          <li class="item">
+            <p>Y Combinator 推出 Limnion（Siglake），为 agent 时代做的开放遥测存储：让 AI agent 直接以开放格式查询公司的可观测数据，数据存在公司自己控制的存储上。帖子强调这是个开放基础层，而不是又一个封闭平台。做 agent 可观测性、或关心 agent 如何安全访问企业数据的人值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7524022758687809536">YC 推出 Limnion：让 agent 直接查询公司可观测数据的开放遥测存储</a>
+            <p class="keywords">关键词：agent 可观测性（agent observability）、开放遥测（open telemetry）、Y Combinator、企业数据（enterprise data）</p>
+          </li>
+          <li class="item">
+            <p>Mistral 在企业 AI 平台 Mistral Studio 上扩展了 agent、工作流与应用的构建能力，让企业可以在同一平台里搭建 agent 和应用。帖子没有展开具体功能细节，定位是平台能力的例行扩展。对用 Mistral 做企业 agent 落地的人来说，可以去官方页面看新增内容。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7524136070750429185">Mistral Studio 新增 agent、工作流与应用构建能力</a>
+            <p class="keywords">关键词：企业 AI 平台（enterprise AI platform）、agent 构建（agent building）、工作流（workflows）、Mistral</p>
+          </li>
+          <li class="item">
+            <p>Viktor 现在能通过邮件工作了：把任务转发给它，它会在邮件线程里直接回复完成的工作，相当于一个用邮件沟通的 AI 员工。原作者是 viktor.com 联合创始人 Fryd Wiatrowski，这条是 Sufyan Maan 的转发。对关注 AI 员工形态、或想看看 agent 如何接入日常办公流的人值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7524134301026697217">Viktor 现在能用邮件工作：转发任务，邮件里直接回完成结果</a>
+            <p class="keywords">关键词：AI 员工（AI employees）、邮件自动化（email automation）、办公流（office workflows）、agent</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1105-morning">
+        <header class="round-header">
+          <h2 id="round-1105-morning">11 月 5 日早报</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>腾讯 11 月 4 日发布 Hy4 正式版：Hunyuan 系列首个同时具备视觉理解与 computer-use 能力的模型，能读图读表、操作命令行与图形界面，针对 Blender、CAD 等专业软件训练；API 已上线、定价与预览版持平，权重承诺未来几天内发布。</p>
+            <a class="source-link" href="https://hy.tencent.ai/research/hy4">腾讯 Hy4 正式发布（官方研究页）</a>
+            <p class="keywords">关键词：视觉理解（visual understanding）、computer-use、专业软件（professional software）、开源模型（open-source models）</p>
+          </li>
+          <li class="item">
+            <p>Moonshot AI 11 月 4 日公开 Kimi K3.1 Pro 全部权重（Hugging Face，约 1.56TB，无需申请）：2.8T 总参数、每 token 激活 104B、1M 上下文；厂商自报 Terminal-Bench 4.0 得 65.7 分，接近 Claude Opus 5.5 的 66.4；许可证为自有条款，大规模商用有限制。</p>
+            <a class="source-link" href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro">Kimi K3.1 Pro 权重（Hugging Face 官方模型卡）</a>
+            <p class="keywords">关键词：开源权重（open weights）、大模型（large language models）、Terminal-Bench、长上下文（long context）</p>
+          </li>
+          <li class="item">
+            <p>新实验室 Ricursive Intelligence 11 月 4 日发布首个模型 Ripple-65B Preview：65B 全参数激活的 dense 模型，12T token 从头训练、1M 上下文，Apache 2.0 开源；模型卡自报 Terminal-Bench 2.1 得 80.5 分，超过 501B 的 Reflection Beam；但 headline 用的是旧版评测，DeepSWE v1.1 仅 44.3，结论待独立复现。</p>
+            <a class="source-link" href="https://www.ricursive.com/ripple">Ricursive Ripple-65B Preview（官方发布页）</a>
+            <p class="keywords">关键词：开源模型（open-source models）、dense 模型（dense models）、agent 基准（agent benchmarks）、终端任务（terminal tasks）</p>
+          </li>
+          <li class="item">
+            <p>OpenAI 11 月 4 日宣布将收购开发者工具公司 Pierre Computer，把它的 Code Storage（为机器设计的 Git 托管服务）并入 Codex，让 Codex 从生成、修改代码扩展到存储、评审与交付代码；Pierre 的开源库 Trees、Diffs、Highlights 早已跑在 Codex 里，收购后仍保持开源，交易价格未披露。</p>
+            <a class="source-link" href="https://openai.com/index/openai-to-acquire-pierre/">OpenAI 收购 Pierre Computer（官方公告）</a>
+            <p class="keywords">关键词：Codex、代码存储（code storage）、开发者工具（developer tools）、收购（acquisition）</p>
+          </li>
+          <li class="item">
+            <p>Together AI 11 月 4 日推出 Polymorphic Inference 与 Together Compiler：用 agent 循环持续为生产推理重写 GPU 代码，热重载候选实现、无需重启引擎；厂商自报在 Kimi K3、GLM 5.3 等模型上 24 小时内提速 1.3–3 倍，已在其无服务器端点上服务数万亿 token。</p>
+            <a class="source-link" href="https://www.together.ai/polymorphic-inference">Together Compiler（官方发布页）</a>
+            <p class="keywords">关键词：推理优化（inference optimization）、GPU 代码生成（GPU code generation）、agent 循环（agent loops）、无服务器推理（serverless inference）</p>
+          </li>
+          <li class="item">
+            <p>11 月 3 日创建的开源项目 Agent Autoloop 两天内冲到约 3,150 star（MIT 协议）：自托管中台，用 cron、GitHub issue 或 HTTP 触发本机的 Claude Code/Codex 等命令行 agent，每轮干完即退出、拿不准才发卡片请人拍板；但作者自认提示注入未解决，跑无人值守前务必先读安全说明。</p>
+            <a class="source-link" href="https://github.com/KKKKhazix/agent-autoloop">Agent Autoloop（GitHub）</a>
+            <p class="keywords">关键词：自托管（self-hosted）、Claude Code、定时触发（scheduled triggers）、提示注入（prompt injection）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1104-2030">
         <header class="round-header">
           <h2 id="round-1104-2030">11 月 4 日 20:30 轮</h2>
@@ -589,6 +655,23 @@
           </li>
         </ol>
       </section>
+      
+      
+      
+      
+      
+      
+
+      
+
+      
+      
+      
+      
+      
+
+<details class="archive">
+        <summary>历史归档（11 月 2 日及之前）</summary>
       <section class="round" aria-labelledby="round-1102-2030">
         <header class="round-header">
           <h2 id="round-1102-2030">11 月 2 日 20:30 轮</h2>
@@ -672,23 +755,6 @@
           </li>
         </ol>
       </section>
-      
-      
-      
-      
-      
-      
-
-      
-
-      
-      
-      
-      
-      
-
-<details class="archive">
-        <summary>历史归档（11 月 1 日及之前）</summary>
       <section class="round" aria-labelledby="round-1101-1930">
         <header class="round-header">
           <h2 id="round-1101-1930">11 月 1 日 19:30 轮</h2>
@@ -6015,6 +6081,57 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1105-0830-academic">
+        <header class="round-header">
+          <h2 id="round-1105-0830-academic">11 月 5 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Recursa 是一篇关于递归自改进（RSI）的论文：基础模型系统把学到的领域技能、使用时机、任务经验与反思写进一个自建知识库，再用并行学习者执行任务、合成局部改进并验证合并回去，不需要人类专家或更强的教师模型。在 Harvey LAB 的 Firm Knowledge 基准上，DeepSeek-V4.1-Flash 的全通过率从 30.0% 提升到 55.0%。做 agent 自改进、或关心模型如何从自身经验中学习的读者值得读原文。论文 arXiv:2611.04035，标题经 arXiv 摘要页核实为《Recursa: Toward Recursively Self-Improving Foundation Model Systems》（2026 年 11 月 2 日提交）。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7524127655328133120">Recursa：让基础模型系统从自身经验中递归自改进（arXiv:2611.04035）</a>
+            <p class="keywords">关键词：递归自改进（recursive self-improvement）、知识库（knowledge base）、并行学习（parallel learning）、基础模型（foundation models）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1105-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1105-morning-academic">11 月 5 日早报</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>BenchFlow 联合伯克利、加州理工、哈佛、斯坦福、亚马逊等 30 余家机构发布 FrontierPhysics：56 个由物理学家基于真实研究设计的任务，要求 agent 完成查文献、定计划、做实验、写手稿全流程；论文自报没有任何配置能在 168 次 rollout 中通过超过 46 次，短板是推理严谨性而非知识。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06910">FrontierPhysics：面向端到端物理研究的 agent 评测</a>
+            <p class="keywords">关键词：agent 评测（agent evaluation）、物理研究（physics research）、多机构基准（multi-institution benchmark）、端到端研究（end-to-end research）</p>
+          </li>
+          <li class="item">
+            <p>帝国理工学院与牛津大学发布 Airlock：给多智能体系统加运行时溯源隔离，用溯源 DAG 追踪受污染的执行、只切断最小范围的受污染路径；论文自报拦截全部告警后的错误执行、零泄漏，比 A2A、LangGraph 原生控制多保留 68–96 个百分点的健康工作。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06727">Airlock：多智能体系统的选择性在线故障隔离</a>
+            <p class="keywords">关键词：多智能体系统（multi-agent systems）、运行时隔离（runtime isolation）、故障隔离（fault isolation）、溯源（provenance tracking）</p>
+          </li>
+          <li class="item">
+            <p>马来西亚拉曼大学、新加坡国立大学等团队实证：合法签名的 MCP 工具可在正常工作时暗藏木马，把机密数据塞进发往合规目的地的请求，Meta 的 MCPGuard-Dynamic 全部 7 种配置均未拦住；提出的 germline execution 让每次调用在只拿到授权数据的临时副本中运行，153 次攻击运行零泄漏。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06585">Signed, Sealed, Leaked：签名 MCP 工具链中的信任缺口</a>
+            <p class="keywords">关键词：MCP、供应链安全（supply chain security）、数据泄露（data exfiltration）、提示注入（prompt injection）</p>
+          </li>
+          <li class="item">
+            <p>清华大学 AI Agent Group 提出 Coca-Cola：把工具观测压缩为连续潜在 token 而非文本，用动作保持训练只保留对决策关键的信息；论文自报 token 消耗降低 70%–89%、端到端运行时间缩短 24%–56%，任务表现不降反升。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06500">Tools Need Not Speak in Text：用潜在 token 压缩 agent 的工具上下文</a>
+            <p class="keywords">关键词：工具上下文压缩（tool context compression）、潜在 token（latent tokens）、token 效率（token efficiency）、agent 推理（agent reasoning）</p>
+          </li>
+          <li class="item">
+            <p>独立研究者提出 SARBLOH：一个零参数的确定性感知引擎把 ARC-AGI-3 的整数网格转为对象清单与几何简报，让 agent 写算法假设而非逐个输出低级动作；论文自报公开集 rubric 分从 3/28 升至 25/28、token 用量减少 89.4%，官方隐藏评测得分 16.53；单作者自报成绩，复现待观察。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06793">SARBLOH：感知而非规划决定 ARC-AGI-3 表现</a>
+            <p class="keywords">关键词：ARC-AGI、对象感知（object perception）、几何推理（geometric reasoning）、确定性引擎（deterministic engine）</p>
+          </li>
+          <li class="item">
+            <p>南京航空航天大学牵头、清华、北航、同济参与的 SecureGARD：给工具调用 agent 加本体论治理，把异构工具调用映射到共享语义动作，做 ready/waiting/forbidden 三态裁决；论文自报在 AgentDojo、ASB、AgentDyn 三个基准的间接提示注入设定下攻击成功率均为 0%，且受攻击下的任务效用高于基线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06682">SecureGARD：给工具调用 agent 加本体论治理</a>
+            <p class="keywords">关键词：工具调用安全（tool-calling safety）、本体论治理（ontology governance）、间接提示注入（indirect prompt injection）、AgentDojo</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1104-1230-academic">
         <header class="round-header">
           <h2 id="round-1104-1230-academic">11 月 4 日 12:30 轮</h2>
@@ -6072,6 +6189,12 @@
           </li>
         </ol>
       </section>
+      
+      
+      
+
+<details class="archive">
+        <summary>历史归档（11 月 2 日及之前）</summary>
       <section class="round" aria-labelledby="round-1102-morning-academic">
         <header class="round-header">
           <h2 id="round-1102-morning-academic">11 月 2 日早报</h2>
@@ -6095,12 +6218,6 @@
           </li>
         </ol>
       </section>
-      
-      
-      
-
-<details class="archive">
-        <summary>历史归档（11 月 1 日及之前）</summary>
       <section class="round" aria-labelledby="round-1031-1230-academic">
         <header class="round-header">
           <h2 id="round-1031-1230-academic">10 月 31 日 12:30 轮</h2>
