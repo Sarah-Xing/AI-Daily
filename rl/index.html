@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>强化学习推送</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --page: #f5f7f6;
+        --surface: #ffffff;
+        --ink: #17201d;
+        --muted: #5e6965;
+        --line: #dbe1de;
+        --soft-line: #e9eeeb;
+        --accent: #09735e;
+        --accent-soft: #e0f2ec;
+        --link: #086b59;
+        --shadow: 0 1px 2px rgba(18, 34, 29, 0.05), 0 10px 32px rgba(18, 34, 29, 0.04);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page: #101513;
+          --surface: #171d1a;
+          --ink: #edf3f0;
+          --muted: #a9b5b0;
+          --line: #303936;
+          --soft-line: #28302d;
+          --accent: #64d4b8;
+          --accent-soft: #173a31;
+          --link: #79ddc3;
+          --shadow: none;
+        }
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        min-width: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+        overflow-wrap: anywhere;
+      }
+
+      a { color: inherit; }
+
+      main {
+        width: min(100%, 900px);
+        margin: 0 auto;
+        padding: 48px 28px 72px;
+      }
+
+      .intro {
+        margin: 0 0 38px;
+        padding: 22px 24px;
+        background: var(--accent-soft);
+        border-radius: 12px;
+        color: var(--ink);
+        font-size: clamp(17px, 2.4vw, 20px);
+        font-weight: 650;
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+      }
+
+      .intro::before {
+        content: "";
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        margin-right: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        vertical-align: 0.08em;
+      }
+
+      .search-sticky {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        margin: 0 0 30px;
+        padding: 12px 0;
+        background: var(--page);
+      }
+
+      .search-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .search-box svg {
+        position: absolute;
+        left: 16px;
+        width: 18px;
+        height: 18px;
+        color: var(--muted);
+        pointer-events: none;
+        flex: none;
+      }
+
+      #search {
+        width: 100%;
+        padding: 13px 44px 13px 44px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--surface);
+        color: var(--ink);
+        font: inherit;
+        font-size: 16px;
+        box-shadow: var(--shadow);
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      #search::placeholder { color: var(--muted); }
+
+      #search::-webkit-search-cancel-button,
+      #search::-webkit-search-decoration {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      #search:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+      }
+
+      .search-clear {
+        position: absolute;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        border: none;
+        border-radius: 50%;
+        background: transparent;
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .search-clear:hover {
+        background: var(--accent-soft);
+        color: var(--ink);
+      }
+
+      .search-clear:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .search-clear[hidden] { display: none; }
+
+      .search-status {
+        margin: 10px 2px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .tabs {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 0 0 26px;
+      }
+
+      .tab {
+        appearance: none;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--surface);
+        color: var(--ink);
+        padding: 11px 24px;
+        font: inherit;
+        font-size: 16px;
+        font-weight: 650;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+      }
+
+      .tab:hover { border-color: var(--accent); }
+
+      .tab:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .tab[aria-selected="true"] {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: var(--page);
+      }
+
+      .tab-count {
+        margin-left: 8px;
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+        opacity: 0.62;
+      }
+
+      .academic-empty {
+        padding: 56px 32px;
+        background: var(--surface);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .academic-empty p {
+        max-width: 54ch;
+        margin: 0 auto;
+      }
+
+      .academic-empty p + p { margin-top: 10px; }
+
+      .hidden { display: none !important; }
+
+      .page-footer {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+        letter-spacing: 0.02em;
+      }
+
+      .round + .round { margin-top: 52px; }
+
+      .archive {
+        margin-top: 52px;
+        border-top: 1px solid var(--line);
+      }
+
+      .archive > summary {
+        padding: 18px 2px;
+        color: var(--muted);
+        font-weight: 650;
+        cursor: pointer;
+      }
+
+      .archive > summary:hover { color: var(--ink); }
+
+      .archive > summary:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+
+      .archive[open] > summary { margin-bottom: 18px; }
+
+      .round-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 13px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(22px, 4vw, 29px);
+        line-height: 1.3;
+        letter-spacing: -0.025em;
+      }
+
+      .count {
+        flex: none;
+        color: var(--muted);
+        font-size: 14px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: feed;
+      }
+
+      .item {
+        counter-increment: feed;
+        display: grid;
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 8px 15px;
+        padding: 24px 0 25px;
+        border-bottom: 1px solid var(--soft-line);
+      }
+
+      .item::before {
+        content: counter(feed, decimal-leading-zero);
+        grid-row: 1 / span 2;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 750;
+        line-height: 1.75;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .item p {
+        margin: 0;
+        max-width: 74ch;
+        color: var(--ink);
+      }
+
+      .source-link {
+        justify-self: start;
+        grid-column: 2;
+        color: var(--link);
+        font-size: 14px;
+        font-weight: 650;
+        line-height: 1.4;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 1px;
+      }
+
+      .source-link:hover { text-decoration-thickness: 2px; }
+
+      .source-link:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
+        border-radius: 2px;
+      }
+
+      .source-note {
+        display: block;
+        grid-column: 2;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 560px) {
+        main { padding: 24px 18px 52px; }
+        .intro { margin-bottom: 32px; padding: 18px; border-radius: 9px; }
+        .round + .round { margin-top: 42px; }
+        .round-header { align-items: flex-end; gap: 10px; }
+        h2 { max-width: 12em; }
+        .item { grid-template-columns: 28px minmax(0, 1fr); gap: 8px 10px; padding: 20px 0 21px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+          .item .keywords {
+        grid-column: 2;
+        font-size: 13px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="intro">强化学习动态推送：RL 算法 / RLHF / 机器人与游戏 RL 每日进展，由 Everest 整理，每天多次更新。</p>
+
+      <div class="tabs" role="tablist" aria-label="选择推送类别">
+        <button class="tab" role="tab" id="tab-industry" aria-controls="panel-industry" aria-selected="true" type="button">业界<span class="tab-count"></span></button>
+        <button class="tab" role="tab" id="tab-academic" aria-controls="panel-academic" aria-selected="false" tabindex="-1" type="button">学术<span class="tab-count"></span></button>
+      </div>
+
+      <div class="search-sticky">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+          <input type="search" id="search" placeholder="搜索当前标签页的条目……" aria-label="按关键词搜索当前标签页的条目" autocomplete="off" spellcheck="false" />
+          <button class="search-clear" id="search-clear" type="button" aria-label="清空搜索" hidden>&times;</button>
+        </div>
+        <p class="search-status" id="search-status" role="status" aria-live="polite" hidden></p>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      
+      
+      
+      
+      
+      
+
+      
+
+      
+      
+      
+      
+      
+
+<details class="archive">
+        <summary>历史归档</summary>
+      
+      
+
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+
+
+      
+
+
+
+
+
+
+
+
+
+      
+
+      
+
+      
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+      
+
+      
+
+      
+
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+      
+
+      
+
+      
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+      
+      </details>
+      </div>
+
+      <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      
+      
+      
+
+<details class="archive">
+        <summary>历史归档</summary>
+      
+      
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+
+      
+
+      
+
+      
+      
+      
+
+      
+
+
+      
+
+      
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+
+
+
+
+      
+
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+
+
+      <!-- 学术标签页：论文 / 研究进展 / 会议课程类条目按推送轮次分节（.round），新内容加在顶部；h2 id 用 -academic 后缀，与业界区同时间分节区分 -->
+
+
+      
+
+      
+
+
+      
+
+      
+
+      
+
+      
+
+
+      
+
+      
+      
+      
+
+      
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      </details>
+      </div>
+
+      <footer class="page-footer">内容快照 · 2026 年 10 月 15 日（America/Los_Angeles）</footer>
+    </main>
+    <script>
+      (function () {
+        var input = document.getElementById("search");
+        var clearBtn = document.getElementById("search-clear");
+        var status = document.getElementById("search-status");
+        var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+        var panels = Array.prototype.slice.call(document.querySelectorAll(".tabpanel"));
+
+        function activePanel() {
+          return document.querySelector(".tabpanel:not(.hidden)");
+        }
+
+        var haystacks = [];
+
+        panels.forEach(function (panel) {
+          Array.prototype.forEach.call(panel.querySelectorAll(".round"), function (round) {
+            var count = round.querySelector(".count");
+            if (count) count.dataset.orig = count.textContent;
+            Array.prototype.forEach.call(round.querySelectorAll(".item"), function (item) {
+              // 匹配范围仅限条目正文（p），不含序号（CSS 计数器）和链接辅助文字（a/.source-note）
+              var paras = Array.prototype.map.call(item.querySelectorAll("p"), function (el) {
+                return el.textContent;
+              });
+              haystacks.push({
+                item: item,
+                round: round,
+                panel: panel,
+                text: paras.join(" ").toLowerCase()
+              });
+            });
+          });
+        });
+
+        // 标签页计数：各标签页条目总数
+        tabs.forEach(function (tab) {
+          var panel = document.getElementById(tab.getAttribute("aria-controls"));
+          var countEl = tab.querySelector(".tab-count");
+          if (panel && countEl) {
+            countEl.textContent = panel.querySelectorAll(".item").length;
+          }
+        });
+
+        function applyFilter() {
+          var q = input.value.trim().toLowerCase();
+          var panel = activePanel();
+          var visibleCounts = new Map();
+          var totalVisible = 0;
+
+          haystacks.forEach(function (entry) {
+            if (entry.panel !== panel) return;
+            var match = q === "" || entry.text.indexOf(q) !== -1;
+            entry.item.classList.toggle("hidden", !match);
+            if (match) {
+              totalVisible++;
+              visibleCounts.set(entry.round, (visibleCounts.get(entry.round) || 0) + 1);
+            }
+          });
+
+          Array.prototype.forEach.call(panel.querySelectorAll(".round"), function (round) {
+            var visible = visibleCounts.get(round) || 0;
+            round.classList.toggle("hidden", q !== "" && visible === 0);
+            var count = round.querySelector(".count");
+            if (count) {
+              count.textContent = q === "" ? count.dataset.orig : "找到 " + visible + " 条";
+            }
+          });
+
+          if (q === "") {
+            status.hidden = true;
+          } else {
+            status.hidden = false;
+            status.textContent =
+              totalVisible === 0
+                ? "没有找到包含「" + input.value.trim() + "」的条目"
+                : "共找到 " + totalVisible + " 条匹配条目（本标签页共 " + panel.querySelectorAll(".item").length + " 条）";
+          }
+
+          clearBtn.hidden = input.value === "";
+        }
+
+        function selectTab(tab) {
+          tabs.forEach(function (t) {
+            t.setAttribute("aria-selected", t === tab ? "true" : "false");
+            t.tabIndex = t === tab ? 0 : -1;
+          });
+          panels.forEach(function (panel) {
+            panel.classList.toggle("hidden", panel.id !== tab.getAttribute("aria-controls"));
+          });
+          applyFilter();
+        }
+
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            selectTab(tab);
+          });
+          tab.addEventListener("keydown", function (event) {
+            if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+            event.preventDefault();
+            var index = tabs.indexOf(tab);
+            var next = event.key === "ArrowRight" ? (index + 1) % tabs.length : (index - 1 + tabs.length) % tabs.length;
+            tabs[next].focus();
+            selectTab(tabs[next]);
+          });
+        });
+
+        input.addEventListener("input", applyFilter);
+        input.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            input.value = "";
+            applyFilter();
+            input.blur();
+          }
+        });
+        clearBtn.addEventListener("click", function () {
+          input.value = "";
+          applyFilter();
+          input.focus();
+        });
+      })();
+    </script>
+  </body>
+</html>
