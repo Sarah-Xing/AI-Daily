@@ -383,6 +383,19 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1106-morning">
+        <header class="round-header">
+          <h2 id="round-1106-morning">11 月 6 日早报</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Allen Institute for AI 今天发布 ToyBlocks，这是其 FoundationWorlds 框架的第一个环境：一个桌面机械臂加积木的仿真世界，配套任务自动生成、演示自动生成与评测工具。短程技能由强化学习与运动规划在 NVIDIA Isaac Lab 里生成，首批放出 85,336 条长程演示（约 1,600 小时、1.44 亿帧），代码 Apache-2.0、数据集为 LeRobot 格式，并开源了 Molmo2-4B-tb 与 ManiFlow-tb 两个模型。值得注意的结论是 ManiFlow、π0.5、MolmoAct 2 在这个受控环境里泛化都很差，说明动作模型泛化远未解决；同时仿真训出的策略零样本迁移到真实 Franka 机械臂上仍有 81.1% 的原子技能成功率。</p>
+            <a class="source-link" href="https://huggingface.co/blog/allenai/toyblocks">ToyBlocks：机器人学习的可控世界</a>
+            <p class="keywords">关键词：机器人学习（robot learning）、仿真环境（simulation environment）、演示数据（demonstration data）、具身智能（embodied AI）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1105-2030">
         <header class="round-header">
           <h2 id="round-1105-2030">11 月 5 日 20:30 轮</h2>
@@ -729,6 +742,49 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1106-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1106-morning-academic">11 月 6 日早报</h2>
+          <span class="count">7 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：牛津大学、微软研究院<br>核心价值问题：RLVR 在数学、代码等可验证任务上大获成功，但开放式任务没有标准答案、人工标注昂贵、学到的奖励模型又容易被 hack，怎么把 RLVR 的红利扩展到开放域？<br>方法：提出 Rubric Curriculum RL（RcRL），利用&quot;评判比生成容易&quot;的生成-验证不对称：用成对偏好比较 rollouts，配合一套逐步推进的评分标准课程，不用新数据、不用人工标注、不用更强的教师模型；成对比较比绝对打分更具区分度，非平稳目标抑制过拟合与奖励 hack。<br>为什么值得看：基线几百步就平台期，RcRL 保持输出熵、1,000 步后还在提升；创意写作上对 base 模型人类胜率 70.5%，HealthBench 上比 base 提升 14.6%（共识子集 25.4%）。想把 RLVR 做到开放式任务的团队可以直接参考这套配方。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06244">Rubric Curriculum RL: Exploiting the Generation-Verification Gap in Non-Verifiable Domains</a>
+            <p class="keywords">关键词：RLVR、开放式任务（open-ended tasks）、评分标准课程（rubric curriculum）、偏好比较（preference comparison）</p>
+          </li>
+          <li class="item">
+            <p>机构：南加州大学、Amazon Alexa<br>核心价值问题：Alexa+ 带屏设备对话时显示的动画图标原来靠设计师逐个手绘，精致但覆盖不了开放对话的任意话题，怎么自动化？<br>方法：把图标生成拆成图像生成→语义分解→矢量化→风格化→动画的多阶段流水线，用 RLVR 优化最关键的第一阶段：设计可自动判定是否违反设计规范的验证器，用它微调 flow matching 图像生成模型；SFT 不可行，因为不存在符合这些约束的线稿图标数据集。<br>为什么值得看：少见的 RLVR 真正进生产管线的案例——独立 VLM 评判下通过率从 15.7% 升到 58.7%（3.7 倍），模型与验证器均已部署上线，验证器还兼任上线前的自动质检关。对做产品化 RL 的人是完整的工程参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06123">From Handcrafted to Generative: RLVR-Optimized Icon Generation for Alexa+</a>
+            <p class="keywords">关键词：RLVR、图标生成（icon generation）、Alexa+、生产部署（production deployment）</p>
+          </li>
+          <li class="item">
+            <p>机构：Salesforce AI Research<br>核心价值问题：On-policy distillation（OPD）用冻结教师的逐 token 监督训练学生自己的 rollouts，信号更稠密，到底比 GRPO 省算力吗？<br>方法：系统对比 vanilla reverse-KL OPD 与 GRPO，覆盖任务难度、学生/教师规模、领域与优化选择，以 held-out 准确率对训练 FLOPs 衡量。<br>为什么值得看：结论分情况：用外部后训练教师时 OPD 通常输给 GRPO，还常让回答变长；但教师换成学生自己的 GRPO checkpoint 时，OPD 能以少 50 倍的蒸馏 FLOPs 恢复该 checkpoint 的数学准确率；多教师 OPD 把各领域 GRPO 专家合并成一个学生，蒸馏只占专家训练 FLOPs 的 5.2%–8.0%，两领域混合总 FLOPs 比联合 GRPO 少 42%。对&quot;先 GRPO 再自蒸馏&quot;的省算力路线是直接的实证依据。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08453">Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO</a>
+            <p class="keywords">关键词：蒸馏（distillation）、GRPO、算力效率（compute efficiency）、后训练（post-training）</p>
+          </li>
+          <li class="item">
+            <p>机构：独立研究者（作者位于美国加州 Santa Clara，未注明机构）<br>核心价值问题：RLVR 通常被当作 SFT 之后的增益来源，但这个增益到底有多少是 RL 自己贡献的？多数评估没法把两个阶段拆开精确对照。<br>方法：自建 gpu-train-debug 基准（1,877 个 GPU/LLM 训练故障诊断任务，30 类原型，程序化验证器给部分分），SFT 与 GRPO 都跑满做精确对照，研究设计预注册；整个研究只花了 8.69 美元算力。<br>为什么值得看：结果出人意料：1,200 条金标准演示几乎解了这道题（困难 split SFT 0.785），而 15 步 GRPO 从 base 模型几乎没动（0.314 vs 0.311）；预注册规模下 RLVR 分布内增益仅 +0.22 分（95% CI 含 0），分布外 +0.33 分。提醒人们别把 SFT 的功劳算到 RL 头上，RLVR 的边际价值要分场景看。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.07639">Measuring the Marginal Value of Verifier-Based RL Beyond Supervised Fine-Tuning</a>
+            <p class="keywords">关键词：RLVR、SFT、边际价值（marginal value）、预注册研究（preregistered study）</p>
+          </li>
+          <li class="item">
+            <p>机构：华东师范大学（上海人工智能教育研究院等）<br>核心价值问题：长程智能体 RL 只有结局奖励，中间每一步做得对不对得不到直接监督，信用分配困难。<br>方法：AttnSR 从训练回放时策略模型的注意力图中反推前面步骤与最终结果的相关性，按此分配步骤级奖励；不需要另外训练奖励模型、不增加 rollout；以运行基线决定奖励是强化还是惩罚。<br>为什么值得看：Qwen2.5-7B-Instruct 在 ALFWorld 上相对 PPO 基线，held-out 成功率从 91.2% 提升到 97.1%，ScienceWorld 上各 checkpoint 均有提升且环境交互减少 29.9%，代码已开源。对做长程 agent RL 的人是几乎零额外成本的改进点。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.07932">AttnSR: Attention Step Reward for Long-Horizon Agentic RL</a>
+            <p class="keywords">关键词：长程 agent（long-horizon agent）、信用分配（credit assignment）、注意力（attention）、步骤奖励（step reward）</p>
+          </li>
+          <li class="item">
+            <p>机构：内华达大学里诺分校、华盛顿州立大学<br>核心价值问题：DPO 的成对偏好常与逐点标准（长度、正确性、安全性分数）冲突，标准 DPO 把&quot;冲突对&quot;和&quot;一致对&quot;同等对待，会导致约束漂移。<br>方法：刻画了约束漂移这一系统性失效模式：小更新下冲突对倾向于增加约束代价、一致对倾向于修复，净变化取决于两者平衡；由此给出可从数据集统计量直接算的预对齐诊断量 ρ*_eq（判断数据集是自纠正还是需要干预），并提出 Conflict-aware DPO（CoDPO），按 ρ*_eq 下调冲突对权重、再加自适应 margin 修正残余漂移。<br>为什么值得看：偏好优化里一个真实存在但常被忽视的坑，给了先诊断、再修正的完整工具；四个领域上 CoDPO 在基本保留 DPO 偏好学习的同时降低了漂移，权衡优于硬过滤与约束/多目标基线。做 DPO 或偏好数据清洗的人可以直接用这个诊断量筛数据。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.07375">When Scores Conflict with Preferences: Pre-Alignment Diagnosis and Adaptive Correction of Constraint Drift in DPO</a>
+            <p class="keywords">关键词：DPO、偏好优化（preference optimization）、约束漂移（constraint drift）、数据诊断（data diagnosis）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京理工大学、布里斯托大学（布里斯托机器人实验室）<br>核心价值问题：接触丰富的灵巧操作需要触觉里的剪切力信息，但用软体/可变形仿真算剪切太贵，没法大规模跑 RL。<br>方法：TactileLab——基于 IsaacLab 的可扩展多模态触觉仿真框架，用刚体仿真加光流法高效估计接触面的稠密切向运动（simulated tactile flow），配合接触深度场；提出联合处理长程本体感觉与触觉观测的策略架构，并给出 real-to-sim 触觉转换方法与新的触觉数据采集方法。<br>为什么值得看：多接触任务上用模拟触觉流训练的策略能高效学习并涌现接触感知行为，真实部署覆盖双臂与灵巧手内操作；做接触丰富操作、触觉 RL 的团队会直接受益。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.07881">TactileLab: Sim-to-Real Dexterous Robot Manipulation with Efficient Shear-Sensitive Tactile Simulation</a>
+            <p class="keywords">关键词：触觉仿真（tactile simulation）、灵巧操作（dexterous manipulation）、sim-to-real、机器人（robotics）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1105-0830-academic">
         <header class="round-header">
           <h2 id="round-1105-0830-academic">11 月 5 日 08:30 轮</h2>
@@ -945,7 +1001,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 10 月 15 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 6 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
