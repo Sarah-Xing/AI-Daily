@@ -383,6 +383,44 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1105-1630">
+        <header class="round-header">
+          <h2 id="round-1105-1630">11 月 5 日 16:30 轮</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>企业智能体不该复用固定提示词，而应根据已验证的运行时上下文动态选择指令。作者给了一条 Context Validation → Conditional Instruction → Agent Decision → Policy Check → Outcome Verification 的路径，把指令选择变成有校验、有策略检查的闭环。做企业级 agent 落地、关心提示词治理的人值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:7037632-7524259559885037569/">Agentic AI：提示词要跟着运行时上下文走</a>
+            <p class="keywords">关键词：提示词治理（prompt governance）、运行时上下文（runtime context）、企业智能体（enterprise agents）</p>
+          </li>
+          <li class="item">
+            <p>Veris AI 为智能体搭建仿真测试环境与基准：在用户遇到问题之前，先在逼真环境和困难场景里发现智能体的失效模式，并让评测可重复。相关内容将在 11 月 30 日至 12 月 1 日的 AI Dev NYC 上讲授。做 agent 评测、关心上线前如何系统性找 bug 的人可以直接看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7524245560157990912/">Veris AI：用仿真环境在上线前发现智能体失效模式</a>
+            <p class="keywords">关键词：智能体评测（agent evaluation）、仿真测试（simulation testing）、失效模式（failure modes）</p>
+          </li>
+          <li class="item">
+            <p>Twilio Assemble 的回顾：客户可以自带 AI 智能体与自有文档，通过 WhatsApp 或电话与之对话，后台 Conversation Intelligence 提供 4 项内置分析。亮点是“自带 agent、自带文档”的组合，企业不用换掉已有客服知识就能接上语音与消息渠道。做客服 agent 落地的人值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7524236681919582208/">Twilio Assemble：自带 AI 智能体与文档接 WhatsApp 与电话</a>
+            <p class="keywords">关键词：客服智能体（customer service agents）、WhatsApp、电话语音（voice calling）、自带文档（bring your own documents）</p>
+          </li>
+          <li class="item">
+            <p>Box 推出了 Context Retrieval，用 NVIDIA Nemotron 开源模型把企业知识与工具接给模型：结合关键词匹配与语义/上下文，帮助智能体从有权限的内容里检索相关信息。与黄仁勋 BoxWorks 分享同一主题，但这是 Box 一侧的产品角度，关心企业知识接 agent 的人值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7524233212257087488/">Box Context Retrieval：用 Nemotron 把企业知识接给智能体</a>
+            <p class="keywords">关键词：企业知识检索（enterprise knowledge retrieval）、Nemotron、检索增强生成（retrieval-augmented generation）</p>
+          </li>
+          <li class="item">
+            <p>GitHub 推出了新的 PR 概览页（公开预览）：在 PR 顶部给一份就绪情况摘要。因为编码智能体现在会批量提交代码、留评审意见，PR 评审负担越来越重，这个页面就是为了应对这种情况。在生产环境用编码 agent、关心代码评审流程的人值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7524232597980336130/">GitHub 新 PR 概览页：应对编码智能体带来的评审负担</a>
+            <p class="keywords">关键词：代码评审（code review）、编码智能体（coding agents）、PR 概览（PR overview）</p>
+          </li>
+          <li class="item">
+            <p>Neo4j 的 Stephen Coltart 分享了 Neo4j Ontology Graph Specification：一种务实、开放、以 AI 为先的方式，用本体图描述实体、关系、属性与业务含义，让人与系统对同一领域有明确一致的理解。这是知识图谱接 agent 应用的基础工作，做 GraphRAG 或企业知识建模的人值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7524215490907398145/">Neo4j 本体图规范：给领域知识一个机器可读的共享定义</a>
+            <p class="keywords">关键词：本体图（ontology graphs）、知识图谱（knowledge graphs）、GraphRAG、企业知识建模（enterprise knowledge modeling）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1105-1230">
         <header class="round-header">
           <h2 id="round-1105-1230">11 月 5 日 12:30 轮</h2>
@@ -6109,6 +6147,19 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1105-1630-academic">
+        <header class="round-header">
+          <h2 id="round-1105-1630-academic">11 月 5 日 16:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>百万级上下文窗口本身不是能力：NVIDIA 的实验显示，在 SWE-bench Verified 上，Claude Opus 4.5 用完整历史得 70.0 分、每次只取一个动作进上下文反而得 70.2 分。配套论文《You don&#x27;t need long context》（arXiv 2611.05306）认为，带 shell 与文件系统的智能体加上语义状态空间模型，可能比把一切塞进上下文更强。做 agent 架构、纠结上下文长度取舍的人值得读原文。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7524235940832194561/">百万上下文不是能力：智能体需要 shell 与语义状态空间</a>
+            <p class="keywords">关键词：长上下文（long context）、智能体架构（agent architecture）、语义状态空间（semantic state space）、SWE-bench</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1105-1230-academic">
         <header class="round-header">
           <h2 id="round-1105-1230-academic">11 月 5 日 12:30 轮</h2>
