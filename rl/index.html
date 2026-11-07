@@ -427,6 +427,23 @@
           </li>
         </ol>
       </section>
+      
+      
+      
+      
+      
+      
+
+      
+
+      
+      
+      
+      
+      
+
+<details class="archive">
+        <summary>历史归档</summary>
       <section class="round" aria-labelledby="round-1104-morning">
         <header class="round-header">
           <h2 id="round-1104-morning">11 月 4 日早报</h2>
@@ -450,23 +467,6 @@
           </li>
         </ol>
       </section>
-      
-      
-      
-      
-      
-      
-
-      
-
-      
-      
-      
-      
-      
-
-<details class="archive">
-        <summary>历史归档</summary>
       
       
 
@@ -760,6 +760,64 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1107-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1107-morning-academic">11 月 7 日早报</h2>
+          <span class="count">10 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>奖励机能表达依赖历史的非马尔可夫任务奖励，但一直需要人工为每个环境写命题 grounding 标注函数。RM-VLM 用大语言模型从自然语言任务描述直接生成奖励机，再用视觉语言模型在图像观测上做命题 grounding 并给出稠密奖励，在网格导航、机器人操作、三维物体收集上都优于已有的 VLM 奖励方法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08308">RM-VLM: From Natural-Language Task Descriptions to Vision-Grounded Reward Machines</a>
+            <p class="keywords">关键词：奖励机（reward machines）、视觉语言模型（vision-language models）、奖励建模（reward modeling）、强化学习（reinforcement learning）</p>
+          </li>
+          <li class="item">
+            <p>灵巧操作需要精确控制，仿真里的大规模 RL 能学到，但视觉演示很少时很难迁移到视觉策略。Latent RL Priors 先把 RL rollout 蒸馏成 flow-matching 动作解码器，再冻结解码器、只用动作监督学习视觉接口；在三个仿真任务的少数据条件下优于 π0.5 和 GR00T N1.7 的全参数微调，开门任务用 10 倍更少的演示就超过全数据基线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08458">Latent RL Priors for Data-Efficient Dexterous Manipulation</a>
+            <p class="keywords">关键词：灵巧操作（dexterous manipulation）、动作解码器（action decoder）、少样本学习（few-shot learning）、机器人（robotics）</p>
+          </li>
+          <li class="item">
+            <p>SFT 和 RL 都常用 LoRA，但两阶段的优化动态有何不同一直不清楚。这篇工作跟踪数学推理任务上 LoRA 更新的奇异谱与子空间旋转，发现 RL 在任何学习率下都压缩谱、SFT 在中等学习率下扩张谱，并定位到组均值基线相减是分歧来源；据此为两阶段各定制了 LoRA 更新方式，在多个模型上取得最好成绩。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08414">Spectral and Subspace Dynamics of LoRA in Supervised Fine-Tuning and Reinforcement Learning</a>
+            <p class="keywords">关键词：LoRA、微调（fine-tuning）、监督微调（supervised fine-tuning）、强化学习（reinforcement learning）</p>
+          </li>
+          <li class="item">
+            <p>用 RL 微调预训练扩散/流策略代价高、样本效率低，还缺理论保证；只微调初始噪声的方法又会遇到&quot;噪声混叠&quot;。LARBRID 提出隐噪声线性 MDP 并推导 Bridge 方程，用共享表征对齐噪声与动作空间的价值，在多组机器人运动与操作任务上比强基线提升 2–3 倍，代码已开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.07275">Efficient Diffusion Policy Fine Tuning with Latent Noise Representation Bridging</a>
+            <p class="keywords">关键词：扩散策略（diffusion policy）、策略微调（policy fine-tuning）、机器人操作（robot manipulation）、隐空间（latent space）</p>
+          </li>
+          <li class="item">
+            <p>RL 已是扩散模型的标准后训练方法，但现有 RL 目标都针对多步采样器设计，少步模型学的是区间平均速度，直接套用会失配。FewStepRL 用三阶段改造系统化地给出 FlowGRPO、AWM、DiffusionNFT 等五个方法的少步版本，并在 SD3.5-Medium 与 Wan2.1 视频生成上做了七种实现的横向对比，给出&quot;奖励可微时奖励梯度法最好&quot;的实用结论。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08240">FewStepRL: Fine-tuning Few-step Diffusion Models with Reinforcement Learning</a>
+            <p class="keywords">关键词：少步扩散模型（few-step diffusion models）、强化学习微调（RL fine-tuning）、FlowGRPO、视频生成（video generation）</p>
+          </li>
+          <li class="item">
+            <p>持续强化学习里智能体要在适应新情况的同时不忘旧知识，稳定性与可塑性难以兼得。这篇工作把价值函数拆成永久与瞬时两部分并让两者用不同表征：永久部分用参数化表征做长期泛化，瞬时部分用新的非参数近似器直接在原始观测上做快速精确修正；在图像任务与 Craftax-Classic 上优于竞争基线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.07327">Permanent and Transient Representations for Continual Reinforcement Learning</a>
+            <p class="keywords">关键词：持续强化学习（continual reinforcement learning）、价值函数（value functions）、灾难性遗忘（catastrophic forgetting）、表征学习（representation learning）</p>
+          </li>
+          <li class="item">
+            <p>一般和博弈里自利学习者容易走向对所有人都不利的结果，已有的对手塑造方法部署时需要看到对手的参数、策略或奖励。DUOS 用元强化学习发现更新规则，元网络只读智能体自己的经验就输出策略更新，部署时完全不需要对手信息；在五个博弈的循环赛里总分与自博弈双双第一。该文为 AAMAS 2027 录用论文。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08335">Discovering Learning Rules that Shape Others</a>
+            <p class="keywords">关键词：对手塑造（opponent shaping）、元强化学习（meta reinforcement learning）、多智能体博弈（multi-agent games）、学习规则（learning rules）</p>
+          </li>
+          <li class="item">
+            <p>机器人 RL 常把环境跑在训练器之外，边界上的静默错误不报错、策略照样学，实验记录却不再描述真实实验。这篇工作把边界做成显式线协议并注入 25 种故障做变异测试：学习曲线最多只抓到一成故障，而两侧各记一份步骤台账逐项比对能抓住并定位全部故障，Pendulum 上只多花 3% 训练时间；还在 Gymnasium 1.3 与五个多智能体库里发现了真实存在的同类故障。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08144">Detecting Silent Faults at the Environment-Trainer Boundary in Reinforcement Learning</a>
+            <p class="keywords">关键词：环境接口（environment interface）、故障检测（fault detection）、变异测试（mutation testing）、机器人强化学习（robot reinforcement learning）</p>
+          </li>
+          <li class="item">
+            <p>真实世界 RL 学出的接触操作策略容易过拟合训练场景的视觉外观，换个背景、光照就失效。S2C 分两阶段：先用视觉语言模型定位任务相关区域、缩小探索范围，再在该区域内用人机协同的真实世界残差 RL 学精细接触行为；完全不用仿真，在六个真实接触操作任务上成功率始终高于强基线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.07532">Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation</a>
+            <p class="keywords">关键词：接触操作（contact-rich manipulation）、视觉语言模型（vision-language models）、真实世界强化学习（real-world reinforcement learning）、机器人（robotics）</p>
+          </li>
+          <li class="item">
+            <p>安全 RLHF 要求提升有用性的同时满足无害约束，已有原始-对偶方法只能保证最终策略可行，训练中途（包括用来估计梯度的扰动策略）可能违规。ZO-LBPG 是无奖励模型的零阶对数障碍策略梯度，直接从人类偏好估计梯度，并给出高概率保证：训练中执行的每一个策略都严格可行，同时证明全局收敛。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.07561">Provable Zeroth-Order Safe Exploration for Reinforcement Learning from Human Feedback</a>
+            <p class="keywords">关键词：安全强化学习（safe reinforcement learning）、RLHF、零阶优化（zeroth-order optimization）、偏好学习（preference learning）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1106-morning-academic">
         <header class="round-header">
           <h2 id="round-1106-morning-academic">11 月 6 日早报</h2>
@@ -849,6 +907,12 @@
           </li>
         </ol>
       </section>
+      
+      
+      
+
+<details class="archive">
+        <summary>历史归档</summary>
       <section class="round" aria-labelledby="round-1104-morning-academic">
         <header class="round-header">
           <h2 id="round-1104-morning-academic">11 月 4 日早报</h2>
@@ -862,12 +926,6 @@
           </li>
         </ol>
       </section>
-      
-      
-      
-
-<details class="archive">
-        <summary>历史归档</summary>
       
       
       
@@ -1019,7 +1077,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 6 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 7 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
