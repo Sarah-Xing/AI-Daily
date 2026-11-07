@@ -2817,6 +2817,24 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1106-1630-academic">
+        <header class="round-header">
+          <h2 id="round-1106-1630-academic">11 月 6 日 16:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Snap Inc.（论文第一页核实，全部作者均属 Snap）。核心价值问题：生成式检索在大规模推荐与广告里越来越常用，但现有方法要么靠语义 ID 的量化与映射（新物品进目录要重新编号），要么物品编码器与查询生成器分开训练、导致用户与物品对不齐。方法：提出 EGR（Embedding-Native Generative Retrieval），用同一个共享 LLM 同时学物品表示（来自物品元数据）与用户表示（来自交互历史），放在同一个 embedding 空间里；物品直接以稠密向量进 ANN 索引，用户历史编码成稠密检索查询；两路用联合对比训练一起优化。为什么值得看：在 Amazon Reviews 上超过已发表的基线；在 Snap DPA 工业数据上随数据量单调变好、冷启动物品表现稳、能利用多模态输入；线上 A/B 测试带来 +2.91% 的转化率提升，并把系统设计简化了。做推荐检索、生成式检索的人值得读原文；注意这篇论文是 2026 年 7 月提交的，今日由作者在 LinkedIn 上分享。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/hoang-van-hao_a-two-tower-retriever-encodes-items-freezes-share-7524599316376604673-LlSc/">Snap EGR：一个共享 LLM 做生成式检索（arXiv:2607.23038）</a>
+            <p class="keywords">关键词：生成式检索（generative retrieval）、推荐系统（recommender systems）、Snap、共享大语言模型（shared LLM）</p>
+          </li>
+          <li class="item">
+            <p>机构：斯坦福大学（牵头）、多伦多大学/Vector Institute、宾夕法尼亚大学、MIT（论文第一页核实）。核心价值问题：冻结的 LLM 只能通过上下文窗口使用记忆里的知识，但要把每次查询真正需要的信息找出来、同时保持上下文很短，现有系统做不到——要么只放精选文本进上下文，要么压缩出的 token 与查询无关。方法：提出 Memorilla，把整个文档集合一次性编码成可复用的 embedding 存起来；针对每个查询，可训练的记忆模块从全部文档 embedding 里读出查询相关的信息，表达成 16 个&quot;记忆 token&quot;，直接放进冻结 LLM 的输入 embedding 空间，不用把文档文本塞进上下文。为什么值得看：只用 16 个记忆 token 就在 8 个基准中的 5 个上超过 Mem0、MemoRAG 等基线；FactKG 上 84.33% 超过全上下文推理的 80.43%，同时文档 token 少用 108 倍；TextWorld 里 agent 的成功率从 18.6% 提升到 24.2%，也不再总在去过的房间里打转。做 LLM 记忆、agent 长期记忆的人值得读原文；该分享为 Jure Leskovec 今日转发，原帖作者 Adib Fallahpour。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/leskovec_memorilla-treats-memory-as-a-modality-ugcPost-7524576802607108098-jrs1/">Memorilla：把记忆做成 LLM 的一种模态（arXiv:2610.21375）</a>
+            <p class="keywords">关键词：大语言模型记忆（LLM memory）、记忆 token（memory tokens）、斯坦福大学（Stanford University）、长期记忆（long-term memory）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1106-morning-academic">
         <header class="round-header">
           <h2 id="round-1106-morning-academic">11 月 6 日早报</h2>
