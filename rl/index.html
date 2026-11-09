@@ -396,6 +396,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 6 日及之前）</summary>
       <section class="round" aria-labelledby="round-1106-1630">
         <header class="round-header">
           <h2 id="round-1106-1630">11 月 6 日 16:30 轮</h2>
@@ -427,8 +429,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档</summary>
       <section class="round" aria-labelledby="round-1105-2030">
         <header class="round-header">
           <h2 id="round-1105-2030">11 月 5 日 20:30 轮</h2>
@@ -758,6 +758,49 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1109-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1109-morning-academic">11 月 9 日早报</h2>
+          <span class="count">7 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>MATS 与 Google DeepMind 的研究系统考察了如何用监控器遏制 RL 训练中的奖励作弊：开源了三个 Qwen3-4B 会自然作弊的真实环境，发现朴素的监控惩罚基本防不住，模型会学出语义规避和表征规避；而泄露信号适度、干预力度适中、训练题目由易到难的设计，能把作弊率压回接近训练前水平。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.09828">arXiv:2611.09828</a>
+            <p class="keywords">关键词：奖励作弊（reward hacking）、强化学习训练（RL training）、监控机制（monitoring）、对齐安全（alignment safety）</p>
+          </li>
+          <li class="item">
+            <p>杜克大学提出有序策略优化（OPO）：PPO 用固定区间裁剪重要性比率，但真正决定估计可靠性的不是单个比率是否越界，而是比率分布的尾部行为；OPO 每批把比率排序，对极端比率按预设的广义 Pareto 尾部轮廓分配自适应裁剪半径，在 MuJoCo 与 Atari 上强于已有基线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08936">arXiv:2611.08936</a>
+            <p class="keywords">关键词：策略优化（policy optimization）、PPO、重要性比率（importance ratios）、裁剪（clipping）</p>
+          </li>
+          <li class="item">
+            <p>列日大学、麦吉尔大学 Mila 与巴黎综合理工学院提出未来信息 Actor-Critic：critic 只在训练时用，可以利用未来信息；新方法首次让 critic 同时以未来状态、动作、奖励中与动作相关（内生）和无关（外生）的特征为条件，在奖励稀疏、带噪声的环境里优于标准 actor-critic。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.09417">arXiv:2611.09417</a>
+            <p class="keywords">关键词：Actor-Critic、未来信息（future information）、critic 训练（critic training）、稀疏奖励（sparse rewards）</p>
+          </li>
+          <li class="item">
+            <p>得克萨斯大学奥斯汀分校的研究把 RLHF 里熟知的过优化问题定量搬到了机器人规划里：对着人类偏好学来的奖励模型做采样规划（MPPI、best-of-N）时，搜得越狠真实回报最多掉 76%，开抽屉任务上人类标注的规划器 20 次全败、而它出发的克隆策略 10 次全成；并证明按评分器误差幅度设定温度的 χ² 正则 MPPI 是最坏情况最优。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.09670">arXiv:2611.09670</a>
+            <p class="keywords">关键词：RLHF、过优化（overoptimization）、机器人规划（robot planning）、奖励模型（reward models）</p>
+          </li>
+          <li class="item">
+            <p>达姆施塔特工业大学与 DFKI 等机构提出 STRIDE：只用机载 IMU 就让人形机器人学会走路，奖励改为跟踪指令加速度曲线，配合高增益关节控制器与左右对称增广；仿真里 Unitree G1 与 Booster T1 均在 14 分钟样本内学会走路，训练摔倒次数比去掉这两项设计时少约八成。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.08857">arXiv:2611.08857</a>
+            <p class="keywords">关键词：人形机器人（humanoid robots）、机器人行走（robot locomotion）、IMU、仿真训练（simulation training）</p>
+          </li>
+          <li class="item">
+            <p>浙江大学与华为提出 RuACT：用细粒度 rubric 做可验证奖励的 RL 时，组内所有回答都过或都不过的 rubric 不产生学习信号，Qwen3-4B 医疗训练里这类&quot;失活&quot;rubric 占 60.88%；RuACT 让不可达的 rubric 当&quot;老师&quot;蒸馏缺失行为、饱和的 rubric 当&quot;评委&quot;拆成更细的子 rubric，在四个医疗与科学基准上全面优于 GRPO 等基线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.09597">arXiv:2611.09597</a>
+            <p class="keywords">关键词：可验证奖励（verifiable rewards）、细粒度评分（fine-grained rubrics）、GRPO、医疗推理（medical reasoning）</p>
+          </li>
+          <li class="item">
+            <p>谢菲尔德大学提出 LambdaMix：冻结基座、每个目标训一个 LoRA 适配器，一个偏好向量同时决定推理时混合哪个适配器、训练时各目标奖励的权重，一次训练得到一族可调偏好的对齐策略；在有用性/无害性、数学加指令遵循等任务上超体积超过条件化与合并等基线，且比训多个 GRPO 专家更省。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.09634">arXiv:2611.09634</a>
+            <p class="keywords">关键词：多目标对齐（multi-objective alignment）、LoRA 适配器（LoRA adapters）、偏好优化（preference optimization）、模型合并（model merging）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1108-1230-academic">
         <header class="round-header">
           <h2 id="round-1108-1230-academic">11 月 8 日 12:30 轮</h2>
@@ -888,6 +931,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 6 日及之前）</summary>
       <section class="round" aria-labelledby="round-1106-morning-academic">
         <header class="round-header">
           <h2 id="round-1106-morning-academic">11 月 6 日早报</h2>
@@ -931,8 +976,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档</summary>
       <section class="round" aria-labelledby="round-1105-0830-academic">
         <header class="round-header">
           <h2 id="round-1105-0830-academic">11 月 5 日 08:30 轮</h2>
@@ -1143,7 +1186,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 8 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 9 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
