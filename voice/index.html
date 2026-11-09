@@ -3964,6 +3964,19 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1108-supplement-academic">
+        <header class="round-header">
+          <h2 id="round-1108-supplement-academic">11 月 8 日补推</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：清华大学、华为技术有限公司。<br>核心价值问题：多用户共用语音助手时，助手要能回答“原来计划什么时候离开”这类跨会话问题，并按不同用户调整行为；只靠主题相似的检索不够，必须认出当前说话人、找回过去的状态、区分后来的修改。<br>方法：提出 PERSIST 持久记忆系统，把跨会话历史写成可读的事件记录，用 Who/What/When 三维联合打分检索（语义内容、说话人声纹身份、时间状态）；为实时全双工复用对话主干的中间表示，避免对查询音频重编码，检索延迟从 578.42ms 降到 7.03ms；并提出 SpokenTrace 诊断基准，按记忆任务与说话人查询类型拆解评测。SpokenTrace 上端到端准确率 85.08%，all-support EM@3 从 BGE-large 的 49.01% 提到 82.10%。<br>为什么值得看：语音助手要真正“记住用户”，跨会话记忆是必经之路；这篇把说话人身份和时间状态放进检索打分，并对全双工做了延迟优化，做语音 agent 长期记忆的人可以直接参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.07725">PERSIST（arXiv:2610.07725）</a>
+            <p class="keywords">关键词：跨会话记忆（cross-session memory）、全双工语音对话（full-duplex spoken dialogue）、说话人身份（speaker identity）、语音 agent 长期记忆（long-term memory for voice agents）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1108-1230-academic">
         <header class="round-header">
           <h2 id="round-1108-1230-academic">11 月 8 日 12:30 轮</h2>
