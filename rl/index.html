@@ -396,6 +396,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1107-1230">
         <header class="round-header">
           <h2 id="round-1107-1230">11 月 7 日 12:30 轮</h2>
@@ -409,8 +411,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 6 日及之前）</summary>
       <section class="round" aria-labelledby="round-1106-1630">
         <header class="round-header">
           <h2 id="round-1106-1630">11 月 6 日 16:30 轮</h2>
@@ -771,6 +771,92 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1110-0830-academic">
+        <header class="round-header">
+          <h2 id="round-1110-0830-academic">11 月 10 日 08:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Andriy Burkov 辞职全职写作 20 个月后，完成了《The Hundred-Page Deep Reinforcement Learning Book》，从奖励信号一路讲到策略梯度、PPO、DQN 与 RLHF，配有完整的 PyTorch 实现与所需的数学基础。想系统补强化学习基础的人，这本书值得收一本。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7525814001646276610">《百页深度强化学习》新书</a>
+            <p class="keywords">关键词：强化学习教材（RL textbooks）、深度强化学习（deep reinforcement learning）、PPO、RLHF</p>
+          </li>
+          <li class="item">
+            <p>密歇根大学的 Jason Corso 没能去成正在奥斯汀举行的 CoRL 2026（11 月 9–12 日），发帖聊他对机器人学习的看法：VLA、世界动作模型（WAM）与机器人&quot;技能&quot;都有意思，但没有一个是机器人学习的全部答案。他还顺带提到密歇根机器人系正在招系主任，并问大家这次会上有什么是他错过的。关心具身智能路线之争的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7525608492313845763">Jason Corso 谈 CoRL 2026</a>
+            <p class="keywords">关键词：机器人学习（robot learning）、VLA、世界动作模型（world action models）、CoRL 2026</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1110-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1110-morning-academic">11 月 10 日早报</h2>
+          <span class="count">12 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>WM-PPO 把世界模型和 PPO 的 critic 结合起来：对每个采样动作预测下一观测并估值，ALFWorld 成功率从 63.5% 提升到 87.5%，ScienceWorld 从 39.3% 提升到 52.9%。模型强化学习里少见的干净、大幅的实证改进。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12200">WM-PPO：用世界模型给每一步估值</a>
+            <p class="keywords">关键词：世界模型（world models）、PPO、强化学习（reinforcement learning）、agent 决策（agent decision-making）</p>
+          </li>
+          <li class="item">
+            <p>Agentic-OPD 发现 GRPO 训练 agent 时只保留最优检查点是浪费：被丢掉的检查点合起来解出的问题远多于任何单个。把它当成零额外成本的教师池做同策略蒸馏，几乎不花算力就能找回被浪费的训练成果。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12799">Agentic-OPD：把 GRPO 训练中丢掉的检查点捡回来</a>
+            <p class="keywords">关键词：GRPO、检查点蒸馏（checkpoint distillation）、agent 训练（agent training）、强化学习（reinforcement learning）</p>
+          </li>
+          <li class="item">
+            <p>AgentOPSD 针对多轮 agent 的信用分配难题：单个优势摊到整条轨迹太粗，找不出真正决定成败的那几步。它给出一个无 critic 的逐轮信用分配方案，在每轮内用 token 级对数概率差递归算信用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12587">AgentOPSD：逐轮做信用分配</a>
+            <p class="keywords">关键词：信用分配（credit assignment）、多轮 agent（multi-turn agents）、强化学习（reinforcement learning）、无 critic 方法（critic-free methods）</p>
+          </li>
+          <li class="item">
+            <p>MaxIM 把增量摘要表述为容量受限的信息论奖励塑形问题，解决长程 agent 在有限记忆里维护无限历史时的信用分配瓶颈。Google Research / DeepMind 的工作，从原理上给 RL 记忆优化找了一个站得住脚的表述。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12825">MaxIM：用强化学习做增量摘要</a>
+            <p class="keywords">关键词：增量摘要（incremental summarization）、信息论（information theory）、记忆优化（memory optimization）、强化学习（reinforcement learning）</p>
+          </li>
+          <li class="item">
+            <p>PORT 针对偏好数据噪声：已有稳健偏好优化都在序列级操作，默认整条回答全对或全错；它改在 token 粒度上重加权，区分被拒绝回答里的好推理步骤和被选中回答里的细微错误。对齐训练的数据噪声是普遍问题，值得做偏好优化的人留意。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12763">PORT：更稳健的 token 级偏好优化</a>
+            <p class="keywords">关键词：偏好优化（preference optimization）、token 级重加权（token-level reweighting）、数据噪声（data noise）、对齐训练（alignment training）</p>
+          </li>
+          <li class="item">
+            <p>AES 针对大推理模型的过度思考：统一惩罚冗长分不清必要步骤和多余步骤。它只保留高效参考之前的高熵 token、惩罚多余分支的过长高熵后缀，在 8 个推理基准上推理长度最多缩短 52.9%，平均准确率反而最高提升 3.8%，代码已开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.11901">AES：让大推理模型少绕弯子</a>
+            <p class="keywords">关键词：推理效率（reasoning efficiency）、过度思考（overthinking）、熵引导（entropy-guided）、强化学习（reinforcement learning）</p>
+          </li>
+          <li class="item">
+            <p>Shortcuts and Boundaries 用“可验证的奖励-上下文冲突”刻画 RL 错位：合规完成任务可行，但某些可执行的捷径比所有合规策略奖励都高。把冲突编码进任务动态后可规模化生成多样化交互环境，给安全 RL 提供了一个新的研究框架。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12865">Shortcuts and Boundaries：可验证的 RL 错位与上下文安全学习</a>
+            <p class="keywords">关键词：RL 安全（RL safety）、奖励错位（reward misalignment）、可验证奖励（verifiable rewards）、上下文安全（contextual safety）</p>
+          </li>
+          <li class="item">
+            <p>Safe RL for Multi-Turn Clinical Agents 在三个受控临床环境中对比结果奖励与密集奖励：只看结果的 GRPO 会产生过早承诺、只问一个问题就下结论等问题；给“减少不确定性的提问”密集奖励，能稳定提升留出集价值且不出现高风险种子崩溃。对医疗等多轮高风险 agent 有直接启示。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12728">Safe RL for Multi-Turn Clinical Agents：密集奖励何时胜过结果奖励</a>
+            <p class="keywords">关键词：临床 agent（clinical agents）、密集奖励（dense rewards）、多轮对话（multi-turn dialogue）、医疗 AI（medical AI）</p>
+          </li>
+          <li class="item">
+            <p>Accelerated RL for Soft Robotics 利用软体机器人动力学的时间尺度分离，把系统约化到低维绝热谱子流形，仅用预先收集的数据学一个简单的多项式常微分方程当作 RL 训练环境。标题即其卖点：把软体机器人 RL 的训练量从以年计压缩到小时级。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.11718">Accelerated RL for Soft Robotics：从数年到数小时</a>
+            <p class="keywords">关键词：软体机器人（soft robotics）、强化学习加速（RL acceleration）、动力学建模（dynamics modeling）、仿真（simulation）</p>
+          </li>
+          <li class="item">
+            <p>Simulation-aided RL with Control Variates 解决 sim-to-real 的经典难题：仿真数据量大但直接混合会把策略带偏。它用控制变量做保守的仿真辅助学习，仿真数据只用来降低学习方差、不直接参与解的构造。原理上干净的解法，值得做机器人 RL 的人参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12643">Simulation-aided RL with Control Variates：只用仿真降方差，不让它带偏策略</a>
+            <p class="keywords">关键词：sim-to-real、控制变量（control variates）、机器人学习（robot learning）、方差缩减（variance reduction）</p>
+          </li>
+          <li class="item">
+            <p>Spectral Rank and Step-Direction Dynamics 统一了后训练更新谱性质的矛盾观察：有的说更新接近满秩，有的说稳定秩很低。理论分析加 OLMo-2-7B 的完整奇异值分解验证，讲清了 RL 后训练到底在权重空间里动了什么。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.11752">Spectral Rank and Step-Direction Dynamics in Language-Model Post-Training</a>
+            <p class="keywords">关键词：后训练（post-training）、权重谱分析（weight spectral analysis）、语言模型（language models）、强化学习（reinforcement learning）</p>
+          </li>
+          <li class="item">
+            <p>A Modular Perspective for Modeling MARL Systems 把多智能体 RL 系统分解为八个功能模块，并在 MARLKIT 框架中实现模块显式、可互换的分解。给碎片化的 MARL 领域提供了一套通用语言和可控实验的框架。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12314">A Modular Perspective for Modeling MARL Systems</a>
+            <p class="keywords">关键词：多智能体强化学习（multi-agent reinforcement learning）、模块化框架（modular frameworks）、MARL、实验设计（experimental design）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1109-2030-academic">
         <header class="round-header">
           <h2 id="round-1109-2030-academic">11 月 9 日 20:30 轮</h2>
@@ -873,6 +959,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1107-2030-academic">
         <header class="round-header">
           <h2 id="round-1107-2030-academic">11 月 7 日 20:30 轮</h2>
@@ -957,8 +1045,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 6 日及之前）</summary>
       <section class="round" aria-labelledby="round-1106-morning-academic">
         <header class="round-header">
           <h2 id="round-1106-morning-academic">11 月 6 日早报</h2>
@@ -1212,7 +1298,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 9 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 10 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
