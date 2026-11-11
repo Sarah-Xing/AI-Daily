@@ -771,6 +771,89 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1111-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1111-morning-academic">11 月 11 日早报</h2>
+          <span class="count">15 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：PayPal.AI<br>核心价值问题：GRPO 把最终答案的奖励平均分给解题过程的每个 token，真正关键的&quot;犹豫处&quot;得不到应有的信用分配，限制了可验证奖励 RL 的训练效率。<br>方法：提出 MCPO（Margin-Credit Policy Optimization），用策略分布 top-2 概率差衡量模型每步的犹豫程度，按两个固定阈值把优势值重新分配到犹豫的 token 上，均值保持不变；犹豫度直接取自训练已有的前向传播，不增加额外模型评估。<br>为什么值得看：在 MiniCPM5-2B 上 200 步 LoRA 训练后，6 个竞赛数学基准平均比 GRPO 基线高 6.55 分，Qwen3-4B 复现也有 +4.75 分；信用分配这个老问题上给出了一个几乎零成本的实用改进。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14015">Margin-Guided Token Credit for RL with Verifiable Rewards</a>
+            <p class="keywords">关键词：信用分配（credit assignment）、GRPO、可验证奖励 RL（RL with verifiable rewards）、数学推理（math reasoning）</p>
+          </li>
+          <li class="item">
+            <p>机构：凯斯西储大学<br>核心价值问题：给 GRPO 加上稠密过程奖励（比如蒙特卡洛奖励）看起来能提升每步更新的效果，但没人认真算过它要多花多少算力——采样续写本身可能吃掉绝大部分 token 预算。<br>方法：提出&quot;等算力&quot;（matched-compute）验证协议，所有训练干预按生成 token 数和 GPU 小时给相同预算，并在 6 个模型上做 1,668 次预注册对照实验，比较蒙特卡洛稠密奖励、梯度测试和 prompt 选择。<br>为什么值得看：等算力后排名反转——蒙特卡洛奖励在 Qwen2.5-1.5B 上按更新次数领先，等 token 数时反而低 14.3 个百分点，4 种稠密奖励无一胜过标准 GRPO；这篇给所有 RL 改进的评估方式立了个新标杆，结论是&quot;先算账再谈收益&quot;。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13560">Are Dense Rewards Worth Their Tokens in GRPO?</a>
+            <p class="keywords">关键词：稠密奖励（dense rewards）、GRPO、算力评估（compute-matched evaluation）、RL 评估（RL evaluation）</p>
+          </li>
+          <li class="item">
+            <p>机构：明尼苏达大学、摩根大通 AI 研究<br>核心价值问题：RLVR 训练中结果奖励把每次尝试压缩成一个数字，大量试错经验被浪费；而训练时给提示加&quot;脚手架&quot;（策略或提示）能帮模型学，但脚手架的设计和调整一直靠人工、按领域定制。<br>方法：提出 AutoScaffold（AI-for-AI 框架），用一个冻结的教师模型定期检查学生的训练经验、诊断瓶颈，自动设计两类脚手架（跨任务的通用策略、针对难题的个别提示），并随学生进步调整支持强度；评估时去掉脚手架。<br>为什么值得看：同一框架在 ALFWorld、搜索问答、数学推理、GPU 核生成四个领域都胜过对应 RL 基线（ALFWorld 成功率 +7.2 分、问答 EM +4.0 分），数学上用约三分之一训练步数就超过 QuestA 的报告精度；训练脚手架自动化是 RLVR 落地的一个实用方向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14515">AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models</a>
+            <p class="keywords">关键词：RLVR、训练脚手架（training scaffolding）、自动课程（automated curriculum）、多领域 RL（multi-domain RL）</p>
+          </li>
+          <li class="item">
+            <p>机构：哈佛大学肯普纳研究所、伊利诺伊大学厄巴纳-香槟分校、加州大学圣迭戈分校、微软研究院<br>核心价值问题：PPO/GRPO 的基础算法 REINFORCE 在优化奖励的同时，可能把最优回答的概率压到接近零——&quot;覆盖坍缩&quot;会让优化停滞，即使初始覆盖很好、梯度精确、加了 KL 正则也一样，收敛可能需要指数级步数。<br>方法：从理论上刻画覆盖坍缩，并提出反复把 KL 参考重置为最新策略来缓解；形式化为近似策略镜像下降（APMD）元算法，证明带显式 KL 正则与参考重置的 PPO/GRPO 变体，以及隐式实现它们的平方损失算法（包括训练 Kimi 模型的方法）都是&quot;覆盖保持&quot;的，给出首个全局收敛保证。<br>为什么值得看：这是后训练方法论少见的硬理论，直接解释了 PPO/GRPO 为什么有时训着训着就&quot;训死&quot;了，并给出了一个已被大模型训练验证的修复思路；作者阵容包括 Kakade、Foster 等理论 RL 的核心人物。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14467">A Theory of Policy Optimization in Post-Training: Coverage Collapse and Reference Resets</a>
+            <p class="keywords">关键词：策略优化（policy optimization）、PPO、GRPO、后训练理论（post-training theory）</p>
+          </li>
+          <li class="item">
+            <p>机构：哥伦比亚大学<br>核心价值问题：KL 正则化 RL（最大熵 RL 和 RLHF 背后的目标）本质上是在做&quot;控制即推断&quot;的变分推断，但到底需要多少样本才能学到这个后验，一直没有确切答案，此前保证随 horizon 的五次方增长，且下界不依赖温度 β。<br>方法：证明在折扣 MDP 上，简单的 plug-in 估计量用 Õ(KH³/(ε·max{ε,β}) + KH) 个样本就能得到 ε-最优策略（K 为状态-动作对数、H 为有效 horizon），并证明这个量级无法再改进（即使自适应采样）；还给出了估计量的精确渐近常数和最优采样分配。<br>为什么值得看：把 KL 正则化 RL 的样本复杂度从 H⁵ 压到 H³，给 RLHF 的理论地基补上了一块；当 ε &lt; β 时达到与无正则 RL 相同的 horizon 依赖，说明正则化本身不增加样本代价。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13480">Sharp Sample Complexity of KL-Regularized Reinforcement Learning</a>
+            <p class="keywords">关键词：KL 正则化 RL（KL-regularized RL）、样本复杂度（sample complexity）、RLHF 理论（RLHF theory）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学<br>核心价值问题：测试时 RL（TTRL）用模型自己的答案做奖励，但多数投票会强化错误的答案——训练审计发现，错误回答拿到正奖励的&quot;假阳性&quot;是奖励误差的主因，少数正确解反而被多数意见淹没。<br>方法：提出 TRUER，用少量有标签数据训练一个&quot;奖励纠正器&quot;，专门学习区分&quot;正确&quot;与&quot;共识&quot;，重点训练在共识与正确性不一致的样本（错误的多数、正确的少数）上；纠正器训好后冻结，在后续测试时自适应中纠正奖励。<br>为什么值得看：在所有评估配置上，TRUER 在奖励准确率和模型性能两项指标上都稳定胜过朴素 TTRL；测试时自适应是部署后持续改进的关键场景，奖励纠错这个切口很准。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13714">TRUER: Test-Time Reward Correction Using an Error-Aware Rectifier for Reinforcement Learning</a>
+            <p class="keywords">关键词：测试时 RL（test-time RL）、奖励纠正（reward correction）、奖励误差（reward errors）、自适应学习（adaptive learning）</p>
+          </li>
+          <li class="item">
+            <p>机构：NVIDIA<br>核心价值问题：RL 后训练学习率很低时，BF16 混合精度训练比 FP16 收敛慢——FP32 影子权重按最近取整量化到 BF16 后，小更新常常让 BF16 权重纹丝不动（&quot;权重粘滞&quot;），多个优化步才反映一次。<br>方法：分析确认权重粘滞是收敛差距的根源；改用随机取整（stochastic rounding）把 FP32 影子权重量化到 BF16，让小更新以概率方式落到 BF16 权重上；同时验证仅对前向权重做随机取整就足够。<br>为什么值得看：在多个模型和数据集上，随机取整让 BF16 达到 FP16 的收敛速度，同时 KL 漂移比&quot;调高 BF16 学习率&quot;的土办法更小，还保留了 BF16 的宽动态范围、无需 loss scaling；做大模型 RL 后训练的工程团队可以直接用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13545">Closing the BF16-FP16 Convergence Speed Gap in RL Post-Training with Stochastic Rounding</a>
+            <p class="keywords">关键词：混合精度训练（mixed-precision training）、BF16、随机取整（stochastic rounding）、RL 后训练（RL post-training）</p>
+          </li>
+          <li class="item">
+            <p>机构：伦敦大学学院<br>核心价值问题：后训练确实提升了模型推理，但它到底改变了什么——是模型内部真的用上了中间信息，还是只是让写出来的思维链看起来更可信？这一点一直不清楚。<br>方法：用多位数加法做可控实验，以进位值作为已知的中间状态，对 Olmo-3-7B-Instruct 的 SFT、DPO、RLVR 三个连续检查点做探测与干预：测内部表征能否恢复进位、干预进位信息能否控制输出、以及思维链中进位相关表述的重要性。<br>为什么值得看：发现 RLVR 产生的思维链在跨检查点迁移时准确率更高，进位相关表述的重要性在 RLVR 后显著上升，而内部探针的准确率在 SFT 与 RLVR 间基本不变——也就是说 RLVR 主要改变的是&quot;写出来的推理好不好用&quot;，而非内部表征本身；对理解 RLVR 的作用机制有启发。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13552">How Post-Training Influences Verbalized Algorithmic Computation in Language Models</a>
+            <p class="keywords">关键词：后训练（post-training）、RLVR、思维链（chain-of-thought）、机制可解释性（mechanistic interpretability）</p>
+          </li>
+          <li class="item">
+            <p>机构：NAVER LABS、韩国科学技术院（KAIST）<br>核心价值问题：离线 RL 的 Lifted Bellman 线性规划（LBLP）把数据集内最优值写成线性规划，但其神经求解器 ALBUM 把约束松弛成固定系数的 hinge 惩罚，保证依赖于预先选好的系数，且通常需要目标网络。<br>方法：用乘子法求解同一个规划，约束系数变成由对偶上升学习的乘子，只剩一个惩罚参数 ρ；凸情形下不动点即 LBLP 的 KKT 点；单个 Q 和 V、无目标网络，配高斯 actor、flow actor 或 best-of-N 采样。<br>为什么值得看：AL-LBLP 加 best-of-N 在 50 个 OGBench 状态任务上平均成功率 60.1%，长程导航 humanoidmaze-giant 达 81.5%、antmaze-giant 79.8%，且 batch size 放到 8192 也不崩；离线 RL 求解器上一个更干净的 formulation。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14183">An Augmented Lagrangian Approach to Lifted Bellman Linear Programming</a>
+            <p class="keywords">关键词：离线 RL（offline RL）、线性规划（linear programming）、OGBench、机器人导航（robot navigation）</p>
+          </li>
+          <li class="item">
+            <p>机构：贝鲁特美国大学<br>核心价值问题：分层 RL 里常用&quot;deliberation cost&quot;防止 option 坍缩成原始动作，但现有方法用固定惩罚或按持续时间调整，都是 option 效用的间接代理，环境一变就失灵。<br>方法：提出机会成本 Option-Critic（OC²），用当前 option 与最佳替代 option 的价值差定义随状态变化的 deliberation cost：当前 option 明显更优时坚持，出现更好选择时快速切换；并引入辅助目标把学到的 cost 对齐到价值差目标（直接学 cost 会坍缩到零）。<br>为什么值得看：在目标迁移的 Pinball 任务上，OC² 前十幕成功率 52%，固定 cost 基线只有 18%；分层 RL 在非平稳环境下的适应性问题上给了一个有理论味道的解法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14099">Opportunity-Cost Option-Critic: Adaptive Switching Costs for Robust Hierarchical Reinforcement Learning</a>
+            <p class="keywords">关键词：分层 RL（hierarchical reinforcement learning）、Option-Critic、非平稳环境（non-stationary environments）</p>
+          </li>
+          <li class="item">
+            <p>机构：CISPA 亥姆霍兹信息安全中心、慕尼黑工业大学<br>核心价值问题：从形式化规约做 RL 时，任务定义、奖励塑形、课程设计、策略诊断被拆成不同的数学对象，转换繁琐，还丢掉了规约里已有的结构（子任务边界、顺序约束、量化度量）。<br>方法：提出 TBTCL，用时序行为树（TBT）做统一接口：一棵树同时定义任务、导出基于鲁棒性的稠密奖励、自动抽出课程 DAG、并通过轨迹分段生成可理解的能力画像、自动把奖励调向瓶颈；TBT 的表达力超过 LTL 且天然分层。<br>为什么值得看：一个规约顶四种用途，在离散与连续域的 6 个规约上验证；规约驱动 RL 的工程化程度又往前走了一步，对安全关键 RL 应用有吸引力。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13993">Temporal Behavior Trees for Reinforcement Learning: Specifications as Rewards, Curricula, and Diagnostics</a>
+            <p class="keywords">关键词：时序行为树（temporal behavior trees）、规约驱动 RL（specification-driven RL）、奖励塑形（reward shaping）、安全关键 RL（safety-critical RL）</p>
+          </li>
+          <li class="item">
+            <p>机构：普渡大学<br>核心价值问题：非线性机器人系统的动力学未知时，模型 RL 要么长时程 rollout 误差累积，要么策略梯度计算昂贵；既要样本效率又要能实时控制，是个老难题。<br>方法：提出 Koopman 模型 RL（K-MBRL），用随机 Koopman 算子把未知非线性动力学学成线性表示，策略目标结合解析的即时代价与一步预测状态处的未来代价估计（critic 补足长期部分）；线性动力学让策略梯度简化为常数矩阵乘积，一步传播避免长时程误差累积，并给出收敛保证。<br>为什么值得看：在 HalfCheetah 和四足运动仿真上样本效率与性能都超过经典 model-free/model-based 基线，还在真实四足机器人上验证了一串高难度动作（双足直立、双足行走、平稳落地）；Koopman 理论与 RL 结合的一个扎实落地。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14186">Koopman Model-Based Reinforcement Learning</a>
+            <p class="keywords">关键词：Koopman 算子（Koopman operator）、模型 RL（model-based RL）、机器人控制（robot control）、四足机器人（quadruped robots）</p>
+          </li>
+          <li class="item">
+            <p>机构：卡内基梅隆大学<br>核心价值问题：端到端导航依赖紧凑的视觉表征，但现有方法要么把表征和策略一起学，要么只做观测重建，都没说清楚表征到底该保留什么信息；而且表征的好坏常随下游学习方式而变，缺乏受控比较。<br>方法：提出 DeRep，把局部鸟瞰可达性监督与深度重建结合起来预训练导航表征；用同一架构预训练编码器、冻结后分别接线性策略探针、流匹配模仿学习和 PPO 做受控对比。<br>为什么值得看：DeRep 在 6 种 PPO 条件下全部优于纯重建，线性探针误差最低；PPO 策略配冻结 DeRep 编码器在 Gazebo 和真实四旋翼上零微调部署，实现 sim-to-sim 与 sim-to-real 迁移；导航表征学习的一个干净对照实验。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13499">DeRep: Learning Depth Representations for End-to-End Navigation in Cluttered Environments</a>
+            <p class="keywords">关键词：导航表征（navigation representations）、端到端导航（end-to-end navigation）、sim-to-real、机器人视觉（robot vision）</p>
+          </li>
+          <li class="item">
+            <p>机构：电子科技大学、同济大学、香港理工大学<br>核心价值问题：长动作块（几十步）已成为高能力机器人策略的关键，但用现有 RL 方法在线微调这类策略时，动作块维度太高、需要大量在线样本，在真实场景里不现实。<br>方法：提出 ExRL，不直接优化动作本身，改为优化&quot;每段动作块执行多长&quot;——给基础策略加一个轻量适配器预测每段块的执行长度，用 off-policy RL 训练；适配空间低维、表达力随块长增长。<br>为什么值得看：在仿真基准与真实机器人任务上，ExRL 以很少的在线样本就完成多种长块策略的适配，几乎不用按任务调超参；长块策略落地的样本效率问题上一个巧妙的降维思路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13482">ExRL: Sample-Efficient Online Adaptation of Long-Chunk Policies via Execution Length Control</a>
+            <p class="keywords">关键词：长动作块策略（long-chunk policies）、在线适配（online adaptation）、样本效率（sample efficiency）、机器人学习（robot learning）</p>
+          </li>
+          <li class="item">
+            <p>机构：韩国科学技术院（KAIST）<br>核心价值问题：RLHF 的奖励模型只学人类偏好排序，但人读文本时的眼动（注视）本身就带有偏好信号；已有工作只用注视点，没用上认知心理学关于阅读时注意力空间分布的发现。<br>方法：按人类字母识别的心理物理学发现，把视觉注意力建模为以当前注视点为中心的空间渐变分布，融入奖励模型训练；在已有眼动数据上与 fixation 中心模型对比。<br>为什么值得看：加了注视分布的奖励模型偏好预测准确率更高，且部分实验结果与阅读注意力的已知规律定性一致；给 RLHF 奖励建模引入了一个新的生理信号维度。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13477">Leveraging Psychophysical Attentional Distribution for Gaze-Augmented Reward Modeling</a>
+            <p class="keywords">关键词：RLHF、奖励模型（reward models）、眼动信号（gaze signals）、人类偏好（human preferences）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1110-0830-academic">
         <header class="round-header">
           <h2 id="round-1110-0830-academic">11 月 10 日 08:30 轮</h2>
@@ -1298,7 +1381,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 10 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 11 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
