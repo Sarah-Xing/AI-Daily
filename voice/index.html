@@ -4129,72 +4129,72 @@
             <p class="keywords">关键词：信号处理（signal processing）、学术会议（academic conferences）、研讨会征稿（workshop submissions）、ICASSP 2027</p>
           </li>
           <li class="item">
-            <p>WaveGen（Ajou University、KT Corp. Frontier AI Lab）：Spectral Forcing 的扩散式文本直达波形框架，单模型内联合学习内部频谱轨迹与目标波形轨迹，单架构、开源数据、单阶段训练，在 Seed-en 上 WER 1.47、SIM 0.75，代码与权重已开源。</p>
+            <p>机构：韩国 Ajou University、KT Corp. Frontier AI Lab<br>核心价值问题：现有 TTS 流水线依赖神经音频编解码器、梅尔谱声码器、时长预测器等外部模块，难以真正端到端。<br>方法：提出 Spectral Forcing 的扩散式文本直达波形框架，单模型内联合学习内部频谱轨迹与目标波形轨迹，配解耦扩散头与多尺度频谱 v-loss，模型 0.1B→0.6B 可扩展。<br>为什么值得看：单架构、开源数据、单阶段训练，在 Seed-en 上 WER 1.47、SIM 0.75，代码与权重已开源，是端到端 TTS 路线的重要进展。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.12527">WaveGen</a>
             <p class="keywords">关键词：文本转语音（text-to-speech）、扩散模型（diffusion models）、波形生成（waveform generation）、频谱建模（spectral modeling）</p>
           </li>
           <li class="item">
-            <p>REAL（中国科学技术大学、中国电信星辰 AGI Lab）：以证据链监督成对偏好，给生成语音的可信度打分；REAL-Judge 在两档评估上比 backbone 提升 16.01/11.41 个百分点，超过开源 SpeechJudge 与 UniSRM，给 TTS 自动评测与数据筛选提供了可解释的新工具。</p>
+            <p>机构：中国科学技术大学、中国电信星辰 AGI Lab<br>核心价值问题：TTS 已足够自然，评测难点从明显失真转向细微不自然，现有语音奖励模型只给 utterance 级分数，局部声学现象与最终偏好之间的联系不透明。<br>方法：以证据链监督成对偏好——REAL-Jury 用时间戳对齐、多模型分析与争议 deliberation 生成证据报告，REAL-Judge 学习生成这类报告，REAL-Eval 分两档评估。<br>为什么值得看：基于 MiMo-Audio 的 REAL-Judge 在两档上比 backbone 提升 16.01/11.41 个百分点，超过开源 SpeechJudge 与 UniSRM，给 TTS 自动评测与数据筛选提供了可解释的新工具。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.12406">REAL</a>
             <p class="keywords">关键词：语音可信度（speech trustworthiness）、偏好优化（preference optimization）、TTS 评测（TTS evaluation）、证据链（evidence chains）</p>
           </li>
           <li class="item">
-            <p>Nemotron 3 Diarization（NVIDIA）：纯 Transformer 编码器 + 可学习上采样，支持 8 人流式说话人日志，DIHARD III 与 CALLHOME 上 DER 达 SOTA，训练显存降 2.8 倍、推理吞吐最高 6.4 倍，代码与权重以 OpenMDW-1.1 开源。</p>
+            <p>机构：NVIDIA（+ 布尔诺理工大学）<br>核心价值问题：流式说话人日志需兼顾低延迟、多说话人与高精度，前代 Streaming Sortformer 只支持 4 人。<br>方法：纯 Transformer 编码器 + 可学习上采样（80ms→10ms），加 activity 与 phantom-speaker 损失，大规模仿真混合数据训练。<br>为什么值得看：支持 8 人，DIHARD III 与 CALLHOME 上 DER 达 SOTA，训练显存降 2.8 倍、训练快 2.2 倍、推理吞吐最高 6.4 倍，代码与权重以 OpenMDW-1.1 开源。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.12246">Nemotron 3 Diarization</a>
             <p class="keywords">关键词：说话人日志（speaker diarization）、流式处理（streaming）、Transformer 编码器（Transformer encoders）、NVIDIA</p>
           </li>
           <li class="item">
-            <p>Textraction（Bar-Ilan University、OriginAI）：一句话指定&quot;保留谁&quot;，文本引导的目标说话人提取与增强；统一单模型一次前向完成提取与增强，无需分离/选择两阶段，在属性提取、空间引导提取与语音增强上达到或超过专用基线。</p>
+            <p>机构：Bar-Ilan University、OriginAI<br>核心价值问题：目标说话人提取通常只支持固定参考音频或单通道，无法用自然语言灵活指定&quot;保留谁、去掉谁&quot;。<br>方法：统一单模型，文本提示（语义或空间描述）经轻量对比微调文本编码器，以交叉注意力条件化时频 Transformer，直接从混合中提取目标，兼容单/多通道与说话人+噪声。<br>为什么值得看：一次前向完成提取与增强，无需分离/选择两阶段，在属性提取、空间引导提取与语音增强上达到或超过专用基线，灵活性显著提升。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.12493">Textraction</a>
             <p class="keywords">关键词：目标说话人提取（target speaker extraction）、语音增强（speech enhancement）、文本引导（text-guided）、语音分离（speech separation）</p>
           </li>
           <li class="item">
-            <p>AudioCodex（Sony CSL Paris、Queen Mary University of London）：全因果自编码器，把立体声音频压到约 10Hz 连续隐序列，编码与解码均严格因果，在生成—重建权衡上超过 SOTA，为实时流式语音/音频 agent 提供新的编解码器底座。</p>
+            <p>机构：Sony CSL Paris、Queen Mary University of London<br>核心价值问题：实时交互式生成音频需要严格因果、低延迟的音频表征，现有编解码器在生成—重建权衡上不足。<br>方法：全因果自编码器，把立体声音频压到约 10Hz 连续隐序列，结合 Mean Flow 幅度自编码器、隐超球面投影、有界噪声增强、表征对齐与对抗相位恢复。<br>为什么值得看：编码与解码均严格因果，在生成—重建权衡上超过 SOTA，为实时流式语音/音频 agent 提供了新的编解码器底座。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.12375">AudioCodex</a>
             <p class="keywords">关键词：音频编解码器（audio codecs）、因果模型（causal models）、流式语音（streaming speech）、隐表示（latent representations）</p>
           </li>
           <li class="item">
-            <p>Joi-Bench-Task（腾讯 Platform and Content Group）：全双工语音 agent 的任务协调评测；需求变更下最高结果完成率仅 55%，被打断后 4/5 的 agent 平均信息遗漏率 ≥23%，揭示语音 agent 产品化的真实短板。</p>
+            <p>机构：腾讯 Platform and Content Group<br>核心价值问题：全双工语音 agent 评测只看单轮问答，测不出任务执行与对话之间的协调能力（如用户中途改需求、打断时 agent 是否丢事）。<br>方法：提出交互式用户模拟器，在工具执行与语音播报的关键时点注入可控干预，从执行响应、需求变更协调、打断协调三维评测 5 款商用语音 agent。<br>为什么值得看：揭示真实短板——需求变更下最高结果完成率仅 55%，被打断后 4/5 的 agent 平均信息遗漏率 ≥23%，是语音 agent 产品化必须面对的协调问题。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.12118">Joi-Bench-Task</a>
             <p class="keywords">关键词：全双工语音 agent（full-duplex voice agents）、任务协调（task coordination）、评测基准（evaluation benchmarks）、语音 agent（voice agents）</p>
           </li>
           <li class="item">
-            <p>MoBiMark（南京大学、苏州大学）：手机发射多频超声探针，提取声道回波特征并融合语音嵌入，生成含持久用户 ID 与每句语音 ID 的双层动态水印；50 名用户、4 款手机上对来源与传播攻击平均准确率 99.79%，是移动端语音防伪的新路。</p>
+            <p>机构：南京大学、苏州大学<br>核心价值问题：高保真语音克隆普及后，移动语音交互的声纹认证面临实时伪造风险，现有水印只做离线保护，无法验证一句话是否由真人当场说出。<br>方法：手机发射多频超声探针，提取声道回波特征并与内容相关语音嵌入融合，生成含持久用户 ID 与每句语音 ID 的双层动态水印，INT8 量化端侧部署。<br>为什么值得看：50 名用户、4 款手机上对来源与传播攻击平均准确率 99.79%，对音质与可懂度影响可忽略，是移动端语音防伪的一条新路。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.11777">MoBiMark</a>
             <p class="keywords">关键词：语音水印（speech watermarking）、移动端安全（mobile security）、声道特征（vocal tract features）、deepfake 防护（deepfake protection）</p>
           </li>
           <li class="item">
-            <p>Guidance at Pure Noise Erodes Speaker Similarity（KAIST）：定位到 few-step TTS 说话人相似度掉分的原因是首步 classifier-free guidance，提出无需训练的 FSU 与 FSU-Mid，在 CosyVoice 2/3 上恢复 84–91% 的两步 SIM 损失，是部署 few-step TTS 的实用修复。</p>
+            <p>机构：KAIST（航空航天工程系）<br>核心价值问题：token 条件流匹配 TTS 解码器用 2–4 步 Euler 采样时，WER 不变但说话人相似度掉 1–6 分，原因不明。<br>方法：定位到第一步的 classifier-free guidance——纯噪声下网络只能返回条件均值，guidance 使所有轨迹平移同一向量且后续步骤无法消除；据此提出无需训练的 FSU（首步不加 guidance）与 FSU-Mid。<br>为什么值得看：在 CosyVoice 2/3 上恢复 84–91% 的两步 SIM 损失，FSU-Mid 在 IndexTTS-2 上恢复 77–85% 且媲美十步 teacher，NFE 反而少一次，是部署 few-step TTS 的实用修复。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.11179">Guidance at Pure Noise Erodes Speaker Similarity</a>
             <p class="keywords">关键词：文本转语音（text-to-speech）、说话人相似度（speaker similarity）、少步推理（few-step inference）、无分类器引导（classifier-free guidance）</p>
           </li>
           <li class="item">
-            <p>DIY Customized Speech Recognition（NOVA University Lisbon、University of Algarve）：第一作者本人（脑瘫、构音障碍）用消费级硬件录制自己的语音，以 LoRA 微调 Whisper medium/large-v3；100 句未见测试集上 WER 从 49%→17%、30%→12%，流程全部公开，是无障碍语音技术的暖心实证。</p>
+            <p>机构：NOVA University Lisbon、University of Algarve<br>核心价值问题：通用 SOTA ASR 对中重度言语障碍者系统性失效。<br>方法：第一作者本人（脑瘫、构音障碍）用消费级硬件录制自己的语音，以 LoRA 微调 Whisper medium/large-v3，并做成端侧实时翻译 App AVoz，全程本地处理。<br>为什么值得看：100 句未见测试集上 WER 从 49%→17%（medium）、30%→12%（large-v3），LoRA 配置、实现与录制训练流程全部公开，方法可复制，是无障碍语音技术的暖心实证。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.11327">DIY Customized Speech Recognition</a>
             <p class="keywords">关键词：个性化语音识别（personalized speech recognition）、Whisper 微调（Whisper fine-tuning）、无障碍技术（accessibility）、构音障碍（dysarthria）</p>
           </li>
           <li class="item">
-            <p>Capability-Guided Iterative Online Optimization（上海交通大学 X-LANCE 实验室）：先以共享可懂度探针判断两模块能力再选优化方向，用单侧数据迭代优化级联口语对话系统；中文 MAGICDATA-RAMC 上 Whisper CER 14.18%→10.77%、CosyVoice2 4.78%→4.04%。</p>
+            <p>机构：上海交通大学 X-LANCE 实验室<br>核心价值问题：级联口语对话系统的理解（ASR）与生成（TTS）模块能力不匹配时，笼统优化浪费算力。<br>方法：先以共享可懂度探针判断两模块能力再选优化方向，用单侧数据迭代优化理解（Whisper large-v3）与生成（CosyVoice2）模块。<br>为什么值得看：中文 MAGICDATA-RAMC 上 Whisper CER 14.18%→10.77%、CosyVoice2 4.78%→4.04%，方法扎实，偏工程。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.11322">Capability-Guided Iterative Online Optimization</a>
             <p class="keywords">关键词：口语对话系统（spoken dialogue systems）、级联优化（cascade optimization）、语音识别（speech recognition）、语音合成（speech synthesis）</p>
           </li>
           <li class="item">
-            <p>Virtual-Flow（KAIST、Meta Reality Labs Research）：半监督流匹配生成虚拟麦克风信号，无需虚拟位置真值，改善高频幅度估计与波束形成；端到端语音增强具竞争力且计算成本低。</p>
+            <p>机构：KAIST、Meta Reality Labs Research<br>核心价值问题：多通道语音增强需要虚拟麦克风信号，但虚拟位置真值难以获取。<br>方法：半监督流匹配生成虚拟麦克风信号，无需虚拟位置真值，改善高频幅度估计与波束形成。<br>为什么值得看：端到端语音增强具竞争力且计算成本低，偏多通道阵列处理，相对小众。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.11130">Virtual-Flow</a>
             <p class="keywords">关键词：语音增强（speech enhancement）、虚拟麦克风（virtual microphones）、波束形成（beamforming）、流匹配（flow matching）</p>
           </li>
           <li class="item">
-            <p>LongCap（独立研究者、CMU LTI）：小时级带时间戳音频描述，分块处理 + LongCapBench，训练最长 40 分钟却能外推到 16 小时拼接音频；2 小时完整录音可描述，与常开语音 agent 场景相关。</p>
+            <p>机构：独立研究者、CMU LTI（含 Shinji Watanabe）<br>核心价值问题：小时级长音频缺乏带时间戳的整体描述，现有音频描述模型只处理短片段。<br>方法：分块处理 + LongCapBench 与三项类 diarization 指标，训练最长 40 分钟却能外推到 16 小时拼接音频。<br>为什么值得看：2 小时完整录音可描述，通用音频理解，与常开语音 agent 场景相关，但非语音专属。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.11125">LongCap</a>
             <p class="keywords">关键词：长音频理解（long-form audio understanding）、音频描述（audio captioning）、时间戳（timestamps）、语音 agent（voice agents）</p>
           </li>
           <li class="item">
-            <p>When Normality Shifts（Czestochowa University of Technology、Sungkyunkwan University、AGH University of Krakow）：仅用真实语音训练的 normality 模型做开世界音频 deepfake 检测；ASVspoof 2019 LA 上 8.45% EER 接近全监督基线，但 2021 DF 域偏移下掉到 22.12%，结论偏警示性。</p>
+            <p>机构：Czestochowa University of Technology、Sungkyunkwan University、AGH University of Krakow<br>核心价值问题：开世界 deepfake 检测中，仅用真实语音训练的 normality 模型能否在域偏移下保持决策稳定。<br>方法：冻结 WavLM 多层表征 + shrinkage-Mahalanobis 的 normality 模型。<br>为什么值得看：ASVspoof 2019 LA 上 8.45% EER 接近全监督基线 7.86%，但 2021 DF 域偏移下掉到 22.12%，阈值重校准亦无法挽救——结论偏警示性：开世界 deepfake 检测排序可用、决策规则不稳。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.11465">When Normality Shifts</a>
             <p class="keywords">关键词：音频 deepfake 检测（audio deepfake detection）、开世界检测（open-world detection）、异常检测（anomaly detection）、域偏移（domain shift）</p>
           </li>
           <li class="item">
-            <p>MUTE（Soongsil University、Chung-Ang University、AIM Intelligence）：通过扰动跨模态注意力与时域音频表征解耦音画对齐，保护语音不被 talking-head 模型滥用；白盒/黑盒下唇同步均显著下降且音质保留。</p>
+            <p>机构：Soongsil University、Chung-Ang University、AIM Intelligence<br>核心价值问题：语音可能被 talking-head 模型滥用生成假视频，现有防护不足。<br>方法：通过扰动跨模态注意力与时域音频表征解耦音画对齐，保护语音不被 talking-head 模型滥用。<br>为什么值得看：白盒/黑盒下唇同步均显著下降且音质保留，语音防伪方向，但场景较窄。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.11989">MUTE</a>
             <p class="keywords">关键词：语音隐私保护（speech privacy protection）、talking-head 模型（talking-head models）、音画解耦（audio-visual decoupling）、对抗扰动（adversarial perturbations）</p>
           </li>
