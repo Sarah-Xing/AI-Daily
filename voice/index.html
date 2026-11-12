@@ -383,6 +383,57 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1112-0830">
+        <header class="round-header">
+          <h2 id="round-1112-0830">11 月 12 日 08:30 轮</h2>
+          <span class="count">4 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Vapi 的语音 agent 大会进入第二天，builder 赛道有一场讲&quot;跳过轮次：更灵敏的语音 agent 架构&quot;，关注语音 agent 轮次切换与响应速度的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7526682816663711745">VapiCon Day 2 — &quot;The future of voice is right here&quot;</a>
+            <p class="keywords">关键词：语音 agent 架构（voice agent architecture）、轮次切换（turn-taking）、低延迟（low latency）、Vapi</p>
+          </li>
+          <li class="item">
+            <p>临床语音 AI 产品 Abridge Assistant 现在能在医生工作流里直接呈现本地就诊路径，包括专科转诊、护理计划与支持服务。语音 AI 正从转录走向护理行动，关注医疗语音落地的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7526681681232044033">Local pathways arrive in Abridge Assistant</a>
+            <p class="keywords">关键词：医疗语音 AI（healthcare voice AI）、临床工作流（clinical workflows）、护理协调（care coordination）、Abridge</p>
+          </li>
+          <li class="item">
+            <p>Synthflow 称其 AI 语音 agent 现在每天处理 100 万+通电话，服务 100 多家企业客户。这是语音 agent 生产规模的一个参考数字，不过数字来自厂商宣传，需留个心眼。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7526676555042029568">Synthflow&#x27;s AI voice agents handle 1M+ calls a day</a>
+            <p class="keywords">关键词：语音 agent 规模化（voice agent scale）、电话 AI（phone AI）、企业部署（enterprise deployment）、Synthflow</p>
+          </li>
+          <li class="item">
+            <p>DeepLearning.AI 出了一门新短课，讲怎么给 AI agent 与应用加上语音功能，合作方 Vocal Bridge、讲师 Ashwyn Sharma。想给 agent 接语音能力的人可以看看这门课。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7526676436301053952">New short course — Voice for AI Agents and Applications</a>
+            <p class="keywords">关键词：语音 agent 开发（voice agent development）、在线课程（online courses）、DeepLearning.AI、AI 应用（AI applications）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1112-morning">
+        <header class="round-header">
+          <h2 id="round-1112-morning">11 月 12 日早报</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Zyphra 开源了实时语音克隆 TTS 模型 ZONOS3-Mini：稀疏 MoE 架构，总参数 8 亿、每次推理仅激活约 1 亿，支持 43 种语言零样本语音克隆与细粒度声音控制；Pixel 9 浏览器里首音频不到 570 毫秒，M3 MacBook Air 上不到 150 毫秒，单张 H100 上中位首音频 80 毫秒。权重 Apache 2.0 开源，浏览器 WebGPU、MLX、ggml 与 SGLang 均可跑，配套发布了 ZTTS2-Eval 评测集，自称在开源模型中排名第一（自测基准）。做端侧 TTS 与语音克隆的人可以直接试用。</p>
+            <a class="source-link" href="https://huggingface.co/blog/Zyphra/zonos3-mini">Zyphra 开源 ZONOS3-Mini：1 亿激活参数的实时语音克隆 TTS</a>
+            <p class="keywords">关键词：实时语音克隆（real-time voice cloning）、稀疏 MoE（sparse MoE）、端侧 TTS（on-device TTS）、开源模型（open-source models）</p>
+          </li>
+          <li class="item">
+            <p>Decagon 推出 Alto：为其双工语音 agent Voice 3 对话层服务的判断模型，每轮决定是立即回答还是等推理模型确认后再说、以及说什么，平均约 700 毫秒回应，不依赖通用填充语。在真实客户通话中，Alto 让问题解决率提升 5 个百分点以上（其余 agent 逻辑未变），上线前经过 9000 多万次模拟通话测试与影子流量验证。做客服语音 agent 可靠性的人可以看看这个&quot;专门模型做专门事&quot;的打法。</p>
+            <a class="source-link" href="https://decagon.ai/blog/introducing-alto">Decagon 推出 Alto：双工语音 agent 的&quot;说话判断&quot;模型</a>
+            <p class="keywords">关键词：双工语音 agent（duplex voice agents）、对话判断模型（dialogue judgment model）、客服 AI（customer service AI）、低延迟响应（low-latency response）</p>
+          </li>
+          <li class="item">
+            <p>语音 AI 创业公司 ThunderPhone 宣布 v3 架构与 Zeus 智能体搭建系统：v3 不再把 ASR、语言模型、TTS 串联起来，而是让多个转录与语言模型在每次通话中并行运行；Zeus 则像语音版 coding agent，可从录音、客服脚本或 Vapi、Retell 等竞品导入中自动搭建语音 agent，并依据模拟与真实通话持续优化性能与成本。公司称其在 Big Bench Audio 推理基准上达 99.4%（厂商自测数据），并改用成本加成定价，通话每分钟 2 美分起。做电话语音 agent 选型的人可以留意这家新玩家。</p>
+            <a class="source-link" href="https://www.prnewswire.com/news-releases/voice-ai-startup-thunderphone-launches-v3-architecture-and-zeus-an-agentic-harness-for-phone-agents-302934190.html">ThunderPhone 发布 v3 架构与 Zeus 语音 agent 搭建系统</a>
+            <p class="keywords">关键词：电话语音 agent（phone voice agents）、并行推理（parallel inference）、语音 agent 搭建（voice agent building）、成本定价（cost pricing）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1111-2030">
         <header class="round-header">
           <h2 id="round-1111-2030">11 月 11 日 20:30 轮</h2>
@@ -722,19 +773,8 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1108-1230">
-        <header class="round-header">
-          <h2 id="round-1108-1230">11 月 8 日 12:30 轮</h2>
-          <span class="count">1 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>Famulor 宣布 AssemblyAI 的 TTS 1 语音合成模型已接入 Famulor 平台，用户可以直接在其中试用。这是 TTS 1 落地到具体产品里的又一个集成，适合关心 TTS 模型实际可用性的读者留意一下。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/famulor-assemblyai-voiceai-share-7525290247056715776-QcUk/">Famulor 接入 AssemblyAI TTS 1</a>
-            <p class="keywords">关键词：语音合成（text-to-speech）、TTS 模型（TTS model）、语音平台（voice platform）、模型集成（model integration）</p>
-          </li>
-        </ol>
-      </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1108-morning">
         <header class="round-header">
           <h2 id="round-1108-morning">11 月 8 日早报</h2>
@@ -758,8 +798,19 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
+      <section class="round" aria-labelledby="round-1108-1230">
+        <header class="round-header">
+          <h2 id="round-1108-1230">11 月 8 日 12:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Famulor 宣布 AssemblyAI 的 TTS 1 语音合成模型已接入 Famulor 平台，用户可以直接在其中试用。这是 TTS 1 落地到具体产品里的又一个集成，适合关心 TTS 模型实际可用性的读者留意一下。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/famulor-assemblyai-voiceai-share-7525290247056715776-QcUk/">Famulor 接入 AssemblyAI TTS 1</a>
+            <p class="keywords">关键词：语音合成（text-to-speech）、TTS 模型（TTS model）、语音平台（voice platform）、模型集成（model integration）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1107-1230">
         <header class="round-header">
           <h2 id="round-1107-1230">11 月 7 日 12:30 轮</h2>
@@ -4303,6 +4354,24 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1112-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1112-morning-academic">11 月 12 日早报</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：瑞典皇家理工学院（KTH）语音、音乐与听力系<br>核心价值问题：全双工对话 agent 要在不等静音的情况下判断谁会接话、何时接话，但已有的多人下一说话人预测研究都依赖每人独立传感器，缺少&quot;一个摄像头加一个麦克风&quot;（社交机器人真实配置）下的公开基准，也没有人类表现参照，无法判断模型 65% 的准确率离人类水平有多远。<br>方法：把 31 小时双人/三人在线对话音视频语料 AVCC 做成公开基准：说话人不重叠的 7 视频测试集、865 个 hold 与 865 个 shift 事件（互静音间隙处）、全语料词级强制对齐转录；154 名参与者在同样预测点上做人类基准；评测纯音频 RoleVAP 与多模态 MuVAP 两个模型；标签、转录、人类数据与复现脚本全部公开。<br>为什么值得看：多模态 MuVAP 下一说话人准确率 63.3%，已超过普通参与者均值 59.5%，距众人多数投票 67.7% 只差 4.4 点；hold/shift 判断 67.9%，同样介于个人均值 64.0% 与多数投票 70.1% 之间——现有模型轮次判断已超过单个人的水平，剩下的差距主要在 hold 事件上；做全双工语音 agent 轮次决策的人可以直接用这个基准对标人类。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13957">AVCC：多人对话轮次预测基准，附人类表现参照</a>
+            <p class="keywords">关键词：下一说话人预测（next-speaker prediction）、全双工对话（full-duplex dialogue）、多模态基准（multimodal benchmark）、轮次决策（turn-taking decisions）</p>
+          </li>
+          <li class="item">
+            <p>机构：南非斯泰伦博斯大学电气与电子工程系<br>核心价值问题：语音内容编码用哪种语言单位最省比特——音素、音节、词，还是更大的单位？这直接关系到语音语言模型该用什么 token，也关系到零资源语音处理该学哪种单位，但此前没有在同一数据、同一标准下比较过。<br>方法：在 960 小时英语有声书转录语料上，用 n-gram 与 transformer 语言模型比较音素、音节、词、多词组合及中间 token 化的信息率；模型主体固定约 20M 参数，只换输入单位。<br>为什么值得看：词单元最优，20M transformer 下 28.07 bps，优于音素的 29.56 bps 与词-BPE（5000 次合并）的 29.27 bps；结论是建模预算有限时，比音节大、比长词组小的类词单位最划算，给语音 token 化设计提供了一个直接的经验依据；代码已开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.13990">语音编码用哪个单位最省比特：词最优</a>
+            <p class="keywords">关键词：语音 token 化（speech tokenization）、信息率（information rate）、语音语言模型（speech language models）、词单元（word units）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1111-morning-academic">
         <header class="round-header">
           <h2 id="round-1111-morning-academic">11 月 11 日早报</h2>
@@ -4510,19 +4579,8 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1108-supplement-academic">
-        <header class="round-header">
-          <h2 id="round-1108-supplement-academic">11 月 8 日补推</h2>
-          <span class="count">1 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>机构：清华大学、华为技术有限公司。<br>核心价值问题：多用户共用语音助手时，助手要能回答“原来计划什么时候离开”这类跨会话问题，并按不同用户调整行为；只靠主题相似的检索不够，必须认出当前说话人、找回过去的状态、区分后来的修改。<br>方法：提出 PERSIST 持久记忆系统，把跨会话历史写成可读的事件记录，用 Who/What/When 三维联合打分检索（语义内容、说话人声纹身份、时间状态）；为实时全双工复用对话主干的中间表示，避免对查询音频重编码，检索延迟从 578.42ms 降到 7.03ms；并提出 SpokenTrace 诊断基准，按记忆任务与说话人查询类型拆解评测。SpokenTrace 上端到端准确率 85.08%，all-support EM@3 从 BGE-large 的 49.01% 提到 82.10%。<br>为什么值得看：语音助手要真正“记住用户”，跨会话记忆是必经之路；这篇把说话人身份和时间状态放进检索打分，并对全双工做了延迟优化，做语音 agent 长期记忆的人可以直接参考。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2610.07725">PERSIST（arXiv:2610.07725）</a>
-            <p class="keywords">关键词：跨会话记忆（cross-session memory）、全双工语音对话（full-duplex spoken dialogue）、说话人身份（speaker identity）、语音 agent 长期记忆（long-term memory for voice agents）</p>
-          </li>
-        </ol>
-      </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1108-1230-academic">
         <header class="round-header">
           <h2 id="round-1108-1230-academic">11 月 8 日 12:30 轮</h2>
@@ -4536,8 +4594,19 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
+      <section class="round" aria-labelledby="round-1108-supplement-academic">
+        <header class="round-header">
+          <h2 id="round-1108-supplement-academic">11 月 8 日补推</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：清华大学、华为技术有限公司。<br>核心价值问题：多用户共用语音助手时，助手要能回答“原来计划什么时候离开”这类跨会话问题，并按不同用户调整行为；只靠主题相似的检索不够，必须认出当前说话人、找回过去的状态、区分后来的修改。<br>方法：提出 PERSIST 持久记忆系统，把跨会话历史写成可读的事件记录，用 Who/What/When 三维联合打分检索（语义内容、说话人声纹身份、时间状态）；为实时全双工复用对话主干的中间表示，避免对查询音频重编码，检索延迟从 578.42ms 降到 7.03ms；并提出 SpokenTrace 诊断基准，按记忆任务与说话人查询类型拆解评测。SpokenTrace 上端到端准确率 85.08%，all-support EM@3 从 BGE-large 的 49.01% 提到 82.10%。<br>为什么值得看：语音助手要真正“记住用户”，跨会话记忆是必经之路；这篇把说话人身份和时间状态放进检索打分，并对全双工做了延迟优化，做语音 agent 长期记忆的人可以直接参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2610.07725">PERSIST（arXiv:2610.07725）</a>
+            <p class="keywords">关键词：跨会话记忆（cross-session memory）、全双工语音对话（full-duplex spoken dialogue）、说话人身份（speaker identity）、语音 agent 长期记忆（long-term memory for voice agents）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1107-0830-academic">
         <header class="round-header">
           <h2 id="round-1107-0830-academic">11 月 7 日 08:30 轮</h2>
@@ -6534,7 +6603,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 11 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 12 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {

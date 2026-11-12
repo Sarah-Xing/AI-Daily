@@ -383,6 +383,77 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1112-0830">
+        <header class="round-header">
+          <h2 id="round-1112-0830">11 月 12 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>这篇实操指南讲如何用图数据库记忆搭建 GraphRAG agent，附 Neo4j 的搭建指南、200 美元 Aura 额度与 NODES 线上会信息。做 agent 记忆与图检索的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7526678096444411904">GraphRAG — how to build an AI agent with graph-based memory</a>
+            <p class="keywords">关键词：GraphRAG、图数据库（graph databases）、Agent 记忆（agent memory）、Neo4j</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1112-morning">
+        <header class="round-header">
+          <h2 id="round-1112-morning">11 月 12 日早报</h2>
+          <span class="count">10 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Google DeepMind 11 月 11 日发布 Gemini Decisions API，底层是专为&quot;有界决策&quot;设计的新模型 Gemini Decision 1：它不逐词生成文本，而是在一次前向 pass 中对最多 1000 个是非/选择/评分问题打分并返回概率与置信度，端到端延迟约 150–250 毫秒，定价每百万输入 token 0.10 美元、输出免费。值得看的是它把工具选择、模型路由、策略检查这类 agent 控制平面的判断从生成式调用中剥离出来，OpenRouter、LangChain、Vercel、LiteLLM 等已首日接入；但要注意这与昨天 Hugging Face 的 Decision Models 是不同厂商的同类动作，&quot;决策模型&quot;正在成为一个新品类。</p>
+            <a class="source-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/">Gemini Decisions API: Fast multimodal decisions（Google 官方博客）</a>
+            <p class="keywords">关键词：决策模型（decision models）、Agent 控制平面（agent control plane）、低延迟推理（low-latency inference）、Google DeepMind</p>
+          </li>
+          <li class="item">
+            <p>Databricks 11 月 11 日在 Data + AI Live 上发布第二代 Genie，从&quot;问答式数据助手&quot;升级为常驻后台的自主企业 agent：可接管长期任务、按计划或触发器运行、委派给子 agent、追踪缺失输入，并通过新的 Priority Inbox 与邮件主动把决策推给人，全程由 Unity Catalog 与 Unity Gateway 治理。值得看的是它标志着企业级 agent 从&quot;被问才答&quot;转向&quot;主动干活&quot;，还配有 Genie Ontology 上下文层与 100 多个数据源搜索；但常驻模式本身只是&quot;即将进入 preview/beta&quot;，目前 GA 的是 Genie 与 Genie Ontology。</p>
+            <a class="source-link" href="https://www.databricks.com/company/newsroom/press-releases/databricks-launches-new-always-genie-autonomous-ai-complex">Databricks Launches New Always-on Genie（Databricks 官方新闻稿）</a>
+            <p class="keywords">关键词：企业 agent（enterprise agents）、自主数据 agent（autonomous data agents）、数据智能（data intelligence）、Databricks</p>
+          </li>
+          <li class="item">
+            <p>xAI 11 月 11 日宣布 Grok Bot 1.0 正式出 beta，把个人助手升级为全团队共享的 Team Bot：可进 Slack 与 Microsoft Teams 群聊、加入 Google Meet/Zoom/Teams 会议做记录与会后总结、主动发现未完成工作并提议接手，还新增 Gmail、日历、GitHub 集成与按领域划分的现成模板。值得看的是它与同日 Cursor 多人 Projects 呼应，都是&quot;agent 从单人工具变成团队协作者&quot;的标志；但 Team Bot 需 Team/Enterprise 套餐，会议功能也需 Team/Enterprise/Ultra，官方未公布价格与性能数据。</p>
+            <a class="source-link" href="https://x.ai/news/grok-bot-1-0">Introducing Grok Bot 1.0（xAI 官方页面）</a>
+            <p class="keywords">关键词：团队 agent（team agents）、多 agent 协作（multi-agent collaboration）、会议记录（meeting notes）、xAI</p>
+          </li>
+          <li class="item">
+            <p>Tether AI Research 11 月 11 日发布 0.8B 参数的开源权重 agent 模型 BotPsy，基于 Qwen3.5-0.8B 后训练，专为函数调用与多步 agentic 工作流设计，可在手机/笔记本本地运行日历、邮件、文件、搜索等日常任务，权重以 Apache 2.0 发布在 Hugging Face（另有 GGUF 量化版）。值得看的是它把&quot;小模型也能干活&quot;推到端侧：官方自测 BFCL v4 从 23.4 提升至 44.0，在 6 项 agent 基准上超过 2.5 倍大的 Qwen3.5-2B-Think；但所有分数均为官方自测、无第三方复现，且官方明确表示不适用于高风险决策。</p>
+            <a class="source-link" href="https://qvac.tether.io/blog/on-device-ai-agent-botpsy">On-Device AI Agent: BotPsy, a 0.8B Model for Your Phone（Tether QVAC 官方博客）</a>
+            <p class="keywords">关键词：端侧 agent（on-device agents）、小模型（small models）、函数调用（function calling）、开源权重（open weights）</p>
+          </li>
+          <li class="item">
+            <p>Coinbase 11 月 11 日给其 MCP 交易/research 接入 Coinbase for Agents 加了一套服务端风控：单笔交易上限、24 小时交易量上限、组合亏损达阈值自动停单，产品类别权限（加密货币/股票/衍生品）标注为即将推出。值得看的是关键设计在&quot;控制不在 agent 内、而在 Coinbase 服务器上&quot;，agent 自己改不了限额，这为 agentic 交易提供了一个可复制的&quot;权限预算&quot;范式；但产品权限尚未上线，亏损阈值的具体计算口径官方也未披露。</p>
+            <a class="source-link" href="https://www.coinbase.com/blog/agent-controls">Coinbase for Agents introduces new Agent Controls（Coinbase 官方博客）</a>
+            <p class="keywords">关键词：Agent 风控（agent risk controls）、MCP、交易安全（trading safety）、权限预算（permission budgets）</p>
+          </li>
+          <li class="item">
+            <p>Google Antigravity 11 月 11 日上线内置浏览器控制，编码 agent 可把实时 UI 验证委派给独立的浏览器子 agent：在内嵌浏览器里打开本地服务、点流程、填表单、读控制台报错与失败网络请求、截图核对修复效果，多个浏览器子 agent 还可并行跑在不同标签页。值得看的是它补上了&quot;写代码—跑起来验证&quot;的闭环，且浏览器子 agent 默认跑在 Gemini Flash 上、不占用主线程上下文与高阶模型额度；但目前仅限个人账号，企业账号与远程 agent 暂不支持，登录与下载需人工接管/审批。</p>
+            <a class="source-link" href="https://antigravity.google/docs/browser/">Browser use in Google Antigravity（Google Antigravity 官方文档）</a>
+            <p class="keywords">关键词：编码 agent（coding agents）、浏览器控制（browser control）、UI 验证（UI verification）、Google</p>
+          </li>
+          <li class="item">
+            <p>OpenAI 收购了由 Sonder 联合创始人 Francis Davidson 创办的 AI 旅行 agent 初创 Odessia，Davidson 将加入 OpenAI 负责&quot;旅行未来&quot;方向；Odessia 独立服务已关闭。值得看的是 Odessia 是持 IATA 牌照、能自己完成机票酒店预订的对话式旅行 agent（而非只给建议），Sequoia 领投了 600 万美元 pre-seed，消息传出后 Expedia、Booking 等股价下滑；但 OpenAI 官方尚未宣布该交易与任何旅行产品，交易金额未披露，实质更像 acqui-hire。（媒体消息：TechCrunch 报道，OpenAI 仅向其确认了创始人入职。）</p>
+            <a class="source-link" href="https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/">OpenAI acquires Odessia, travel startup created by Sonder founder（TechCrunch）</a>
+            <p class="keywords">关键词：旅行 agent（travel agents）、收购（acquisitions）、OpenAI、对话式预订（conversational booking）</p>
+          </li>
+          <li class="item">
+            <p>语音 agent 平台 Vapi 11 月 11 日推出 Agent Loop，让开发者围绕业务目标搭建语音 agent，并用模拟通话做测试、根据结果迭代，改动上线前需人工批准，GA 计划 2027 年初。值得看的是它把语音 agent 的开发从&quot;调提示词&quot;变成&quot;目标—测试—改进&quot;的闭环，对客服、电话销售类 agent 的上线质量有直接意义；但目前只是 early access，且为语音 agent 开发工具，与语音早报覆盖面有重叠。（媒体消息：未找到 Vapi 官方直接页面。）</p>
+            <a class="source-link" href="https://runtimewire.com/article/vapi-agent-loop-voice-agents-early-access">Vapi launches Agent Loop to build and test voice agents against a business goal（Runtime Wire）</a>
+            <p class="keywords">关键词：语音 agent 开发（voice agent development）、模拟测试（simulation testing）、持续改进（continuous improvement）、Vapi</p>
+          </li>
+          <li class="item">
+            <p>New Relic 11 月 10 日在 KubeCon North America 上发布 Autopilot Kubernetes Agent，现已公开预览：面向 SRE 与平台工程师的领域专用 agent，用 90 多个诊断检测器横跨 K8s 事件、对象描述、日志与 APM trace 定位故障根因，并生成可供工程师审核执行的修复代码。值得看的是它把 agent 落到&quot;运维排障&quot;这一高频场景，且基于 OpenTelemetry 的 Ground Truth 上下文引擎做关联分析；但根因识别准确率尚无独立实测数据，修复代码仍需人工审核后才能执行。</p>
+            <a class="source-link" href="https://newrelic.com/press-release/20261110">New Relic Launches New Relic Autopilot Kubernetes Agent（New Relic 官方新闻稿）</a>
+            <p class="keywords">关键词：运维 agent（ops agents）、Kubernetes、根因分析（root cause analysis）、可观测性（observability）</p>
+          </li>
+          <li class="item">
+            <p>Cursor 11 月 10 日把 9 月推出的 Projects（由一个协调器指挥一支编码 agent 舰队）升级为多人版：邀请队友进入同一 Project 后，人与各自的 agent 在共享工作区里一起规划、开发与交付，共享任务板与上下文，agent 之间可协调计划、标记冲突、交接工作。值得看的是它与 Grok Bot 1.0 同日被热议，共同指向&quot;多 agent 协作&quot;从单人走向团队；官方称 beta 即日起向所有用户开放，但内部测试数据（如 11 人 62 个并发 agent、15 天合并 972 个 PR）为官方自述、无独立验证。</p>
+            <a class="source-link" href="https://cursor.com/blog/projects-multiplayer">Cursor Projects is now multiplayer（Cursor 官方博客）</a>
+            <p class="keywords">关键词：多 agent 协作（multi-agent collaboration）、编码 agent（coding agents）、团队开发（team development）、Cursor</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1111-2030">
         <header class="round-header">
           <h2 id="round-1111-2030">11 月 11 日 20:30 轮</h2>
@@ -988,73 +1059,8 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1108-2030">
-        <header class="round-header">
-          <h2 id="round-1108-2030">11 月 8 日 20:30 轮</h2>
-          <span class="count">2 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>Deepika Mishra 提出，基础设施 AI agent 不应直接从模糊需求生成资源，而应先把约束讲清楚，再生成架构设计与 Terraform 代码。把“先定约束”放在生成之前，是让 infra agent 输出可用的关键一步，做基础设施自动化的人可以看看。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:1378157-7525406512056500224/">基础设施 AI agent：先定约束，再生成架构与 Terraform</a>
-            <p class="keywords">关键词：基础设施 agent（infrastructure agent）、约束先行（constraint-first design）、架构设计（architecture design）、Terraform 代码生成（Terraform code generation）</p>
-          </li>
-          <li class="item">
-            <p>Zendesk 的 Franch Almero 介绍，员工服务 AI agent 可以用 Advanced Action Flows 自动处理 NDA 请求：收集信息、核查政策、起草文件一气呵成。这是 AI agent 落到企业内部流程的一个具体例子，关心 agent 在企业服务场景落地的人值得一看。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/franchalmero_an-nda-request-shouldnt-trigger-a-scavenger-ugcPost-7525381443544322049-ZQ4Q/">Zendesk 员工服务 AI agent 自动处理 NDA 请求</a>
-            <p class="keywords">关键词：员工服务 agent（employee service agent）、NDA 自动处理（automated NDA processing）、企业流程自动化（enterprise workflow automation）、Advanced Action Flows</p>
-          </li>
-        </ol>
-      </section>
-      <section class="round" aria-labelledby="round-1108-1630">
-        <header class="round-header">
-          <h2 id="round-1108-1630">11 月 8 日 16:30 轮</h2>
-          <span class="count">2 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>GitHub 宣布，Copilot 应用会话现在可以在 VS Code 里继续了：用户能在 IDE 中接过 agent 的任务、计划、对话记录和代码改动接着干。这是把 agent 会话从网页端带进编辑器的一个落地，常用 Copilot 写代码的人可以留意一下。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/how-to-continue-a-github-copilot-app-session-share-7525331575626985472-qN0K/">GitHub Copilot 应用会话可在 VS Code 里继续</a>
-            <p class="keywords">关键词：GitHub Copilot、VS Code、编程 agent（coding agent）、会话接续（session handoff）</p>
-          </li>
-          <li class="item">
-            <p>Alan Paris 结合欧盟 AI 办公室的研究，把三道防线治理模型套用到银行部署 agent 的场景：列出四项测试，以及银行需要记录和验证什么才能证明合规。做金融行业 agent 落地、关心合规治理的人可以读一读。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/alanparis_agentic-governance-the-3-lines-were-drawn-share-7525298604824166400-050H/">Agentic Governance：三道防线是给人画的</a>
-            <p class="keywords">关键词：agent 治理（agent governance）、三道防线（three lines of defense）、银行部署（bank deployment）、合规验证（compliance verification）</p>
-          </li>
-        </ol>
-      </section>
-      <section class="round" aria-labelledby="round-1108-1230">
-        <header class="round-header">
-          <h2 id="round-1108-1230">11 月 8 日 12:30 轮</h2>
-          <span class="count">2 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>Rahul Parundekar 提到，他正在用 Kyle Stratis 的 MCP 新书备考 Agentic AI Foundation 的 Model Context Protocol Architect 认证考试。MCP 生态现在连认证考试都有了，说明这套协议正在从工具约定走向职业技能，想系统学 MCP 的人可以留意这本书和这门认证。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/rparundekar_earlier-this-year-i-spoke-with-kyle-stratis-ugcPost-7525261110506139648-5MRg/">MCP 新书与 Model Context Protocol Architect 认证</a>
-            <p class="keywords">关键词：模型上下文协议（Model Context Protocol）、MCP、Agent 认证（agent certification）、职业技能（professional skills）</p>
-          </li>
-          <li class="item">
-            <p>Sri Raghu Malireddi 谈长时程 agent 的关键指标：跑几个小时的 agent，延迟是按步数累乘的，所以该数完成任务的步数、而不是首 token 时间；Sierra 收购 Anon 正是为这种能在网站上连续工作数小时的 agent 补基础设施。他自己的 Moss Inference 浏览器执行在 Browser Use Bench V2.1 上 180 个任务拿下 84.4 分，步数比上一版少 17%。关注长时程 agent 和浏览器 agent 的人可以看看。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/r4ghu_an-agent-that-runs-for-hours-has-a-different-share-7525237459409018880-W-g6/">长时程 agent：数步数，别只看首 token 时间</a>
-            <p class="keywords">关键词：长时程 agent（long-horizon agent）、浏览器 agent（browser agent）、Agent 评测（agent evaluation）、步数效率（step efficiency）</p>
-          </li>
-        </ol>
-      </section>
-      <section class="round" aria-labelledby="round-1108-0830">
-        <header class="round-header">
-          <h2 id="round-1108-0830">11 月 8 日 08:30 轮</h2>
-          <span class="count">1 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>Snorkel AI CEO Alexander Ratner 在 Runtime 2026 的演讲&quot;The Art &amp; Science of Agent Evals&quot;中指出，AI 能力正在跑赢评估能力，缩小差距要从更好的基准数据入手——更真实的任务、更丰富的上下文和专家级标注。关心 agent 评测怎么做才靠谱的人值得看看这个观点。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/ai-capabilities-are-outpacing-our-ability-share-7525206705195073536-FRrf/">Snorkel AI CEO 谈 agent 评测：能力跑赢评估，差距要从基准数据补起</a>
-            <p class="keywords">关键词：agent 评测（agent evaluation）、基准数据（benchmark data）、AI 能力评估（AI capability evaluation）、Runtime 2026</p>
-          </li>
-        </ol>
-      </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1108-morning">
         <header class="round-header">
           <h2 id="round-1108-morning">11 月 8 日早报</h2>
@@ -1083,8 +1089,73 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
+      <section class="round" aria-labelledby="round-1108-0830">
+        <header class="round-header">
+          <h2 id="round-1108-0830">11 月 8 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Snorkel AI CEO Alexander Ratner 在 Runtime 2026 的演讲&quot;The Art &amp; Science of Agent Evals&quot;中指出，AI 能力正在跑赢评估能力，缩小差距要从更好的基准数据入手——更真实的任务、更丰富的上下文和专家级标注。关心 agent 评测怎么做才靠谱的人值得看看这个观点。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/ai-capabilities-are-outpacing-our-ability-share-7525206705195073536-FRrf/">Snorkel AI CEO 谈 agent 评测：能力跑赢评估，差距要从基准数据补起</a>
+            <p class="keywords">关键词：agent 评测（agent evaluation）、基准数据（benchmark data）、AI 能力评估（AI capability evaluation）、Runtime 2026</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1108-1230">
+        <header class="round-header">
+          <h2 id="round-1108-1230">11 月 8 日 12:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Rahul Parundekar 提到，他正在用 Kyle Stratis 的 MCP 新书备考 Agentic AI Foundation 的 Model Context Protocol Architect 认证考试。MCP 生态现在连认证考试都有了，说明这套协议正在从工具约定走向职业技能，想系统学 MCP 的人可以留意这本书和这门认证。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/rparundekar_earlier-this-year-i-spoke-with-kyle-stratis-ugcPost-7525261110506139648-5MRg/">MCP 新书与 Model Context Protocol Architect 认证</a>
+            <p class="keywords">关键词：模型上下文协议（Model Context Protocol）、MCP、Agent 认证（agent certification）、职业技能（professional skills）</p>
+          </li>
+          <li class="item">
+            <p>Sri Raghu Malireddi 谈长时程 agent 的关键指标：跑几个小时的 agent，延迟是按步数累乘的，所以该数完成任务的步数、而不是首 token 时间；Sierra 收购 Anon 正是为这种能在网站上连续工作数小时的 agent 补基础设施。他自己的 Moss Inference 浏览器执行在 Browser Use Bench V2.1 上 180 个任务拿下 84.4 分，步数比上一版少 17%。关注长时程 agent 和浏览器 agent 的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/r4ghu_an-agent-that-runs-for-hours-has-a-different-share-7525237459409018880-W-g6/">长时程 agent：数步数，别只看首 token 时间</a>
+            <p class="keywords">关键词：长时程 agent（long-horizon agent）、浏览器 agent（browser agent）、Agent 评测（agent evaluation）、步数效率（step efficiency）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1108-1630">
+        <header class="round-header">
+          <h2 id="round-1108-1630">11 月 8 日 16:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>GitHub 宣布，Copilot 应用会话现在可以在 VS Code 里继续了：用户能在 IDE 中接过 agent 的任务、计划、对话记录和代码改动接着干。这是把 agent 会话从网页端带进编辑器的一个落地，常用 Copilot 写代码的人可以留意一下。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/how-to-continue-a-github-copilot-app-session-share-7525331575626985472-qN0K/">GitHub Copilot 应用会话可在 VS Code 里继续</a>
+            <p class="keywords">关键词：GitHub Copilot、VS Code、编程 agent（coding agent）、会话接续（session handoff）</p>
+          </li>
+          <li class="item">
+            <p>Alan Paris 结合欧盟 AI 办公室的研究，把三道防线治理模型套用到银行部署 agent 的场景：列出四项测试，以及银行需要记录和验证什么才能证明合规。做金融行业 agent 落地、关心合规治理的人可以读一读。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/alanparis_agentic-governance-the-3-lines-were-drawn-share-7525298604824166400-050H/">Agentic Governance：三道防线是给人画的</a>
+            <p class="keywords">关键词：agent 治理（agent governance）、三道防线（three lines of defense）、银行部署（bank deployment）、合规验证（compliance verification）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1108-2030">
+        <header class="round-header">
+          <h2 id="round-1108-2030">11 月 8 日 20:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Deepika Mishra 提出，基础设施 AI agent 不应直接从模糊需求生成资源，而应先把约束讲清楚，再生成架构设计与 Terraform 代码。把“先定约束”放在生成之前，是让 infra agent 输出可用的关键一步，做基础设施自动化的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:1378157-7525406512056500224/">基础设施 AI agent：先定约束，再生成架构与 Terraform</a>
+            <p class="keywords">关键词：基础设施 agent（infrastructure agent）、约束先行（constraint-first design）、架构设计（architecture design）、Terraform 代码生成（Terraform code generation）</p>
+          </li>
+          <li class="item">
+            <p>Zendesk 的 Franch Almero 介绍，员工服务 AI agent 可以用 Advanced Action Flows 自动处理 NDA 请求：收集信息、核查政策、起草文件一气呵成。这是 AI agent 落到企业内部流程的一个具体例子，关心 agent 在企业服务场景落地的人值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/franchalmero_an-nda-request-shouldnt-trigger-a-scavenger-ugcPost-7525381443544322049-ZQ4Q/">Zendesk 员工服务 AI agent 自动处理 NDA 请求</a>
+            <p class="keywords">关键词：员工服务 agent（employee service agent）、NDA 自动处理（automated NDA processing）、企业流程自动化（enterprise workflow automation）、Advanced Action Flows</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1107-2030">
         <header class="round-header">
           <h2 id="round-1107-2030">11 月 7 日 20:30 轮</h2>
@@ -7392,21 +7463,23 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1108-1630-academic">
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
+      <section class="round" aria-labelledby="round-1108-0830-academic">
         <header class="round-header">
-          <h2 id="round-1108-1630-academic">11 月 8 日 16:30 轮</h2>
+          <h2 id="round-1108-0830-academic">11 月 8 日 08:30 轮</h2>
           <span class="count">2 条</span>
         </header>
         <ol class="items">
           <li class="item">
-            <p>Hao Hoang 介绍了 ServerBench：一个给编码 agent 的新基准，让 agent 在真实服务器上完成任务、按实际完成的工作量打分，而不是只比速度。Claude Sonnet 5.5 在简单任务上拿到 52.8%，论文 arXiv:2611.06841、代码已开源，关心编码 agent 评测的人值得看看。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/hoang-van-hao_a-speedup-benchmark-tells-you-how-fast-a-share-7525330255683989504-ZEJ-/">ServerBench：给编码 agent 的新基准</a>
-            <p class="keywords">关键词：编码 agent 评测（coding agent evaluation）、基准测试（benchmark）、真实服务器任务（real server tasks）、Claude Sonnet 5.5</p>
+            <p>DAIR.AI 发布了 11 月 2–8 日&quot;本周顶级 AI 论文&quot;盘点，覆盖 agent 上下文压缩、Skill++、Recursa、路由式持续学习、JevAct、SPAR、RSI-Dojo、Drex/基础决策模型、协作智能和 LifeVal 等多个方向。想一周之内快速扫一遍 agent 相关的重要论文，这篇盘点是个不错的入口。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/the-top-ai-papers-of-the-week-november-2-ugcPost-7525232169393254400-WBot/">DAIR.AI 本周顶级 AI 论文盘点（11 月 2–8 日）</a>
+            <p class="keywords">关键词：AI 论文盘点（AI paper roundup）、agent、上下文压缩（context compression）、持续学习（continual learning)</p>
           </li>
           <li class="item">
-            <p>Towards Data Science（Shuai Guo）的一篇实操指南：用决策模型监测 agent 在运行中的行为异常，及时发现 agent 的行为漂移。文章讲了怎么做这类生产级监控，适合正在把 agent 部署到生产环境、关心可观测性的团队参考。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/let-decision-models-watch-your-agents-share-7525319831311560704-NIsd/">让决策模型盯着你的 agent</a>
-            <p class="keywords">关键词：agent 监控（agent monitoring）、行为漂移（behavior drift）、决策模型（decision models）、生产可观测性（production observability）</p>
+            <p>DeepLearning.AI 预告了 11 月 13 日 AI Dev NYC 的专场&quot;Context, Memory, and State: Memory Engineering for Agents&quot;，嘉宾来自 Amazon、Microsoft、Anyscale、MongoDB、OpenAI、Google DeepMind 和 NVIDIA，聚焦 agent 的长短期记忆如何设计与维护。做 agent 记忆工程、关心上下文与状态管理的可以留意这场（票价 50 美元，纽约时间 12–16 点）。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/deeplearningai_aidev-deeplearningai-agentmemory-activity-7525227026744659968-0k0P">DeepLearning.AI 预告 AI Dev NYC 专场：Memory Engineering for Agents</a>
+            <p class="keywords">关键词：agent 记忆（agent memory）、记忆工程（memory engineering）、AI Dev、上下文管理（context management)</p>
           </li>
         </ol>
       </section>
@@ -7428,26 +7501,24 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1108-0830-academic">
+      <section class="round" aria-labelledby="round-1108-1630-academic">
         <header class="round-header">
-          <h2 id="round-1108-0830-academic">11 月 8 日 08:30 轮</h2>
+          <h2 id="round-1108-1630-academic">11 月 8 日 16:30 轮</h2>
           <span class="count">2 条</span>
         </header>
         <ol class="items">
           <li class="item">
-            <p>DAIR.AI 发布了 11 月 2–8 日&quot;本周顶级 AI 论文&quot;盘点，覆盖 agent 上下文压缩、Skill++、Recursa、路由式持续学习、JevAct、SPAR、RSI-Dojo、Drex/基础决策模型、协作智能和 LifeVal 等多个方向。想一周之内快速扫一遍 agent 相关的重要论文，这篇盘点是个不错的入口。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/the-top-ai-papers-of-the-week-november-2-ugcPost-7525232169393254400-WBot/">DAIR.AI 本周顶级 AI 论文盘点（11 月 2–8 日）</a>
-            <p class="keywords">关键词：AI 论文盘点（AI paper roundup）、agent、上下文压缩（context compression）、持续学习（continual learning)</p>
+            <p>Hao Hoang 介绍了 ServerBench：一个给编码 agent 的新基准，让 agent 在真实服务器上完成任务、按实际完成的工作量打分，而不是只比速度。Claude Sonnet 5.5 在简单任务上拿到 52.8%，论文 arXiv:2611.06841、代码已开源，关心编码 agent 评测的人值得看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/hoang-van-hao_a-speedup-benchmark-tells-you-how-fast-a-share-7525330255683989504-ZEJ-/">ServerBench：给编码 agent 的新基准</a>
+            <p class="keywords">关键词：编码 agent 评测（coding agent evaluation）、基准测试（benchmark）、真实服务器任务（real server tasks）、Claude Sonnet 5.5</p>
           </li>
           <li class="item">
-            <p>DeepLearning.AI 预告了 11 月 13 日 AI Dev NYC 的专场&quot;Context, Memory, and State: Memory Engineering for Agents&quot;，嘉宾来自 Amazon、Microsoft、Anyscale、MongoDB、OpenAI、Google DeepMind 和 NVIDIA，聚焦 agent 的长短期记忆如何设计与维护。做 agent 记忆工程、关心上下文与状态管理的可以留意这场（票价 50 美元，纽约时间 12–16 点）。</p>
-            <a class="source-link" href="https://www.linkedin.com/posts/deeplearningai_aidev-deeplearningai-agentmemory-activity-7525227026744659968-0k0P">DeepLearning.AI 预告 AI Dev NYC 专场：Memory Engineering for Agents</a>
-            <p class="keywords">关键词：agent 记忆（agent memory）、记忆工程（memory engineering）、AI Dev、上下文管理（context management)</p>
+            <p>Towards Data Science（Shuai Guo）的一篇实操指南：用决策模型监测 agent 在运行中的行为异常，及时发现 agent 的行为漂移。文章讲了怎么做这类生产级监控，适合正在把 agent 部署到生产环境、关心可观测性的团队参考。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/let-decision-models-watch-your-agents-share-7525319831311560704-NIsd/">让决策模型盯着你的 agent</a>
+            <p class="keywords">关键词：agent 监控（agent monitoring）、行为漂移（behavior drift）、决策模型（decision models）、生产可观测性（production observability）</p>
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1107-0830-academic">
         <header class="round-header">
           <h2 id="round-1107-0830-academic">11 月 7 日 08:30 轮</h2>
@@ -9759,7 +9830,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 11 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 12 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
