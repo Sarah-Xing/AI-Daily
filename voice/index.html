@@ -4549,7 +4549,7 @@
             <p class="keywords">关键词：统一语音模型（unified speech model）、多任务学习（multi-task learning）、语音翻译（speech translation）、开源模型（open-source models）</p>
           </li>
           <li class="item">
-            <p>机构：未注明（PDF 第一页未署单位，单作者）<br>核心价值问题：流式识别器通常在说话人说完一个词后 90–400ms 才输出，语音 agent 每毫秒都关键，等词说完才开始检索、规划回复太慢。<br>方法：2900 万参数流式识别器（4-bit 下 16.8MB），用随机截断音频（含词中间截断）训练，预测截至当前应出的全部词并猜测下两个词；原始 token 概率为每个词（含正在说的词）提供置信度。<br>为什么值得看：LibriSpeech test-clean 上中位词在说话人说完前 90ms 即被正确预测（已发布流式模型是说完后 90–400ms 才出），6 个计时测试集全部最早；同一批有声书上 69% 的词在说完前即被正确预测（对照模型仅 3–25%）；8 个英文 Open ASR Leaderboard 集合上全面优于 Moonshine Tiny、约等于同尺寸 Whistle。</p>
+            <p>作者：Sahil Mahendrakar<br>核心价值问题：流式识别器通常在说话人说完一个词后 90–400ms 才输出，语音 agent 每毫秒都关键，等词说完才开始检索、规划回复太慢。<br>方法：2900 万参数流式识别器（4-bit 下 16.8MB），用随机截断音频（含词中间截断）训练，预测截至当前应出的全部词并猜测下两个词；原始 token 概率为每个词（含正在说的词）提供置信度。<br>为什么值得看：LibriSpeech test-clean 上中位词在说话人说完前 90ms 即被正确预测（已发布流式模型是说完后 90–400ms 才出），6 个计时测试集全部最早；同一批有声书上 69% 的词在说完前即被正确预测（对照模型仅 3–25%）；8 个英文 Open ASR Leaderboard 集合上全面优于 Moonshine Tiny、约等于同尺寸 Whistle。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.14421">Earlybird</a>
             <p class="keywords">关键词：流式语音识别（streaming ASR）、低延迟预测（low-latency prediction）、实时语音 agent（real-time voice agents）</p>
           </li>
@@ -4584,7 +4584,7 @@
             <p class="keywords">关键词：轻量 TTS（lightweight TTS）、端侧语音合成（on-device TTS）、语音克隆（voice cloning）、开源模型（open-source models）</p>
           </li>
           <li class="item">
-            <p>机构：未注明（PDF 第一页未署单位，独立研究者）<br>核心价值问题：浏览器与手机端的客户端 ASR 要覆盖 12 种印度语系与古典文字脚本，单语 Conformer 检查点每脚本约 177MiB，12 脚本超 2.1GiB，塞爆浏览器缓存配额；还有位置编码常量、WebAssembly 算子、CTC 边界闪烁与采样率失配等工程瓶颈。<br>方法：开源 16kHz 流式 ASR，能力路由的共享 INT8 Conformer 编码器（桌面 177MB Studio 版与 25MB Mobile 版）+ 12 个可热插拔的 515KB 原生脚本线性 CTC 头；动态位置合成、MatMul 点卷积、量化后 QInt8 头校准。<br>为什么值得看：12 语言存储从 2.1GiB 压到 31MB（Mobile 版首载 25.85MB）；Studio 版 12 语言开放 CER 8.87%、中位首词延迟 30.6ms、已提交前缀零抖动；覆盖梵语、印度英语与十种印度语言，浏览器、Node.js 与 Python 都能跑。</p>
+            <p>作者：Hemanth HM<br>核心价值问题：浏览器与手机端的客户端 ASR 要覆盖 12 种印度语系与古典文字脚本，单语 Conformer 检查点每脚本约 177MiB，12 脚本超 2.1GiB，塞爆浏览器缓存配额；还有位置编码常量、WebAssembly 算子、CTC 边界闪烁与采样率失配等工程瓶颈。<br>方法：开源 16kHz 流式 ASR，能力路由的共享 INT8 Conformer 编码器（桌面 177MB Studio 版与 25MB Mobile 版）+ 12 个可热插拔的 515KB 原生脚本线性 CTC 头；动态位置合成、MatMul 点卷积、量化后 QInt8 头校准。<br>为什么值得看：12 语言存储从 2.1GiB 压到 31MB（Mobile 版首载 25.85MB）；Studio 版 12 语言开放 CER 8.87%、中位首词延迟 30.6ms、已提交前缀零抖动；覆盖梵语、印度英语与十种印度语言，浏览器、Node.js 与 Python 都能跑。</p>
             <a class="source-link" href="https://arxiv.org/abs/2611.13814">Swanada</a>
             <p class="keywords">关键词：印度语言 ASR（Indic ASR）、流式识别（streaming recognition）、浏览器端 ASR（browser ASR）、多语言（multilingual）</p>
           </li>
