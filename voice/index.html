@@ -383,6 +383,47 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1114-0830">
+        <header class="round-header">
+          <h2 id="round-1114-0830">11 月 14 日 08:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Revve AI 的 Nguyễn Hỷ 分享了越南语语音转写加说话人分离的实验：用 Moonshot 的 MOSS 0.9B 模型，内部基准词错率 11.07%，并放出了公开的 Hugging Face 演示。做小语种 ASR 或说话人分离的人可以看看这个实测结果。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/nguyễn-hỷ-5645bb187_𝗘𝘅𝗰𝗶𝘁𝗲𝗱-𝘁𝗼-𝘀𝗵𝗮𝗿𝗲-𝗺𝘆-𝗹𝗮𝘁𝗲𝘀𝘁-𝗲𝘅𝗽𝗲𝗿𝗶𝗺𝗲𝗻𝘁-𝗼𝗻-𝗩𝗶𝗲𝘁𝗻𝗮𝗺𝗲𝘀𝗲-𝗦𝗽𝗲𝗲𝗰𝗵-𝘁𝗼-𝗧𝗲𝘅𝘁-𝘄𝗶𝘁𝗵-𝗦𝗽𝗲𝗮𝗸𝗲𝗿-𝗗𝗶𝗮𝗿𝗶𝘇𝗮𝘁𝗶𝗼𝗻-share-7527395707197026304-rUQQ/">Nguyễn Hỷ：越南语语音转写 + 说话人分离（MOSS 0.9B，WER 11.07%）</a>
+            <p class="keywords">关键词：越南语 ASR（Vietnamese ASR）、说话人分离（speaker diarization）、小语种（low-resource languages）、开源演示（open demo）</p>
+          </li>
+          <li class="item">
+            <p>Meta AI 的 Sara Papi 分享了两篇 EACL 2027 录用论文：RedVox 是首个多语言 LLM 语音安全评测基准，3.2 万多个测试用例、覆盖 8 种语言；LOST 则评测带上下文的语音翻译。做语音安全或语音翻译评测的人可以关注这两项工作。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/sara-papi_excited-to-share-that-two-of-our-papers-have-ugcPost-7527249707040026624-3F8U/">Sara Papi：EACL 2027 两篇论文——RedVox 语音安全基准与 LOST 语音翻译评测</a>
+            <p class="keywords">关键词：语音安全（speech safety）、语音翻译（speech translation）、多语言基准（multilingual benchmark）、EACL 2027</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1114-morning">
+        <header class="round-header">
+          <h2 id="round-1114-morning">11 月 14 日早报</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>印度语音实验室 Chariot 发布多语言 TTS 模型 Chariot-1-TTS-Multilingual，覆盖 11 种印度语言与英语，50+ 音色，支持句内任意两种语言混说与几秒音频的声音克隆，单次最长生成 1000 字符。卖点是模型内部做语境化读法：能按上下文把&quot;₹1,250&quot;读成卢比金额、把&quot;B+&quot;区分为血型还是成绩，减少定制文本归一化规则。据 Chariot 自家评测，印地语字符错误率 7.60%、英语难例读对率 93.78%，均列所比模型第一，但基准为官方自测、未经独立验证。关注印度语言 TTS 与语音 agent 落地的人可以看看。</p>
+            <a class="source-link" href="https://chariot.in/news/introducing-chariot-1-tts-multilingual/">Chariot 发布多语言 TTS 模型 Chariot-1-TTS-Multilingual</a>
+            <p class="keywords">关键词：多语言 TTS（multilingual TTS）、印度语言（Indian languages）、声音克隆（voice cloning）、语境化读法（contextual reading）</p>
+          </li>
+          <li class="item">
+            <p>Bland 发布全双工语音到语音模型 Tofu-1：边听边说、可被打断、边说边推理，专为银行、医疗、保险、政府等高风险电话场景打造；能分辨来电者与背景说话人、理解整段通话场景（包括电视、孩子哭声、键盘音等环境声）并生成带场景感的完整通话音频。Bland 称在封闭试听中 92% 的人分辨不出 Tofu-1 与真实录音——该数字为厂商自报。研究预览现已开放申请，预计 2027 年 1 月初开放。</p>
+            <a class="source-link" href="https://www.bland.ai/speech-to-speech">Tofu-1：面向高风险电话的全双工语音模型 | Bland</a>
+            <p class="keywords">关键词：全双工语音模型（full-duplex speech model）、语音到语音（speech-to-speech）、电话场景（phone calls）、可打断对话（interruptible dialogue）</p>
+          </li>
+          <li class="item">
+            <p>Speechify 的 Simba 3.5 在 Artificial Analysis 的 Controlled Voice Arena 登顶，与 HeyGen Voice 统计上持平，领先 Qwen-Audio-3.1-TTS-Plus；在 Provider Voice 榜上排第 5，与 Cartesia Sonic 3.6 持平。Artificial Analysis 给出的速度与价格是每秒 139.6 字符、每百万字符 6.58 美元。关注 TTS 榜单与选型的人可以参考。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/speechifys-simba-35-takes-1-in-the-artificial-share-7527122697592541184-l2Sq/">Speechify Simba 3.5 登顶 Artificial Analysis TTS 榜单</a>
+            <p class="keywords">关键词：TTS 榜单（TTS leaderboard）、语音合成（speech synthesis）、语音评测（voice evaluation）、性价比（cost-performance）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1113-1630">
         <header class="round-header">
           <h2 id="round-1113-1630">11 月 13 日 16:30 轮</h2>
@@ -840,6 +881,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1110-2030">
         <header class="round-header">
           <h2 id="round-1110-2030">11 月 10 日 20:30 轮</h2>
@@ -935,8 +978,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1109-morning">
         <header class="round-header">
           <h2 id="round-1109-morning">11 月 9 日早报</h2>
@@ -4608,6 +4649,34 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1114-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1114-morning-academic">11 月 14 日早报</h2>
+          <span class="count">4 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>DeepLearning.AI 今早开播一期实时语音 agent 主题研讨会，由 Vocal Bridge 首席执行官 Ashwyn Sharma 主讲：如何把聊天机器人改造成实时语音 agent，覆盖轮次切换、打断处理、记忆、声音身份与延迟优化，并附 Google AI Studio 搭建示例。做实时语音 agent 落地的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/aidev-deeplearningai-aiagents-ugcPost-7527401223260471297-VTpO/">DeepLearning.AI 实时语音 agent 研讨会</a>
+            <p class="keywords">关键词：实时语音 agent（real-time voice agent）、研讨会（workshop）、轮次切换（turn-taking）、延迟优化（latency optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：AveraLabs<br>核心价值问题：全双工口语对话（边听边说、能打断、能接话）通常要靠几十万到几百万小时语音训练，还会改写提供知识的语言模型本身；而且轮次切换要么藏在模型内部、要么只做到粗粒度，难以逐词控制。<br>方法：冻结通用多模态 LLM（Qwen3-Omni），只训练轻量适配器与 17 个新 token embedding（9700 万参数）；思考器以 80 毫秒帧频逐词输出 agent 文本，停顿、让出话轮、开始说话都表示为同一词表的 token，并由有限状态机保证合法；思考与发声只通过离散 token 对接，可分别训练；四阶段课程学习总计约 30 GPU 小时。<br>为什么值得看：在 Full-Duplex-Bench 与 InteractionBench 上与经大规模语音训练的开源全双工系统相当，且在用户仅停顿时最不容易抢话、接话最频繁、长对话的任务准确率与连贯性领先。做全双工语音 agent、想低成本复用现成 LLM 的人值得细读。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14774">An LLM Is All You Need: Data-Efficient Adaptation to Full-Duplex, Word-Level Spoken Dialogue</a>
+            <p class="keywords">关键词：全双工对话（full-duplex dialogue）、大语言模型（LLM）、逐词控制（word-level control）、低成本适配（efficient adaptation）</p>
+          </li>
+          <li class="item">
+            <p>机构：伦斯勒理工学院、IBM Research<br>核心价值问题：BEST-RQ 用固定随机投影与码本做语音自监督预训练，简单高效，但学到的表征对随机码本的选择很敏感——换一组码本，预训练任务质量就可能变差。<br>方法：把每个随机码本看作一组，用组分布鲁棒优化（Group DRO）训练：按各组损失自适应加权、侧重表现差的组，并以 KL 散度正则防止权重过度集中；共享编码器加各组独立预测头。<br>为什么值得看：在 Multilingual LibriSpeech 上，分布鲁棒的 BEST-RQ 在多个码本配置下均优于常规均匀平均的多码本训练。做语音自监督表征、关心预训练稳定性的人可以看看。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14801">Distributionally Robust BEST-RQ for Speech Representation Learning</a>
+            <p class="keywords">关键词：语音自监督学习（speech self-supervised learning）、分布鲁棒优化（distributionally robust optimization）、语音表征（speech representation）、多语言（multilingual）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学、南京大学<br>核心价值问题：多接收器场景下要判断谁在说话、在哪、在怎么动，现有评测只看空间预测、转录或追踪，少有检验&quot;语音信号是否始终对应正确的物理声源&quot;——尤其在多个接收器与说话人移动时。<br>方法：提出 MESH 评测：近 4 万道题、13 项静态/动态定位与空间转录任务，分第一人称（本地录音加对端元数据）与第三人称（多接收器同步录音、统一三维世界坐标）两种视角；评测 11 个音频模型配置与一个用专用工具的语言模型 agent；数据集与评测代码均已公开。<br>为什么值得看：最佳静态距离估计准确率仅 21.90%、动态方向追踪仅 41.54%，四项转录任务的最低词错率在 59.15%–73.10% 之间——现有模型还不会有效利用对端信息，多说话人与动态场景仍是短板。做空间音频、多设备语音理解与具身语音的人值得关注。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16787">MESH: Multi-receiver Evaluation of Spatial Hearing across Egocentric and Allocentric Views</a>
+            <p class="keywords">关键词：空间音频（spatial audio）、多接收器（multi-receiver）、语音定位（speech localization）、评测基准（evaluation benchmark）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1113-1630-academic">
         <header class="round-header">
           <h2 id="round-1113-1630-academic">11 月 13 日 16:30 轮</h2>
@@ -4829,6 +4898,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1110-morning-academic">
         <header class="round-header">
           <h2 id="round-1110-morning-academic">11 月 10 日早报</h2>
@@ -4917,8 +4988,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1109-morning-academic">
         <header class="round-header">
           <h2 id="round-1109-morning-academic">11 月 9 日早报</h2>
@@ -6992,7 +7061,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 13 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 14 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
