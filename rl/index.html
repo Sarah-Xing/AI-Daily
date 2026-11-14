@@ -422,6 +422,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1109-1630">
         <header class="round-header">
           <h2 id="round-1109-1630">11 月 9 日 16:30 轮</h2>
@@ -435,8 +437,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1107-1230">
         <header class="round-header">
           <h2 id="round-1107-1230">11 月 7 日 12:30 轮</h2>
@@ -810,6 +810,150 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1113-1630-academic">
+        <header class="round-header">
+          <h2 id="round-1113-1630-academic">11 月 13 日 16:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>TwelveLabs 总结了 CoRL 2026 上关于机器人数据集的讨论：用第一人称视频做机器人训练数据时，演示多样性、保留上下文、把任务拆解成步骤、识别失败动作都很关键，数据规模越大，质量与筛选越重要。做机器人数据与仿真到真机迁移的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/corl2026-robotics-videointelligence-ugcPost-7527132030485057536-H31L/">TwelveLabs 谈 CoRL 2026：机器人数据集越大，质量与筛选越重要</a>
+            <p class="keywords">关键词：机器人数据集（robot datasets）、仿真到真机（sim-to-real）、第一人称视频（egocentric video）、数据质量（data quality）</p>
+          </li>
+          <li class="item">
+            <p>&quot;RoboTTT: Context Scaling for Robot Policies&quot; 获得了 CoRL 2026 最佳学生论文，作者包括 Yunfan Jiang、李飞飞和 Jim Fan 等人。做机器人策略学习的人可以看看这篇获奖工作。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/corl2026-share-7527129693137965056-kk8H/">RoboTTT 获 CoRL 2026 最佳学生论文</a>
+            <p class="keywords">关键词：机器人策略学习（robot policy learning）、上下文扩展（context scaling）、最佳学生论文（best student paper）、CoRL 2026</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1113-1230-academic">
+        <header class="round-header">
+          <h2 id="round-1113-1230-academic">11 月 13 日 12:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>NVIDIA Robotics 分享了一个 Isaac Sim 上手教程：用 SimReady 资产一步步搭建 Franka 机械臂的抓取放置仿真。做机器人仿真到真机迁移的人可以照着练手。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7527099064497270784/">Isaac Sim 上手教程：Franka 机械臂抓取放置仿真</a>
+            <p class="keywords">关键词：机器人仿真（robot simulation）、抓取放置（pick-and-place）、仿真到真机（sim-to-real）、Isaac Sim</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1113-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1113-morning-academic">11 月 13 日早报</h2>
+          <span class="count">21 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：南洋理工大学、Skywork AI<br>核心价值问题：可验证奖励 RL 里很多验证器只能证伪、不能证实——“通过验证”的样本里混着大量走捷径的假正例，直接强化它们等于奖励作弊，怎么在这种单边可验证设定下训练？<br>方法：提出 NOPO，把“验证通过”当作未标注样本、只用可信的“验证失败”负样本做抑制更新：参考相对的负抑制损失 + 按未证伪比例缩放更新幅度的组级适配器。<br>为什么值得看：不依赖完美验证器就能稳定提升，在代码、逻辑、数学基准上 pass@k 超过 GRPO 等基线，且推理时扩展与跨基准迁移都保持增益；对依赖单元测试、约束检查这类不完全验证器的 RLVR 训练有直接参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17287">Negative-Only Policy Optimization for One-Sided Verifiable Rewards</a>
+            <p class="keywords">关键词：强化学习（reinforcement learning）、可验证奖励（verifiable rewards）、RLVR、策略优化（policy optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：威斯康星大学麦迪逊分校、KRAFTON<br>核心价值问题：GRPO 等方法每步都要算旧策略与当前策略的似然比做重要性采样，成本不小——重要性比到底是不是稳定训练必需的？<br>方法：提出 LGPO，用基于似然的门控实现软信任域约束，不再计算旧策略似然；证明去掉重要性采样修正不损害稳定性，真正起作用的是信任域机制。<br>为什么值得看：与标准实现相比训练提速约 18%、峰值性能相当；更关键的是在全在线（on-policy）设定下 GRPO 会失效（比值恒为 1、约束永不触发），LGPO 仍保持稳定，给 LLM 的 RL 后训练提供了一个更便宜、适用面更广的优化器。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15404">Is the Importance Ratio Necessary for Stable Reinforcement Learning in LLMs?</a>
+            <p class="keywords">关键词：强化学习（reinforcement learning）、GRPO、信任域（trust regions）、LLM 训练（LLM training）</p>
+          </li>
+          <li class="item">
+            <p>机构：复旦大学、美团、清华大学、北京大学、中国科学技术大学<br>核心价值问题：RLVR 里靠熵鼓励探索，但普通熵分不清“有效推理的多样性”和“胡编乱造的多样性”，高熵常常只是退化——怎么度量真正有用的探索？<br>方法：提出有效熵（Effective Entropy），只在有效推理子空间内度量多样性、过滤掉错误轨迹的噪声，并据此做出 VEPO 方法，把有效熵直接纳入 RLVR 训练。<br>为什么值得看：在 1.5B 与 7B 的 DeepSeek-R1-Distill-Qwen 上，六个数学推理基准相对 GRPO 一致提升、重复采样成功率也有竞争力；“多样性幻觉”这个诊断本身就值得做 RLVR 的人注意。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15493">The Illusion of Diversity: Aligning LLM Exploration via Effective Entropy</a>
+            <p class="keywords">关键词：强化学习（reinforcement learning）、探索（exploration）、熵（entropy）、数学推理（mathematical reasoning）</p>
+          </li>
+          <li class="item">
+            <p>机构：兰州大学<br>核心价值问题：想让视觉语言模型拒绝有害图文请求，安全程度却只能靠调奖励权重间接控制——能不能把安全直接写成预算（有害求助率、过度拒绝率上限），让训练按预算精确达标？<br>方法：指出约束 GRPO 的两处失效（评分器均值偏差决定拉格朗日乘子、组内标准化抵消惩罚），提出双通道约束 GRPO 修复控制通道。<br>为什么值得看：在 Qwen3-VL-2B 上，held-out 有害求助率从 8.9% 降到 4.8%（未校准的预算控制只到 7.6%），过度拒绝率不超过 2%、MMBench 不变，HADES 未见基准上从 28.9% 降到 12.8%；对需要可控安全性的 VLM 后训练是实用的 recipe。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16628">Safety as a Budget: Calibrating the Control Channel of Constrained GRPO for Vision-Language Models</a>
+            <p class="keywords">关键词：约束强化学习（constrained RL）、视觉语言模型（VLMs）、安全对齐（safety alignment）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学院大学、中国科学院软件研究所、联想研究院、北卡罗来纳大学教堂山分校、天津大学、北京交通大学<br>核心价值问题：多轮 agent 的 RL 训练常把一条轨迹展开成多行训练样本，同一轮次结果会被重复计数、不同轨迹的目标质量也不均衡——这种“账算错了”的问题怎么修？<br>方法：提出 Outcome-Mass Alignment（OMA），分两步：结果对齐（只按唯一源轨迹算结果统计）、质量对齐（在轨迹内聚合后控制总目标质量），不改动底层优化器的信用分配、重要性比与裁剪。<br>为什么值得看：在 ALFWorld 的 GRPO 对照实验（两个模型规模）中均提升性能；问题本身很隐蔽——很多多轮 agent 训练管线都可能在不知不觉中重复计数，值得检查自己的实现。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16816">Outcome-Mass Alignment: Controlling Length-Dependent Trajectory Influence in Multi-Turn LLM Agent Reinforcement Learning</a>
+            <p class="keywords">关键词：多轮 agent（multi-turn agents）、强化学习（reinforcement learning）、信用分配（credit assignment）、轨迹优化（trajectory optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学技术大学<br>核心价值问题：推理分割里轨迹级奖励说不清“哪些 token 提供了有效视觉证据”，信用分配太粗——怎么把 token 级的信用分到真正起作用的推理步骤上？<br>方法：提出 HISD，用目标消歧证据做 token 级信用分配：离线生成 Segment Hint，提示条件 EMA 教师给学生轨迹打分，只调整正优势的幅度、负优势不动。<br>为什么值得看：在 ReasonSeg 测试集上比 DPAD 复现基线 gIoU/cIoU 各提升 3.00/3.55 个百分点，同时有效推理跨度平均缩短 80%–92%；把“提示”变成信用分配信号的思路也可迁移到其他需要细粒度信用的 RL 任务。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14931">Hint-Informed Self-Distillation for Reasoning Segmentation</a>
+            <p class="keywords">关键词：推理分割（reasoning segmentation）、强化学习（reinforcement learning）、信用分配（credit assignment）、视觉语言模型（VLMs）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学院计算技术研究所、中国科学院大学、蚂蚁集团<br>核心价值问题：多智能体 LLM 系统里智能体之间的通信知识要么被忽略、要么被压成一个标量奖励，学不到“哪句话帮了忙”——怎么把通信变成细粒度的信用信号？<br>方法：提出 OPSD4MAS，用在线策略自蒸馏把未来通信转为 token 级信用：外部模型抽事实、粗筛轨迹关系，再用留一法细筛目标 token 对智能体结果优势的影响，与 GRPO 线性退火联合优化。<br>为什么值得看：数学任务 pass@4 相对 GRPO 最高提升 20 个百分点；多智能体协作里“谁的哪句话有用”这个信用分配问题，终于有了一个 token 级的解法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16206">Turning Multi-Agent Communication into Token-Level Credit with On Policy Self Distillation</a>
+            <p class="keywords">关键词：多智能体系统（multi-agent systems）、强化学习（reinforcement learning）、通信信用（communication credit）、自蒸馏（self-distillation）</p>
+          </li>
+          <li class="item">
+            <p>机构：蚂蚁集团、电子科技大学、浙江大学、东南大学<br>核心价值问题：多智能体深度研究系统靠主智能体派活、子智能体回证据，但现有训练要么只训主智能体、要么给所有智能体发同样的团队优势——误导性报告可能被奖励、有用的报告可能被惩罚。<br>方法：提出 LEAD-RL，主–子智能体联合 RL 训练 + 贡献感知信用分配：训练时用 rubric 评估每份子智能体报告的研究效用，据此门控它继承的团队优势，最终答案正确性是唯一的团队奖励。<br>为什么值得看：BrowseComp 准确率提升 2.49 个百分点、关键路径成本下降 24.5%，五个基准、两个模型家族上均有提升；对做深度研究 agent 的团队，这是个可直接借鉴的训练框架。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17041">From Delegation to Coordination: Learning Efficient Multi-Agent Deep Research</a>
+            <p class="keywords">关键词：多智能体深度研究（multi-agent deep research）、强化学习（reinforcement learning）、信用分配（credit assignment）、Agent 训练（agent training）</p>
+          </li>
+          <li class="item">
+            <p>机构：纽约大学、KAIST AI<br>核心价值问题：agent 的 RL 只从标量奖励学习，试错中丰富的环境信息（如错误日志）被丢掉了；现有的反思/压缩 harness 能把经验传给下一轮，但“经验产物本身怎么写”却没人学。<br>方法：提出 ACE-RL（Experience-Handoff RL），固定 ACE harness，用一个模型同时担任行动、反思、策展三个角色，按候选经验产物对未来 rollout 的下游效果评估，协同优化三者。<br>为什么值得看：在多个 agentic 基准上 held-out 性能超过基线；它把“自改进”从调动作扩展到调“经验本身”，对递归自改进 agent 的设计是个新方向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16409">Experience-Handoff Reinforcement Learning for Recursive Self-Improvement</a>
+            <p class="keywords">关键词：递归自改进（recursive self-improvement）、强化学习（reinforcement learning）、经验学习（experience learning）、Agent 优化（agent optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：伦斯勒理工学院、IBM Research<br>核心价值问题：工具 agent 任务分上去了、幻觉也上去了——模型明明推理出信息不够，却还是直接执行本该先问、先查或拒绝的调用，怎么让决策跟上当前任务状态？<br>方法：提出 StateAlign：任务状态构建 + 状态对比 RL，覆盖五种任务条件，配对不同行动要求的状态；结果奖励管任务完成，token 级对比让同一推理在不同状态下产出适配的行动。<br>为什么值得看：在 BFCL v4 多轮、ToolSandbox、When2Call 上，五个基座模型（三个家族）均有提升；Qwen3-8B 上多轮准确率最高、工具幻觉率最低；代码与模型已开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16304">StateAlign: Internalizing State-Aware Decision-Making for Reliable Multi-Turn Tool Agents via Reinforcement Learning</a>
+            <p class="keywords">关键词：工具 agent（tool agents）、强化学习（reinforcement learning）、状态感知（state awareness）、多轮对话（multi-turn dialogue）</p>
+          </li>
+          <li class="item">
+            <p>机构：Brightendata<br>核心价值问题：小开源模型适合私有化客服部署，但离前沿模型差得远；想从部署日志里自学，又不能把客户对话发给强 teacher 模型——没有 teacher 能不能自我进化？<br>方法：无教师自进化：部署日志自我诊断、把规则写进 skill 库（代码检查、反例自审、配对重测、噪声校准验证门控），再用 GRPO 在完整多轮工具对话上训练 LoRA；harness 与权重两层一起进化。<br>为什么值得看：Gemma 4 12B agent 两轮后 τ²-bench 零售/航空 pass¹ 分别提升 12.5/19.5 分，超过同模型全量策略提示的参考 agent，大幅缩小与前沿模型的差距；对私有化部署场景很实用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15268">Knowledge in the Harness, Reliability in the Weights: Teacher-Free Co-Evolution of an LLM Agent</a>
+            <p class="keywords">关键词：Agent 自进化（agent self-evolution）、强化学习（reinforcement learning）、私有化部署（private deployment）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、百度<br>核心价值问题：决策模型当行动者常表现糟糕——但它能不能当个好老师？行动差的模型，评判与教学能力是否还值得用？<br>方法：在 ALFWorld 上比较三类决策模型与三类通用 LLM 当行动者与评判者；再用 JEV 作教师，经 GRPO 训练策略：问“每一步是否有助于目标”而非“任务最终能否成功”。<br>为什么值得看：JEV 自己行动在 ALFWorld 只有 42.9% 成功率，但作教师把 Qwen2.5-1.5B 从 72.8% 提到 82.9%（WebShop 56.8%→71.4%）；“行动差的模型仍可当好老师，但要问对问题”——对用小模型做 RL 奖励/评判的人有启发。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17167">Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents</a>
+            <p class="keywords">关键词：决策模型（decision models）、强化学习（reinforcement learning）、Agent 评判（agent evaluation）、教师模型（teacher models）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、清华大学、海康威视研究院<br>核心价值问题：LLM 推荐 agent 能搜、能问、能改推荐，但这些行为多由手工流程控制，现有训练只优化查询改写或排序等单个环节——能不能把整条交互策略一起用 RL 训出来？<br>方法：提出 SimRec：任务锚定用户模拟器（按任务需求而非用户画像给反馈，可用外部 LLM 或自博弈）+ 任务对齐奖励，用 GRPO 优化整条轨迹，奖励自然检索质量与有效工具使用。<br>为什么值得看：Qwen3-4B agent 的 NDCG@100 从 32.23% 提升到 35.42%（ESCI 与 Amazon C4）；把“推荐”当成多轮交互策略来训练，是推荐 agent 的一个新范式。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15426">SimRec: Learning to Search, Ask, and Recommend from Simulated Interaction</a>
+            <p class="keywords">关键词：推荐 agent（recommendation agents）、强化学习（reinforcement learning）、用户模拟（user simulation）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：南洋理工大学、清华大学、斯坦福大学、VinUniversity<br>核心价值问题：RL 能磨利 LLM 推理，但参数更新贵、会遗忘、不透明；无训练的技能库方案又只用轨迹级相关性准入、结构扁平——能不能不改参数还享受 GRPO 的好处？<br>方法：提出 HyperSkill：冻结主干，用超图索引技能库的可审计编辑替代梯度更新——技能是带优势值的节点、组合是超边；训练时蒸馏反事实检验过的技能，门控超图检索注入优势排序的技能，执行协议让冻结主干提交答案。<br>为什么值得看：11 个文本/视觉/多模态基准全部最优或并列最优，平均超最强基线 13.0 个 F1 点，且主干全程冻结；“无训练 GRPO”这个方向值得关注。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15178">HyperSkill: Training-Free Omnimodal GRPO via Hypergraph-Indexed Skill-Library Evolution</a>
+            <p class="keywords">关键词：无训练强化学习（training-free RL）、技能库（skill libraries）、超图（hypergraphs）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：南加州大学<br>核心价值问题：Q 学习常有显著的暂态误差，但主流高斯极限刻画不出来（中心极限定理的归一化把小尺度位移抹掉了），最坏情况有限样本界又说不清具体实例的误差机制。<br>方法：对有限折扣 MDP 的同步 Q 学习做更精细的渐近分析：把末次迭代误差拆成最优策略 TD 分量与极大化导致的非负位移，后者是 n⁻¹ 量级、重标后几乎必然收敛到随机极限；再结合 TD 分量的 Edgeworth 展开。<br>为什么值得看：给出了 Q 学习暂态误差的渐近精确刻画，分离了初始化、非高斯 TD 波动与极大化的各自影响；做 RL 理论与算法分析的人可以直接引用这套工具。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14926">Understanding the Asymptotic Transience of Q-Learning via Distributional Expansion</a>
+            <p class="keywords">关键词：Q 学习（Q-learning）、强化学习理论（RL theory）、渐近分析（asymptotic analysis）、MDP</p>
+          </li>
+          <li class="item">
+            <p>机构：Incubilate、马萨诸塞大学阿默斯特分校<br>核心价值问题：可验证奖励的 RL 可能教模型诚实，也可能教它 bluff——同样期望收益的两种奖励，训练结局却相反，什么时候会走向哪一边？<br>方法：理论分析 GRPO 一步更新：模型变得更诚实当且仅当 p̃r/b &gt; 1+κ（p̃ 是检查器接受模型证书的速率，κ 是不可验证判据为真时的拉力）；在命题 Datalog、两个代码模型与小学数学拒答实验上验证。<br>为什么值得看：揭示了诚实与 bluff 之间的“竞赛”阈值动态：低于阈值会崩溃、略低于阈值靠检查器还能存活、比值到 3 时模型会把约一半正确程序判为有 bug；对设计可验证奖励的人是个直接可用的判断准则。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15779">Honesty Is a Race: Predicting When Verifiable-Reward RL Teaches a Model to Bluff</a>
+            <p class="keywords">关键词：可验证奖励（verifiable rewards）、强化学习（reinforcement learning）、模型诚实性（model honesty）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：新加坡国立大学、耶鲁大学、Cisco Foundation AI<br>核心价值问题：“RL 泛化、SFT 记忆”几乎成了共识，但这个结论是不是在 SFT 没拿到同等数据资源的前提下得出的？SFT 的泛化差距到底来自方法还是数据？<br>方法：在 Qwen2.5 与 Qwen3 系列上系统研究 SFT 数据的来源与规模：混合数据源、匹配正确 rollout 数、匹配总 rollout 预算，并用 LLM 标注分析训练 rollout 中的解法多样性，辅以浅层 Transformer 训练动力学理论。<br>为什么值得看：结论很颠覆——匹配 rollout 数后 SFT 泛化大幅提升，匹配总预算后 SFT 与 RL 相当甚至更好；数据来源与规模才是关键，方法本身的差距被高估了。NeurIPS 2026 论文。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.14912">Rethinking &quot;RL Generalizes, SFT Memorizes&quot;: The Role of SFT Data</a>
+            <p class="keywords">关键词：监督微调（SFT）、强化学习（reinforcement learning）、泛化（generalization）、后训练（post-training）</p>
+          </li>
+          <li class="item">
+            <p>机构：Gnani.AI<br>核心价值问题：给多语言模型做 RL 后训练，数学等被奖励任务涨了，其他能力会不会悄悄掉？特别是答案语言与文字（script）合规这种奖励函数不检查的维度。<br>方法：在 30B-A3B MoE 模型（英语+8 种印度语言）上做 GRPO，对比 RL 前后 34 个基准；另做第二轮 RL，加入印度语言环境与语言/重复奖励。<br>为什么值得看：MATH 提升 36.07 分的同时，XQuAD-Indic F1 跌 19.32 分（英文回答占比从 8.7% 飙到 91.7%），IndicQA 跌 8.64 分；加语言奖励也没能保证文字合规——多语言后训练的“能力漂移”有了一份扎实的实测记录。NeurIPS 2026 GlobalSouthAI workshop。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16228">Indic-Task Gains and Regressions after Reinforcement Learning</a>
+            <p class="keywords">关键词：多语言模型（multilingual models）、强化学习（reinforcement learning）、能力漂移（capability drift）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：佐治亚理工学院<br>核心价值问题：人类标注与合成偏好数据单价差很多，但以往比较只固定样本数、不固定预算——在同样花钱的前提下，哪种偏好数据更划算？<br>方法：在固定美元预算下比较人类与合成偏好数据做 DPO 后训练的效果，覆盖多个基座模型家族、有用性与摘要任务。<br>为什么值得看：合成数据在 200–400 美元的中低预算下就达到高胜率；人类数据要在有用性任务上追平，需要大约两个数量级更大的预算，在摘要任务上任何测试预算下都追不上；还发现常用人类偏好数据源之间质量差距很大。给后训练预算分配提供了直接的数字依据。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16895">Human or Synthetic? What a Fixed Budget Buys for Post-Training</a>
+            <p class="keywords">关键词：偏好数据（preference data）、DPO、后训练（post-training）、数据预算（data budgets）</p>
+          </li>
+          <li class="item">
+            <p>机构：佐治亚理工学院、Google DeepMind<br>核心价值问题：agentic RL 即服务正在兴起，用户自带环境与奖励函数——如果奖励函数本身有毒，服务商的模型安全对齐会不会被低价绕过？<br>方法：实证攻击：仅花约 20 美元，用有毒环境做多轮有害 agentic RL，就能彻底颠覆大模型（如 Inkling）的安全对齐，得到的模型可用于漏洞利用等真实有害活动；并提出防御 Bait，通过主动探测奖励函数来识别有害奖励。<br>为什么值得看：暴露了 agentic RL 服务模式的一个现实安全漏洞，成本低得惊人；防御简单有效，且自适应攻击者也难以完全绕过；做 RL 服务与安全的人都该看。代码已开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16369">Bait: Mitigating Harmful Agentic Reinforcement Learning via Probing Reward Function</a>
+            <p class="keywords">关键词：Agent 安全（agent security）、强化学习（reinforcement learning）、奖励函数（reward functions）、安全对齐（safety alignment）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京航空航天大学、新加坡国立大学、香港中文大学 MMLab<br>核心价值问题：语言引导的无人机导航多关注长程路径规划，短程、相对物体的精细飞行动作缺乏基准与数据——怎么让无人机听懂“飞到我前面三米拍照”这类指令？<br>方法：提出 Flow 任务与 UAV-Flow 套件：30,692 条真实专家飞行轨迹（8 类动作）+ 10,109 条仿真轨迹；FlowVLA 先模仿预训练，再用 Tail-Aware GRPO（TGRPO）在线后训练。<br>为什么值得看：273 个 held-out 仿真回合上成功率从 75.58% 提升到 93.16%（超最强基线 6.72 个百分点），真实无人机室内外实验也验证了物体相对指令的执行；数据集、仿真环境与代码均已公开。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17163">UAV-Flow++: A Unified Suite for Benchmarking and Learning Language-Guided UAV Flight</a>
+            <p class="keywords">关键词：无人机导航（UAV navigation）、语言引导（language-guided）、强化学习（reinforcement learning）、世界模型（world models）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1112-2030-academic">
         <header class="round-header">
           <h2 id="round-1112-2030-academic">11 月 12 日 20:30 轮</h2>
@@ -1031,19 +1175,8 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1109-2030-academic">
-        <header class="round-header">
-          <h2 id="round-1109-2030-academic">11 月 9 日 20:30 轮</h2>
-          <span class="count">1 条</span>
-        </header>
-        <ol class="items">
-          <li class="item">
-            <p>MOPD 把多个经 RL 训练的专家模型（编码、数学、工具调用各有所长）蒸馏进同一个学生模型，用在线 rollout 与教师-学生对数概率差算出的 token 级优势，并与 GRPO 做了对比。想把多个 RL 专家合而为一的人，可以看看这篇的方法细节与教师路由、裁剪等实践建议。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:6731624-7525080994274623488/">多教师在线蒸馏 MOPD：把多个 RL 专家模型蒸进一个学生</a>
-            <p class="keywords">关键词：多教师蒸馏（multi-teacher distillation）、强化学习（reinforcement learning）、GRPO、专家模型（expert models）</p>
-          </li>
-        </ol>
-      </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1109-morning-academic">
         <header class="round-header">
           <h2 id="round-1109-morning-academic">11 月 9 日早报</h2>
@@ -1087,8 +1220,19 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
+      <section class="round" aria-labelledby="round-1109-2030-academic">
+        <header class="round-header">
+          <h2 id="round-1109-2030-academic">11 月 9 日 20:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>MOPD 把多个经 RL 训练的专家模型（编码、数学、工具调用各有所长）蒸馏进同一个学生模型，用在线 rollout 与教师-学生对数概率差算出的 token 级优势，并与 GRPO 做了对比。想把多个 RL 专家合而为一的人，可以看看这篇的方法细节与教师路由、裁剪等实践建议。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:6731624-7525080994274623488/">多教师在线蒸馏 MOPD：把多个 RL 专家模型蒸进一个学生</a>
+            <p class="keywords">关键词：多教师蒸馏（multi-teacher distillation）、强化学习（reinforcement learning）、GRPO、专家模型（expert models）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1108-morning-academic">
         <header class="round-header">
           <h2 id="round-1108-morning-academic">11 月 8 日早报</h2>
@@ -1472,7 +1616,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 12 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 13 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {

@@ -383,6 +383,60 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1113-1230">
+        <header class="round-header">
+          <h2 id="round-1113-1230">11 月 13 日 12:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Towards Data Science 的 Shuai Guo 介绍了一个叫 Nimble 9B 的小决策模型，用来当本地大模型的第二道审稿人，校验本地 LLM 的输出质量。文章给了评测、优缺点分析和交互式演示。对在本地跑模型、关心输出可靠性的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7527104844931817473/">本地 LLM 也需要审稿人：Nimble 9B 第二道校验</a>
+            <p class="keywords">关键词：本地大模型（local LLMs）、输出校验（output verification）、小模型（small models）、模型可靠性（model reliability）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1113-0830">
+        <header class="round-header">
+          <h2 id="round-1113-0830">11 月 13 日 08:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Hemant Sudarshan 在一个 AI 小组里分享说，Meta 内部模型 Muse Spark 1.4 已在 GitHub 后端用于 PR 生成，还能帮着调优数据库查询。帖子把它当作内部大模型落到真实工程流程里的例子。关注大厂内部模型工程化落地的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7527044283636400128/">Muse Spark 1.4 用于 GitHub 后端 PR 生成与数据库查询调优</a>
+            <p class="keywords">关键词：内部大模型（internal models）、代码生成（code generation）、工程化落地（engineering deployment）、Meta</p>
+          </li>
+          <li class="item">
+            <p>Hugging Face 联合创始人 Thomas Wolf 转发了黄仁勋的帖子——这是黄仁勋首次在社交媒体上发声，公开力挺开源模型。开源模型阵营的分量又添了一笔，值得一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7527037594740776961/">黄仁勋首次在社交媒体发声力挺开源模型</a>
+            <p class="keywords">关键词：开源模型（open-source models）、NVIDIA、社交媒体（social media）、Hugging Face</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1113-morning">
+        <header class="round-header">
+          <h2 id="round-1113-morning">11 月 13 日早报</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Google 旗下 AI 创作工作室 Flow 一次推出五款由视觉艺术家亲手打造的工具：Character Poster（角色形象一致性）、Character Arc（角色跨年龄演变）、Pixel Machine（复古像素/故障风格）、Lucid Glass（玻璃光学特效），以及 Pocket Studio。其中 Pocket Studio 最值得看：只用一次手机拍摄就能生成多个机位角度并提升画质，同时保留演员原表演，对短视频与独立创作者的制作门槛有直接意义。</p>
+            <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools/">Google Flow 上线 5 款艺术家打造的新工具（Google 官方博客）</a>
+            <p class="keywords">关键词：AI 视频创作（AI video creation）、角色一致性（character consistency）、短视频工具（short-video tools）、Google</p>
+          </li>
+          <li class="item">
+            <p>Thinking Machines Lab 兑现 11 月 5 日发布时的承诺：Inkling 2 Small 的权重于 11 月 12 日在 Hugging Face 开放下载，采用 Apache 2.0 许可。这是 594B 总参数、每 token 激活 17B 的多模态 MoE 模型，支持图像输入与最长 100 万 token 上下文，Artificial Analysis Intelligence Index 得分 31；同日还扩展了 Together、NVIDIA、Fireworks、Baseten、Nebius、Modal、Cloudflare 的 API 接入，以及 Unsloth、SGLang、vLLM 等部署集成。这是本周分量最重的开源权重发布之一；该模型主打 agentic coding 与长程自主任务，与 Agentic 一侧有交叉，本期按多模态模型发布归入生成式一侧，不重复推。</p>
+            <a class="source-link" href="https://thinkingmachines.ai/news/inkling-2-small/">Inkling 2 Small 开放权重（Thinking Machines Lab 官网）</a>
+            <p class="keywords">关键词：开源权重（open weights）、多模态模型（multimodal models）、长上下文（long context）、Thinking Machines Lab</p>
+          </li>
+          <li class="item">
+            <p>Diffusers 0.43.0 于 11 月 12 日发布，新增 Pika H3 Flex（带立体声的视频+音频生成，6 步出片）、Kandinsky S2V 1.0（凭参考图+语音驱动人物）等 pipeline，并接通 MiniMax-H3-Image、P-H3-Image 与 PAN 2 的模拟器及 LoRA 加载与 checkpoint 保存。对开发者的实际意义是：近期一批新视频模型终于能用同一套标准库跑起来；但其中 MiniMax-H3-Image 与 PAN 2 是昨日已推过的单品，此处只是库集成而非模型新发布。（第三方发布记录，未取得 GitHub 官方 release 页直链。）</p>
+            <a class="source-link" href="https://deployedbyai.com/log/51249bf69a37/diffusers-0-43-0/">Diffusers 0.43.0（The Deploy Log 发布记录）</a>
+            <p class="keywords">关键词：视频生成库（video generation libraries）、扩散模型（diffusion models）、开发者工具（developer tools）、开源工具（open-source tools）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1112-2030">
         <header class="round-header">
           <h2 id="round-1112-2030">11 月 12 日 20:30 轮</h2>
@@ -589,16 +643,18 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1109-2030">
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
+      <section class="round" aria-labelledby="round-1109-morning">
         <header class="round-header">
-          <h2 id="round-1109-2030">11 月 9 日 20:30 轮</h2>
+          <h2 id="round-1109-morning">11 月 9 日早报</h2>
           <span class="count">1 条</span>
         </header>
         <ol class="items">
           <li class="item">
-            <p>开源的泼溅编辑引擎 ComfyUI-SpEdE，用 SAM 3.1 在每个拍摄机位里找到目标物体，删掉它的高斯点并把后面的表面重新拟合出来，自带 33 个 ComfyUI 节点与 10 条工作流，在本地 GPU 就能跑、不用调云。做 3D 生成与编辑的人可以试试。</p>
-            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7525723916456288256">ComfyUI-SpEdE：从高斯泼溅里删掉一个物体</a>
-            <p class="keywords">关键词：高斯泼溅（Gaussian splatting）、3D 编辑（3D editing）、ComfyUI、SAM 3.1、开源工具（open-source tools）</p>
+            <p>Viggle 11 月 5 日在 Hugging Face 开源 Viggle Remake：一对基于 MiniMax H3 的 LoRA，把已拍好的视频&quot;重拍&quot;一遍——Swap 模式换人换角色，Edit 模式换物体、背景、天气与光线，同时保留原片的运动、机位与声音；自带 MCP 服务器，让编码 agent 按对话改完整部片子。需提醒：发布材料没有质量指标，模型也不核验被换人的 consent，只适合改自己有权的素材。</p>
+            <a class="source-link" href="https://huggingface.co/Viggle/Viggle-Remake">Viggle/Viggle-Remake · Hugging Face</a>
+            <p class="keywords">关键词：视频重拍（video remake）、视频编辑（video editing）、LoRA、MCP 服务器（MCP servers）</p>
           </li>
         </ol>
       </section>
@@ -640,21 +696,19 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1109-morning">
+      <section class="round" aria-labelledby="round-1109-2030">
         <header class="round-header">
-          <h2 id="round-1109-morning">11 月 9 日早报</h2>
+          <h2 id="round-1109-2030">11 月 9 日 20:30 轮</h2>
           <span class="count">1 条</span>
         </header>
         <ol class="items">
           <li class="item">
-            <p>Viggle 11 月 5 日在 Hugging Face 开源 Viggle Remake：一对基于 MiniMax H3 的 LoRA，把已拍好的视频&quot;重拍&quot;一遍——Swap 模式换人换角色，Edit 模式换物体、背景、天气与光线，同时保留原片的运动、机位与声音；自带 MCP 服务器，让编码 agent 按对话改完整部片子。需提醒：发布材料没有质量指标，模型也不核验被换人的 consent，只适合改自己有权的素材。</p>
-            <a class="source-link" href="https://huggingface.co/Viggle/Viggle-Remake">Viggle/Viggle-Remake · Hugging Face</a>
-            <p class="keywords">关键词：视频重拍（video remake）、视频编辑（video editing）、LoRA、MCP 服务器（MCP servers）</p>
+            <p>开源的泼溅编辑引擎 ComfyUI-SpEdE，用 SAM 3.1 在每个拍摄机位里找到目标物体，删掉它的高斯点并把后面的表面重新拟合出来，自带 33 个 ComfyUI 节点与 10 条工作流，在本地 GPU 就能跑、不用调云。做 3D 生成与编辑的人可以试试。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7525723916456288256">ComfyUI-SpEdE：从高斯泼溅里删掉一个物体</a>
+            <p class="keywords">关键词：高斯泼溅（Gaussian splatting）、3D 编辑（3D editing）、ComfyUI、SAM 3.1、开源工具（open-source tools）</p>
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1108-1230">
         <header class="round-header">
           <h2 id="round-1108-1230">11 月 8 日 12:30 轮</h2>
@@ -3129,6 +3183,67 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1113-morning-bupu-academic">
+        <header class="round-header">
+          <h2 id="round-1113-morning-bupu-academic">11 月 13 日早报补推</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：蚂蚁 inclusionAI<br>核心价值问题：现有世界模型只模拟物理世界、把推理决策当成外部控制，里面没有能实时感知用户并回应的“活”的存在；全双工互动要求系统一边持续听看用户（语音、视频、文本），一边实时回应、打断或保持沉默，而不是等用户说完再生成。<br>方法：提出 Reciprocal World Model（RWM），把智能与物理现实并列为世界的两大要素；Duo v1 是其模块化实现：Intent 模块（语言模型）用自回归方式做持续交互推理与参与决策，每 chunk 输出 &lt;speak&gt; 或 &lt;wait&gt;；Realization 模块（因果音视频联合扩散）按意图隐状态生成视频与立体声音频；两者通过 chunk 级条件与同步 token 在统一时间线上对齐（每 chunk 约 0.71 秒、17 帧），再用 dual rollout distillation 缓解分布偏移，训出四步流式生成器。<br>为什么值得看：首个把意图认知与音视频行为生成放进同一个流式世界模型的全双工系统，能自发对话、处理打断，还能共享实物、重塑虚拟场景、玩音视频游戏；蚂蚁集团 inclusionAI 已把主页、GitHub 与 HF 上线，是全双工语音 agent 与世界模型交叉方向的新参考点。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15131">Duo v1</a>
+            <p class="keywords">关键词：世界模型（world models）、全双工互动（full-duplex interaction）、音视频生成（audio-video generation）、蚂蚁集团（Ant Group）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1113-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1113-morning-academic">11 月 13 日早报</h2>
+          <span class="count">8 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Roblox / 加州大学默塞德分校 / 宾夕法尼亚大学 / 得克萨斯大学奥斯汀分校<br>核心价值问题：前沿视频生成模型都在 VAE 潜空间里工作，压缩虽让训练可行，却限制了高分辨率、逐帧可控与实时交互——分辨率翻倍则 token 数翻四倍，条件也只能作用于帧组。<br>方法：保留扩散 Transformer，把 VAE 解码器换成轻量卷积 head，让模型直接逐帧生成像素；关键发现是预测干净视频而非速度、配合更大的噪声偏移；从 Wan2.1-14B 微调，仅约 130 万训练片段即与潜空间基线质量相当。<br>为什么值得看：同等每帧 token 数下分辨率翻倍至 960×1664，深度条件编辑在快速运动下保持对齐，自回归蒸馏后控制延迟从 495ms 降到 34ms、下一帧即响应——把视频扩散模型抬回像素空间，对实时世界模型与交互式视频生成有直接启发。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17336">Back to Pixels: Lifting Latent Video Diffusion into Pixel Space (PixVid)</a>
+            <p class="keywords">关键词：视频扩散（video diffusion）、像素空间生成（pixel-space generation）、实时视频（real-time video）、视频编辑（video editing）</p>
+          </li>
+          <li class="item">
+            <p>机构：剑桥大学 / 丰田欧洲<br>核心价值问题：视频扩散模型画质虽好，但物理错误频发——扩散过程要一次性推断整段序列的物理过程，力不从心。<br>方法：把物理推理从扩散过程里拆出来：先由语言模型规划关键帧（用语言显式推理场景的物理演变，再经图像编辑模型生成关键帧），扩散模型只负责在物理正确的关键帧之间插值。<br>为什么值得看：在 Physics-IQ Verified 上把 Wan2.2-14B 从 32.2 提升到 55.0，PhyGenBench 从 0.56 提升到 0.63，均达当时的 SOTA；全程无需训练、无需物理仿真器，用户还能先检查、修正关键帧再生成完整视频。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17324">K2V: Generative Keyframing For Physically Plausible Video Generation</a>
+            <p class="keywords">关键词：视频生成（video generation）、物理一致性（physical consistency）、关键帧（keyframes）、扩散模型（diffusion models）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学 / 西湖大学 AGI Lab / StepFun<br>核心价值问题：分布匹配蒸馏（DMD）把扩散模型蒸馏为少步学生模型时，现有方法让辅助的 fake 模型在中间态或全部去噪步上训练，学生更新信号与中间分布纠缠——即使学生最终输出已与教师一致，匹配信号仍不为零。<br>方法：eDMD 改为只在学生的最终输出上训练单个共享 fake 模型来纠正匹配方向，使蒸馏信号只针对最终输出分布。<br>为什么值得看：把蒸馏目标收敛到真正关心的最终输出分布，思路干净、改动小，对少步扩散蒸馏的后续工作有直接参考价值；但摘要未给 headline 数字，效果幅度需读全文确认。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17194">Endpoint Distribution Matching for Few-Step Diffusion Distillation (eDMD)</a>
+            <p class="keywords">关键词：扩散蒸馏（diffusion distillation）、少步生成（few-step generation）、分布匹配（distribution matching）、模型压缩（model compression）</p>
+          </li>
+          <li class="item">
+            <p>机构：新加坡国立大学 / 高通 AI 研究院<br>核心价值问题：多主体个性化视频生成要么需要参考视频训练集，要么要对每种主体组合联合优化，成本高、扩展性差。<br>方法：提出 Token-wise LoRA（ToRA），把低秩更新限制在主体相关文本 token 的交叉注意力 value 投影上，为每个主体提供独立适配路径；T2V 引导流在去噪早期复用冻结基模型的查询与键以保留布局与运动先验；同时发布 30 个主体、122 个提示词的多主体基准 Multi-DB。<br>为什么值得看：无需参考视频训练集、也无需对每种主体组合联合优化就能做多主体个性化视频生成，部署成本明显降低；配套的 Multi-DB 基准也给了这个方向一个可比的评测。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16897">TokenStream: Multi-Subject Personalized Video Generation with Token-wise LoRA and Guided Attention</a>
+            <p class="keywords">关键词：个性化视频生成（personalized video generation）、多主体生成（multi-subject generation）、LoRA、文本转视频（text-to-video）</p>
+          </li>
+          <li class="item">
+            <p>机构：南方科技大学 / ZODA / 香港科技大学 / 香港中文大学 / 香港科技大学（广州）/ 复旦大学 / 浙江大学 / 中佛罗里达大学<br>核心价值问题：多模态编码 agent 把 4D 世界构建与视觉生成解耦成新范式后，一个基本问题没人回答：如果代码建世界，视频模型能不能只做渲染？<br>方法：发布 WorldDraft 基准：432 个严格配对的测试用例、48 个可执行 4D 世界族、6 类动态挑战；用 3×3 析因设计正交交叉草稿粒度（抽象代理到预演）与外观对齐程度，在相同动力学下评估视频模型作为“生成式渲染器”的世界保持与视觉实现能力。<br>为什么值得看：首次系统度量视频模型“只做渲染器”时的世界一致性，432 个严格配对用例与析因设计让结论可归因，对世界模型与视频生成交叉方向的评估方法有参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.16217">WorldDraft: If Code Builds the World, Can Video Models Just Render It?</a>
+            <p class="keywords">关键词：世界模型（world models）、视频生成评测（video generation evaluation）、4D 世界构建（4D world building）、生成式渲染（generative rendering）</p>
+          </li>
+          <li class="item">
+            <p>机构：纽伦堡工业大学 Fundamental AI Lab / 德国航空航天中心 DLR / 日本产业技术综合研究所 AIST / 蒂宾根大学 / 慕尼黑工业大学 MCML / valeo.ai<br>核心价值问题：Vision Banana 把视觉任务表述为条件图像编辑、复用预训练图像生成器做感知，想法很吸引人，但数据、权重、代码均不公开，别人复现不了。<br>方法：发布完全开源可复现的配方 OVB：系统分析颜色编码、提示设计、参数适配、任务平衡等关键设计选择及其相互作用；用 4B 与 9B 开源权重基模型、210 万–380 万公开数据集训练对训练。<br>为什么值得看：在 Cityscapes 零样本上取得 73.9 mIoU，超过 Vision Banana 报告的 69.9，并可与专用感知模型比肩——证明生成式模型做感知这条路可以复现、可以追赶。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15844">Open Vision Banana: A Fully Open Recipe for Generative Visual Perception</a>
+            <p class="keywords">关键词：生成式视觉感知（generative visual perception）、图像编辑（image editing）、开源复现（open reproduction）、语义分割（semantic segmentation）</p>
+          </li>
+          <li class="item">
+            <p>机构：重庆大学<br>核心价值问题：计划条件驾驶世界模型被用来比较候选规划方案，但常用控制指标只检查相机是否跟随指令，场景本身动没动没人验证——模型可能只是在“假装执行计划”。<br>方法：利用记录驾驶中“未执行计划的真实结果”做对照（重定时日志得到位姿匹配的图像与激光雷达、立体相机记录横向偏移视角）；并做生成器内部干预定位故障来源。<br>为什么值得看：已发布的世界模型只移动了相机、几乎没移动场景：场景响应（预测复现的真实距离变化占比）最多约为真实视频的三分之一，且轨迹分数无法区分已执行与被忽略的速度指令；故障源于计划通道——预测几何跟随上下文帧而非计划。这个诊断对拿世界模型做规划决策的人是个提醒。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15260">Driving World Models Move the Camera, Not the Scene</a>
+            <p class="keywords">关键词：驾驶世界模型（driving world models）、规划评估（planning evaluation）、自动驾驶（autonomous driving）、视频预测（video prediction）</p>
+          </li>
+          <li class="item">
+            <p>机构：Deccan AI<br>核心价值问题：用未来预测分数比较预训练视频世界模型时，该分数混杂了编码器质量、近期过去与近未来的相似性、预测器本身的贡献，高分未必等于真预测能力。<br>方法：用配对的“持续性对照”（预测器永不调用的相同模型）分离三者；在 27,000 次家庭第一视角视频未来检索试验中对比。<br>为什么值得看：分数与贡献脱节：同一 V-JEPA 家族内，预测器为 V-JEPA 2.1 带来 +0.291 的 top-1 提升，对 V-JEPA 2 仅 +0.03 至 +0.04——说明只看未来预测分数会误判世界模型的真实预测能力，评估方法需要修正。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15082">Prediction or Persistence? What Future-Prediction Scores Miss About World Models</a>
+            <p class="keywords">关键词：视频世界模型（video world models）、未来预测（future prediction）、模型评测（model evaluation）、V-JEPA</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1111-1630-academic">
         <header class="round-header">
           <h2 id="round-1111-1630-academic">11 月 11 日 16:30 轮</h2>
@@ -3233,6 +3348,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1109-morning-academic">
         <header class="round-header">
           <h2 id="round-1109-morning-academic">11 月 9 日早报</h2>
@@ -3271,8 +3388,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 7 日及之前）</summary>
       <section class="round" aria-labelledby="round-1107-1230-academic">
         <header class="round-header">
           <h2 id="round-1107-1230-academic">11 月 7 日 12:30 轮</h2>
@@ -4760,7 +4875,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 12 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 13 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
