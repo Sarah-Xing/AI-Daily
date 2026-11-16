@@ -383,6 +383,19 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1116-morning">
+        <header class="round-header">
+          <h2 id="round-1116-morning">11 月 16 日早报</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Laurent Valdes 分享了一支不用大语言模型的多智能体 AI 团队：行为克隆起步、自博弈强化学习联赛迭代、神经上下文赌博机做战术决策，在自研 3D 即时战略游戏 defendmybase 里验证，第一代模型对基线胜率约 2/3。文章还指向了野火无人机群灭火这类真实应用场景，适合关心低成本多智能体 RL 落地的人看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/pulse/multi-agent-ai-doesnt-have-mean-llms-team-cheap-rl-agents-valdes-yh3sf">Laurent Valdes：不用 LLM 的多智能体 AI——小成本 RL 智能体团队</a>
+            <p class="keywords">关键词：多智能体强化学习（multi-agent reinforcement learning）、自博弈（self-play）、行为克隆（behavior cloning）、无 LLM 智能体（LLM-free agents）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1114-2030">
         <header class="round-header">
           <h2 id="round-1114-2030">11 月 14 日 20:30 轮</h2>
@@ -396,6 +409,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 11 日及之前）</summary>
       <section class="round" aria-labelledby="round-1112-1630">
         <header class="round-header">
           <h2 id="round-1112-1630">11 月 12 日 16:30 轮</h2>
@@ -435,8 +450,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 11 日及之前）</summary>
       <section class="round" aria-labelledby="round-1109-1630">
         <header class="round-header">
           <h2 id="round-1109-1630">11 月 9 日 16:30 轮</h2>
@@ -823,6 +836,94 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1116-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1116-morning-academic">11 月 16 日早报</h2>
+          <span class="count">16 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：麻省理工学院、加州大学伯克利分校、Inco AI<br>核心价值问题：开源推理模型能否不靠人类演示、只凭仿真里的强化学习就直接操控真实机器人？<br>方法：Robot-Use RL——对 Qwen3.8-27B 在仿真中做强化学习，模型像 computer-use agent 一样看相机画面、写链式思考、直接输出机械臂下一姿态，无需任何工具或技能库，只用任务成功与否作为奖励。<br>为什么值得看：LIBERO 从 1.6% 提升到 74.4%，接近 GPT-6 Astra 最高推理档；未见过的真实双臂机器人上 30 次试验成功 18 次（基座模型 0 次），且通用推理、编程、视觉能力无可测损失；模型、代码与训练基础设施全部开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18562">PEAR：纯仿真 RL 训练推理模型直接操控真实机器人</a>
+            <p class="keywords">关键词：机器人操控（robot manipulation）、仿真强化学习（simulation reinforcement learning）、推理模型（reasoning models）、sim-to-real</p>
+          </li>
+          <li class="item">
+            <p>机构：犹他大学<br>核心价值问题：单人一次只能遥操作一个智能体，演示怎么加速多智能体强化学习？<br>方法：Round-Robin 行为克隆轮流教每个智能体，再用集中式 critic 集成在模仿动作与 RL 动作之间做选择，并以门控模仿惩罚把 RL 策略拉向更有价值的模仿动作；训练后每个智能体只用自己的 RL 策略执行。<br>为什么值得看：在四个合作式 MARL 基准上，比演示基线快 2.6–4.2 倍超越模仿策略，其中两项上是唯一超越基线的方法，两项上超过了演示者本人；用真实人类演示仍快两倍以上。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18543">IBMARL：模仿引导的多智能体强化学习</a>
+            <p class="keywords">关键词：多智能体强化学习（multi-agent reinforcement learning）、模仿学习（imitation learning）、行为克隆（behavior cloning）、演示加速（demonstration acceleration）</p>
+          </li>
+          <li class="item">
+            <p>机构：宾夕法尼亚州立大学、LinkedIn、加州大学圣塔芭芭拉分校<br>核心价值问题：agent RL 的 harness（脚手架）一直是手写且训练中固定不变，能不能让它随模型一起学、一起变？<br>方法：把 harness 重构成可学习的程序：交互记录为结构化 State，Compression 程序组装历史进上下文、Steering 程序在行为偏离时给引导；训练中从最新轨迹提议候选程序、执行验证、在历史轨迹上回放。<br>为什么值得看：在 CodeSearch、ALFWorld、BIRD SQL 上，1.5B–8B 模型多数设定下都优于固定 harness 基线，说明 harness 可以从任务数据里学出来、随模型演化。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18533">ModHarness-RL：把 harness 重构成可学习、可演化的程序</a>
+            <p class="keywords">关键词：agent 脚手架（agent harness）、可学习程序（learnable programs）、强化学习训练（reinforcement learning training）、工具调用（tool use）</p>
+          </li>
+          <li class="item">
+            <p>机构：斯蒂文斯理工学院<br>核心价值问题：小语言模型数学推理不可靠，能不能让它产出可执行、可审计的推理轨迹？<br>方法：两阶段：先把自由格式思维链编译成含推理步骤、计算器调用、确定性运行反馈与验证动作的类型化动作轨迹；再用非对称分层强化学习，以答案正确性、工具 grounding、过程纪律与轨迹对齐为分组奖励精调策略。<br>为什么值得看：五个 sub-10B 骨干上比最强工具增强基线平均高 5.51 个百分点，MATH-500 高 8.95 点、AIME-2024/2025 各高 5.3 点以上；在推理专项 7B 模型上仍有效。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18494">ARCHER：小语言模型的可执行推理</a>
+            <p class="keywords">关键词：小语言模型推理（small language model reasoning）、数学推理（mathematical reasoning）、可执行轨迹（executable trajectories）、分层强化学习（hierarchical reinforcement learning）</p>
+          </li>
+          <li class="item">
+            <p>机构：米哈游崩坏 AI 研发团队<br>核心价值问题：通用 agent 能不能在长程实时游戏里像熟练玩家一样操作？<br>方法：感知、记忆管理与多步推理的端到端架构；先在数万小时键鼠交互轨迹上继续预训练，再做稀疏思考指令微调，最后用稳定的多轮强化学习训练长程交互策略，并配云边推理引擎支撑实时交互。<br>为什么值得看：在多个高难度 3D 开放世界游戏上泛化与操作效率可比熟练玩家，2D 游戏基准上也有竞争力；为跨数字与物理世界的通用 agent 提供了一条可扩展的路径。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18397">Gamer：长程实时游戏通用视觉-语言-动作基础模型</a>
+            <p class="keywords">关键词：游戏 agent（game agents）、视觉-语言-动作模型（vision-language-action models）、长程交互（long-horizon interaction）、实时游戏（real-time games）</p>
+          </li>
+          <li class="item">
+            <p>机构：南洋理工大学（新加坡）<br>核心价值问题：端侧 RL 里 actor 与 learner 共用一块嵌入式 GPU，权重刷新要么让 actor 停滞、要么让策略漂移，怎么破？<br>方法：把耦合做成可调参数：刷新上限限制两次权重刷新之间 actor 的放行次数，带松弛感知的 GPU 许可优先保障 actor、用空闲时间做训练，可叠加在任意基础调度器之上。<br>为什么值得看：在两块 Jetson 板上，16.8M 参数策略的截止期错过率从 85–100% 降到 1% 以下；端侧 RL 落地值得参考的运行时设计。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18035">RL^RT：端侧强化学习运行时</a>
+            <p class="keywords">关键词：端侧强化学习（on-device reinforcement learning）、嵌入式 GPU（embedded GPU）、实时调度（real-time scheduling）、Jetson</p>
+          </li>
+          <li class="item">
+            <p>机构：华盛顿大学、布朗大学、加州大学伯克利分校、纽约大学<br>核心价值问题：LLM 同策略 RL 后训练里，长尾 rollout 让推理引擎长时间空转，GPU 利用率只剩 56.6%，怎么在不破坏 on-policy 语义的前提下回收？<br>方法：两招互补：rollout 长尾进行时把 GPU 动态挪去做训练；再把 rollout 在推理引擎之间动态迁移以提升解码吞吐，自适应迁移策略自动决定何时挪资源。<br>为什么值得看：端到端比同策略 colocated 系统快最高 1.36 倍，达到最优吞吐的 97%，且无需针对不同任务、后端与硬件手工调参。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17924">TIDE：回收同策略 RL 后训练中损失的性能</a>
+            <p class="keywords">关键词：同策略强化学习（on-policy reinforcement learning）、GPU 利用率（GPU utilization）、rollout 优化（rollout optimization）、LLM 后训练（LLM post-training）</p>
+          </li>
+          <li class="item">
+            <p>机构：苏黎世联邦理工学院机器人系统实验室、Blue River Technology、Gravis Robotics、英特尔智能系统实验室<br>核心价值问题：5 吨滑移装载机这种重型机械，液压驱动、非线性延迟、实验危险，强化学习能不能让它做出只有少数精英人类操作员才能完成的特技动作？<br>方法：仿真中训练 RL 策略再 sim-to-real 迁移到真机：策略自主让装载机翘起双轮、在双轮平衡状态下越野、循迹、原地旋转、摆动铲斗再安全落回四轮。<br>为什么值得看：已发表于 Science Robotics（2026 年 11 月 11 日）；证明 RL 与 sim-to-real 能实现重型机械的动态自主控制，对建筑、采矿、物料搬运自动化有直接意义。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18365">Heavy Metal Acrobatics：滑移装载机的动态控制学习</a>
+            <p class="keywords">关键词：重型机械控制（heavy machinery control）、sim-to-real、滑移装载机（skid-steer loader）、动态控制（dynamic control）</p>
+          </li>
+          <li class="item">
+            <p>机构：韩国科学技术研究院（KIST）、延世大学、LG 电子、1X Technologies<br>核心价值问题：人形机器人运动训练配方（奖励、结构、超参）换一台关节坐标不同的机器人就得重调，能不能复用？<br>方法：在策略与执行器之间引入身体对齐虚拟关节空间：策略的动作与观测遵循统一解剖学约定，再由确定性运动学层映射到各机器人原生关节，底层传动与控制栈不动。<br>为什么值得看：同一套未改动的配方在三台腿轴布局不同的人形机器人上都稳定训练，且是唯一能准确跟踪、保持足部朝向的接口；在 Unitree G1 真机上航向漂移降低近 6 倍。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18003">跨人形机器人复用运动训练配方</a>
+            <p class="keywords">关键词：人形机器人（humanoid robots）、运动训练（locomotion training）、身体对齐（body alignment）、跨机器人复用（cross-robot reuse）</p>
+          </li>
+          <li class="item">
+            <p>机构：韩国科学技术院（KAIST）、蔚山科学技术院（UNIST）<br>核心价值问题：离线多智能体 RL 受限于固定数据集质量，扩增轨迹时多样性与协调性难以兼得，怎么办？<br>方法：扩散模型按智能体顺序逐个生成轨迹，并用 inpainting 保证跨智能体的协调一致，产出既多样又协调、全局连贯的多智能体轨迹。<br>为什么值得看：在 MPE、SMAC、SMAC-v2 等基准上，多种离线 MARL 方法的性能都显著提升；为离线 MARL 数据扩增提供了一个通用框架。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17793">MASTARS：回报条件子目标的多智能体轨迹扩增</a>
+            <p class="keywords">关键词：离线多智能体强化学习（offline multi-agent reinforcement learning）、轨迹扩增（trajectory augmentation）、扩散模型（diffusion models）、数据生成（data generation）</p>
+          </li>
+          <li class="item">
+            <p>机构：美团、香港中文大学、上海科技大学、复旦大学<br>核心价值问题：RL 训练动态不稳定、需要持续人工监督，能不能让 agent 自己接管整个 RL 训练流程、走向递归自我改进？<br>方法：三个 RL 专用的 agent 角色分工：Perceptor 跟踪训练动态、rollout、评测与效率，异常时触发研判；三个 Proposer 互补诊断并基于共享证据精炼干预方案；Orchestrator 审核后通过在线热更新或断点续训执行。<br>为什么值得看：在 Qwen3 与 LongCat-Flash-Lite 上优于静态 RL 配方与通用 agent；实验记录显示现有 agent 已能胜任无人值守的 RL 监督与动态调整。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17790">AutoRL：面向自主强化学习的多智能体系统</a>
+            <p class="keywords">关键词：自主强化学习（autonomous reinforcement learning）、训练监督（training supervision）、多智能体系统（multi-agent systems）、自我改进（self-improvement）</p>
+          </li>
+          <li class="item">
+            <p>机构：武汉大学、阿德莱德大学、香港科技大学、华侨大学、中国石油大学（华东）、华中师范大学<br>核心价值问题：部署要求变了，多智能体学到的旧协作约定可能过时甚至不安全，怎么让智能体“忘掉”指定约定又不丢有用的协作能力？<br>方法：把问题形式化为语义协作策略遗忘：因果协调归因定位关键交互，保留感知的子空间更新限制对无关行为的干扰，反事实再协调学出替代方案，对抗审计检验目标约定是否还可被诱发。<br>为什么值得看：五个合作 MARL 基准上，目标约定完成率与最坏诱发率分别降低 91.4% 与 83.3%，中位效用损失仅 5.9%，推理延迟与原策略相当。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17917">CARVE：多智能体 RL 中的语义策略遗忘</a>
+            <p class="keywords">关键词：策略遗忘（policy unlearning）、多智能体协作（multi-agent coordination）、语义遗忘（semantic unlearning）、安全对齐（safety alignment）</p>
+          </li>
+          <li class="item">
+            <p>机构：不来梅大学、北得克萨斯大学、丰田北美、布达佩斯技术与经济大学<br>核心价值问题：自博弈练出的人形机器人递物策略，遇到没见过的搭档就崩，问题出在哪？<br>方法：定位病因——共享奖励下 learned giver 总是立刻开始递物，receiver 只学会了一个固定会合点；引入隐藏起始延迟随机化（HSD）：在 receiver 看不到的搭档身上加一行延迟规则，再训 300 步。<br>为什么值得看：与未见过的脚本搭档交接成功率从 31% 升到 80%（两颗种子一致），高力接触减少 3–5 倍，且无需重训搭档；对自博弈 sim-to-real 的鲁棒性是个简洁有效的教训。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18491">隐藏起始延迟让自博弈交接对陌生搭档更鲁棒</a>
+            <p class="keywords">关键词：自博弈（self-play）、人机交接（human-robot handover）、sim-to-real 鲁棒性（sim-to-real robustness）、人形机器人（humanoid robots）</p>
+          </li>
+          <li class="item">
+            <p>机构：京都大学、SB Intuitions、理研 AIP<br>核心价值问题：掩码扩散语言模型算不出策略梯度要的对数似然，只能用 ELBO 替代目标估计；现有分块估计随机采样 block，有的重复评、有的漏评，方差从何而来？<br>方法：全 block 估计器——每个 block 恰好评估一次再平均；理论上证明无偏且消除了 block 选择带来的组间方差，同等样本量下方差更低。<br>为什么值得看：在数学、规划、编程五项基准中四项最高，比随机 block 采样基线平均高 12.79 分；扩散语言模型 post-training 的一个干净改进。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17754">See Every Block Once：掩码扩散语言模型的方差缩减 post-training</a>
+            <p class="keywords">关键词：掩码扩散语言模型（masked diffusion language models）、策略梯度（policy gradients）、方差缩减（variance reduction）、post-training</p>
+          </li>
+          <li class="item">
+            <p>机构：斯坦福大学、得克萨斯 A&amp;M 大学、耶鲁大学、2077AI<br>核心价值问题：灵巧操作学演示时，视觉只能还原手怎么动，却看不到哪根手指何时碰、多用力——这个“力缺口”有多大、怎么补？<br>方法：用戴 880 点触觉手套采集的人类触觉数据，在 MuJoCo 里重建交互：触觉设定每根手指的接触与闭合力；再以此生成带接触与力标签的扰动演示与新视角视频。<br>为什么值得看：触觉 grounding 的策略抓握力达到记录值的 0.99 倍（视觉复现仅 0.31 倍或 1.55 倍），20/20 试验成功、35/36 未见扰动成功；接触预测漏检率从 32% 降到 13%。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17619">TouchTwin：以 real-to-sim-to-real 扩展人类触觉数据</a>
+            <p class="keywords">关键词：触觉数据（tactile data）、灵巧操作（dexterous manipulation）、real-to-sim-to-real、接触力建模（contact force modeling）</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST AI、卡内基梅隆大学语言技术研究所、LG AI Research<br>核心价值问题：AI 审稿人只模仿人类评审会把主观标准也学进来，能不能只盯“严谨性”这个最客观的标准来训练？<br>方法：构建 PaperSound-23K（1K 篇 ICLR 投稿、23K 条人工与 LLM 评审要点，带质量标签），以评审要点的 precision 与 recall 的 F1 为奖励做强化学习训练 PaperCritic。<br>为什么值得看：在域内测试上超过前沿模型与其他 AI 审稿人训练方法；学审 ICLR 投稿的能力还能迁移到 Nature 系列论文，甚至代码评审、法律合同评审等域外任务。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17834">PaperCritic：训练 AI 审稿人评估论文严谨性</a>
+            <p class="keywords">关键词：AI 审稿人（AI reviewers）、论文严谨性评估（paper rigor evaluation）、强化学习训练（reinforcement learning training）、评审质量（review quality）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1115-1230-academic">
         <header class="round-header">
           <h2 id="round-1115-1230-academic">11 月 15 日 12:30 轮</h2>
@@ -993,6 +1094,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 11 日及之前）</summary>
       <section class="round" aria-labelledby="round-1112-2030-academic">
         <header class="round-header">
           <h2 id="round-1112-2030-academic">11 月 12 日 20:30 轮</h2>
@@ -1032,8 +1135,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 11 日及之前）</summary>
       <section class="round" aria-labelledby="round-1110-0830-academic">
         <header class="round-header">
           <h2 id="round-1110-0830-academic">11 月 10 日 08:30 轮</h2>
@@ -1655,7 +1756,7 @@ on>
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 15 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 16 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
