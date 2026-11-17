@@ -383,6 +383,54 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1116-2030">
+        <header class="round-header">
+          <h2 id="round-1116-2030">11 月 16 日 20:30 轮</h2>
+          <span class="count">8 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Towards Data Science 上的一篇文章：用 1890 年代渔业里的 capture-recapture 方法评估 agent 的召回率——只做少量人工抽查，就能在合同任务上把 agent 的召回估计到与真实值相差 2 个点以内。原文标题是《Two Runs of One LLM Agreed So Well They Underestimated the Total by 22%》。做 agent 评测的人值得看这个思路。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528307770673012737">Towards Data Science：用 capture-recapture 方法估计 agent 漏检了多少</a>
+            <p class="keywords">关键词：agent 评测（agent evaluation）、召回率（recall）、capture-recapture、人工抽查（spot-checking）</p>
+          </li>
+          <li class="item">
+            <p>据 Together AI 与 Ollama 介绍，让编码 agent 跑得快的关键是前缀缓存：但提示词顶部改一行、加一个时间戳、或改动推理强度，都可能让整段缓存作废；告诉 agent 它的输出被截断了，能让它回头读漏掉的部分。结论是 harness 要保持提示词稳定、推理引擎要把每一轮路由回持有缓存的机器。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528296013481095168">Ollama：让编码 agent 保持高速的经验</a>
+            <p class="keywords">关键词：编码 agent（coding agents）、前缀缓存（prefix caching）、推理引擎（inference engine）、Ollama</p>
+          </li>
+          <li class="item">
+            <p>Abacus AI 的 Agent 能把一句话变成完整应用：全栈应用、移动应用、带 Stripe 支付的产品、3D 游戏、CRM 或微型 SaaS，还能自己找 bug 修 bug。帖子附了 10 页轮播图与一句示例提示&quot;我困在朝九晚五，帮我做个应用…&quot;。这是产品推广，技术细节不多，作为 agent 产品动态收录。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7528293673202044930">Ishika Rawat：一句话生成完整应用的 Abacus AI Agent</a>
+            <p class="keywords">关键词：一句话生成应用（text-to-app）、全栈应用（full-stack apps）、Abacus AI、Stripe</p>
+          </li>
+          <li class="item">
+            <p>Deepika Mishra 认为，基础设施 agent 的风险预算不能按步算、要按累计算：agent 生命周期里要一直累计风险消耗，预算归零就降级或停手。她的 CrftInfrai 治理流程是&quot;部署 → agent 行动 → 累计消耗预算 → 预算耗尽 → 降级或停止&quot;。做 agent 安全与治理的人值得看这个区分。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7528279246776020992">Deepika Mishra：agent 风险预算要累计算，不能按步算</a>
+            <p class="keywords">关键词：agent 风险治理（agent risk governance）、风险预算（risk budget）、基础设施 agent（infrastructure agents）</p>
+          </li>
+          <li class="item">
+            <p>据该帖称，TypeSafe 的 Jev 是个嵌在其他程序里做快速决策的模型，今年秋天作为聊天式 LLM 的高效替代走红，并因此拿到 a16z 领投的 8.7 亿美元 A 轮。Glean、UiPath、ZoomInfo、Workday 都在用 Jev 搭建产品，相关分享会在 AI Engineer World&#x27;s AIE Code 活动上讲。融资与采用数字均为帖子所述、未独立核实。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528282756724985856">Dae Kim：TypeSafe 的 Jev 模型走红，拿下 8.7 亿美元 A 轮</a>
+            <p class="keywords">关键词：快速决策模型（fast decision model）、A 轮融资（Series A）、a16z、TypeSafe</p>
+          </li>
+          <li class="item">
+            <p>HubSpot 联合创始人兼 CTO Dharmesh Shah 写了&quot;HubSpot 再造 Day 4&quot;笔记：围绕 AI 重构公司，核心是&quot;Headless、Harness、Human&quot;——所有 GTM 对象与操作都要能经 MCP/API 被任何 AI 应用调用；agent harness 在各应用间协调 agent、人类居中；agent 优先的人类层负责判断、关系与品味。Agentic coding（Claude Code）已成为 HubSpot 工程的一等公民。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528263929198759937">Dharmesh Shah：HubSpot 围绕 AI 再造，Headless、Harness、Human</a>
+            <p class="keywords">关键词：AI 重构（AI transformation）、MCP、agent harness、HubSpot</p>
+          </li>
+          <li class="item">
+            <p>Databricks 的 Zeashan Pappa 用 Genie 搭了个每日任务看板：自动从 Slack、其他 MCP 应用与邮件里抽行动项，扫描遥测与指标看板、标出异常并链回源文档，还能提炼会议要点。接上真实的业务定义、数据与上下文后，Genie&quot;不再是 demo、成了队友&quot;。这是 Databricks 官方产品能力的用户实测分享。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528256254092414976">Zeashan Pappa：用 Databricks Genie 搭出每日任务看板</a>
+            <p class="keywords">关键词：每日任务看板（daily task dashboard）、Genie、Databricks、MCP 应用（MCP apps）</p>
+          </li>
+          <li class="item">
+            <p>Zendesk 的 Tommy Hines 宣布 Advanced Action Flows 全面可用：用自然语言提示就能在 Zendesk 及连接的系统里生成自动化工作流。Zendesk 称已执行 2300 万个工作流、省下 190 万小时人工。这是厂商产品公告，数字为 Zendesk 自述。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528249535807221760">Tommy Hines Jr：Zendesk Advanced Action Flows 全面可用</a>
+            <p class="keywords">关键词：工作流自动化（workflow automation）、自然语言提示（natural language prompts）、Zendesk、Action Flows</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1116-1630">
         <header class="round-header">
           <h2 id="round-1116-1630">11 月 16 日 16:30 轮</h2>
@@ -989,7 +1037,7 @@
         </ol>
       </section>
 <details class="archive">
-        <summary>历史归档（11 月 11 日及之前）</summary>
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1112-2030">
         <header class="round-header">
           <h2 id="round-1112-2030">11 月 12 日 20:30 轮</h2>
@@ -7960,6 +8008,19 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1116-2030-academic">
+        <header class="round-header">
+          <h2 id="round-1116-2030-academic">11 月 16 日 20:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Pierre de Lacaze 分享 Grid Robotics 11 月的一篇 84 页论文《Envisioning Agentic Robotics》：据该论文称，GPT-6 Astra 的出现标志着 agentic 机器人时代的到来，带 agentic harness 的前沿模型在多项具身基准上达到或超过了专用策略。论文还提出&quot;Embodied System 2&quot;（基础模型＋具身 harness）作为决策核心，并给出评测框架与通向持续自主的路线图。论文与模型表述为帖子转述，未独立核实。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528292217057103874">Pierre de Lacaze：Grid Robotics 论文谈 agentic 机器人新时代</a>
+            <p class="keywords">关键词：agentic 机器人（agentic robotics）、具身智能（embodied AI）、Embodied System 2、GPT-6 Astra</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1116-1230-academic">
         <header class="round-header">
           <h2 id="round-1116-1230-academic">11 月 16 日 12:30 轮</h2>
@@ -8137,7 +8198,7 @@
         </ol>
       </section>
 <details class="archive">
-        <summary>历史归档（11 月 11 日及之前）</summary>
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1112-1630-academic">
         <header class="round-header">
           <h2 id="round-1112-1630-academic">11 月 12 日 16:30 轮</h2>
