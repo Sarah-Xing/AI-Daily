@@ -383,6 +383,29 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1117-1630">
+        <header class="round-header">
+          <h2 id="round-1117-1630">11 月 17 日 16:30 轮</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Nuance Labs 发布了下一代 AI 角色 Nora，基于 Nuplex 模型，现以研究预览版开放聊天。关注 AI 角色与多模态模型的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7528600264115798016/">Nuance Labs：发布下一代 AI 角色 Nora（研究预览）</a>
+            <p class="keywords">关键词：Nuance Labs、AI 角色（AI characters）、Nora、Nuplex、多模态模型（multimodal models）</p>
+          </li>
+          <li class="item">
+            <p>微软在 Ignite 上发布了 MAI Image 2.7 与 2.7 Flash：号称前沿级文生图质量，在图像 Arena 上排前二、领先 GPT Image。关注文生图模型进展的人值得看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528587477318713345/">Xing Mei：微软发布 MAI Image 2.7，图像 Arena 排前二</a>
+            <p class="keywords">关键词：MAI Image 2.7、文生图（text-to-image）、图像 Arena（image arena）、Ignite、微软（Microsoft）</p>
+          </li>
+          <li class="item">
+            <p>Open Athena/Marin 完成了 Mochi（Marin 535B-A23B）在 NVIDIA GB200 上用 JAX 的长达数月的预训练。这是开源大模型预训练的一个里程碑进展。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7528581830787239936/">Tejash Shah：Open Athena/Marin 完成 Mochi 预训练（GB200+JAX）</a>
+            <p class="keywords">关键词：Mochi、开源预训练（open pretraining）、GB200、JAX、Open Athena</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1117-1230">
         <header class="round-header">
           <h2 id="round-1117-1230">11 月 17 日 12:30 轮</h2>
@@ -3353,6 +3376,59 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1117-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1117-morning-academic">11 月 17 日早报</h2>
+          <span class="count">9 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：罗彻斯特大学、Adobe<br>核心价值问题：自回归长视频生成中主体与背景会随时间漂移，现有短窗口蒸馏目标不训练长程一致性，而复用已漂移的历史帧又会把误差传下去，如何在保持运动自然的前提下锁住长视频的外观一致性。<br>方法：以初始帧为外观参照，先用现成分割模型找区域、经注意力掩码建教师模型，迫使新帧每个区域只关注初始帧的对应区域，再把该行为蒸馏进学生的独立注意力通路（推理时无需外部模型）；另加免训练的数值修正，把 KV 缓存中已漂移的数值拉回初始帧对应值。<br>为什么值得看：在多个基模型上取得长视频方法中最佳的主体与背景一致性，且优势随视频长度增大；论文展示了单次生成两小时视频、一致性全程稳定，对长视频、流式生成的实用化是关键一步。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21559">Reference Forcing: Long Video Generation with Region-Guided Drift Correction</a>
+            <p class="keywords">关键词：长视频生成（long video generation）、外观一致性（appearance consistency）、Reference Forcing、注意力掩码（attention masking）、KV 缓存（KV cache）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京大学、腾讯混元、香港科技大学<br>核心价值问题：流式视频生成要超出训练时长维持质量，还要处理自生成历史带来的暴露偏差与不断增长的缓存成本，现有方法多只针对少步生成器或只评到 15 秒。<br>方法：基座到蒸馏的完整框架：窗口式教师强制（WinTF）建多步流式基座，分层 KV 缓存压缩（HieraKV，缓存内存最多降 78%）；累积长程调优结合分布匹配蒸馏（CuLT-DMD）训练少步生成器；推理时用 KV 重算与引导退火（AnnealCFG）稳定超视距外推，另配 FBCA 注意力与 PS-VAE 流式解码。<br>为什么值得看：在 HeliosBench 上仅用最长 15 秒视频训练，基座在 30 秒仍有竞争力，蒸馏版在单事件与多事件、10 秒至 60 秒评测中总分最高，兼顾持续自然度与活跃运动，是目前长视频滚动生成最完整的方案之一。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21339">MovieRoll: A Systematic Framework for Rolling Out Long-Form Videos</a>
+            <p class="keywords">关键词：流式视频生成（streaming video generation）、MovieRoll、KV 缓存压缩（KV cache compression）、分布匹配蒸馏（distribution matching distillation）、长视频（long-form video）</p>
+          </li>
+          <li class="item">
+            <p>作者：Tian Xia<br>核心价值问题：公开平台上有大量个性化 LoRA，但在一张图里同时用两个主体 LoRA 极易失败：K=10 或 20 的池子互相干扰，只加载被请求的两个 LoRA 时双主体同时保留率也不到 4%，不是一个主体消失、就是两者融合或拼成拼贴画。<br>方法：免训练两阶段流程：先用 SSR-Merge 的子空间回归路由器把整个池子一次性合并为单个定秩适配器，并精确分解为共享部分与每主体部分；再在去噪前 30% 步数内把各主体部分门控到其布局区域，辅以衰减的软注意力偏置与循环交换引导，对抗区域同质化。<br>为什么值得看：双主体保留率达 94.2%（K=10）与 78.3%（K=20），远超 FreeFuse（50.8%/35.8%）与 LoRAShop（25.0%/24.2%），ImageReward 1.32（最佳基线 0.07），且全部 K 个主体共用一个适配器，自动推断布局时仍有 70.0%/55.0%，对社区 LoRA 的多主体组合是直接可用的方案。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21077">MORE: Merge Once, Route Early for Training-Free Multi-Subject Composition from Large LoRA Pools</a>
+            <p class="keywords">关键词：LoRA、多主体组合（multi-subject composition）、MORE、图像生成（image generation）、免训练（training-free）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京大学<br>核心价值问题：视频世界模型能否准确描绘科学现象受到关注，但现有评测多孤立评单个样本，无法区分模型是真理解原理还是只拟合了表面视觉先验。<br>方法：构建 222 对科学实验的成对评测：每对固定实验设置、只改一个条件，两个条件对应互斥的预期结果，提示词只给条件、不给结果；用独立视觉语言模型在不知条件文本与正确答案的情况下评判视频，pair 只有两侧都正确才算通过；评测了 10 个文生/图生视频模型。<br>为什么值得看：所有模型成对准确率最高仅 24.8%，配对视频在 55.7%–91.7% 的情况下画出相同结果；即使在提示词中直接给出正确结果，最高成对准确率也只有 33.3%，有力说明当前视频世界模型在生成中并不可靠地运用科学原理，是世界模型评估的重要基准。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20899">SciWorldBench: Do Video World Models Really Understand Scientific Experiments?</a>
+            <p class="keywords">关键词：视频世界模型（video world models）、科学实验（scientific experiments）、SciWorldBench、成对评测（paired evaluation）、物理理解（physics understanding）</p>
+          </li>
+          <li class="item">
+            <p>机构：LynnReal AI<br>核心价值问题：交互式视频世界模型已有文本与相机控制，但直接操作物体需要更精细的控制；手是最自然的交互界面，然而连续手部动作到连贯视觉响应的映射很难，且实时计算要求苛刻。<br>方法：手控视频世界模型：整理 10 万条涵盖真实与合成环境的手部交互片段并做手部感知监督；学习因果流映射做少步生成，区域感知分数蒸馏结合视频与图像先验分别打磨交互动态与外观；另提紧凑视频解码器 Ultra-Fast-VAE 降低解码延迟。<br>为什么值得看：在 HandBench 上完整模型 FVD 181.67、MANO Dice 93.02，三步因果模型仍保持 92.49；单张 H200 上 540p 流式达 18.03 FPS、延迟 741 毫秒，把手部交互的世界模型推进到可实时游玩的程度，数据集、权重与代码均承诺开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21479">LynnReal-Hand: Unlocking World Interaction with Hand Control</a>
+            <p class="keywords">关键词：手部交互（hand interaction）、视频世界模型（video world models）、LynnReal-Hand、实时生成（real-time generation）、HandBench</p>
+          </li>
+          <li class="item">
+            <p>机构：立命馆大学、大阪工业大学<br>核心价值问题：生成精炼网络（GRN）通过反复重预测离散隐变量达到高保真，但需要数十个马尔可夫步；直接砍步数会让样本崩坏，因为因式化输出头无法表达 token 间的联合依赖。<br>方法：在 GRN 自身样本分布上做离散分布匹配：利用其均匀态损坏做反向 KL 梯度，让离散生成器可反向传播学习，并以整流流方式配对噪声与样本；再加过采样、非均匀采样与精炼置信度保留三项设计，让少数步承担不同的信息量与修复负担。<br>为什么值得看：ImageNet 256 上 3 步 FastGRN 的 FID 超过原 GRN；2 步学生可匹配需 79 次网络评估的教师质量、提速 12.7 倍；2B 文生图模型上 4 步学生几乎追平原模型的 GenEval，是离散 token 生成器少步化的重要进展。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20021">FastGRN: Few-Step Generative Refinement Networks</a>
+            <p class="keywords">关键词：生成精炼网络（generative refinement networks）、FastGRN、少步生成（few-step generation）、离散 token（discrete tokens）、FID</p>
+          </li>
+          <li class="item">
+            <p>机构：康奈尔大学<br>核心价值问题：掩码扩散语言模型能并行生成，但标准模型有两个根本局限：已生成的 token 无法修正，且训练信号只落在被掩码位置上，稀疏低效。<br>方法：重访空心 Transformer，提出 Leave-One-Out Transformer（LOOT）：每个 token 的预测只依赖其周围上下文、与自身输入无关；重新设计左右上下文合并机制实现逐层频繁交互，并推导监督全部 token 的低方差 MDM NELBO 估计量，使推理时可自我修正。<br>为什么值得看：在 LM1B 上验证困惑度追平最强稠密监督 MDM 基线；在 OpenWebText 上生成质量与多样性权衡优于已有重掩码方法，且前向评估次数少 8 倍、推理 FLOPs 少 3.5 倍，让扩散语言模型真正具备了自我修正能力。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19127">Empowering Masked Diffusion Models to Self-Correct with Leave-One-Out Transformers</a>
+            <p class="keywords">关键词：掩码扩散语言模型（masked diffusion language models）、LOOT、自我修正（self-correction）、Leave-One-Out Transformer、并行生成（parallel generation）</p>
+          </li>
+          <li class="item">
+            <p>机构：理化学研究所 RIKEN AIP、华南理工大学<br>核心价值问题：生成模型在作画前写一段思考链并报告大幅提分，但从未验证过这段文字到底贡献了什么：是真正的规划，还是仅仅扩充了提示词、点明了要画什么。<br>方法：用替换而非消融做因果检验：固定生成器、采样器与种子，把思考块换成无内容填充文本、模型自述的一句话指认、外部模型给出的指认等对照条件，在统一模型、强化学习推理生成器与规划器驱动的冻结扩散模型三类系统上测量成像变化。<br>为什么值得看：结论出人意料且扎实：无内容文本毫无收益，外部 8B 模型的一句话指认用 3–6 倍更少的条件 token 就追平模型自己的规划；写对名字值 +0.33、写错仅 +0.05；截断到文本编码器窗口后 286 张图中有 272 张字节完全相同——思考块的价值在于“指明画什么”的规格说明，而非可执行的规划，对统一多模态模型的推理设计有直接启示。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19341">A Think Block Is Conditioning, Not a Plan</a>
+            <p class="keywords">关键词：思考链（chain-of-thought）、统一多模态模型（unified multimodal models）、条件提示（conditioning）、图像生成（image generation）、因果检验（causal testing）</p>
+          </li>
+          <li class="item">
+            <p>机构：Google DeepMind、得克萨斯大学奥斯汀分校、加州大学伯克利分校<br>核心价值问题：视频世界模型承诺从当前画面预测未来，但现有评测只看单条生成视频是否合理——模型完全可能对两个真实未来截然相反的初始帧生成同一条“合理”视频，孤立打分永远抓不住这个矛盾。视频模型到底有没有学到决定未来的世界状态？<br>方法：构建 FlipTest：1,680 个初始帧、10 个仿真与 15 个真实任务的三级反事实测试——视觉最小对（两帧几乎相同、真实未来相反）、匹配对照（只在未来真正变化时才应翻转预测）、密集扫描（定位预测翻转点与真实物理边界的吻合度）；对 11 个视频世界模型评测，生成 21,000 余条视频，并以视觉语言模型与显式测量几何的编码 agent 做对照诊断。<br>为什么值得看：结论尖锐：最强模型成对准确率仅 18.3%，低于 25% 的随机水平，仿真任务上全部模型都不如随机猜测；模型在不改变未来的扰动上翻转预测的频率与在边界处一样高；但同一帧上视觉语言模型能画出近 S 形选择曲线、编码 agent 能精确定位边界，说明决定性信息就在帧里、只是视频模型没学到。直接挑战“视频预测即世界模型”的主流假设，是世界模型评估的关键基准。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19822">The Flip Test: Video World Models Fail to Learn the World State</a>
+            <p class="keywords">关键词：视频世界模型（video world models）、FlipTest、世界状态（world state）、反事实评测（counterfactual evaluation）、视频预测（video prediction）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1116-morning-academic">
         <header class="round-header">
           <h2 id="round-1116-morning-academic">11 月 16 日早报</h2>
