@@ -383,6 +383,37 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1118-0830">
+        <header class="round-header">
+          <h2 id="round-1118-0830">11 月 18 日 08:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Synthesia 的 Thomas NADAUD 展示了用 Syren 视频生成器做的汽车广告：只给一份 brief 和几张参考图，几分钟就产出专业级成片。他认为这行正在从&quot;会用工具&quot;转向&quot;有想法、会讲故事&quot;。做 AI 视频生成、关注视频 agent 落地的人值得看这条。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7528850782914371584">Thomas NADAUD：用 Synthesia Syren 几分钟产出专业级汽车广告</a>
+            <p class="keywords">关键词：AI 视频生成（AI video generation）、Synthesia Syren、广告制作（ad production）、视频 agent（video agents）、创意工具（creative tools）</p>
+          </li>
+          <li class="item">
+            <p>Gael Varoquaux 分享了 NVIDIA 发布的 Kumo Tabular：表格基础模型的训练代码与技术报告已公开，权重与完整训练流程都开放，在 11 个表格基础模型发布中成为仅有的第二个完全开放的模型（与 TabICL v2 并列）。做表格数据建模、关注基础模型开放程度的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7528850439342243840">Gael Varoquaux：NVIDIA 开放 Kumo Tabular 表格基础模型训练代码与技术报告</a>
+            <p class="keywords">关键词：表格基础模型（tabular foundation models）、开源训练（open training）、NVIDIA Kumo、表格数据（tabular data）、Gael Varoquaux</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1118-morning">
+        <header class="round-header">
+          <h2 id="round-1118-morning">11 月 18 日早报</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>微软在 Ignite 2026 上发布 MAI Image 2.7 与轻量版 Flash：图像编辑登顶 Artificial Analysis 榜单（1215 Elo），超过 GPT Image 2.6 Sunburst（max），价格约其五分之一；文生图排名第四。两款均在 Microsoft Foundry 公开预览，2.7 约 35 美元/千张、Flash 约 10 美元/千张，并同步推出由 Flash 驱动的交互式画布 Canvas。微软称 MAI Image 已是 Bing Image Creator 的默认模型系列，Adobe、Figma Weave、Manus 等已接入；成绩均为官方引用榜单数据。</p>
+            <a class="source-link" href="https://microsoft.ai/news/introducing-mai-image-2-7/">微软发布 MAI Image 2.7（Microsoft AI 官方博客）</a>
+            <p class="keywords">关键词：图像编辑（image editing）、文生图（text-to-image）、MAI Image 2.7、图像生成基准（image generation benchmarks）、微软（Microsoft）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1117-2030">
         <header class="round-header">
           <h2 id="round-1117-2030">11 月 17 日 20:30 轮</h2>
@@ -535,6 +566,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1114-1230">
         <header class="round-header">
           <h2 id="round-1114-1230">11 月 14 日 12:30 轮</h2>
@@ -589,8 +622,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1113-1230">
         <header class="round-header">
           <h2 id="round-1113-1230">11 月 13 日 12:30 轮</h2>
@@ -3389,6 +3420,54 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1118-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1118-morning-academic">11 月 18 日早报</h2>
+          <span class="count">8 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Apple、康奈尔大学<br>核心价值问题：自回归视频扩散模型能按新观测与输入逐帧生成，是交互式视觉体验的理想载体，但现有模型比流畅交互所需的速度慢几个数量级。<br>方法：发布 FastFrames 系列：剖析 SOTA 模型的推理管线，发现常被当作固定实现细节的 VAE 解码与 KV 缓存更新占端到端延迟一半以上，改用轻量替代方案。<br>为什么值得看：1.3B 版本在单张 B200 上每帧 36ms（28 响应/秒），质量与慢近 8 倍的 SOTA 相当；14B 版本在 8×B200 节点上每帧 45ms（22 响应/秒），视觉质量与真实感显著更好。视频生成从&quot;离线渲染&quot;走向&quot;实时交互&quot;的关键一步，项目页已放视频、代码与权重。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23226">FastFrames: Video Generation at Interactive Latency</a>
+            <p class="keywords">关键词：视频生成（video generation）、实时生成（real-time generation）、交互延迟（interactive latency）、Apple、扩散模型（diffusion models）</p>
+          </li>
+          <li class="item">
+            <p>机构：卡内基梅隆大学、莱斯大学<br>核心价值问题：像素空间扩散把视觉表征学习与图像生成合在一阶段训练、无需单独预训练的视觉编码器，但朴素像素空间 Transformer 在生成质量与训练效率上仍落后于两阶段潜空间扩散——差距的一部分可能来自&quot;每层保留每个 patch 一个 token&quot;，没有显式构建视觉层级。<br>方法：提出 HiT：逐步把相关 token 分组、每组用一个 token 表征，主干在压缩后的组 token 上计算，再解组恢复到原图像位置；压缩预算调节整批平均压缩比，分组关系与数量可随图像与扩散步变化。<br>为什么值得看：ImageNet 256×256 上 FID 1.48，约 40% 的累计训练 FLOPs 即达到与 JiT 相当的生成质量；文生图上以约 6 倍少的去噪器参数、3 倍少的前向 FLOPs 超过 UniLiP 在五项基准上的平均分。分组还自发学出语义结构（物体与部件成组、无需分割标签），为&quot;无外部视觉预训练的更强图像生成&quot;打开一条路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22962">Hierarchical Diffusion Transformer for End-to-End Image Generation</a>
+            <p class="keywords">关键词：图像生成（image generation）、扩散 Transformer（diffusion transformers）、分层建模（hierarchical modeling）、端到端生成（end-to-end generation）、卡内基梅隆大学（Carnegie Mellon University）</p>
+          </li>
+          <li class="item">
+            <p>机构：同济大学、ZERON、郑州轻工业大学、布达佩斯技术与经济大学、HUN-REN SZTAKI<br>核心价值问题：世界模型能生成日志之外的驾驶场景，用于训练与评测自动驾驶，但现有模型难兼顾行为真实与视觉保真——因为忽略了车辆交互与自车视觉观测之间的关系。<br>方法：提出闭环交互世界模型：先用多 agent 强化学习在闭环里微调模仿学习得到的背景车策略，对抗一个会对渲染图像做出反应的端到端自车规划器，使交互行为贴合真实日志；再用交互暴露的视角逐个诊断 3D 高斯车辆资产（弱化欠观测高斯的视角相关颜色、补全从未观测的表面），并按车辆驾驶意图渲染信号灯。<br>为什么值得看：在长尾闭环场景上，与真实交互行为的偏离降低 85%，新视角车辆 PSNR 比 SOTA 世界模型高 2.0dB；四分之一场景里，渲染的信号灯所传达的背景车意图会间接影响自车驾驶行为——信号灯这类细节在世界模型里第一次被证明有实际影响。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22691">Making the World React Realistically: A Closed-Loop Interactive World Model for Autonomous Driving</a>
+            <p class="keywords">关键词：世界模型（world models）、自动驾驶（autonomous driving）、交互式仿真（interactive simulation）、闭环建模（closed-loop modeling）、同济大学（Tongji University）</p>
+          </li>
+          <li class="item">
+            <p>机构：牛津大学、莫纳什大学、巴斯大学等<br>核心价值问题：视觉世界模型按动作预测未来画面，但实体位姿与空间关系的递归误差会限制长程预测——能否用一个单独预测的关系状态来纠正这种漂移，而不动原视觉模型的结构？<br>方法：提出 JointGV 插件：基于&quot;跨粒度动力学&quot;假设（图节点变化与视觉状态变化描述同一物理转移），在视觉世界模型旁并行展开任务条件的场景图，耦合两者预测的变化，用图运动上下文与图预测的节点位置算出一个有界残差来纠正；图学习与纠正的梯度不回传进原视觉动力学。<br>为什么值得看：接在 DINO-WM 与 DreamerV3 上，32 步 rollout 的关节位置误差降低 11–28%；真实机器人倒立摆序列上，DINO-WM 的 32 步摆角误差从 12.56° 降至 6.69°；仿真倒立摆控制中，用纠正后 rollout 训练的 actor 完成 46/50 回合，而用原 rollout 的为 0/50。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22543">JointGV: Structure-Aware Correction of Visual World Models with Parallel Graph Dynamics for Long-Horizon Modeling</a>
+            <p class="keywords">关键词：视觉世界模型（visual world models）、长程建模（long-horizon modeling）、图动力学（graph dynamics）、结构感知（structure-aware）、牛津大学（University of Oxford）</p>
+          </li>
+          <li class="item">
+            <p>作者：Karthik Iyer<br>核心价值问题：世界模型被信任回答&quot;如果……&quot;——对它从没见过的动作，世界会如何反应；但预测准确度（forecast accuracy）到底能不能预示它在新动作上的准确度，从未被系统检验过。<br>方法：给出一套适用于任何动作条件世界模型的检验：把动作按设计排除在训练之外、用已知答案打分；检验预测准确度是否能预测新动作上的准确度；并把同样结构交给更简单的模型做对照。在零售场景（动作是定价与促销计划）上拟合 2853 个模型验证。<br>为什么值得看：预测准确度在&quot;不同种类模型之间&quot;是合理向导（与新计划误差的秩相关 0.32–0.66），但在&quot;同一世界模型的不同版本之间&quot;却不可靠——商家把计划排进高需求周时相关性反转为 -0.69；教世界模型学习动作效应（JEPA 预训练等）对新计划误差毫无改善（1.05–1.06 对 1.06）。真正有用的是记录的常规价格与三条价格规则；给定同样规则，简单对数线性模型在曲线能拟合真相时反而最优。给&quot;该不该信世界模型的 what-if&quot;立了一个可复用的检验框架。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22537">Testing World Models on Actions They Have Never Seen: Held-Out Plans, Forecast Accuracy and Price Rules in Retail</a>
+            <p class="keywords">关键词：世界模型评测（world model evaluation）、未见动作（unseen actions）、零售预测（retail forecasting）、预测准确性（forecast accuracy）、泛化测试（generalization testing）</p>
+          </li>
+          <li class="item">
+            <p>机构：微软（剑桥）<br>核心价值问题：SOTA 世界模型能生成连贯数分钟的玩法序列，但推理慢、训练数据量巨大——实时交互玩法与小数据定制训练都做不了，限制了世界模型在创意领域的用途。<br>方法：用两阶段离散扩散方法取代 next-token 预测范式，引入轻量精炼 Transformer 做迭代掩码预测；基于一个已能生成高度一致复杂序列的自回归世界模型改进。<br>为什么值得看：模型加速 79 倍、质量仅适度下降；仅用约 28 小时（一天）的玩法数据即可训练出能复现高质量、一致玩法的模型。世界模型从&quot;只有大厂玩得起&quot;向&quot;小团队可定制、可实时交互&quot;迈进了一大步。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22497">Towards Data-Efficient, Real-Time World Models</a>
+            <p class="keywords">关键词：世界模型（world models）、数据效率（data efficiency）、实时建模（real-time modeling）、微软（Microsoft）、轻量模型（lightweight models）</p>
+          </li>
+          <li class="item">
+            <p>机构：马里兰大学<br>核心价值问题：文生视频扩散模型漏掉提示词的一部分时，大家的第一反应是调大 classifier-free guidance——但这招什么时候真管用、什么时候白费，始终没有系统测量。<br>方法：在 Mochi 上做测量研究：同一组失败，比较&quot;调大 guidance&quot;与&quot;重新生成&quot;的修复效果，并用一个廉价分数 demand（去噪器对被漏掉的那部分提示词的反应强度，去噪前四分之一即可读出）预测结果。<br>为什么值得看：结论干净可用——调大 guidance 能修罕见组合（&quot;下雪的海滩&quot;），修不了否定（&quot;没有车辆的公路&quot;），对迟发事件（&quot;海浪拍平沙堡&quot;）毫无作用；只有当提示词无否定、无定时事件、且 demand 足够高时才有效。三类已发表的修正方法作为固定探针，行为与该解释一致。给创作者一个&quot;生成前先判断值不值得调&quot;的决策规则。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23025">When a Larger Guidance Scale Repairs Text-to-Video Failures and When It Does Not</a>
+            <p class="keywords">关键词：文生视频（text-to-video）、引导尺度（guidance scale）、生成失败分析（generation failure analysis）、扩散模型（diffusion models）、马里兰大学（University of Maryland）</p>
+          </li>
+          <li class="item">
+            <p>机构：Luma AI、加州理工学院、斯坦福大学<br>核心价值问题：潜空间扩散模型依赖解码器把去噪后的 latent 映射回像素，增加了复杂度与推理成本——能不能让扩散 Transformer 自己在最后一步直接输出像素？<br>方法：提出 DWD：去噪头继续驱动采样，新增一个 DWD 头只在最后一步预测像素；只微调最后几个 Transformer 块、用像素质量损失训练 DWD 头，同时把去噪头锚定在预训练模型上以保持采样轨迹。<br>为什么值得看：去掉解码器、降低推理成本的同时保持甚至提升像素质量；在 Wan 视频生成上细节失真与闪烁 visibly 减少、warping error 降低 23%；同一分离思路甚至能改进本就没有解码器的像素扩散模型——文生图上把 ImageNet FID 从 1.55 降到 1.43，创像素流模型新纪录。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22287">Decoding Without a Decoder: Direct Pixel Prediction from Diffusion Transformers</a>
+            <p class="keywords">关键词：扩散 Transformer（diffusion transformers）、像素预测（pixel prediction）、无解码器生成（decoder-free generation）、图像生成（image generation）、Luma AI</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1117-morning-academic">
         <header class="round-header">
           <h2 id="round-1117-morning-academic">11 月 17 日早报</h2>
@@ -3490,6 +3569,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1114-1630-academic">
         <header class="round-header">
           <h2 id="round-1114-1630-academic">11 月 14 日 16:30 轮</h2>
@@ -3521,8 +3602,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1113-morning-bupu-academic">
         <header class="round-header">
           <h2 id="round-1113-morning-bupu-academic">11 月 13 日早报补推</h2>
@@ -5213,7 +5292,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 17 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 18 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {

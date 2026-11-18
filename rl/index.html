@@ -445,6 +445,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1114-2030">
         <header class="round-header">
           <h2 id="round-1114-2030">11 月 14 日 20:30 轮</h2>
@@ -458,8 +460,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1112-1630">
         <header class="round-header">
           <h2 id="round-1112-1630">11 月 12 日 16:30 轮</h2>
@@ -885,6 +885,129 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1118-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1118-morning-academic">11 月 18 日早报</h2>
+          <span class="count">23 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Surge AI<br>核心价值问题：大模型 RL 后训练到底能在专家任务上带来多大提升、提升来自哪里？只用 RL（无 SFT）微调 120B 模型能否在真实任务上稳定获益，至今缺少按任务逐个拆开的实证。<br>方法：对 NVIDIA Nemotron 3.5 Super（120B 总参数、12B 激活）做 RL 后训练，在软件工程、复杂约束、长程工具使用、专业图表理解、企业文档推理五类专家任务数据集上各训一个 rank-32 LoRA 适配器，用 CISPO 算法在 Tinker 上训练、无 SFT 阶段，并在同一任务、同一 harness 下与基座模型对比。<br>为什么值得看：12 项 headline 基准全部提升，SWE-bench Pro V2 从 86.9% 升至 92.1%，Terminal-Bench 2.1 从 63.9% 升至 70.3%，文档推理的 GDP_pdf 从 10.4% 升至 24.2%；还逐个拆解了基座模型失败的模式与适配器学会的补救行为，是 RL 后训练效果少见的细粒度实证。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22161">What RL on Expert-Built Tasks Teaches Nemotron 3.5 Super</a>
+            <p class="keywords">关键词：RL 后训练（RL post-training）、专家任务（expert tasks）、Nemotron、适配器（adapters）、基准提升（benchmark gains）</p>
+          </li>
+          <li class="item">
+            <p>机构：圣母大学<br>核心价值问题：GRPO 训练中超出基座模型能力的问题会全军覆没、零奖励、没有梯度信号，能力扩展就此卡住；已有的 Hint-Augmented GRPO 虽能给提示降低难度，但推理时没有提示可用，训练与推理上下文不一致，效果不稳定。<br>方法：提出 ASH（Activation Steering for Hinting），把提示重新理解为对模型行为的引导而非降低难度：训练时同时给带提示与不带提示的问题，优化一个可训练的 steering 向量，拉大模型对带提示回答相对不带提示回答的生成概率差距；推理时直接把该向量注入模型激活，复现带提示的行为，无需提示。<br>为什么值得看：在 Qwen3-1.7B/4B、Llama-3.2-1B/3B 上，竞赛数学基准（AMC、OlympiadBench、AIME24/25）与分布外基准（Minerva、GPQA-Diamond）的 pass@8 稳定提升，Qwen3-1.7B-Base 平均 pass@8 提升 2.60%，为 GRPO 零奖励困境提供了一个轻量解法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23124">Get Hint-Augmented GRPO Done Right Through Activation Steering</a>
+            <p class="keywords">关键词：GRPO、提示增强（hint augmentation）、激活引导（activation steering）、推理训练（reasoning training）、圣母大学（University of Notre Dame）</p>
+          </li>
+          <li class="item">
+            <p>机构：复旦大学、上海创新研究院、美团<br>核心价值问题：MCTS 在 LLM 推理上的收益常不如预期，瓶颈可能不在搜索量而在&quot;数什么&quot;：标准 UCT 给每个文本分支独立计访问次数，同一推理策略的不同表述会反复拿到探索奖励，探索效率被计数碎片化拖累。<br>方法：提出 Learned Pseudo-Count MCTS（LPC-MCTS），只改 UCT 的探索统计量：在策略隐藏表示上加一个轻量 Coin-Flipping Network 头估计表示覆盖度，让相关分支共享探索证据；理论分析表明计数碎片化会增大累积遗憾。<br>为什么值得看：5 个数学推理与 7 个搜索基准上均优于强 MCTS 基线；固定已训策略、仅在推理时换计数方式，Qwen2.5-7B 平均 mean@16 准确率提升 3.79 个百分点，训练与推理都用 LPC-MCTS 时提升 4.96 个百分点。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22301">MCTS Is Counting the Wrong Thing: Learning Exploration Counts for LLM Reasoning</a>
+            <p class="keywords">关键词：MCTS、探索计数（exploration counts）、LLM 推理（LLM reasoning）、搜索算法（search algorithms）、复旦大学（Fudan University）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港科技大学、Trip.com Group<br>核心价值问题：生成式推荐器经 SFT 后再用 RL 后训练已成标准做法，榜单前列准确率提升了，但部署时模型要给下游排序器提供数百个候选——RL 是否悄悄损害了候选召回？<br>方法：在五个数据集上系统测量发现，RL 后训练提升了小 K 下的 hit@K，却降低了大 K（数百量级）下的候选召回；根因是 RL 给采样到的候选分配负优势——每个用户只记录了一个下一项，RL 把其他候选都当错，而这些候选恰是相似用户的下一项；据此提出 out-of-rollout anchoring，增加一项损失保留 SFT 模型对 rollout 之外物品的排序。<br>为什么值得看：首次系统揭示 RL 后训练在推荐中的召回代价并定位到负优势机制，补救方法简单且在五个数据集上把召回恢复到 SFT 水平、同时保留榜首收益，对做推荐 RL 的人有直接警示意义。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22838">Better Rankers, Worse Retrievers: The Hidden Cost of RL Post-Training in Generative Recommendation</a>
+            <p class="keywords">关键词：生成式推荐（generative recommendation）、RL 后训练（RL post-training）、排序器（rankers）、检索器（retrievers）、权衡分析（trade-off analysis）</p>
+          </li>
+          <li class="item">
+            <p>机构：苏黎世联邦理工学院、独立研究者、伦敦大学学院<br>核心价值问题：奖励设计仍是 RL 的核心瓶颈，尤其在稀疏奖励、长程、部分可观测、需要依赖链与记忆的环境里；现有基础模型方法大多假设目标条件、任务描述、专家演示或真实度量已知，而在 POMDP 中这些信息本应通过交互自己发现。<br>方法：提出 WATERFALL，一个迭代的群体式自动奖励发现流程：在严格可观测约束下，用 persona 条件生成多样化的程序化奖励候选，以视觉语言模型评审的瑞士制进化锦标赛从原始视觉 rollout 中评估候选行为并选出精英，再依据纵向评估历史迭代变异、升级或淘汰候选。<br>为什么值得看：在完全可观测与揭示门控的部分可观测环境中，WATERFALL 在不接触任何特权信息的情况下优于保留原生信息优势的基线，尤其在 POMDP 场景下优势最明显；消融证实视觉证据、锦标赛选择与迭代精炼三者缺一不可。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22854">WATERFALL: Workflow for Adaptive Training with Evolutionary Reward Formulation and Automated Learning Loops</a>
+            <p class="keywords">关键词：自适应训练（adaptive training）、奖励设计（reward design）、进化方法（evolutionary methods）、自动化学习（automated learning）、工作流（workflows）</p>
+          </li>
+          <li class="item">
+            <p>机构：清华大学、香港科技大学<br>核心价值问题：用 RL 后训练 flow-based 视觉-语言-动作（VLA）策略时，策略更新会改变随机转移所依赖的速度场几何，且稀疏多任务 rollout 在不同任务与优势正负之间产生不均衡的学习信号。<br>方法：提出结合 Outcome-Balanced PPO 与策略诱导 flow 矫正的 RL 框架：按任务成功率估计重加权正优势、并在保持符号的前提下重缩放正负优势；周期性地用当前策略生成的 ODE 端点对拟合线性桥 flow，刷新后续随机优化所用的表示。<br>为什么值得看：在仿真操作基准上成功率全面超过所评估的基线，并在 Real2Sim2Real 任务上验证了组件组合，为 flow-based VLA 的 RL 后训练补上了稳定性的关键一块。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22878">Outcome-Balanced PPO and Policy-Induced Flow Rectification for Flow-Based VLA Policies</a>
+            <p class="keywords">关键词：PPO、流匹配策略（flow-based policies）、VLA、机器人学习（robot learning）、策略优化（policy optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：Woven by Toyota<br>核心价值问题：足式机器人持续行走常因关节电机过热而停机，而非电池耗尽；热时间常数远超 RL 的信用分配视野，直接对温度给奖励学不到东西。<br>方法：先辨识一个 13 节点集总 RC 热网络（两次运行拟合，预测 12 个电机温度均方根误差小于 1°C），再设计奖励：以 gait 平均平方力矩与关节速度推算电机将稳定到的温度渐近线、压低最热的渐近线，策略无需观测温度即可学会降温与散热；实验用 Unitree Go2 四足机器人。<br>为什么值得看：效果非常直观：5kg 负载、1m/s 下，基线 19 分钟（1.1km）即热停机，新策略跑满电池 174 分钟（10.0km）、最热电机仍低于停机阈值 14°C；无负载工厂环路 25 圈过热 vs 47 圈跑完一块电池，是真实机器人 RL 落地的扎实案例。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22231">From Temperature-Limited to Battery-Limited Legged Locomotion</a>
+            <p class="keywords">关键词：四足机器人（legged locomotion）、电池约束（battery constraints）、温度限制（temperature limits）、Woven by Toyota、机器人控制（robot control）</p>
+          </li>
+          <li class="item">
+            <p>机构：伍斯特理工学院<br>核心价值问题：基于模型的四足控制器通常踩固定周期、固定顺序的循环步态，遇到安全落脚点不在节律上时就受限；能否让步态本身从任务中学出来？<br>方法：提出 CADENCE，一个在凸模型预测控制（MPC）之上用 RL 训练的学习式步伐规划器：每 40ms 从至多 65 个离散选择中挑一个（不迈步，或某条腿迈向某个安全落脚点），并预测摆动时间；奖励中没有任何步态项、只有每步成本，唯一结构约束是至多两条腿同时摆动。<br>为什么值得看：策略自发形成了非周期步态（无固定周期与顺序，但仍配对对角腿）；在 26%–49% 空洞地形仿真中成功率 85.1%，高于 OCS2-Trot 的 67.8%；49% 空洞时 72.9% 对 43.0%，且只重拟合逆足步模型即可迁移到非线性 MPC 上。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23102">CADENCE: Learning Acyclic Gaits for Model-Based Quadruped Locomotion</a>
+            <p class="keywords">关键词：四足步态（quadruped gaits）、基于模型的 RL（model-based RL）、步态学习（gait learning）、机器人运动（robot locomotion）、伍斯特理工学院（Worcester Polytechnic Institute）</p>
+          </li>
+          <li class="item">
+            <p>机构：GMO Internet Group、GMO Various Robotics<br>核心价值问题：学习式方法已让人形机器人跑得稳健并开始参加竞技比赛，但缺少在真实比赛中完整自主跑完的系统级报告：新场地车道跟随、硬件极限内的配速、无人干预完赛都是未被讲清的环节。<br>方法：在商用 Unitree G1 人形机器人上部署完整自主跑步系统，参加 2026 年世界人形机器人运动会 100m、400m、1500m：视觉车道感知 + 路径跟踪 + 带人类运动先验的 RL 跑步策略，辅以头部相机防抖、IMU 辅助腿部里程计跨越腾空相，并用训练中惩罚髋关节力矩、加散热片、按温度限速做配速管理。<br>为什么值得看：100m 74 人中第 13、400m 预赛 44 人中第 10（半决赛因车道检测失误摔倒）、1500m 35 人中第 7；每场比赛的配速都由热裕度决定，是人形机器人 RL 从实验室走向真实竞技的罕见完整部署记录。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22445">Autonomous Track Racing with a Commercially Available Humanoid: System Design and Real-World Deployment</a>
+            <p class="keywords">关键词：人形机器人（humanoid robots）、赛道竞速（track racing）、真实部署（real-world deployment）、机器人系统（robot systems）、GMO</p>
+          </li>
+          <li class="item">
+            <p>机构：香港城市大学、清华大学、江西财经大学、康涅狄格大学、上海财经大学、中山大学、南方科技大学<br>核心价值问题：基于模型的离线到在线 RL 里，离线与在线阶段的分布偏移常拖累微调效果；乐观与悲观的权衡通常被写进单一目标，调权衡系数又需要昂贵的双层优化。<br>方法：提出双目标建模，把乐观-悲观权衡做成 Pareto 策略池：离线阶段用 Multi-Objective Soft Actor-Critic（MOSAIC）求解双目标问题、生成多样化的 Pareto 策略；在线微调时用分层上下文 bandit 在每次交互中选最合适的策略微调，构成 HiP3 流程。<br>为什么值得看：在相同与新颖在线任务上取得最强的总体表现，且在更强的分布偏移下仍保持优势；动机实验还给出一个反直觉结论——乐观策略更适应新任务、悲观策略在同类在线任务上更好，值得做离线到在线 RL 的人参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22172">Towards Optimism-Pessimism Trade-off in Model-based Offline-to-Online Reinforcement Learning</a>
+            <p class="keywords">关键词：离线 RL（offline RL）、在线微调（online fine-tuning）、乐观悲观权衡（optimism-pessimism trade-off）、模型方法（model-based methods）、香港城市大学（City University of Hong Kong）</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST、蔚山科学技术院<br>核心价值问题：合作多智能体 RL 常在外生变化下失效：对手策略或环境机制的切换不受团队控制、却会改变转移动力学，现有方法对此缺乏形式化处理。<br>方法：把问题形式化为外生 Dec-POMDP（ED-POMDP）：每回合的外生机制独立于团队选定、为动力学编号；全局状态分为当前步直接响应团队动作的部分与不直接响应的部分，团队动作可通过前者间接影响后者；据此提出 LEICA，学习两类分量的历史条件上下文表示，并用智能体粒度的、影响加权的反事实内在奖励塑造策略更新。<br>为什么值得看：在对手策略切换的 SMAX 基准上，LEICA 在训练表现与对未见对手策略的泛化上均持续优于现有基线，是多智能体 RL 处理分布外对手的一个有理论支撑的新方向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22067">Addressing Exogenous Variability in Cooperative Multi-Agent Reinforcement Learning</a>
+            <p class="keywords">关键词：多智能体 RL（multi-agent RL）、外生变异性（exogenous variability）、合作学习（cooperative learning）、KAIST、鲁棒性（robustness）</p>
+          </li>
+          <li class="item">
+            <p>机构：JetBrains Research、Constructor University<br>核心价值问题：掩码扩散语言模型并行生成 token，解掩顺序影响最终答案准确率；已有方法学习解掩策略，却不能 remask（重新掩盖）已生成的预测，而 remask 能让模型用新生成的上下文纠正早期错误。<br>方法：提出 ReMaRL，一个仅约 0.3M 参数的轻量策略，直接学习哪些 token 该解掩、保留或 remask；用 GRPO 以最终答案奖励训练，扩散模型本身保持冻结。<br>为什么值得看：在 LLaDA-8B-Instruct 上，于 4–32 次模型调用的数学任务与 8–16 次调用的代码任务预算内，ReMaRL 在所比较的解掩与 remask 策略中得分最高；策略极小、模型冻结，说明扩散语言模型的推理顺序本身就有可观的 RL 优化空间。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22576">ReMaRL: Learning to Unmask and Remask in Frozen Diffusion Language Models</a>
+            <p class="keywords">关键词：扩散语言模型（diffusion language models）、掩码重构（mask remasking）、冻结模型（frozen models）、JetBrains、推理优化（inference optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京邮电大学、阿里巴巴<br>核心价值问题：前向过程 RL 把有奖励的生成重噪成回归目标来适配扩散与 flow 模型，但负优势会产生无界排斥梯度的凹更新；现有方法用移动策略副本的缓存预测做锚来稳定训练，可锚又会改变正反馈教模型拟合的目标——两者存在冲突。<br>方法：把这一冲突形式化为锚耦合（anchor coupling），提出优势门控适配（AGA）解耦两种角色：正样本保留标准目标拟合，其自限更新在观测目标处消失、不依赖移动锚；负样本改用凹目标在移动策略预测处的一阶切线，保留局部排斥方向、梯度与预测无关；长期行为保持则交给冻结预训练参考的正则。<br>为什么值得看：在组合生成、文本渲染与偏好对齐实验中，AGA 持续改善奖励-质量权衡，而移动正目标则会损害视觉质量并对策略副本更新节奏更敏感，为扩散 RL 的训练稳定性提供了干净的理论解法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23038">When Anchors Shift the Target: Advantage-Gated Adaptation for Diffusion Reinforcement Learning</a>
+            <p class="keywords">关键词：扩散 RL（diffusion reinforcement learning）、优势门控（advantage gating）、锚点适应（anchor adaptation）、阿里巴巴（Alibaba）、策略学习（policy learning）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学技术大学、理想汽车、华中科技大学、通义实验室<br>核心价值问题：基于奖励的扩散模型后训练仍靠高维隐空间中的各向同性随机扰动探索，扰动预算大量花在对目标奖励几乎没有影响的变化上，探索效率低。<br>方法：提出 RiDEx（Reward-Informed Directional Exploration），把局部探索集中到去噪速度场中与奖励相关的子空间：由条件残差或可微奖励梯度提议子空间，在同一生成状态做等值反向扰动测其终态奖励响应，奖励差提供有符号的局部监督，同时所有生成图像参与全局 DiffusionNFT 学习。<br>为什么值得看：在 Stable Diffusion 3.5 Medium 上四个对齐与偏好任务中取得最高的峰值奖励；梯度方向版本在 HPSv2 与 PickScore 上达到目标的速度比 DiffusionNFT 快 15 倍与 29 倍（按 H200 GPU 小时计），是扩散 RL 探索效率上少见的大幅提升。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22052">RiDEx: Reward-Informed Directional Exploration for Diffusion Reinforcement Learning</a>
+            <p class="keywords">关键词：奖励引导探索（reward-guided exploration）、方向探索（directional exploration）、扩散 RL（diffusion reinforcement learning）、通义实验室（Tongyi Lab）、理想汽车（Li Auto）</p>
+          </li>
+          <li class="item">
+            <p>机构：波士顿大学、Broad Institute of MIT and Harvard<br>核心价值问题：RL 迁移学习经验上很成功，但何时、如何把一个 MDP 的知识迁移到另一个 MDP 才有理论保证，一直缺少原则性回答。<br>方法：研究存在&quot;撤销映射&quot;（undo map）的情形：把该映射作用于目标状态空间可精确还原源任务；提出通过匹配两个 MDP 的状态特征统计量来学习该映射、再把源策略迁移到目标的算法；在线性撤销映射且源任务线性 Q* 可实现时，证明其样本复杂度严格优于在目标 MDP 从零开始的 RL。<br>为什么值得看：理论保证之外，在有挑战的连续控制任务与 Atari 游戏上也表现出显著更好的样本效率，说明任务间共享结构确实可以被系统性地利用来加速迁移。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23081">Learning to Undo: Transfer Reinforcement Learning under State Space Transformations</a>
+            <p class="keywords">关键词：迁移 RL（transfer reinforcement learning）、状态空间变换（state space transformations）、可逆学习（undo learning）、波士顿大学（Boston University）、泛化（generalization）</p>
+          </li>
+          <li class="item">
+            <p>机构：理化学研究所、Mila、蒙特利尔大学、东京大学<br>核心价值问题：在线偏好对齐的标注成本高、样本效率是关键；现有方法从 LLM 视角度量不确定性来挑选对比对，但 LLM 觉得不确定的 pair，用户历史比较可能早已能排出明确顺序——两者视角不一致会浪费查询。<br>方法：提出 MPG-DPO（多维偏好引导的在线 DPO）：用自动化验证器对用户历史比较做低成本多维评估，构建个性化偏好锥来指导回答选择——先丢弃在估计偏好下被确信支配的回答，再挑在偏好锥下仍有竞争、且分歧最大的两个回答做对比；理论证明花在锥支配回答上的查询占比随学习进行而趋于零。<br>为什么值得看：在多个 LLM 家族上，相同查询预算下 MPG-DPO 优于强基线；把&quot;用户视角的不确定性&quot;而非&quot;模型视角的不确定性&quot;作为选择标准，是个性化对齐里一个值得注意的转向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22210">Sample-efficient Personalization of Large Language Model Alignment with Multidimensional User Preference Data</a>
+            <p class="keywords">关键词：个性化对齐（personalized alignment）、多维偏好（multidimensional preferences）、样本效率（sample efficiency）、大语言模型（large language models）、理化学研究所（RIKEN）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港大学、南洋理工大学、TranscEngram<br>核心价值问题：多模态 RL 用轨迹级奖励训练图像与视频推理，但奖励被分配给整条生成轨迹，而视觉证据只在回答中稀疏且不均匀的位置出现——奖励到底该落在哪一步，现有方法靠外部标注或感知模块来定。<br>方法：提出 Gaze-RL，一种表示驱动的策略优化方法：通过隐式奖励落点场重新分配完成级优势，该场由内部跨模态几何与局部预测不确定性算出，给视觉锚定且承担决策的位置更大更新权重，同时保持均值为 1（每条 rollout 的总信用不变，只改变位置分配）；无需过程监督、辅助感知模块或改架构。<br>为什么值得看：在 Qwen2.5-VL 与 InternVL3.5 上，广泛的图像与视频基准均有提升；&quot;奖励落点可从模型自身的多模态计算中推断&quot;这一思路，比外挂标注更干净，也更容易推广。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22438">Eyes in the Update? Learning Where Rewards Land in Multimodal Reasoning</a>
+            <p class="keywords">关键词：多模态推理（multimodal reasoning）、奖励归属（reward attribution）、视觉语言模型（vision-language models）、香港大学（University of Hong Kong）、可解释性（interpretability）</p>
+          </li>
+          <li class="item">
+            <p>机构：首尔女子大学<br>核心价值问题：偏好优化（PO）是减少大视觉语言模型物体幻觉的标准做法，但它是否也悄悄降低了物体覆盖率——少说固然少错，可代价是什么？<br>方法：诊断四个公开的 LLaVA-1.5-7B 偏好优化 checkpoint，发现它们命名更少的物体类别，幻觉率下降的同时集合级物体 F1 在 CHAIR 上并无显著提升；进一步验证：仅靠给基座模型加正 EOS logit 偏置（提前停）就能复现 PO 模型 58%–86% 的 CHAIRi 收益；并提出 base-guided 目标类别恢复法，把基座模型高置信独有的物体类别追加到 PO 输出中，无需训练。<br>为什么值得看：揭示了偏好优化&quot;少说少错&quot;的另一面——覆盖率损失，并给出一个无训练的补救办法，在 held-out COCO 集上把三个 checkpoint 的召回拉回基座水平附近、且物体幻觉率低于基座；对评估 VLM 偏好优化的人有直接提醒。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23179">Say Less, Hallucinate Less? Diagnosing and Restoring Object Coverage in Preference-Optimized Vision-Language Models</a>
+            <p class="keywords">关键词：偏好优化（preference optimization）、幻觉诊断（hallucination diagnosis）、目标覆盖（object coverage）、视觉语言模型（vision-language models）、首尔女子大学（Seoul Women's University）</p>
+          </li>
+          <li class="item">
+            <p>机构：阿里巴巴、清华大学、南洋理工大学、南京大学、香港科技大学<br>核心价值问题：大规模机器人仿真需要大量可变形物体资产，但现有 3D 资产库重视觉多样性、轻物理可执行性；带可执行物理属性且经验证的柔性物体数据一直缺位。<br>方法：提出 RFW-S，一个 83,365 个仿真验证资产的数据集，覆盖 485 个日常类别、五大结构家族（软固体、布料片、壳体、服装、袋子）；用参考引导 3D 生成、结构感知物理建模与 LLM 辅助参数估计校准的自动化管线构建，并引入独立仿真验证框架——在与参数校准不同的交互下评估物体行为。<br>为什么值得看：规模与验证方式都是新的：8.3 万资产、485 类，抓取实验同时评估任务成功与物体完整性，并通过易碎物体操作的 sim-to-real 回放验证了物理真实性；是具身机器人仿真与 RL 训练的一块重要基础设施。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23056">RFW-S: Everyday Deformable Objects with Independent Simulation Verification</a>
+            <p class="keywords">关键词：可变形物体（deformable objects）、仿真验证（simulation verification）、机器人操作（robot manipulation）、阿里巴巴（Alibaba）、数据集（datasets）</p>
+          </li>
+          <li class="item">
+            <p>机构：全北国立大学<br>核心价值问题：四足机械臂的末端执行器轨迹跟踪难在不确定性会沿腿臂运动链传播：关节编码器只能测驱动关节，测不到间隙、尺寸误差与结构变形带来的末端误差。<br>方法：提出带末端惯性反馈的 RL 框架：策略用末端惯性测量补偿整条腿臂系统不确定性导致的跟踪误差，同时保持标称身体姿态与支撑形态、不主动移动身体或重定位足端；在四足机械臂上做仿真与真实实验。<br>为什么值得看：真实实验中，MoCap 测得的 RMSE 相对标称基线降低 17.3% 与 28.0%（两种分布内指令条件），相对仅本体感知基线再降 12.6% 与 15.9%；运动学重建与动捕实测的末端位置平均偏差达 12.61mm，说明该误差源真实存在且该方法确实补上了。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22695">Learning Accurate End-Effector Trajectory Tracking with Inertial Feedback for a Quadruped Manipulator</a>
+            <p class="keywords">关键词：末端轨迹跟踪（end-effector tracking）、惯性反馈（inertial feedback）、四足机械臂（quadruped manipulator）、全北国立大学（Jeonbuk National University）、机器人控制（robot control）</p>
+          </li>
+          <li class="item">
+            <p>机构：亚琛工业大学、莫纳什大学<br>核心价值问题：自动驾驶里世界模型能预测未来场景供轨迹候选评估，但固定的选择规则抓不住场景相关的权衡；能否用极轻量的 RL 在冻结世界模型上学一个轨迹选择器？<br>方法：提出残差引导的轻量 RL 框架：用 PPO 微调一个联合策略，同时做候选选择与有界轨迹残差；上下文条件排序网络从局部扰动评估的反馈中学习候选偏好；微调只更新 16,106 个参数，部署时选择器仅保留 11,725 参数的排序网络，残差分支与 critic 只用于训练。<br>为什么值得看：nuScenes 验证集开环评估上，相对 RiskWorld 基线平均轨迹 L2 误差降低 3.99%，且去掉或打乱风险特征后仍保持更低 L2；11k 参数的 RL 选择器就能带来可测收益，是&quot;小 RL 解决大系统里一个环节&quot;的轻量范例。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22998">Residual-Guided Lightweight Reinforcement Learning for Risk-Aware Trajectory Selection with a Frozen World Model</a>
+            <p class="keywords">关键词：风险感知（risk-aware）、轨迹选择（trajectory selection）、轻量 RL（lightweight RL）、世界模型（world models）、亚琛工业大学（RWTH Aachen University）</p>
+          </li>
+          <li class="item">
+            <p>机构：武汉大学<br>核心价值问题：要学出可靠的控制策略，必须同时处理转移动力学的不确定性与函数估计、动作生成带来的误差；现有鲁棒 RL 方法多只覆盖单一不确定性度量，缺少统一的有限样本保证。<br>方法：针对折扣鲁棒 MDP（连续状态与动作、标称转移律未知），提出鲁棒 actor-critic 方法：不确定性集覆盖 Wasserstein 距离、总变差、KL 散度与 Pearson 卡方散度四种度量；先用条件扩散模型拟合离线转移，再以共享目标的 minimax 准则估计鲁棒动作值函数，通过指数加权分数匹配更新生成式 actor。<br>为什么值得看：给出 critic 估计、学习到的条件动作分布与鲁棒回报的有限样本界，并区分 critic 误差、标称模型不确定性与策略正则化三类误差来源，刻画四种鲁棒半径的影响；是鲁棒 RL 理论与扩散 actor 结合得较完整的一项工作。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22759">Robust Actor-Critic Learning under Transport and Divergence Uncertainty</a>
+            <p class="keywords">关键词：Actor-Critic、鲁棒学习（robust learning）、不确定性（uncertainty）、传输理论（transport theory）、武汉大学（Wuhan University）</p>
+          </li>
+          <li class="item">
+            <p>ICML 2027 征稿已发布：第 44 届国际机器学习大会（ICML 2027）将于 2027 年 7 月 31 日至 8 月 6 日在巴西里约热内卢举行，摘要截稿 2027 年 1 月 14 日、全文截稿 1 月 22 日（AOE）。本届引入两阶段评审（初筛拒稿 2027 年 2 月 23 日通知）、投稿上限与互惠评审、生成式 AI 使用披露等新政，强化学习（决策与控制、规划、分层 RL、机器人）列在征稿主题内。做 RL、想投 ICML 的人可以按这个时间表准备。</p>
+            <a class="source-link" href="https://icml.cc/Conferences/2027/CallForPapers">ICML 2027 征稿</a>
+            <p class="keywords">关键词：ICML 2027、征稿（call for papers）、机器学习会议（machine learning conferences）、投稿截止（submission deadlines）、里约热内卢（Rio de Janeiro）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1117-morning-academic">
         <header class="round-header">
           <h2 id="round-1117-morning-academic">11 月 17 日早报</h2>
@@ -1104,6 +1227,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1114-morning-academic">
         <header class="round-header">
           <h2 id="round-1114-morning-academic">11 月 14 日早报</h2>
@@ -1117,8 +1242,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1113-1630-academic">
         <header class="round-header">
           <h2 id="round-1113-1630-academic">11 月 13 日 16:30 轮</h2>
@@ -1923,7 +2046,7 @@ on>
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 17 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 18 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
