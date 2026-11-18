@@ -383,6 +383,54 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1118-morning">
+        <header class="round-header">
+          <h2 id="round-1118-morning">11 月 18 日早报</h2>
+          <span class="count">8 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>微软在 Ignite 2026 上发布了首个自研实时语音到语音模型 MAI Realtime 1，面向低延迟语音对话场景，定价低至每音频分钟 0.01 美元，微软称其在自家评测中优于 OpenAI 的 GPT-Realtime 2.1，并兼容 OpenAI Realtime API。同批发布的还有 MAI Transcribe 2，支撑临床转录产品 Dragon Copilot。这意味着微软的自研模型路线开始在语音 agent 推理成本上与 OpenAI 正面竞争。</p>
+            <a class="source-link" href="https://microsoft.ai/news/microsoft-ignite-2026/">微软 MAI Realtime 1 官方公告</a>
+            <p class="keywords">关键词：实时语音对话（real-time voice conversation）、语音到语音模型（speech-to-speech models）、MAI Realtime 1、低延迟（low latency）、微软（Microsoft）</p>
+          </li>
+          <li class="item">
+            <p>AssemblyAI 发布了新一代转录模型家族 STT-3.7，包含面向实时对话的 Realtime、面向语音智能体的 Realtime-Agent 和面向录制音频的预录制版三个模型，覆盖 32 种语言，全部支持说话人标签。语音智能体专用的 Realtime-Agent 在 12,460 通英语语音智能体电话上词错率 4.53%，为所测 26 个流式模型中最低，语音结束 86 毫秒后即可出最终转录文本；老模型 Universal-3.5 Pro 已于同日退役。</p>
+            <a class="source-link" href="https://www.assemblyai.com/blog/introducing-assemblyai-stt-3-7">AssemblyAI STT-3.7 官方发布</a>
+            <p class="keywords">关键词：语音转录（speech transcription）、流式 ASR（streaming ASR）、说话人标签（speaker labels）、语音智能体（voice agents）、词错率（word error rate）</p>
+          </li>
+          <li class="item">
+            <p>荷兰创业公司 Reson8 以开放权重发布了 0.5B 参数的语音识别模型 Rumble-2-Flash，采用 Apache 2.0 许可，可免费商用，支持 40 多种语言、原生接入 Transformers 与 vLLM。在 Hugging Face Open ASR 排行榜多语言赛道上，它平均错误率 6.96%，与 30B 的 NVIDIA Nemotron 3.5 Transcribe 相当；满批量下转录一小时音频约半秒。小模型做到大模型精度的开源进展，对端侧与低成本部署很有价值。</p>
+            <a class="source-link" href="https://huggingface.co/blog/rumble-2-flash">Reson8 Rumble-2-Flash</a>
+            <p class="keywords">关键词：开源 ASR（open-source ASR）、轻量语音识别（lightweight speech recognition）、端侧部署（on-device deployment）、多语言（multilingual）、Hugging Face</p>
+          </li>
+          <li class="item">
+            <p>据 LinkedIn 帖子分享，强制对齐基准 FA-Bench 迎来新进展：Zyphra 的 FuseAlign 在词级时间戳精度上领先，据帖子称词错率改善 4.5%，较此前最优系统错误减少 7%。强制对齐决定了转录文本中每个词的时间戳准不准，直接影响字幕、剪辑与语音 agent 的轮次判断，这个细分赛道的基准进步值得做 ASR pipeline 的团队留意。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7528605645273550851">Olewave 的 LinkedIn 帖子</a>
+            <p class="keywords">关键词：强制对齐（forced alignment）、词级时间戳（word-level timestamps）、语音基准（speech benchmarks）、FA-Bench、Zyphra</p>
+          </li>
+          <li class="item">
+            <p>Otter.ai 更新了其在 ChatGPT 中的集成，销售团队现在可以直接在 ChatGPT 里查找过往通话、打开 Otter 笔记，并引用潜在客户的原话起草跟进内容。这是会议转录产品向销售工作流里再嵌深一步的更新。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7528844104756154369">Otter.ai 的 LinkedIn 帖子</a>
+            <p class="keywords">关键词：会议转录（meeting transcription）、ChatGPT 集成（ChatGPT integration）、销售工作流（sales workflows）、Otter.ai、语音笔记（voice notes）</p>
+          </li>
+          <li class="item">
+            <p>RingCentral 推出 AI 会话专家（ACE）四项新能力，可以像分析人工通话一样分析 AI 通话：形成对话记忆、直接向通话记录提问、按人工坐席的标准为 AI 智能体打分，并自建看板与评分卡。这是从“能跑通语音 agent”走向“能质检、可运维”的配套工具。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7528532768671318016">RingCentral 的 LinkedIn 帖子</a>
+            <p class="keywords">关键词：AI 通话分析（AI call analytics）、语音智能体质检（voice agent QA）、对话记忆（conversation memory）、RingCentral、通话评分（call scoring）</p>
+          </li>
+          <li class="item">
+            <p>Magic Data 开源了全双工对话数据 MAGICDATA-DUPLEX，在原有中、英、日三语基础上新增韩语和西班牙语，覆盖五种语言，每种约 10 小时无脚本自发对话。数据为双声道录制，带时间戳、说话人和轮次等细粒度标注，面向语音助手轮次切换与打断等训练场景，是全双工语音对话难得的开源数据。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7528618628557156352">Qingqing Zhang 的 LinkedIn 帖子</a>
+            <p class="keywords">关键词：全双工对话数据（full-duplex dialogue data）、开源数据集（open datasets）、轮次切换（turn-taking）、多语言（multilingual）、语音助手（voice assistants）</p>
+          </li>
+          <li class="item">
+            <p>Ronan McGovern 发布了首个语音到语音预训练数据集：源自 YODAS3 英语数据，用 Mimi 音频 token 而非原始音频表示语音，包含带词级时间戳的说话人归属转录、重叠语音、笑声等发声事件及每句情感标签，双人对话还分轨存放。这类数据直接服务于语音大模型的预训练，对做 speech LLM 的团队有参考价值。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7528588466104963073">Ronan McGovern 的 LinkedIn 帖子</a>
+            <p class="keywords">关键词：语音到语音预训练（speech-to-speech pretraining）、语音数据集（speech datasets）、音频 token（audio tokens）、speech LLM、情感标签（emotion labels）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1117-1630">
         <header class="round-header">
           <h2 id="round-1117-1630">11 月 17 日 16:30 轮</h2>
@@ -684,6 +732,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1114-2030">
         <header class="round-header">
           <h2 id="round-1114-2030">11 月 14 日 20:30 轮</h2>
@@ -761,8 +811,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1113-1630">
         <header class="round-header">
           <h2 id="round-1113-1630">11 月 13 日 16:30 轮</h2>
@@ -4986,6 +5034,59 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1118-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1118-morning-academic">11 月 18 日早报</h2>
+          <span class="count">9 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Fraunhofer IDMT / 奥尔登堡大学 / CEOTRONICS / Fraunhofer IIS<br>核心价值问题：AMR-NB 这类低码率电话语音编解码器至今仍在广泛使用，带宽受限、音质差；已有的编码语音恢复方法不针对不同说话人做适配，恢复质量受限。<br>方法：基于因果低复杂度 UBGAN 模型，提出两种基于说话人嵌入的个性化方法：用说话人嵌入条件建模单个恢复模型，以及按声学相似度聚类做多模型选择；两种方法在推理时几乎不增加计算成本。<br>为什么值得看：在 4.75 kbps AMR-NB 语音上，嵌入条件法显著提升了 ViSQOL 与 WB-PESQ 分数；电话语音质量提升的实用方向，个性化思路的成本很低。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22620">Personalized Causal Low-Bitrate Coded Speech Restoration with Speaker Embeddings</a>
+            <p class="keywords">关键词：低码率语音恢复（low-bitrate speech restoration）、说话人嵌入（speaker embeddings）、电话语音（telephone speech）、个性化增强（personalized enhancement）、编解码器（codecs）</p>
+          </li>
+          <li class="item">
+            <p>机构：中科院声学所 / 中国科学院大学 / 巴黎电信<br>核心价值问题：生成式语音增强难以同时兼顾声学保真度、感知质量与处理效率，大模型路线越走越重。<br>方法：回到 Mel 谱作为结构化声学表征，提出流匹配框架 BAME：子带感知 Transformer（SaT）做高效生成建模，并引入相位感知神经声码器与质量引导双相位策略处理不可靠的相位信息。<br>为什么值得看：SaT 仅用 2.9% 的参数量就超越了 331M 的 DiT 骨干；用小模型打大模型、效率与质量兼顾的思路值得做语音增强的团队参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22628">Back to Mel: Learning to Bridge Fidelity and Perception in Generative Speech Enhancement</a>
+            <p class="keywords">关键词：生成式语音增强（generative speech enhancement）、Mel 谱（mel spectrogram）、流匹配（flow matching）、轻量模型（lightweight models）、语音质量（speech quality）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港中文大学 / 清华大学深圳国际研究生院<br>核心价值问题：说话人数未知时，多说话人 ASR 与说话人归属的联合任务要求严格的结构化输出；只做 SFT 对齐的 SpeechLLM 在密集重叠下容易幻觉、说话人与时间戳标签格式错乱。<br>方法：两阶段框架：先用 CoT 增强的 SFT 推断全局说话人总数，再用 GRPO 做约束探索，并以多维约束感知奖励（MCAR）直接优化排列不变准确率，同时强制计数、时间与结构约束。<br>为什么值得看：在 Libri3Mix 与 Dynamic-Mix 上 cpWER 分别为 14.52% 与 9.24%，GRPO 相对 SFT+CoT 降低 35% 与 54%；把强化学习用到多说话人转录的结构化约束上，效果提升明显。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22627">Beyond Mimicry: Constrained Exploration with GRPO for Joint Multi-Talker ASR and Diarization under Unknown Speaker Counts</a>
+            <p class="keywords">关键词：多说话人 ASR（multi-talker ASR）、说话人归属（speaker diarization）、GRPO、结构化输出（structured outputs）、重叠语音（overlapped speech）</p>
+          </li>
+          <li class="item">
+            <p>机构：中科院声学所 / 中国科学院大学 / 腾讯混元多模态模型部<br>核心价值问题：神经声码器多依赖全精度算子，推理时的存储与计算成本不容忽视；直接把权重与激活二值化到 1 比特又会带来严重的信息损失。<br>方法：提出 BiVoC，面向 1 比特二值神经网络的时频神经声码器，在此前全精度 RNDVoC 框架基础上做二值化适配，包括简单二值卷积单元、模块质量-复杂度敏感性分析与混合精度设计，质量敏感模块保留全精度。<br>为什么值得看：端侧与低功耗部署的声码器方向，1 比特仍能保持高保真，压缩思路对资源受限场景有直接参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.22593">High-Fidelity Binarized Neural Vocoder</a>
+            <p class="keywords">关键词：神经声码器（neural vocoders）、二值神经网络（binary neural networks）、1 比特量化（1-bit quantization）、端侧部署（on-device deployment）、高保真合成（high-fidelity synthesis）</p>
+          </li>
+          <li class="item">
+            <p>机构：不来梅大学认知系统实验室<br>核心价值问题：基于预训练 Transformer 的嗓音障碍自动检测有早期诊断潜力，但模型在麦克风变化下的鲁棒性一直没被研究；消费级设备上最差情况无加权平均召回率下降达 12.53 个百分点。<br>方法：首次在 20 部智能手机麦克风上系统研究麦克风失配对二元嗓音障碍检测的影响，并引入 Barlow Twins 启发的模块来学习麦克风不变表征。<br>为什么值得看：医疗语音落地的真实痛点——换个麦克风性能就掉；这篇既给出量化结果，也给出解法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21140">Towards Microphone-Invariant Speech Representations for Transformer-Based Voice Disorder Detection</a>
+            <p class="keywords">关键词：嗓音障碍检测（voice disorder detection）、麦克风鲁棒性（microphone robustness）、医疗语音（medical speech）、表征学习（representation learning）、Transformer</p>
+          </li>
+          <li class="item">
+            <p>机构：印度信息技术学院 Dharwad / 迪布鲁格尔大学 / Armsoftech.air<br>核心价值问题：无编码器的音频语言模型把波形帧直接投影进语言模型解码器，语音表征在解码器层内如何涌现、哪一层编码了什么信息，尚不清楚。<br>方法：以 Gemma-4-12B 为研究对象，对全部 49 层表征做线性探测，在 TIMIT 上考察基频、能量、浊音、音素、词起始结构、说话人身份、性别与方言等信息在深度上的可线性获取性。<br>为什么值得看：理解音频 LLM 内部表征的分析性工作，对设计与调试语音语言模型有参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20954">Layer-wise Linear Probing of an Encoder-free Audio-capable Language Model</a>
+            <p class="keywords">关键词：音频语言模型（audio language models）、表征探测（representation probing）、语音表征（speech representations）、无编码器架构（encoder-free architectures）、Gemma</p>
+          </li>
+          <li class="item">
+            <p>机构：雷恩大学 / CNRS / IRISA / 日本国立情报学研究所 / 西安交通利物浦大学<br>核心价值问题：自监督预训练的语音基础模型微调时只利用了最深的 Transformer 层，对 XLS-R-128 的逐层探测发现顶部三分之二的层对防伪性能几乎没有贡献，多数网络容量在判别上处于休眠状态。<br>方法：提出渐进式逐层监督（深到浅监督退火），给中间层也加上显式监督，打破预训练 Transformer 的表征冗余。<br>为什么值得看：揭示了基础模型微调的普遍问题并给出通用性较强的解法，思路不只适用于 deepfake 检测，其他微调任务也可借鉴。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20630">Progressive Layer-wise Supervision: Deep-to-Shallow Supervision Annealing for Efficient and Robust Speech Deepfake Detection</a>
+            <p class="keywords">关键词：语音 deepfake 检测（speech deepfake detection）、逐层监督（layer-wise supervision）、自监督模型（self-supervised models）、微调（fine-tuning）、XLS-R</p>
+          </li>
+          <li class="item">
+            <p>机构：剑桥大学 / 南京大学 / INGENIO（CSIC-瓦伦西亚理工大学）/ 南京大学新型软件技术国家重点实验室<br>核心价值问题：公开音频被拿去训练音频大模型，引发隐私与版权担忧，但缺乏有效的审计方法；现有成员推理攻击假设已知完整训练样本及文本监督，而实际中音频常配私有转录、字幕或问答，录音所有者拿不到这些信息。<br>方法：首次系统研究音频文件级成员推理——在不假设已知训练任务与标注的前提下判断一段录音是否被用于训练，并提出评测基准 AudioTraceBench。<br>为什么值得看：音频 LLM 时代的数据合规审计工具，版权方和模型方都值得关注。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21088">AudioTrace: File-Level Membership Detection for Audio Large Language Models</a>
+            <p class="keywords">关键词：音频成员推理（audio membership inference）、数据合规（data compliance）、音频大语言模型（audio large language models）、隐私审计（privacy auditing）、版权（copyright）</p>
+          </li>
+          <li class="item">
+            <p>机构：西安电子科技大学 / 蚂蚁国际 / 南洋理工大学 / 北京邮电大学 / 中国科学院大学 / 北京大学<br>核心价值问题：大音频语言模型能“听到”什么，不等于能把声音当证据来推理决策；感知声学内容与用其作为证据解决不确定决策之间存在鸿沟。<br>方法：提出证据中心学习框架 Think2Listen：先证据、后承诺，把迭代推理与目标明确的 LALM 交互结合，主动寻找能区分竞争假设的声学线索，再根据返回的观测修正候选判断。<br>为什么值得看：给音频 agent 补上“用声音做证据”的推理闭环，是 agentic 音频理解方向的新尝试。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21083">Think2Listen: Evidence-Centric Learning For Agentic Audio Understanding With LALMS</a>
+            <p class="keywords">关键词：音频智能体理解（agentic audio understanding）、证据推理（evidence-based reasoning）、大音频语言模型（large audio language models）、主动感知（active perception）、Think2Listen</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1117-0830-academic">
         <header class="round-header">
           <h2 id="round-1117-0830-academic">11 月 17 日 08:30 轮</h2>
@@ -5161,6 +5262,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1114-morning-academic">
         <header class="round-header">
           <h2 id="round-1114-morning-academic">11 月 14 日早报</h2>
@@ -5189,8 +5292,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1113-1630-academic">
         <header class="round-header">
           <h2 id="round-1113-1630-academic">11 月 13 日 16:30 轮</h2>
@@ -7573,7 +7674,7 @@ Vspoof 2019 LA 上 8.45% EER 接近全监督基线 7.86%，但 2021 DF 域偏移
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 17 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 18 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
