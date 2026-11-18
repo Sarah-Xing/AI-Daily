@@ -849,6 +849,124 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1117-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1117-morning-academic">11 月 17 日早报</h2>
+          <span class="count">22 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：安纳大学（BIT 校区）、卡纳塔克中央大学、蒂鲁吉拉帕利国立理工学院、尼赫鲁大学（印度）<br>核心价值问题：RLVR 的奖励来自验证器，验证器与真实目标的偏差从未被度量，奖励上升分不清是真进步还是钻空子。<br>方法：在 124,416 个授权策略场景上构造可精确计算的过程奖励&quot;真值&quot;，把验证器沿七个维度降级（只看结果、只看充分性、只看召回、抽取噪声、粗分类、过期策略、LLM 评审），逐一训练并用精确验证器打分。<br>为什么值得看：首次在可精确度量的设定下系统揭示奖励 hacking 的形态——乐观验证器会被&quot;注水&quot;回答攻破（代理奖励 0.940，真实忠实度却从 0.731 跌到 0.667），给 RLVR 的验证器审计提供了可复用的方法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21538">Optimistic Verifiers Get Hacked: Reward Hacking Under an Exact Process Oracle</a>
+            <p class="keywords">关键词：奖励 hacking（reward hacking）、RLVR、验证器审计（verifier auditing）、过程奖励（process rewards）、奖励校准（reward calibration）</p>
+          </li>
+          <li class="item">
+            <p>机构：安纳大学（BIT 校区）、卡纳塔克中央大学、蒂鲁吉拉帕利国立理工学院、尼赫鲁大学（印度）<br>核心价值问题：验证器完全准确时，小模型到底能从强化学习中学到什么？<br>方法：在可精确计算最小充分理由的授权策略任务上，让解释器在 30 轮内调用策略试探、用删除算法的轨迹微调 4B 模型，并与前沿模型教学对比。<br>为什么值得看：算法教出来的学生全面优于前沿模型教出来的学生（同等数据量、三个随机种子下从不重叠），4B 模型在训练过的策略上达到 92%，说明&quot;教什么&quot;比&quot;谁教&quot;更关键。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21529">Procedure without Judgment: What Small Language Models Learn under an Exact Verifier</a>
+            <p class="keywords">关键词：小语言模型（small language models）、强化学习（reinforcement learning）、算法教学（algorithmic teaching）、精确验证器（exact verifiers）、推理学习（reasoning learning）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、蚂蚁集团<br>核心价值问题：无监督 RLVR 靠模型自身 rollout 产生奖励，但这种自生成监督在不同 rollout 组之间可靠性差异很大，现有方法只看解码结果，判断不准。<br>方法：提出双层谱校准框架 SpeCal，用隐藏层谱结构刻画 rollout 组的组织程度与每条 rollout 获得的支撑，校准奖励的可靠性。<br>为什么值得看：为无标注推理数据的 RLVR 提供了一个不依赖外部验证器的奖励校准思路，让无监督 RLVR 的监督信号更可信。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20691">SpeCal: Spectral Calibration for Unsupervised RLVR</a>
+            <p class="keywords">关键词：无监督 RLVR（unsupervised RLVR）、奖励校准（reward calibration）、谱方法（spectral methods）、推理模型（reasoning models）、rollout 分析（rollout analysis）</p>
+          </li>
+          <li class="item">
+            <p>机构：东京大学、Third Intelligence<br>核心价值问题：代码生成、指令遵循等多验证器任务中，把多个验证结果压成一个标量奖励会丢掉&quot;部分成功&quot;的区别，加权求和又在不可比的回答之间强行比较。<br>方法：提出偏序似然策略优化 POLPO，用 Pareto 占优关系直接从验证结果的比较中学习，不先构造聚合奖励，把 DPO 的列表似然推广到偏序。<br>为什么值得看：多验证器场景（代码、工具调用、指令遵循）越来越普遍，这套方法让策略优化能利用&quot;满足更多要求且不丢已有要求&quot;的细粒度信号。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19064">Policy Optimization with Multiple Verifiers via Pareto Rankings</a>
+            <p class="keywords">关键词：多验证器优化（multi-verifier optimization）、Pareto 优化（Pareto optimization）、策略优化（policy optimization）、代码生成（code generation）、指令遵循（instruction following）</p>
+          </li>
+          <li class="item">
+            <p>机构：KT、成均馆大学、庆北大学（韩国）<br>核心价值问题：概率型安全评审器只把不确定的判罚交给更强的 LLM 评审，&quot;自信通过的有害内容&quot;成了盲区，策略会专门利用这个盲区，评审器一升级问题又会重现。<br>方法：提出一套验证协议，在训练前、训练中、评审器每次更换后重新验证评审器，把&quot;自信通过的有害内容&quot;的占比与总量分开度量，在商用评审器 Jev 两个版本和开源 guard 分类器上验证。<br>为什么值得看：11 次运行中通过的有害内容全部集中在盲区，且前沿 LLM 评审最多只能抓出 10 个已标注自信漏判中的 1 个——给用安全评审器做 RL 奖励的团队敲了警钟。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20955">Jev-as-a-Reward: Validating Probabilistic Safety Judges for Reinforcement Learning</a>
+            <p class="keywords">关键词：安全评审器（safety judges）、RL 奖励（RL rewards）、评审器验证（judge validation）、有害内容过滤（harmful content filtering）、Jev</p>
+          </li>
+          <li class="item">
+            <p>机构：弗吉尼亚大学<br>核心价值问题：安全上下文强化学习要求策略仅凭交互历史、在不超成本预算的前提下适应未见过的约束任务，但此前的 Safe Algorithm Distillation 在机车任务上回报为负、在导航任务上很少到达目标。<br>方法：重做 Safe AD 的两个环节：先蒸馏一个&quot;预算感知&quot;的教师（预算多时多探索，首次拿到奖励或成本后转为利用），再在固定与动态预算下收集教师的学习历史进行蒸馏。<br>为什么值得看：把&quot;安全&quot;从训练目标变成上下文学习能力的一部分，修复了 Safe AD 在基准上的适应失败，对需要在线适应且不能越安全边界的智能体有参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21524">Algorithm Distillation for Safe In-Context Reinforcement Learning</a>
+            <p class="keywords">关键词：安全强化学习（safe reinforcement learning）、上下文学习（in-context learning）、算法蒸馏（algorithm distillation）、成本预算（cost budgets）、智能体安全（agent safety）</p>
+          </li>
+          <li class="item">
+            <p>机构：威斯康星大学麦迪逊分校<br>核心价值问题：带生成模型的强化学习里，折扣与平均奖励两种设定下&quot;最少需要多少样本&quot;的 minimax 复杂度一直没有完全解决。<br>方法：提出 Bellman 残差夹逼技术，改进了基于吸收态 MDP 的集中分析，证明折扣 plug-in 方法达到 O(SA(1-γ)^-3 ε^-2) 样本复杂度，并给出匹配的下界。<br>为什么值得看：把折扣 RL 与平均奖励 RL 的 minimax 样本复杂度在常数因子意义上彻底解决，是 RL 理论的一块重要拼图。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19566">Bellman Residual Bracketing: Resolving the Sample Complexity of Discounted and Average-Reward RL</a>
+            <p class="keywords">关键词：样本复杂度（sample complexity）、折扣 RL（discounted RL）、平均奖励 RL（average-reward RL）、minimax 理论（minimax theory）、生成模型（generative models）</p>
+          </li>
+          <li class="item">
+            <p>机构：加州大学尔湾分校<br>核心价值问题：集成方法能提升小规模深度 RL 的样本效率，但在大规模架构（如 BBF）上是否有效一直没人研究过，而直接把 BBF 网络做大反而会掉性能。<br>方法：提出 MeanQ-BBF，把 MeanQ 的集成方差缩减与 BBF 的大架构结合，新增参数组织成基本独立的学习器，在 Atari 100K 上做严格统计评估。<br>为什么值得看：与&quot;单纯放大网络会掉性能&quot;相反，集成式扩容真正把模型容量转化成了性能提升，给样本高效 RL 的规模化提供了一条可行的路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19733">Sample-Efficient Ensemble Reinforcement Learning at Scale</a>
+            <p class="keywords">关键词：集成强化学习（ensemble reinforcement learning）、样本效率（sample efficiency）、Atari 100K、深度 RL（deep reinforcement learning）、模型扩容（model scaling）</p>
+          </li>
+          <li class="item">
+            <p>机构：麻省理工学院<br>核心价值问题：跨域离线强化学习里目标域数据很少，源域数据虽多但动力学不同，直接复用转移样本不可靠。<br>方法：提出 RIFT，不复用源域转移，而是学习&quot;低奖励与高奖励源域转移之间差了什么&quot;：在共享隐空间中用最优传输配对高低奖励转移、拟合一个仿射&quot;奖励提升场&quot;，再把它作用到目标域的低奖励锚点上做数据增强。<br>为什么值得看：换了个角度做跨域迁移——迁移&quot;如何变好&quot;的方向而不是迁移数据本身，在重力、形态、摩擦变化的机车任务上优于现有基线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19681">RIFT: Reward Improvement Field Transfer for Cross-Domain Offline RL</a>
+            <p class="keywords">关键词：跨域离线 RL（cross-domain offline RL）、迁移学习（transfer learning）、奖励提升场（reward improvement fields）、最优传输（optimal transport）、机器人控制（robot control）</p>
+          </li>
+          <li class="item">
+            <p>机构：深圳技术大学、深圳大学、清华大学<br>核心价值问题：多目标强化学习里多个奖励经常互相冲突，现有方法只能针对特定任务或目标学帕累托策略，学到的权衡没法泛化到没见过的任务和目标。<br>方法：提出基础帕累托流策略 FP2，用多模态扩散 Transformer 加无似然流匹配损失统一学习多样化的权衡轨迹，并设计预训练-中期-后训练三阶段流程。<br>为什么值得看：把&quot;基础模型&quot;式的预训练范式搬到多目标 RL，让一条策略能按指令在不同目标之间切换权衡，是多目标 RL 向通用化走的一步。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19825">Foundation Pareto Flow Policy for Multi-Objective Reinforcement Learning</a>
+            <p class="keywords">关键词：多目标强化学习（multi-objective reinforcement learning）、帕累托策略（Pareto policies）、基础模型（foundation models）、扩散策略（diffusion policies）、通用策略（generalist policies）</p>
+          </li>
+          <li class="item">
+            <p>机构：乌普萨拉大学（瑞典）<br>核心价值问题：DPO 简化了 RLHF，但仍依赖反向传播，激活内存开销大；零阶优化省内存，但各向同性的扰动对偏好目标来说噪声太大。<br>方法：提出 CA-ZODPO，从每对偏好样本中&quot;选中 vs 拒绝&quot;回答的激活差异构造低秩搜索子空间，扰动只限制在这个子空间内，动量也保持在低秩坐标上。<br>为什么值得看：在 Qwen2.5-1.5B 上效果接近一阶 DPO，序列长度 2048 时峰值显存降低约 59%，给显存受限场景下的 LLM 对齐提供了一个实用方案。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20635">Contrastive Activation-Guided Zeroth-Order Preference Optimisation for Memory-Efficient LLM Alignment</a>
+            <p class="keywords">关键词：零阶优化（zeroth-order optimization）、DPO、显存优化（memory efficiency）、LLM 对齐（LLM alignment）、偏好优化（preference optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：武汉大学、上海财经大学、上海交通大学、复旦大学、中国科学院大学、北京邮电大学、阿里巴巴<br>核心价值问题：过程奖励模型（PRM）给多步推理的每一步打分，但现有方法对历史步骤的依赖建模弱、看不到后续推理，中间步骤的评估不够准。<br>方法：提出全局视角过程奖励模型 GPRM，联合建模问题、先前步骤及其评估、当前步骤和未来步骤，并设计&quot;回看、前瞻、自查、目标对齐&quot;四维评估框架，用 SFT 与 GRPO 训练。<br>为什么值得看：用更少训练数据和更小模型取得了更好的过程评估效果，PRM 是 RLVR 奖励信号的关键部件，这类改进会直接传导到推理模型的训练质量。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20755">GPRM: Global Perspective Process Reward Model</a>
+            <p class="keywords">关键词：过程奖励模型（process reward models）、多步推理（multi-step reasoning）、RLVR、推理评估（reasoning evaluation）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：哈尔滨工业大学（深圳）、清华大学深圳国际研究生院<br>核心价值问题：视觉语言模型常把有依据和没依据的内容混在同一回答里，回答级强化学习给所有 token 同一个优势值，压制幻觉时会连带压掉正确信息。<br>方法：提出 SARGO，用在线自引导做选择性强化与压制：按 token 的依据程度加权，直接与互惠加权让有依据的 token 在正向更新中得到更强强化、负向更新中受到更弱惩罚，再用参考校准的奖励把事实性与信息保留绑在一起。<br>为什么值得看：在 Qwen3-VL-4B/8B 与 Gemma3-4B 上降幻觉的同时保住了有依据的信息，解决了&quot;降幻觉靠少说话&quot;的取巧问题。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19388">SARGO: Agreement-Gated Reinforcement and Suppression via On-Policy Self-Guidance for Visual Hallucination Mitigation</a>
+            <p class="keywords">关键词：视觉幻觉缓解（visual hallucination mitigation）、视觉语言模型（vision-language models）、选择性强化（selective reinforcement）、事实性（factuality）、在线自引导（on-policy self-guidance）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学技术大学、快手<br>核心价值问题：生成式推荐里直接套用 GRPO 等比率型目标会优化不稳定、推荐质量下降，原因一直没有系统诊断。<br>方法：从统一的 logit 梯度视角重审 GRPO 等目标，定位三个问题（截断 surrogate 造成死梯度区、负优势更新实际上无界、高置信样本的更新不消失），提出梯度有界策略优化 GBPO。<br>为什么值得看：不只是给推荐场景提了个新目标，更是对 GRPO 类方法失效模式的一次清晰诊断，对所有用比率型目标做 RL 的团队都有参考意义。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19742">Exploration of Reinforcement Learning in Generative Recommendation Models</a>
+            <p class="keywords">关键词：生成式推荐（generative recommendation）、GRPO、梯度分析（gradient analysis）、策略优化（policy optimization）、推荐系统（recommender systems）</p>
+          </li>
+          <li class="item">
+            <p>机构：罗彻斯特理工学院、普渡大学、犹他大学、NVIDIA<br>核心价值问题：视觉智能体回答超高分辨率照片时常凭常识猜答案而不是读证据，最终答案奖励纠正不了这一点——猜对和读对拿一样的奖励。<br>方法：提出跨输入相对策略优化 CrossRPO，在&quot;对比集&quot;上训练：同一问题配多张仅在证据小区域不同的图片、答案各不相同，只有真正读证据才能整组答对；奖励只给整组答对，并证明不会强化靠常识猜中的集合。<br>为什么值得看：只用约 3500 条训练样本，ViRA-27B 在多数基准上超过 Claude Haiku 5.5 与 GPT-6-Luna 的最高思考档，说明奖励设计比数据量更能决定视觉智能体是否&quot;真看&quot;。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.21605">ViRA: Toward Ultra-High-Resolution Visual Agents via Cross-Input Relative Policy Optimization</a>
+            <p class="keywords">关键词：视觉智能体（visual agents）、超高分辨率（ultra-high-resolution）、跨输入优化（cross-input optimization）、证据推理（evidence-based reasoning）、相对策略优化（relative policy optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：新加坡国立大学、南洋理工大学<br>核心价值问题：机器人奖励模型都号称用基础模型替代逐任务的奖励工程，但不同方法的输出回答的问题根本不一样（任务成没成 vs 哪次执行更好），混在一起没法比较。<br>方法：这篇综述把 114 个方法按输出回答的问题分成五类（结果、绝对进展、相对比较、时序价值、混合），并发布 RRM-Bench-1K（1117 段真实机器人闭环执行视频）与四个对照套件，对 27 个评估器做统一评测，还开源 RRM-Hub 工具箱。<br>为什么值得看：首次系统揭示了一个关键缺口——现有评估器排整段执行还行，但密集奖励跟的是执行进度而非任务状态，且没法发现&quot;决定性视角缺失&quot;的情况；做机器人 RL 奖励设计的人值得精读。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20741">Robotic Reward Models in the Foundation-Model Era</a>
+            <p class="keywords">关键词：机器人奖励模型（robot reward models）、奖励设计（reward design）、机器人评测（robot evaluation）、基础模型（foundation models）、综述（survey）</p>
+          </li>
+          <li class="item">
+            <p>机构：帝国理工学院<br>核心价值问题：流式视觉-语言-动作模型（VLA）用 GRPO 这类组式 RL 微调时，每步 rollout 都要多步 ODE 积分，采样随机性又低，组内方差小，训练又慢又难。<br>方法：提出 VLA-SSD，把预训练的流匹配动作头自蒸馏成一个随机单步策略（以布朗路径为条件的单跳生成器），推导出条件动作密度，从而能用似然比类 RL 算法高效后训练。<br>为什么值得看：从 π0 蒸馏后动作头前向时间快 7.7 倍，代价仅为 LIBERO 成功率相对下降 5.5%，让流式 VLA 的在线 RL 微调第一次变得实际可行。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20460">Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models</a>
+            <p class="keywords">关键词：视觉-语言-动作模型（vision-language-action models）、流匹配（flow matching）、自蒸馏（self-distillation）、在线 RL（online reinforcement learning）、机器人策略（robot policies）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港科技大学（广州）、BrainCo、重庆大学、武汉大学<br>核心价值问题：灵巧抓取策略通常一臂一手配一个，换个组合就要重新训，策略数量随组合数膨胀。<br>方法：提出 DexFormer 2.0，一条 RL 策略控制多种臂手组合：把每台机器人映射到带有效性掩码的规范关节接口，用运动学树偏置的注意力编码关节形态，再用 Transformer-XL 记忆从近期交互推断 embodiment 相关的动力学。<br>为什么值得看：在 18 种臂手组合上训练，见过的组合稳定成功率 89%，6 种没见过的组合仍有 51%，是&quot;一个策略管所有灵巧手&quot;的跨 embodiment 路线上的重要进展。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20273">DexFormer 2.0: Towards a Cross-Embodiment Foundation Policy for Dexterous Grasping</a>
+            <p class="keywords">关键词：灵巧抓取（dexterous grasping）、跨 embodiment 策略（cross-embodiment policies）、人形机器人（humanoid robots）、Transformer-XL、机器人操控（robot manipulation）</p>
+          </li>
+          <li class="item">
+            <p>机构：高通 AI 研究<br>核心价值问题：人形机器人全身动作跟踪要同时在数千 GPU 小时和海量动作数据上扩展，但多样动作带来的学习干扰让训练效率上不去，动作跟踪本质上是算力受限问题。<br>方法：提出 QTOP，用基于状态-参考对的条件分位数优势估计提升样本效率，并在仿真与真机跟踪上验证，同时给出 QTOP 的扩展律。<br>为什么值得看：相对在线与离线 RL 基线最高提升 10%，且发现数据集规模对性能的影响有限——对&quot;堆数据还是堆算力&quot;的人形机器人训练路线有直接指导意义。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.20791">QTOP: Scaling Humanoid Motion Tracking with Quantile Critics</a>
+            <p class="keywords">关键词：人形机器人（humanoid robots）、动作跟踪（motion tracking）、分位数评论家（quantile critics）、扩展律（scaling laws）、仿真训练（simulation training）</p>
+          </li>
+          <li class="item">
+            <p>机构：挪威科技大学、东京农工大学、伦敦大学学院<br>核心价值问题：系统设计与控制策略要联合优化，但策略用 RL 训，评估一个设计就要完整训一轮策略，黑盒搜索随设计维度扩展很差，还忽略了现代可微仿真器的结构。<br>方法：推导出基于梯度的协同设计方法：设计梯度分解为固定策略下的直接效应与经由&quot;最优策略随设计变化&quot;的间接效应，后者用隐函数定理作用于策略梯度的平稳条件求得。<br>为什么值得看：把&quot;设计-策略&quot;联合优化从黑盒搜索变成可微优化，机器人与控制系统设计里&quot;先定硬件再训策略&quot;的老流程可能因此改变。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19329">Gradient-Based Co-Design of Systems and Reinforcement Learning Policies with Differentiable Simulators</a>
+            <p class="keywords">关键词：协同设计（co-design）、可微仿真（differentiable simulation）、策略梯度（policy gradients）、机器人设计（robot design）、控制优化（control optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：不列颠哥伦比亚大学（加拿大）<br>核心价值问题：异构多智能体团队里，智能体能力各不相同，要协作完成团队任务，还要能互相替补、复用已完成的子任务，现有 MARL 缺乏组合式的抽象。<br>方法：引入 assume/guarantee 契约与迭代异构分配方法 IHA-MARL：契约规定每个子任务的假设、保证、自动机、超时与成功概率要求，自动机跟踪智能体在子任务中的高层进展并实现跨契约同步。<br>为什么值得看：给异构多智能体协作提供了一个可组合、可复用的形式化框架，契约思想来自形式化方法，与 MARL 的结合是条新路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19078">Assume/Guarantee Contracts for the Compositional Multi-Agent Reinforcement Learning of Heterogeneous Teams</a>
+            <p class="keywords">关键词：多智能体强化学习（multi-agent reinforcement learning）、异构团队（heterogeneous teams）、形式化契约（formal contracts）、组合式学习（compositional learning）、任务分配（task allocation）</p>
+          </li>
+          <li class="item">
+            <p>机构：加州理工学院<br>核心价值问题：标准 RL 不保证学到的策略满足安全约束，现有带可证明保证的安全 RL 方法只支持受限的约束类，还要求无偏估计，没法直接接入 PPO 这类主流算法。<br>方法：把基于鲁棒安全梯度流的 RSGF-RL 框架扩展到一般轨迹级安全约束（含碰撞避免这类机会约束），并允许有偏的值与梯度估计，证明训练全程以高概率满足约束违反界。<br>为什么值得看：理论与部署兼备——在人形机器人与空中机器人上实测，安全 RL 从&quot;只能用受限算法&quot;向&quot;能接 PPO、能落真机&quot;迈了一步。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.19616">Towards Probabilistically Safe Reinforcement Learning: Theory and Deployment on Humanoid and Aerial Robots</a>
+            <p class="keywords">关键词：安全强化学习（safe reinforcement learning）、概率安全保证（probabilistic safety guarantees）、人形机器人（humanoid robots）、PPO、部署验证（deployment validation）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1116-morning-academic">
         <header class="round-header">
           <h2 id="round-1116-morning-academic">11 月 16 日早报</h2>
@@ -963,6 +1081,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1113-1630-academic">
         <header class="round-header">
           <h2 id="round-1113-1630-academic">11 月 13 日 16:30 轮</h2>
@@ -1107,8 +1227,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1112-2030-academic">
         <header class="round-header">
           <h2 id="round-1112-2030-academic">11 月 12 日 20:30 轮</h2>
@@ -1769,7 +1887,7 @@ on>
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 16 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 17 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
