@@ -383,6 +383,29 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1119-morning">
+        <header class="round-header">
+          <h2 id="round-1119-morning">11 月 19 日早报</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>RadixArk 发布首个模型 DaisyRose-27B，基于 Qwen3.8-27B、用自家开源 RL 框架 Miles 以全异步方式训练：1,200 个精选长程 agent 任务、最长 1M token 的会话，18 天、144 块 H200。Terminal-Bench 4.1 pass@1 从 5.6% 提到 12.0%，推理、指令遵循与编码基准也全面高于基座模型；训练后端模型 FLOPs 利用率 37%（对照开源训练器 16%），训练成本降低约 57%。权重以 Apache 2.0 开源，提供 BF16/FP8/NVFP4 三种精度。</p>
+            <a class="source-link" href="https://www.radixark.com/blog/daisyrose-27b">DaisyRose-27B：RadixArk 发布首个 RL 训练模型</a>
+            <p class="keywords">关键词：RL 训练模型（RL-trained models）、长程 agent 任务（long-horizon agent tasks）、异步训练（asynchronous training）、RadixArk、开源权重（open weights）</p>
+          </li>
+          <li class="item">
+            <p>Hugging Face 的 harness-hub 团队发布 Qwen3.8-27B-pi-adapted：一个用强化学习（TRL 的 AsyncGRPO）为 pi 编程 agent 训练的 rank-32 LoRA 适配器。在 pi harness 下，SWE-bench Pro 最难 51 题从 39.2% 提到 64.7%，Terminal-Bench 2.1 从 39.5% 提到 55.8%；不用开思考模式就能达到基座模型最高思考强度下的水平，生成 token 少约 4.5 倍。适配器 Apache 2.0 开源，可用 vLLM 或 llama.cpp 加载。</p>
+            <a class="source-link" href="https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted">Qwen3.8-27B-pi-adapted：为 pi 编程 agent 训练的 RL LoRA 适配器</a>
+            <p class="keywords">关键词：RL 微调（RL fine-tuning）、编程 agent（coding agents）、LoRA 适配器（LoRA adapters）、AsyncGRPO、Hugging Face</p>
+          </li>
+          <li class="item">
+            <p>轻量 agent 强化学习框架 HarborRL 最近登上 GitHub trending：把模型、算法、任务、harness 四维组合成一条可复现管线，支持 GRPO 与 DAPO，覆盖 200 多个可验证沙箱任务（Terminal-Bench、SWE-Bench 等）与 40 多种 harness（Claude Code、Codex、LangGraph 等）。仓库 10 月发布、MIT 开源，本周受到关注。</p>
+            <a class="source-link" href="https://github.com/datamllab/HarborRL">HarborRL：面向 agent 的端到端强化学习框架</a>
+            <p class="keywords">关键词：Agent RL 框架（agent RL frameworks）、GRPO、DAPO、开源（open source）、GitHub Trending</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1117-2030">
         <header class="round-header">
           <h2 id="round-1117-2030">11 月 17 日 20:30 轮</h2>
@@ -885,6 +908,94 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1119-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1119-morning-academic">11 月 19 日早报</h2>
+          <span class="count">16 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：南京大学、北京大学、阿伯里斯特威斯大学<br>核心价值问题：长程任务上用 RL 训 LLM agent 时，终端稀疏奖励让信用分配和探索都很难；策略当前能可靠完成的“能力区域”边界附近，其实只需要几步就能到达更易解的状态，但现有方法没有利用这一点。<br>方法：提出反向-正向课程与优势分解：用成对优势分别给出“到达更易解状态”和“从该状态完成任务”两个信号；课程先沿成功参考轨迹反向扩展能力区域，再通过在线探索扩展到轨迹外状态。<br>为什么值得看：在 ALFWorld 上 Qwen2.5-1.5B/7B 成功率达 90.1%/96.1%，WebShop 上 80.2%/82.6%，优于同类 agentic RL 方法；把长程学习拆成“到达”与“完成”两个子问题是个干净的思路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24697">Depth Before Breadth: Reverse-to-Forward Curriculum with Advantage Decomposition for LLM Agent</a>
+            <p class="keywords">关键词：长程 agent 学习（long-horizon agent learning）、课程学习（curriculum learning）、优势分解（advantage decomposition）、南京大学（Nanjing University）、ALFWorld</p>
+          </li>
+          <li class="item">
+            <p>机构：伊利诺伊大学厄巴纳-香槟分校、阿贡国家实验室、独立研究者、亚马逊<br>核心价值问题：前沿后训练的通行做法是每个领域训一个 RL 专家，再用多教师在线蒸馏（MOPD）合并成一个模型——但合并时学生要在每个环境里重新采样、专家要给每个采样 token 打分，成本高，还会继承最终专家的漂移。<br>方法：提出多专家回放策略蒸馏（MRPD）：直接回放专家训练日志里带采样概率与奖励的轨迹，按专家学习时的顺序过给学生；每步在记录的轨迹上重算策略梯度，并在记录的前缀上蒸馏最终专家的分布。<br>为什么值得看：合并全程零采样、零环境调用、零奖励模型调用，只用训练专家约七分之一的算力；在推理、搜索、SQL 三个长程 agent 领域上，学生模型优于在线 RL 基线与同专家 MOPD；日志顺序本身比数据量与奖励更重要，说明专家训练日志是一份课程表而不只是数据混合。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24059">Replay, Don&#x27;t Resample: Off-Policy Consolidation of Long-Horizon RL Experts</a>
+            <p class="keywords">关键词：多专家蒸馏（multi-expert distillation）、离线 RL（offline RL）、专家回放（expert replay）、伊利诺伊大学（UIUC）、零采样（zero sampling）</p>
+          </li>
+          <li class="item">
+            <p>机构：西北工业大学<br>核心价值问题：基于评分细则的 RL 用评委给各条标准打分再平均聚合奖励，但各标准打分尺度不一会扭曲候选排序；现有工作多在改进评委或学权重，评分异质性与排序的相互作用本身还没被讲清。<br>方法：把异质性形式化为“奖励增益不平衡”——每条标准进入聚合奖励时自带增益（满足与不满足回答的期望分差）；推导了任意两个候选的奖励差的精确分解，证明不平衡会衰减或放大基础信号；据此提出自适应双中心裁剪聚合（DCC），只用当前候选组的分数定出裁剪区间，限制单条标准对奖励差的贡献。<br>为什么值得看：一个反直觉的发现——即使有真实标签，完全消除不平衡反而会降低排序准确率；DCC 不靠学权重、只靠当前组内分数做裁剪，对做 rubric 奖励与奖励建模的人有直接参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24005">How Reward Gain Imbalance Shapes Ranking: Rethinking Rubric-Based Reward Aggregation</a>
+            <p class="keywords">关键词：评分细则奖励（rubric-based rewards）、奖励聚合（reward aggregation）、排序准确性（ranking accuracy）、西北工业大学（Northwestern Polytechnical University）、奖励建模（reward modeling）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学院大学、腾讯、哈尔滨工业大学、中国人民大学、北京大学、北京理工大学<br>核心价值问题：搜索增强语言模型用终端答案奖励做 RL 时，同一轨迹里的每次搜索拿到相同的信用，不管它到底有没有搜到有用信息；当一组采样全都答错时，组内优势归零，哪怕各条轨迹搜集到的证据质量天差地别。<br>方法：提出基于证据的信用分配（ECA）：用一个训练期辅助信号衡量检索到的文档对参考答案似然的提升——只用问题与去重后的已见文档构造“纯证据”提示，问冻结的当前策略快照，以此隔离证据效用；并给出 ECA-Step 与 ECA-Horizon 两种回报形式，配跨折组归一化、新颖性门控与搜索局部 token 分配。<br>为什么值得看：在 7 个搜索问答基准上，ECA-Horizon 相对纯结果奖励的 GRPO 基线，严格宏平均精确匹配在 Qwen2.5-3B/7B 上分别提升 1.03 与 4.80 个百分点，优于 RLOO 与 GiGPO；零样本迁移到多跳推理上也有效。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23824">Evidence-Based Credit Assignment for Search-Augmented Language Models</a>
+            <p class="keywords">关键词：搜索增强语言模型（search-augmented language models）、信用分配（credit assignment）、证据效用（evidence utility）、中国科学院大学（UCAS）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：北京大学、京东、四川大学、北京理工大学、中国人民大学、香港科技大学<br>核心价值问题：在线策略蒸馏（OPD）能提升长程任务上的语言模型 agent，但它依赖教师的 logits；只给文本的黑盒大模型不暴露 logits，这条路就走不通。<br>方法：提出交流式在线策略蒸馏（COPD）：以自然语言交流为蒸馏媒介，学生在执行任务时自主决定何时请教黑盒教师、自主组织开放式提问；成功的师生互动作为特权参考，与任务奖励 RL 联合，监督无顾问的新一轮学生 rollout。<br>为什么值得看：在 CAMG-II 上，COPD 的增益达到最强黑盒 OPD 基线的 2.46 倍；学到的能力能泛化到 Terminal-Bench 2.1 与 SWE-Bench Pro V2，在无顾问情况下提升任务成功率。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23673">Communicative On-Policy Distillation: Distilling Black-Box Teacher Capabilities through Communication for Long-Horizon Tasks</a>
+            <p class="keywords">关键词：在线策略蒸馏（on-policy distillation）、黑盒教师（black-box teachers）、交流式学习（communicative learning）、北京大学（Peking University）、长程任务（long-horizon tasks）</p>
+          </li>
+          <li class="item">
+            <p>机构：高丽大学、微软亚洲研究院<br>核心价值问题：隐动作模型（LAM）能从无动作视频里学控制表示，但现有管线只用行为克隆训隐策略、没有显式的策略改进目标；直接把离线 RL 搬进隐动作空间也不可靠——对隐动作做价值最大化或拟合单峰策略，可能产出物理上无法执行的隐动作，还会把奖励不同的物理控制合并到同一个隐表示里。<br>方法：先推导隐空间优化能迁移到解码执行、且隐最优与物理最优对齐的条件；据此提出 LAPIS：把基于价值的策略改进锚定在观测到的状态-隐动作转移上，并用条件流策略刻画其多峰结构。<br>为什么值得看：在多数任务上优于基线，视觉操作上的优势最明显；即便只有 1% 的动作标签仍有效，而对照方法基本失效。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24482">Latent Action Policies from Suboptimal Data</a>
+            <p class="keywords">关键词：隐动作模型（latent action models）、离线 RL（offline RL）、视觉操作（visual manipulation）、高丽大学（Korea University）、微软亚洲研究院（Microsoft Research Asia）</p>
+          </li>
+          <li class="item">
+            <p>机构：滑铁卢大学、浙江大学、瑞典皇家理工学院<br>核心价值问题：用 RL 做红队能找到高攻击成功率的间接提示注入攻击，但高成功率不等于对抗训练后防御真的变强——两个最强的 RL 红队方法都会模式坍缩，反复发现相似的攻击策略，多出来的成功对鲁棒性毫无增量。<br>方法：提出 PIPETTE 统一紫队框架：用基于字典学习的奖励鼓励红队阶段覆盖更多样的攻击策略，再接一条专为间接提示注入防御设计的在线对抗训练管线，让 agent 在抵抗攻击的同时完成合法任务。<br>为什么值得看：在 AgentDojo 与 ASB 上，训出的防御器对静态攻击接近零攻击成功率，也能扛住强自适应攻击，同时良性任务效用接近未防御基线；把“红队发现如何转化为防御收益”讲清楚了。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24362">PIPETTE: Prompt Injection Purple-Teaming for Robust LLM Agents</a>
+            <p class="keywords">关键词：提示注入防御（prompt injection defense）、紫队（purple teaming）、RL 红队（RL red-teaming）、新加坡国立大学（National University of Singapore）、AgentDojo</p>
+          </li>
+          <li class="item">
+            <p>机构：英伟达、得克萨斯大学奥斯汀分校、华盛顿大学<br>核心价值问题：机器人奖励建模要在任务间泛化，还要在长程操作里准确跟踪进度；通用奖励模型能跨任务迁移，但从短任务预训练迁移到长程任务一直没被系统研究；已有的长程进度模型依赖任务特定的子任务分类器或固定动作词表，学到的进度知识换个任务就难复用。<br>方法：提出 Grana，一个视觉-语言机器人奖励模型：用开放词表的子任务描述识别未完成的子任务并估计其连续进度；短任务与长程子任务上训语言条件进度估计，长程任务上把选中子任务的进度与前面已完成子任务的 credit 相加；并设计标注协议，把稀疏的子任务边界与动作质量标注转成稠密进度目标。<br>为什么值得看：在 200 个多样化短程操作任务上预训练后，对未见任务能零样本预测奖励，适配到 5 个多分钟长程任务后进度预测更好，下游策略性能也提升。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24926">Grana: Compositional Reward Modeling for Long-Horizon Robot Manipulation</a>
+            <p class="keywords">关键词：机器人奖励模型（robot reward models）、视觉语言模型（vision-language models）、长程操作（long-horizon manipulation）、英伟达（NVIDIA）、进度估计（progress estimation）</p>
+          </li>
+          <li class="item">
+            <p>机构：弗莱堡大学、慕尼黑工业大学、丰田欧洲<br>核心价值问题：学机器人操作受制于带动作标注的机器人数据；人类几秒就能演示一个技能，但演示里没有机器人动作，模仿与世界模型都用不上。<br>方法：提出 DiWALI：用逆动力学模型从相邻帧推断隐动作，让世界模型无需动作标签即可训练；再用单独在机器人 play 数据上训的解码器把隐动作落地成机器人指令；技能策略在隐动作上训练，并在想象中用 RL 改进。<br>为什么值得看：在 CALVIN 上，只用人类演示训出的策略大幅优于用机器人演示训的基线；把人类 play 纳入世界模型训练，微调后的策略也比只用等量机器人 play 更强；真机实验验证了想象中改进的技能可以落地。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24836">DiWALI: Diffusion Policy Learning in World Models via Latent Action Inference from Human and Robot Play</a>
+            <p class="keywords">关键词：世界模型（world models）、隐动作推断（latent action inference）、人类演示（human demonstrations）、机器人学习（robot learning）、弗莱堡大学（University of Freiburg）</p>
+          </li>
+          <li class="item">
+            <p>机构：新加坡国立大学<br>核心价值问题：世界动作模型（WAM）把动作生成与未来视觉动态预测耦合，泛化与数据效率都不错，但要可靠执行任务仍难：离线 SFT 只在专家轨迹的加噪动作上监督，动作专家从没见过自己采样器产生的中间状态；在线 RL 又受稀疏任务奖励拖累，探索与信用分配都难。<br>方法：提出 HINT-WAM，首个在线自蒸馏框架：学生用自己的去噪轨迹生成动作，同一模型在“事后信息”（演示的未来视频）条件下当教师，给出条件动作分布作为稠密训练目标；再用能量分数把教师分布蒸馏给学生——匹配分布而非回归速度场。<br>为什么值得看：学生只看部署时能看到的输入、不需要环境奖励也不需要仿真交互，就能拿到稠密的动作级监督；为 WAM 的后训练补上了一个介于 SFT 与 RL 之间的实用选项。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24789">HINT-WAM: Hindsight-Informed Training for World Action Models</a>
+            <p class="keywords">关键词：世界动作模型（world action models）、在线自蒸馏（online self-distillation）、动作生成（action generation）、新加坡国立大学（National University of Singapore）、机器人操作（robot manipulation）</p>
+          </li>
+          <li class="item">
+            <p>机构：悉尼大学、新南威尔士大学、Maincode、拉筹伯大学<br>核心价值问题：无臂四足机器人能三条腿走路、一条前腿操作，但还没有能按语言指令做这种“移动操作”的策略；世界动作模型（WAM）是有效的语言条件操作策略，但它是为机械臂预训练的、采样还慢。<br>方法：分两阶段把一个 WAM 转成四足移动操作策略：先跨形态迁移并用在线自蒸馏把策略蒸馏成“1 步视频 + 2 步动作”的快速学生；再用 RL 微调教师、把多个慢速专家合并成一个少步学生。<br>为什么值得看：在 QLM-Bench 的 10 个仿真任务上，迁移策略 77.0%，蒸馏学生保持 76.7% 且采样快 14 倍，RL 与多教师蒸馏后升至 85.0%；并在真实 Unitree Go2 Air 上部署验证。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24011">WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation</a>
+            <p class="keywords">关键词：四足机器人（quadruped robots）、移动操作（loco-manipulation）、世界动作模型（world action models）、悉尼大学（University of Sydney）、策略蒸馏（policy distillation）</p>
+          </li>
+          <li class="item">
+            <p>机构：Mila—魁北克人工智能研究所、蒙特利尔大学、瑞萨电子加拿大<br>核心价值问题：VLA 模型大多针对平行夹爪，迁移到多指灵巧手很难，遥操作数据也更难采；SFT 加扩散引导 RL（DSRL）的组合里，哪个 checkpoint 最值得微调、该冻住哪部分，一直没有系统结论。<br>方法：用 π0.5 与 LEAP 灵巧手，在两个仿真任务上、只用少量演示评估五种微调配方：比较 SFT 成功率与 DSRL 后成功率的相关性、冻结视觉-语言主干只训动作专家、以及 LoRA 的可引导性。<br>为什么值得看：三个可直接用的结论——SFT 成功率与 DSRL 后成功率相关性差，别拿 SFT 的 rollout 成绩选 checkpoint；冻结 VLM、只全量训动作专家最容易引导，训练与分布外放置都如此；LoRA 最难引导。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23676">Finetuning VLAs for Dexterous Manipulation: The Right Checkpoint Is All You Need</a>
+            <p class="keywords">关键词：VLA 微调（VLA fine-tuning）、灵巧手操作（dexterous manipulation）、检查点选择（checkpoint selection）、Mila、π0.5</p>
+          </li>
+          <li class="item">
+            <p>机构：花旗集团、巴基斯坦国立计算机与新兴科学大学、阿里云、安永<br>核心价值问题：学出来的暖通空调控制器大多出不了仿真；少数落地的也是离线训好、部署后冻结、靠云端重训，无法从建筑自己的数据里持续学习。<br>方法：在一台 Jetson Orin 网关上跑三个学习组件：逐周期在线学习的温度预测器（带五道独立门控，限制坏读数的影响）、带结构安全包络的分布 soft actor-critic 阀门控制器（夜间在设备上用记录的转移做离线学习，带行为锚定与 critic 校准）、以及按 ASHRAE Guideline 14 标定的变点回归基线做节能认证的反事实。<br>为什么值得看：18 个月真实酒店数据上，预测器一周内从随机权重收敛，误差 0.11–0.39°C；RL agent 已完成仿真阶段、正在 104 台设备上影子运行，60 天回放证明具备接管条件；论文对“证据能证明什么、不能证明什么”写得很坦诚。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24052">From Data to Valves: A Self-Learning, Production-Grade Edge Stack for Sustainable HVAC Control</a>
+            <p class="keywords">关键词：HVAC 控制（HVAC control）、边缘学习（edge learning）、在线 RL（online RL）、花旗集团（Citigroup）、节能（energy efficiency）</p>
+          </li>
+          <li class="item">
+            <p>机构：克劳斯塔尔工业大学、罗斯托克大学<br>核心价值问题：形式化验证能证明策略是否安全，但实践中很多策略验证出来就是不安全；想得到安全策略只能从头重训再验证、反复碰运气，训练与验证都不便宜。<br>方法：提出 VESPA：对决策树策略做有针对性的微调——把验证器给出的反例直接当成训练信号，只在违反安全约束的那些情况上微调已有策略。<br>为什么值得看：CartPole 上经验证的安全步数均值从 63.8 提到 92.7 以上，两轮迭代就达到无反例循环十轮的效果；MountainCarContinuous 上 60 次里 53 次把不安全策略变成了安全策略。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24083">VESPA: Verifiable Symbolic Policy Adaptation for Safe Reinforcement Learning</a>
+            <p class="keywords">关键词：安全 RL（safe reinforcement learning）、形式化验证（formal verification）、决策树策略（decision tree policies）、克劳斯塔尔工业大学（TU Clausthal）、反例引导（counterexample-guided）</p>
+          </li>
+          <li class="item">
+            <p>机构：亚利桑那大学、诺基亚贝尔实验室<br>核心价值问题：RAN 切片是共享资源分配问题：每个切片想用最少无线资源满足 SLA，所有切片又在争同一份有限预算；切片内“保 SLA 与省资源”的权衡和切片间“抢资源”的冲突需要同时处理。<br>方法：提出 CoSlice 协调式多智能体 RL 框架：偏好条件的切片 agent 做快速资源分配，LLM 协调器按全局网络观测以较慢节奏调整各 agent 的目标；形式化为多目标部分可观测随机博弈，证明偏好相关均衡的存在性与次线性遗憾界；用 ORANSlice 与射频仿真器搭建评测环境。<br>为什么值得看：相比集中式与多智能体基线，在多种切片负载下平均与尾部 SLA 违规都更低；是多智能体 RL 落到真实协议栈执行环境里的一个完整案例。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23909">CoSlice: Coordinated Multi-Agent Reinforcement Learning for 5G Network Slicing Allocation</a>
+            <p class="keywords">关键词：多智能体 RL（multi-agent RL）、5G 网络切片（5G network slicing）、资源分配（resource allocation）、亚利桑那大学（University of Arizona）、协调器（coordinator）</p>
+          </li>
+          <li class="item">
+            <p>机构：哈尔滨工业大学（深圳）、鹏城实验室<br>核心价值问题：低空城市峡谷里无人机既要可靠联网又要不撞楼：密集建筑遮挡飞行、遮蔽基站、路口同频干扰还强；现有规划要么需要机上没有的 3D 城市网格与信道知识图，要么用无模型 RL、样本效率低、换城市就失效。<br>方法：提出 CommDreamer，无地图的射频几何世界模型：融合机载 3D 激光雷达、多小区蜂窝报告与平移不变的相对运动学，联合推断局部障碍物净空与方向性信干噪比动态；用分类循环状态空间模型压缩多模态历史，在隐空间多步想象中训一个轻量在线策略，全程无需先验地图与天线方向图。<br>为什么值得看：在自研开源射线追踪仿真器 AeroCity-RT 的未见城市形态上零样本测试，150 回合内收敛（无模型 RL 完不成飞行），任务成功率 100%、零碰撞，中位路线 SINR 提升到 8.02 dB、有效 SINR 中断比基线降低一半以上。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24244">CommDreamer: Radio-Geometric World Models for Mapless Cellular-Connected UAV Trajectory Planning</a>
+            <p class="keywords">关键词：无人机轨迹规划（UAV trajectory planning）、世界模型（world models）、射频几何（radio geometry）、哈尔滨工业大学（Harbin Institute of Technology）、零样本（zero-shot）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1118-1630-academic">
         <header class="round-header">
           <h2 id="round-1118-1630-academic">11 月 18 日 16:30 轮</h2>
@@ -1227,6 +1338,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1115-1230-academic">
         <header class="round-header">
           <h2 id="round-1115-1230-academic">11 月 15 日 12:30 轮</h2>
@@ -1240,8 +1353,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1114-morning-academic">
         <header class="round-header">
           <h2 id="round-1114-morning-academic">11 月 14 日早报</h2>
@@ -2059,7 +2170,7 @@ on>
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 18 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 19 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
