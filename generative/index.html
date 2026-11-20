@@ -383,6 +383,64 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1120-1230">
+        <header class="round-header">
+          <h2 id="round-1120-1230">11 月 20 日 12:30 轮</h2>
+          <span class="count">10 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Google 11 月 19 日把世界模型 Genie 4 放进 Gemini API（Interactions API，v1beta）与 Google AI Studio，距 11 月 18 日向 AI Ultra 用户开放仅一天：开发者用付费 key 即可调用 models/genie-4，从文本或参考图生成 720p、24fps 的可交互世界，带 48kHz 立体声原生音频。计费约每秒 0.10 美元，单会话上限 120 秒、无免费层；每帧输出都带 SynthID 水印。</p>
+            <a class="source-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/">Google 把 Genie 4 放进 Gemini API（Google 官方博客）</a>
+            <p class="keywords">关键词：世界模型（world models）、Genie 4、Gemini API、交互式生成（interactive generation）、Google AI Studio</p>
+          </li>
+          <li class="item">
+            <p>Ideogram 11 月 19 日发布 4.6：图像生成与编辑模型，原生输出最高 4K（4096×4096，无需放大），Generate 端点支持最多 5 张参考图，Precise Edit 端点可用 mask 限定修改区域；主打&quot;一次只改一处、其余像素不动&quot;，可连续多轮编辑同一张图。官方称其在 Rapidata 多步图像编辑榜上以 1892 分排第一；API 四档质量定价 0.008–0.60 美元/张，另承诺将发布 4.6 的开放权重（未给日期）。</p>
+            <a class="source-link" href="https://ideogram.ai/models/4.6/">Ideogram 发布 4.6（Ideogram 官方模型页）</a>
+            <p class="keywords">关键词：图像生成（image generation）、图像编辑（image editing）、4K 输出（4K output）、Ideogram、API 定价（API pricing）</p>
+          </li>
+          <li class="item">
+            <p>Thinking Machines 发布 Inkling 2 Mini，26.4B 参数循环 Transformer，中间层每 token 复用三次，TokenSpeed 提供推理支持。关注开源模型发布的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529642397895491584">LightSeek Foundation：Thinking Machines 发布开源循环 Transformer 模型 Inkling 2 Mini</a>
+            <p class="keywords">关键词：Inkling 2 Mini、开源模型（open models）、循环 Transformer（recurrent Transformers）、Thinking Machines、TokenSpeed</p>
+          </li>
+          <li class="item">
+            <p>他称 Inkling 2 Mini 以 Apache 2.0 发布，性能逼近前沿并可在笔记本本地运行，给出 llama.cpp GGUF 运行命令。想在本地跑编码模型的人可以直接看这篇。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529642149894635521">Julien Chaumond：Inkling 2 Mini 或将取代 Qwen 成为本地编码首选模型</a>
+            <p class="keywords">关键词：Inkling 2 Mini、本地编码（local coding）、llama.cpp、GGUF、开源模型（open models）</p>
+          </li>
+          <li class="item">
+            <p>Hugging Face 已支持 Inkling 2 Mini（A3B/26B），经实测是出色的本地编码助手，并附博客与 llama.cpp、MLX 支持。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529641196290465792">Merve Noyan：Hugging Face 上线 Inkling 2 Mini 支持，可本地运行</a>
+            <p class="keywords">关键词：Inkling 2 Mini、Hugging Face、本地运行（local inference）、编码助手（coding assistants）、MLX</p>
+          </li>
+          <li class="item">
+            <p>Inkling 2 Mini 正式接入 Transformers，26B 参数、4B 激活 MoE、循环 Transformer，支持图文输入，本地运行数据不出设备。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529640566012305408">Aritra Roy Gosthipaty：Inkling 2 Mini 接入 Transformers，可完全本地运行</a>
+            <p class="keywords">关键词：Inkling 2 Mini、Transformers、本地运行（local inference）、MoE、Hugging Face</p>
+          </li>
+          <li class="item">
+            <p>他宣布 Thinking Machines 以 Apache 2.0 发布 Inkling 2 Mini，性能进入帕累托前沿并附与 Gemma、Qwen 等模型的对比基准表。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529639241207709696">Clem Delangue：开源 AI 未死，Inkling 2 Mini 达帕累托前沿</a>
+            <p class="keywords">关键词：Inkling 2 Mini、开源 AI（open-source AI）、帕累托前沿（Pareto frontier）、Thinking Machines、基准对比（benchmark comparison）</p>
+          </li>
+          <li class="item">
+            <p>vLLM 首日支持该循环模型，三次推理的 KV 与卷积状态各自独立，GB200 上单批解码步延迟从 10.29 毫秒降至 3.84 毫秒，约快 2.7 倍。做推理部署的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7529638301352439808">vLLM：vLLM 首日支持 Inkling 2 Mini，GB200 解码延迟降至 3.84 毫秒</a>
+            <p class="keywords">关键词：vLLM、推理部署（inference deployment）、Inkling 2 Mini、GB200、解码延迟（decoding latency）</p>
+          </li>
+          <li class="item">
+            <p>他认为针对前沿模型轻松蒸馏的终结可能是开源权重模型进展相对放缓的原因之一，并链接 OpenAI 关于对抗蒸馏的博客。关心开源模型生态的人值得一读。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529634278670880768">Ethan Mollick：OpenAI 与 Anthropic 严打对抗蒸馏，或拖慢开源模型进步</a>
+            <p class="keywords">关键词：对抗蒸馏（adversarial distillation）、开源模型（open models）、OpenAI、Anthropic、模型生态（model ecosystem）</p>
+          </li>
+          <li class="item">
+            <p>TypeSafe 的 Jev（只输出结构化决策的 System One 模型）在 30 个人工标注的 MLflow 问答样本上与 GPT-5.6 Terra/Luna 一样全对，中位延迟 369 毫秒、每千次评判约 0.025 美元，均为最低，但不给文字理由。做 LLM 评估的人可以看看这个思路。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529625896430006273">MLflow：Jev 能否替代 LLM 评判器，30 例人工标注全对且更快更便宜</a>
+            <p class="keywords">关键词：LLM 评判器（LLM judges）、Jev、MLflow、模型评估（model evaluation）、低延迟（low latency）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1119-2030">
         <header class="round-header">
           <h2 id="round-1119-2030">11 月 19 日 20:30 轮</h2>
@@ -3528,6 +3586,64 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1120-1230-academic">
+        <header class="round-header">
+          <h2 id="round-1120-1230-academic">11 月 20 日 12:30 轮</h2>
+          <span class="count">10 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：苹果<br>核心价值问题：训练图像扩散模型时若想保留像素级精确重建，以往做法是直接在像素空间建模，需改动扩散训练目标或模型架构；能否不改动扩散模型本身，同时兼得高生成质量与像素精确重建，仍是开放问题。<br>方法：提出无损潜扩散模型（LLDM），不改扩散模型，而是构造无损变换把像素映射为更适合扩散建模的表示：残差潜变换（保留 VAE 重建丢失的残差信息）加非均匀潜缩放，并提出语义秩优先级（SRP）指标解释其有效性。<br>为什么值得看：LLDM 在生成质量上大幅超过以往像素空间扩散模型，甚至超过若干广泛使用的有损 VAE，同时保证像素精确重建（PSNR 为无穷大）；SRP 与下游生成性能强相关。摘要未给出具体 FID 等数值，量级需看正文。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25454">Lossless Latent Diffusion Models</a>
+            <p class="keywords">关键词：潜扩散模型（latent diffusion models）、像素重建（pixel reconstruction）、苹果（Apple）、图像生成（image generation）、VAE</p>
+          </li>
+          <li class="item">
+            <p>机构：南京大学、香港大学、牛津大学、DreamTech<br>核心价值问题：原生 3D 生成长期依赖潜扩散：几何先压缩进潜空间再由生成器建模；VAE 重建会先丢掉精细几何细节，且 VAE 与扩散模型两阶段目标不一致，限制了网格的保真度。<br>方法：提出 Direct3D-V3，丢掉 VAE 的无潜扩散 Transformer 框架，直接在原生体素域对原始 SDF 体素网格建模；用邻域体素隐式流形正则化抑制非水密曲面，经 Marching Cubes 转网格后用渲染法线损失直接监督，并以条件图像相机参数预测为辅助任务提升图像与几何对齐。<br>为什么值得看：该设计去掉了重建瓶颈、让训练目标落在原生体素域，实验称在与最先进潜方法相当的同时生成细节更丰富的网格，并可扩展到生成式重建（扩散与法线引导精化交错进行）。摘要未给出定量对比数字，细节优势需看正文评测。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26511">Direct3D-V3: Latent-Free Diffusion Transformers in the Native Voxel Domain</a>
+            <p class="keywords">关键词：3D 生成（3D generation）、体素（voxels）、无潜扩散（latent-free diffusion）、南京大学（Nanjing University）、网格生成（mesh generation）</p>
+          </li>
+          <li class="item">
+            <p>机构：英伟达、曼彻斯特大学、加州大学圣迭戈分校<br>核心价值问题：真实感 3D 资产生成受限于经典表示：网格加紧凑 PBR 材质难以表达由精细几何或复杂光传输决定的外观（如毛皮、羽毛、蜘蛛网），而现有高斯溅射生成器通常把固定光照 baked 进外观，无法重打光。<br>方法：提出 VideoRNG，两阶段方法：先用预训练视频扩散微调的视频生成器产出已知位姿、相机与光照下的结构化 RGBA 转盘序列；再用前馈大重建模型把视频 VAE 潜帧直接映射为数百万带神经外观特征的各向异性高斯，用共享方向解码器与随机高斯光线追踪实现新视角与新光照下的渲染（rtRNG）；另引入深度锚定外观训练保留高频外观。<br>为什么值得看：无需网格或解析材质模型，仅凭文本提示或单张图像即可生成毛皮、羽毛、蜘蛛网等复杂资产，并支持交互式渲染、重打光与场景融合。摘要未给出定量评测数字，质量主要靠示例展示。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25338">VideoRNG: Relightable Neural Gaussians from Generative Video Models</a>
+            <p class="keywords">关键词：3D 资产生成（3D asset generation）、高斯溅射（Gaussian splatting）、重打光（relighting）、英伟达（NVIDIA）、视频扩散（video diffusion）</p>
+          </li>
+          <li class="item">
+            <p>机构：腾讯 AIPD<br>核心价值问题：可控流式视频生成是交互式游戏模拟的可行路线，但现有方法难以同时做到高视觉保真度、高帧率与低交互延迟，离真正可玩的游戏体验还很远。<br>方法：提出 Streaming-AAA，面向 AAA 级游戏视频的可控无限流式生成：重设计 VAE 架构实现高效高分辨率解码；用扩散 forcing 预训练并大幅延长时序训练跨度以捕捉长期依赖、维持持久记忆；再经后训练蒸馏与记忆压缩提升推理效率。<br>为什么值得看：在仅用 NVIDIA A800 GPU 的条件下生成 1080p 游戏视频达 43 FPS、端到端交互延迟 198 毫秒，并支持长期游玩而不出现严重时序退化或崩溃；实验称在视觉保真度、帧率、延迟与长期稳定性上大幅超过以往可控视频生成方法。需注意演示以《原神》为主，泛化到其他游戏未在摘要中说明。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26040">Streaming-AAA: Streaming AAA Game Video Generation at High Resolution, High Frame Rate, and Low Latency</a>
+            <p class="keywords">关键词：流式视频生成（streaming video generation）、游戏视频（game video）、腾讯 AIPD、高帧率（high frame rate）、低延迟（low latency）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学技术大学、HiDream.ai<br>核心价值问题：个性化视频生成扩展到多主体时，现有方法会出现严重的身份泄露与语义纠缠，生成视频里人物属性混杂、叙事不连贯；根源是扩散模型融合前缺乏文本实体短语与其视觉模式之间的显式绑定。<br>方法：提出 MultiBinder，&quot;先绑定、再叙事&quot;范式：第一阶段跨模态实体绑定，用实体感知 Q-Former 从每个主体的参考图提取身份中心特征并与专属实体短语对齐，得到解耦的身份 token；第二阶段以多模态大语言模型作&quot;叙事导演&quot;，按文本提示安排各主体的动作，合成保留角色区分的上下文特征，再经专用条件通路注入视频扩散模型。<br>为什么值得看：在通用与新构建的多主体基准上的大量实验表明，MultiBinder 在多主体身份保真度上显著优于现有方法。摘要未给出具体指标数字，领先幅度需看正文。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26164">MultiBinder: Preventing Multi-Subject Identity Leakage in Personalized Video Generation</a>
+            <p class="keywords">关键词：个性化视频生成（personalized video generation）、多主体（multi-subject）、身份保真（identity preservation）、中国科学技术大学（USTC）、视频扩散（video diffusion）</p>
+          </li>
+          <li class="item">
+            <p>机构：哈尔滨工业大学<br>核心价值问题：视频生成器作为世界模型接受物理评测时，出现反直觉现象：去噪步数更少反而能在物理基准上得分更高，即使视频变模糊、过早停止运动；这让人怀疑单样本对照录像的评分方式本身在奖励&quot;走中间路线&quot;。<br>方法：通过精确分解证明 Physics-IQ 的单样本分数会奖励生成未来分布的收缩（即使分布本身变差）；提出 Kernel Physics-IQ，仅需每条件两个独立样本即可在期望上消除这一激励；并在已知结果概率的受控物理系统中验证新指标更偏好真实分布而非坍缩预测。<br>为什么值得看：对 CogVideoX，二步采样的官方分数上升 0.055，而 Kernel Physics-IQ 下降 0.131；在全部五个图生视频模型上，二步采样都降低了 Kernel Physics-IQ，说明官方榜单上的&quot;少步数更高分&quot;多是评分机制的假象而非模型更懂物理。作者建议将 Kernel Physics-IQ 与样本离散度一并报告。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25632">What One Sample Cannot See: Why Fewer Denoising Steps Can Score Higher on Physics Benchmarks</a>
+            <p class="keywords">关键词：物理评测（physics evaluation）、视频生成（video generation）、Physics-IQ、哈尔滨工业大学（Harbin Institute of Technology）、基准偏差（benchmark bias）</p>
+          </li>
+          <li class="item">
+            <p>机构：南洋理工大学 S-Lab、KlingAI Research、香港中文大学<br>核心价值问题：当前顶尖视频生成模型能合成高度逼真的视频，但在多步推理与规划中仍常违反物理与逻辑约束；根源在于常规训练把一段解法当作固定长度片段，而非一连串决策。<br>方法：提出 ViDecide，以决策为中心的框架：训练视频扩散模型因果地预测状态转移并自主决定何时停止，配合聚焦决策的训练排程；再提出纠正性微调（CFT），把失败决策的噪声映射到模型自身成功的延续上，无需策略梯度优化即可稳定改进。<br>为什么值得看：在抽象游戏、规划任务与新建的多步机器人规划基准上，平均严格成功率达 83.8%，远高于标准微调的 23.3% 与最强已有方法的 67.8%，并能泛化到更大的谜题与未见过的布局。需注意评测集中于规则明确的任务，开放场景下的推理能力仍待检验。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26389">ViDecide: Teaching Video Diffusion Models to Reason and Plan Step by Step</a>
+            <p class="keywords">关键词：视频推理（video reasoning）、规划（planning）、决策框架（decision-making frameworks）、南洋理工大学（NTU S-Lab）、机器人规划（robot planning）</p>
+          </li>
+          <li class="item">
+            <p>机构：马德里卡洛斯三世大学、丹麦技术大学、格拉纳达大学<br>核心价值问题：前沿文生图基础模型依赖数十亿参数 DiT 与大规模算力集群，学术实验室难以从头训练；在单张消费级 GPU（如 RTX 4090）上训练会遇到二次注意力开销、JIT 编译图断裂与冻结 VAE 占主导的步骤延迟三重瓶颈。<br>方法：提出 Asuka-FM，系统与架构协同设计框架：无 AdaLN 的双流 DiT 主干、SPRINT 结构化序列稀疏化（注意力 FLOPs 降低 50% 以上）、连续宽高比归一化 RoPE 加移位方形裁剪训练，以及轻量 Patch Detailer Head 的像素适配阶段。<br>为什么值得看：约 206M 参数的双流 DiT 在单张消费级 GPU 上约 160 GPU 小时、不到 55 美元完成从头预训练；无基准针对性微调下，256px 时 GenEval 0.588、DPG 78.96，512px 时 GenEval 0.609、DPG 78.51，树立了平民化基础模型的新效率标准。需注意其绝对分数仍明显低于工业级大模型，定位是可及性而非榜首。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26437">Asuka-FM: A System-Architectural Co-Design Framework for Efficient Text-to-Image Pretraining on Consumer Hardware</a>
+            <p class="keywords">关键词：文生图（text-to-image）、消费级 GPU（consumer GPUs）、高效预训练（efficient pretraining）、马德里卡洛斯三世大学（UC3M）、DiT</p>
+          </li>
+          <li class="item">
+            <p>机构：CISPA 亥姆霍兹信息安全中心、香港科技大学（广州）、香港科技大学<br>核心价值问题：多模态图像编辑系统的安全机制往往只看单一模态：只审文本提示而忽略上传图像本身可能携带的风险，导致&quot;图不安全、指令中性&quot;的编辑请求被放行，图与文的安全感知存在系统性错位。<br>方法：提出 EditSafetyBench，含 5,940 组图-指令对，覆盖安全与不安全图像、11 类风险与三种编辑意图；并在 Gemini、GPT、Qwen API 与 Qwen 本地版四个系统上探测其系统级安全意识。<br>为什么值得看：Gemini 与 GPT 对含不安全意图的编辑提示的拒绝率分别为 87.1% 与 81.6%，但对&quot;不安全图像加中性指令&quot;仅拒绝 24.2% 与 22.4%；类别间也不一致，如 GPT 放行 70.4% 的不安全政治内容编辑尝试，Gemini 仅放行 34.8%。结论是图像编辑需要同时对视觉与文本做联合推理的安全护栏。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26569">Text-Aware, Vision-Blind: How Multimodal Image Editing Systems Handle Unsafe Inputs (EditSafetyBench)</a>
+            <p class="keywords">关键词：图像编辑安全（image editing safety）、多模态安全（multimodal safety）、CISPA、内容审核（content moderation）、风险评测（risk evaluation）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学、上海人工智能实验室、北京航空航天大学、天津大学、清华大学深圳国际研究生院<br>核心价值问题：交互式视频世界模型要求场景随相机移动保持 3D 结构、每个动作保持稳定的效果；现有基准的参照系多由被测视频自身拟合得到，会把渐进的场景变形与步速变化吸收掉，使错误漏网。<br>方法：提出 StrideWorld，所有参照都在被评判的运动发生前固定：以起始视角的真实几何评测场景刚性，以每个动作的步幅（单条指令的相机运动，先测前几步、再检验后续步骤）评测动作一致性；并在已知相机运动的渲染视频上验证度量、与人类判断对照。<br>为什么值得看：在 140 个起始视角上对 15 个开源模型生成的 54,600 条视频评测发现，除一个模型外所有模型在相机移动时都会让场景变形，偏移最高达刚性渲染的 7.3 倍；多数模型在单一动作下能保持稳定步速，但组合路线常中途停滞、终点偏离预测；仅用场景深度缩放指令的两个模型能让多数路线接近预测；用少量渲染片段微调两个模型可消除大部分中途停滞。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24408">StrideWorld: Benchmarking Scene Rigidity and Action Consistency in Interactive Video World Model</a>
+            <p class="keywords">关键词：视频世界模型（video world models）、场景刚性（scene rigidity）、动作一致性（action consistency）、上海交通大学（Shanghai Jiao Tong University）、交互式视频（interactive video）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1119-morning-academic">
         <header class="round-header">
           <h2 id="round-1119-morning-academic">11 月 19 日早报</h2>

@@ -383,6 +383,54 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1120-1230">
+        <header class="round-header">
+          <h2 id="round-1120-1230">11 月 20 日 12:30 轮</h2>
+          <span class="count">8 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>亚马逊 AWS Polly 新增语音克隆功能，在升级后的生成式 Polly 模型基础上推出，主打定制品牌声音。这条首发来自亚马逊负责信息、语音与多模态服务的 AGI 高管，帖子附了 AWS 官方发布博客与演示视频。做品牌语音、关心大厂 TTS 克隆落地的可以直接看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/daviska_aws-polly-speechai-ugcPost-7529275599253778432-otGI/">Kevin Davis：AWS Polly 新增语音克隆</a>
+            <p class="keywords">关键词：语音克隆（voice cloning）、AWS Polly、品牌声音（brand voice）、TTS、生成式语音（generative voice）</p>
+          </li>
+          <li class="item">
+            <p>Cekura 的语音转文字基准在真实电话通话上跑了 AssemblyAI STT 3.7 Realtime Agent：人名、数字、日期的完全正确率达 94.9%，为其榜单最高；通话者停下后 47 毫秒出最终转录，23 个流式模型中排第四快；真实通话词错率从上一代 Universal 3.6 Pro 的 4.50% 降到 3.81%。做实时转写选型、关心电话场景 ASR 实际表现的人可以直接看这份实测。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/tarush-agarwal_we-ran-assemblyai-stt-37-realtime-agent-share-7529549759292801025-Qgsu/">Tarush Agarwal：Cekura 实测 AssemblyAI STT 3.7 Realtime Agent</a>
+            <p class="keywords">关键词：实时转写（real-time transcription）、电话场景（phone calls）、词错率（word error rate）、AssemblyAI、语音基准（speech benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>Google AI Edge Gallery 把完整的离线语音循环带进 AI Chat：与 Gemma 4 并排，用 Parakeet-TDT 0.6B 做流式实时听写，再配 PocketTTS 100M、Kokoro-82M 或 Phonon 31M 做本地朗读（首音延迟不到 100 毫秒），朗读时句子实时高亮。工程细节上，它会去掉 Markdown、跳过代码块和表格再朗读，并逐句调度 TTS 以免与 Gemma 抢内存。关心端侧语音、离线语音助手的人可以看看这个实现。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/lgusmartins_asr-and-tts-in-google-ai-edge-gallery-chat-share-7529544772395520003-VDCC/">Gus Martins：Google AI Edge Gallery 的离线 ASR+TTS 语音循环</a>
+            <p class="keywords">关键词：端侧语音（on-device voice）、离线 ASR（offline ASR）、Gemma、流式听写（streaming dictation）、本地 TTS（on-device TTS）</p>
+          </li>
+          <li class="item">
+            <p>VoiceStudio（前身 OmniVoice Studio）是一个开源桌面工具，用三秒录音就能克隆声音，全程在用户自己的电脑上运行，不用云账号和订阅，覆盖 646 种语言，CPU 上也能跑（慢一些）。小团队能低成本、私密地做本地语音工具；但另一方面，骗子只需三秒语音就能冒充他人，帖子也提醒接到要钱或要权限的电话要挂断再用已知号码回拨。关心本地语音克隆、也关心声音防伪的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/jasen-holloway-124161235_voice-cloning-just-moved-onto-the-desktop-share-7529566251791261696-dAgt/">Jasen Holloway：VoiceStudio 开源桌面语音克隆工具</a>
+            <p class="keywords">关键词：开源语音克隆（open-source voice cloning）、本地运行（local inference）、桌面工具（desktop tools）、声音防伪（voice anti-fraud）、多语言（multilingual）</p>
+          </li>
+          <li class="item">
+            <p>TTSFree AI v1.8.0 接入了 OmniVoice，语音克隆质量、多语支持、语音自然度和长文收听体验都有提升；直接在 TTSFree AI 里就能试新的语音克隆功能，不用自己配置 TTS 模型。适合把 PDF 转音频、做内容或测试 AI 语音流程的人顺手一试；注意 OmniVoice 在 TTSFree AI 上仅限个人与非商业使用，商业部署帖子建议用 Qwen3-TTS 或 Kokoro。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/artificialintelligence-texttospeech-voicecloning-ugcPost-7529470034843172864-jOBm/">PopPop AI：TTSFree AI v1.8.0 接入 OmniVoice</a>
+            <p class="keywords">关键词：TTS 工具（TTS tools）、语音克隆（voice cloning）、OmniVoice、长文转音频（long-form audio）、个人使用（personal use）</p>
+          </li>
+          <li class="item">
+            <p>ElevenLabs 推出 ElevenAgents for Healthcare：面向医疗场景的语音 agent 套装，基于 Scribe v3 Live Medical 做实时医疗转录（药名、临床术语听得准），配 Eleven v4 Turbo 调语气、轮次检测判断来电者是说完还是在找保险卡；能接排班、EHR、CRM 与电话系统，预约、查理赔、按核准内容答疑都能在通话里完成，敏感操作前要身份核验、可转人工，全程可设护栏，支持 HIPAA 合规部署。已落地的例子包括 Banner Health（33 家医院、400+ 诊所，24/7 接患者电话并直接在 EHR 里约诊）、Angle Health（90% 以上供应商来电无需转接）、Cadence（异常生命体征随访，患者接 agent 电话的比例比接护士高 47%）。注意：Scribe v3 Live Medical 模型本身 11 月 17 日已推过，这次是把它打包成医疗套装、带客户落地的那次发布。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7528927722723651584/">ElevenLabs：ElevenAgents for Healthcare</a>
+            <p class="keywords">关键词：医疗语音 agent（healthcare voice agents）、实时转录（real-time transcription）、Scribe v3 Live Medical、HIPAA、EHR 集成（EHR integration）</p>
+          </li>
+          <li class="item">
+            <p>沙特国家 AI 公司 HUMAIN 推出 HUMAIN Voice：阿拉伯语优先的语音 AI 平台，ASR、TTS 与全双工语音 agent 合一，主打按说话人自己的方言对话——支持沙特方言（Najdi、Hijazi）、海湾阿拉伯语及阿英语码切换，TTS 有沙特、黎凡特、摩洛哥、埃及 7 种声音，语音 agent 还在 beta；同时宣布了一个 8000 万参数的开源权重转录模型（Apache 2.0），但还没发布。阿拉伯语语音长期是英语优先模型事后适配的方向，这次是反过来从阿拉伯语起手，值得关注。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529280753462001664/">Voice AI Space：HUMAIN 推出 HUMAIN Voice，阿拉伯语优先语音 AI</a>
+            <p class="keywords">关键词：阿拉伯语语音 AI（Arabic voice AI）、方言（dialects）、ASR、TTS、全双工语音 agent（full-duplex voice agents）</p>
+          </li>
+          <li class="item">
+            <p>她讲了一家百亿美元公司员工接到冒充高管的 AI 语音诈骗电话的案例，提醒大家和同事、家人约定安全词；她认为从 2027 年起，不应再把声音当作身份证明。做语音安全、反欺诈的人值得看看这个提醒。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7529632573501898752">Allie K. Miller：AI 语音克隆太便宜，认声已不能作为身份凭证</a>
+            <p class="keywords">关键词：AI 语音诈骗（AI voice fraud）、声音克隆（voice cloning）、身份验证（identity verification）、安全词（safe words）、反欺诈（anti-fraud）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1120-0830">
         <header class="round-header">
           <h2 id="round-1120-0830">11 月 20 日 08:30 轮</h2>
@@ -5204,6 +5252,19 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1120-1230-academic">
+        <header class="round-header">
+          <h2 id="round-1120-1230-academic">11 月 20 日 12:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Deepgram 将于 12 月 3 日（周四）18:00–20:30 GMT 在伦敦举办今年最后一场 Voice AI 线下聚会，由 AWS 联合赞助，主题是医疗场景的环境语音技术，讨论语音 AI 如何帮 NHS 临床医生少花时间写记录、多花时间看病人。演讲者包括前 NHS 首席执行官 Kate Shields、NHS 首席临床信息官 Samir Shah 等，报名走 Luma，帖子称这类聚会常满员。关心医疗语音 AI 落地的人可以留意。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/asykesdarmon_voiceai-healthtech-nhs-share-7529514812054302720-w2vE/">Aurelie Sykes-Darmon：Deepgram 伦敦 Voice AI 聚会（12 月 3 日）</a>
+            <p class="keywords">关键词：语音 AI 聚会（voice AI meetup）、医疗语音（healthcare voice）、NHS、环境语音技术（ambient voice technology）、伦敦（London）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1120-0830-academic">
         <header class="round-header">
           <h2 id="round-1120-0830-academic">11 月 20 日 08:30 轮</h2>
