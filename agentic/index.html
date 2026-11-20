@@ -383,6 +383,89 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1120-1230">
+        <header class="round-header">
+          <h2 id="round-1120-1230">11 月 20 日 12:30 轮</h2>
+          <span class="count">15 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Google 11 月 19 日为 Mac 版 Gemini 应用上线 computer use：说一句话，Gemini 就能在隔离的后台窗口里代操作本地应用与网站——点按、输入、填表、跨应用搬数据，主屏幕与鼠标完全不受影响，聊天里可实时看进度。首批仅限美国英语、Apple Silicon Mac（macOS Sequoia 15.0+）、18 岁以上个人账号，需 Google AI Plus/Pro/Ultra 订阅。</p>
+            <a class="source-link" href="https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/">Google 给 Mac 版 Gemini 加上 computer use（Google 官方博客）</a>
+            <p class="keywords">关键词：computer use、Gemini、Mac 应用（Mac apps）、Google AI 订阅（Google AI subscription）、桌面自动化（desktop automation）</p>
+          </li>
+          <li class="item">
+            <p>Google 11 月 19 日在 Gemini Interactions API 中推出 Tool Retrieval 预览：agent 工具库再大，请求里也只放每个工具的名字与一句话描述，完整参数 schema 等任务真正需要时才按需加载。适用于 Gemini 3.6 及更新模型（含全部 Gemini 4），无单独收费、按模型标准 token 价计费；官方未公布实测节省数字，建议按自家流量实测。</p>
+            <a class="source-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/">Gemini API 推出 Tool Retrieval（Google 官方博客）</a>
+            <p class="keywords">关键词：工具检索（tool retrieval）、Gemini API、Agent 工具（agent tools）、token 优化（token optimization）、Gemini 3.6</p>
+          </li>
+          <li class="item">
+            <p>OpenAI 11 月 18 日发布《Research acceleration: The jagged frontier》：内部编码 agent 对 2–4 小时研究任务的零干预成功率从 3 月的 23% 升至 10 月的 46%，但任务间差异极大——监控训练任务 79%、写推理与 serving 栈代码仅 25%。OpenAI 借此重申：各实验室应被要求公开报告递归自我改进（RSI）指标。</p>
+            <a class="source-link" href="https://openai.com/index/research-acceleration-jagged-frontier/">OpenAI 发布第二份研究加速报告（OpenAI 官方博客）</a>
+            <p class="keywords">关键词：研究加速（research acceleration）、编码 agent（coding agents）、递归自我改进（recursive self-improvement）、OpenAI、基准（benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>xAI 的 Grok Bot 11 月 18 日宣布可在一次对话里订机票、酒店与租车：改版后的航班结果带详情与 Book 按钮，酒店页加了大图查看器与地图、租车可比价预订，行程卡会保留整单预订，用户付款前仍需确认行程与总价。这是消费级 agent 从&quot;规划行程&quot;走向&quot;完成购买&quot;的又一步。</p>
+            <a class="source-link" href="https://x.ai/news/grok-bot-1-0">Grok Bot 开始端到端订机票、酒店与租车（xAI 官方页面）</a>
+            <p class="keywords">关键词：Grok Bot、行程预订（travel booking）、消费级 agent（consumer agents）、xAI、端到端预订（end-to-end booking）</p>
+          </li>
+          <li class="item">
+            <p>微软 11 月 18 日发布 VS Code 1.147 稳定版，几乎是一次 agent 专场更新：Browser Use（预览）让 agent 直接操作用户已登录的 Chrome/Edge 真浏览器；Model routers（实验）用 YAML 写&quot;哪类活走哪个模型&quot;，由决策模型按请求匹配；Send Later（实验）可把 agent 请求定时发出。但多数新功能默认关闭、处实验或预览阶段，需手动开启。</p>
+            <a class="source-link" href="https://code.visualstudio.com/updates/v1_147">VS Code 1.147 发布（VS Code 官方发布说明）</a>
+            <p class="keywords">关键词：VS Code、Browser Use、agent 编辑器（agent editors）、模型路由（model routing）、微软（Microsoft）</p>
+          </li>
+          <li class="item">
+            <p>腾讯 11 月 20 日把旗舰模型 Hy4 的完整权重放上 Hugging Face（另有 FP8 与 base 版）：770B 参数 MoE、每 token 激活 49B、1M 上下文，原生支持文本、图像与视频理解。注意：8 月预览版用 Apache 2.0，这次正式版权重改用腾讯自拟的 Hy License 1.0，年收入超 5000 万美元的 API 服务商或月活超 1 亿的产品需另行书面授权。</p>
+            <a class="source-link" href="https://huggingface.co/tencent/Hy4">腾讯 Hy4 旗舰权重开源（Hugging Face 模型页）</a>
+            <p class="keywords">关键词：Hy4、开源权重（open weights）、MoE、腾讯（Tencent）、1M 上下文（1M context）</p>
+          </li>
+          <li class="item">
+            <p>Allen Institute for AI（Ai2）11 月 19 日把 Theorizer 接进科学研究 agent 平台 Asta 并开源代码：它从论文文献中提取发现、提出可检验的科学解释（定律+适用范围+证据），一次查询最多读 100 篇论文。官方同时提醒：它可能漏掉相关文献、误判新颖性，结论仍需研究者自己核对文献。</p>
+            <a class="source-link" href="https://github.com/allenai/asta-theorizer">Ai2 把 Theorizer 接进 Asta（Theorizer 开源代码库）</a>
+            <p class="keywords">关键词：科学 agent（science agents）、Theorizer、Asta、Ai2、文献挖掘（literature mining）</p>
+          </li>
+          <li class="item">
+            <p>EPFL、ELLIS Tübingen、马普智能系统研究所等团队 11 月 17 日发布 Horizon Labs 报告：给一个基于 Claude Opus 5.5 的 agent 一个空白 Hugging Face 账号与每周约 500 GPU 小时算力、唯一目标是&quot;赢得真实采用&quot;，七周里它自主训练发布了 38 个小模型，累计下载超 6 万次、被 152 个 GitHub 仓库使用，token 成本约 1040 美元。报告坦言下载数含爬虫、agent 自己也下过 42 次，但核查认为多数下载是真实采用。</p>
+            <a class="source-link" href="https://horizon-labs.ai">Horizon Labs 报告（项目官方页面）</a>
+            <p class="keywords">关键词：自主 agent（autonomous agents）、Hugging Face、模型训练（model training）、Claude Opus 5.5、开源模型采用（open model adoption）</p>
+          </li>
+          <li class="item">
+            <p>GitHub 11 月 19 日趋势榜首是 BaaRai/ARTEX：一个自托管、LLM 驱动的自主渗透测试平台，规划器把目标拆成意图、工作器调用真实工具执行，每条发现都附带抓到的请求与响应作为证据，另有范围规则与审批关卡约束自主操作。值得看的是&quot;自主 agent + 安全审计&quot;的组合正从演示走向可落地的工具形态；但渗透测试涉及授权边界，使用前须确认目标在授权范围内。</p>
+            <a class="source-link" href="https://github.com/BaaRai/ARTEX">ARTEX：自主渗透测试平台（GitHub 仓库）</a>
+            <p class="keywords">关键词：自主渗透测试（autonomous penetration testing）、安全审计（security auditing）、GitHub 趋势（GitHub trending）、agent 工具（agent tools）、BaaRai</p>
+          </li>
+          <li class="item">
+            <p>斯坦福 Marin 项目 11 月 17 日在 Hugging Face 公开了 Mochi 535B-A23B 预训练全过程的 57 个中间检查点（约 61TB 权重）：535B 总参数、每 token 激活约 22.8B，训练用 18.2T token，含 10 个长上下文扩展阶段（4K→262K）的检查点。一次公开完整预训练轨迹在开源界极为罕见，对 scaling 研究与训练动力学分析价值很高；团队定位为研究制品而非可用聊天模型，并坦言基准污染未能完全清除。</p>
+            <a class="source-link" href="https://huggingface.co/open-athena/Marin-Mochi-535B-A23B">Marin Mochi 535B 检查点（Hugging Face 模型页）</a>
+            <p class="keywords">关键词：开源模型（open models）、预训练检查点（pretraining checkpoints）、斯坦福 Marin（Stanford Marin）、scaling 研究（scaling research）、Hugging Face</p>
+          </li>
+          <li class="item">
+            <p>Azure Databricks Genie 插件上线，Microsoft Copilot Cowork 可以调用 Genie 跨数据与文档调查业务问题，一次建好 Ontology 即可复用。关注企业数据 agent 落地的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7529637233792823296">Databricks：Copilot Cowork 可调用 Databricks Genie 插件查询业务数据</a>
+            <p class="keywords">关键词：Databricks Genie、Copilot Cowork、企业数据 agent（enterprise data agents）、数据查询（data querying）、微软（Microsoft）</p>
+          </li>
+          <li class="item">
+            <p>作者讲自己在 Uber 值班时常被半夜叫醒，如今 Resolve 承担值班并处理告警，人只在需要时介入，现已可作为首要值班方使用。关注 AI 运维、on-call 自动化的可以看看这篇。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529636896944050176">Noah Schlager：Resolve 正式成为首要值班方，AI 替人守夜</a>
+            <p class="keywords">关键词：AI 运维（AI operations）、on-call 自动化（on-call automation）、值班（on-call）、Resolve、告警处理（alert handling）</p>
+          </li>
+          <li class="item">
+            <p>Alpamayo 2 Edge 把自适应推理带到车端，2B 参数推理视觉语言动作模型可实时生成驾驶轨迹与控制，已上线 Hugging Face 并附技术博客。关注具身智能、车端 agent 的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7529628911274524672">NVIDIA DRIVE：发布 Alpamayo 2 Edge，2B 参数推理视觉语言动作模型上车</a>
+            <p class="keywords">关键词：Alpamayo 2 Edge、车端推理（on-vehicle inference）、视觉语言动作模型（vision-language-action models）、自动驾驶（autonomous driving）、NVIDIA DRIVE</p>
+          </li>
+          <li class="item">
+            <p>ASIV 是在现有 ERP 界面内工作的 AI 同事，可跨界面与文档处理异常、记住团队流程，执行经批准的更改并在提交前展示证据，现开放早期体验。关注企业 agent 落地的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7529628175878836224">Gradian (Young Seok) Lee：发布 ASIV，一位在 ERP 界面里工作的 AI 同事</a>
+            <p class="keywords">关键词：ASIV、ERP、AI 同事（AI colleagues）、企业 agent（enterprise agents）、早期体验（early access）</p>
+          </li>
+          <li class="item">
+            <p>Grok 与 Claude 上周都把智能体放进会议，它们不再只是记录，而是实时查知识库、答题、做演示文稿。关注会议 agent 的人可以看看这篇。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529620846714400768">Amanda Zhu：Grokbot 与 Claude 进驻会议，会议智能体淘金热开启</a>
+            <p class="keywords">关键词：会议 agent（meeting agents）、Grokbot、Claude、实时协作（real-time collaboration）、知识库（knowledge bases）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1120-0830">
         <header class="round-header">
           <h2 id="round-1120-0830">11 月 20 日 08:30 轮</h2>
@@ -8646,6 +8729,79 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1120-1230-academic">
+        <header class="round-header">
+          <h2 id="round-1120-1230-academic">11 月 20 日 12:30 轮</h2>
+          <span class="count">13 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：独立研究者<br>核心价值问题：LLM 智能体的领域特化通常被当作权重更新问题，需收集轨迹、跑 RL 或 SFT 再部署新检查点，成本高且 SFT 会损伤推理能力；能否在不改动模型权重的前提下实现领域特化仍是开放问题。<br>方法：把特化对象从权重转向智能体脚手架（系统提示、工具 schema、技能库、规划支架），用反思式进化优化器 GEPA 构成 RL 式外层循环演化脚手架，产出无需 GPU 训练、可按领域加载的脚手架适配器，并可与权重 RL 组合。<br>为什么值得看：在类 Claude Code 的编码智能体 Codev 上，于 SWE-bench Verified、OfficeBench、Terminal-Bench 三个基准验证：权重更新单路径收益最强，脚手架演化以极小算力恢复了其中大部分收益，两者结合效果最佳；还揭示 SFT 特化会缩短推理链、增加截断，而脚手架适配器天然避免这一问题。摘要未给出具体分数，需谨慎看待&quot;恢复大部分收益&quot;的幅度。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25380">Beyond Weight Updates: Evolving Agent Harnesses for Domain Specialization</a>
+            <p class="keywords">关键词：agent 脚手架（agent scaffolding）、领域特化（domain specialization）、GEPA、SWE-bench、独立研究者（independent researcher）</p>
+          </li>
+          <li class="item">
+            <p>机构：清华大学软件学院、新浪微博<br>核心价值问题：开发有效的 RAG 系统需要大量工程投入和反复试验，而 LLM 智能体能否从零自主搭建并迭代改进 RAG 系统，此前缺乏专门的评测基准。<br>方法：提出 AutoRAGBench，首个评测 LLM 智能体从零开发 RAG 系统的基准，含 9 个开发任务；每个任务中智能体在单块 H800 GPU、6 小时预算内，无初始代码、无既定策略，从零搭建并迭代优化 RAG 流水线；共评测 9 种智能体配置。<br>为什么值得看：GPT-6.1 Sol 配 Codex CLI 平均分 56.1，超过人类 SOTA 复合基线（44.4）11.7 分；从人类设计的系统出发时，在 7 个任务上平均再提升 16.6 分，表明智能体已能自动化开发出有效的 RAG 系统。但需注意这是在受控基准内的结果，真实业务语料上的泛化仍待验证。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25582">AutoRAGBench: A Benchmark for LLM Agents Automating RAG System Development</a>
+            <p class="keywords">关键词：RAG 系统（RAG systems）、agent 基准（agent benchmarks）、清华大学（Tsinghua University）、Codex CLI、自动化开发（automated development）</p>
+          </li>
+          <li class="item">
+            <p>机构：复旦大学、腾讯混元团队、清华大学<br>核心价值问题：长程智能体任务中工作上下文不断累积，上下文压缩是让执行跨越上下文窗口的常用手段，但现有模型的压缩能力究竟如何、压缩对后续任务完成有多大损害，一直缺乏直接度量。<br>方法：提出 CompAct-Bench，从成功的智能体轨迹出发，在执行中途插入压缩边界，由被测模型压缩此前的工作上下文，再由同一执行器继续完成原任务，以任务完成率度量压缩质量；覆盖 BrowseComp、SWE-bench 与内部 CompanyBench 三类任务，用迭代比例校准控制保留比例。<br>为什么值得看：12 个前沿模型评测中，压缩后平均任务准确率仅 56.7%，最强模型（Claude Opus 5）也只有 68.5%；失败不仅源于信息遗漏，还源于任务状态被扭曲（如把未解决的问题写成已解决的结论），导致错误决策或重复执行。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25673">CompAct-Bench: A Benchmark for Working-Context Compaction in Long-Horizon Agent Tasks</a>
+            <p class="keywords">关键词：上下文压缩（context compaction）、长程 agent（long-horizon agents）、复旦大学（Fudan University）、任务完成率（task completion）、腾讯混元（Tencent Hunyuan）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学区块链与数据安全全国重点实验室、北京大学、阿里巴巴集团<br>核心价值问题：LLM 智能体依赖持久记忆来规划工具调用和完成多步任务，但一条对抗性或误导性记忆就能让执行路径和结果偏离（记忆漂移）；现有防御难以在服务时定位是哪条被召回的记忆导致了漂移。<br>方法：提出 DriftGuard，两阶段框架：离线通过成对反事实重放构建因果监督，汇总为记忆漂移分数（MDS，涵盖动作改变、攻击消除、违规消除、任务恢复四分量）；再训练一个在线风险模型，直接从动作前信息估计 MDS、按最大分量风险标记漂移记忆，无需在线反事实 rollout。<br>为什么值得看：摘要称大量实验表明 DriftGuard 能准确识别导致漂移的记忆并实现高效在线防御，但摘要未给出具体指标数字，实际检出率与误报率需看正文。代码已匿名开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25583">DriftGuard: Online Memory-Drift Detection via Causal Attribution for LLM Agents</a>
+            <p class="keywords">关键词：记忆漂移（memory drift）、agent 记忆（agent memory）、因果归因（causal attribution）、浙江大学（Zhejiang University）、在线防御（online defense）</p>
+          </li>
+          <li class="item">
+            <p>机构：Uniphore<br>核心价值问题：现有基准大多评测 LLM 驱动的智能体本身，却很少评测 LLM 作为&quot;搭建者&quot;构建智能体的能力——而这正是人类应用科学家为企业搭建业务智能体的真实工作。<br>方法：提出 AppSci-Bench，模拟应用科学家的工作流：向利益相关方问清需求、探索企业基础设施、设计实验与内部评测来科学改进目标智能体；覆盖 7 个真实业务领域（幻灯片生成、订单到收款、合规审查、客服通话洞察、CRM 洞察，及改编自 tau3-bench 的航空与银行），各配专属 held-out 评测集。<br>为什么值得看：7 个前沿模型中表现最好的 Claude Opus 5.0 在 3 次搭建尝试的平均最低分为 59.1%，其余模型明显更差；模型在需求获取上仅得 65%，且 65% 的情况下自己的内部评测已饱和却仍解不出 held-out 任务，暴露了&quot;会搭但搭不准&quot;的短板。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25360">AppSci-Bench: Can LLMs Build AI Agents and Make Them Better?</a>
+            <p class="keywords">关键词：应用科学家（applied scientists）、agent 搭建（agent building）、Uniphore、企业 agent（enterprise agents）、业务智能体（business agents）</p>
+          </li>
+          <li class="item">
+            <p>机构：Meta<br>核心价值问题：自主 LLM 智能体能否在大规模工业级推荐系统而非小基准上真正做机器学习工程，尚不清楚；工业场景有三大障碍：单次实验反馈耗时数小时、离线指标不总能预测线上效果、早期收益后改进迅速饱和。<br>方法：构建人在环路的 MLE 智能体，在大型搜索排序器上自主提出、实现、训练并评估模型改动，工程师保留目标设计、搜索方向与最终模型审核权；用并行训练、与线上效果校准的目标函数和精细的上下文工程应对三大障碍。<br>为什么值得看：在一次 campaign 中系统完成 1,097 个候选实验、采纳 325 个，采纳率 29.6%（此前 campaign 为 15.6%）；最佳模型在一次大规模 A/B 测试中使搜索量提升 0.23%；多项改进是团队从未尝试过的架构改动。需注意 0.23% 的线上提升伴随一定的延迟回归代价，摘要未量化。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.23910">MLE Agents: Autonomous ML Engineering in Large-scale Recommendation Systems</a>
+            <p class="keywords">关键词：机器学习工程（ML engineering）、推荐系统（recommendation systems）、Meta、人在环路（human-in-the-loop）、A/B 测试（A/B testing）</p>
+          </li>
+          <li class="item">
+            <p>机构：清华大学（主导，mmlab@SIGS）等，联合剑桥大学、牛津大学、斯坦福大学、卡内基梅隆大学、北京大学、上海交通大学、复旦大学、中国人民大学、香港大学、香港科技大学、香港中文大学、深圳大学，以及 Velabot AI、Simple AI、百度智能云<br>核心价值问题：具身智能需要基于历史的认知推理、精准及时的物理执行，以及二者通过环境反馈的组合；现有基准要么把推理与执行混在同一任务里评，要么分开评而不评组合，因此无法判断失败源于推理、执行还是组合。<br>方法：提出 Mind2Act World，30 个仿真操作任务、覆盖 5 类真实应用领域，每任务 3 档难度、Clean 与 Random 两种场景，共 180 种配置；分 Mind（历史观测决策）、Act（精准及时执行）、Mind2Act（闭环组合）三视角评测，另配诊断脚手架把失败 episode 归因到三类原因并生成模型画像卡。<br>为什么值得看：最强的智能体在 Mind 上成功率 52.7%、Act 上 39.0%，但在 Mind2Act 上仅 12.0%，说明单项能力并不迁移到组合任务；最强智能体能记住任务状态却难以维持持续接触，而端到端策略能执行熟练动作却记不住任务状态。组合推理与执行是当前主要开放问题。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26444">Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation</a>
+            <p class="keywords">关键词：具身智能（embodied AI）、世界模型（world models）、机器人操作（robotic manipulation）、清华大学（Tsinghua University）、诊断基准（diagnostic benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>机构：宾夕法尼亚大学、谷歌、威斯康星大学麦迪逊分校<br>核心价值问题：自主智能体执行任意 shell 命令时可能发起未授权网络请求或对文件系统、进程、权限做持久恶意修改；LLM 监视器缺乏可证明的安全保证，无状态策略层则看不到多步数据流与执行副作用。<br>方法：提出 Tether，在临时隔离沙箱中执行每个提议动作，从观测到的系统调用推断抽象动作语义，再用 Lean 4 内嵌 DSL 表达的有状态策略强制执行，策略可表达信息流控制、访问控制与网络安全约束，并可形式化验证满足全局安全不变量。<br>为什么值得看：用同一条策略横跨全部任务，在真实编码智能体基准的良性与对抗轨迹上，Tether 拦截了 100% 的范围内攻击，良性误报率低于 5%（摘要口径；正文分基准为 2.3% 与 5.0%）。需注意&quot;范围内&quot;这一限定：超出系统调用追踪范围的攻击不在保证内。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25599">Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents</a>
+            <p class="keywords">关键词：agent 安全（agent safety）、形式化验证（formal verification）、沙箱（sandbox）、宾夕法尼亚大学（University of Pennsylvania）、策略引擎（policy engine）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学<br>核心价值问题：AI 科学家需要三种能力：正确执行给定计算流程、从给定设计空间选择下一步测量、自主设计实验；现有基准主要评前两种，第三种需要可靠执行智能体自行设计的实验，并以真实实验室的读数作依据。<br>方法：提出 TwinLab-Bench，52 个源自物理、生命科学与工程实验室真实记录的任务；每个任务配一个 TwinLab 智能体作为环境，读取实验室原始材料、调用由其记录构建的计算器，执行被测智能体设计的实验；被测智能体的报告与来自真实实验室记录的隐藏答案对照评分，支持 100 多种实验动作类型。<br>为什么值得看：最强前沿模型 Claude Fable 5.2 平均仅得 45.0 分，说明任务对现有模型仍很难；TwinLab 智能体相比只看任务描述的语言模型，几乎消除了偏离真实记录的读数与重复提问时的不一致回答。需注意摘要未披露任务难度分布与评分细节。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26248">TwinLab-Bench: Evaluating AI Scientists in Agentic Twins of Real Labs</a>
+            <p class="keywords">关键词：AI 科学家（AI scientists）、实验设计（experiment design）、浙江大学（Zhejiang University）、实验室孪生（lab twins）、基准（benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>机构：哈索·普拉特纳研究所、慕尼黑工业大学、Helmholtz AI、大众汽车集团创新部门<br>核心价值问题：用自然语言技能特化智能体时，文本的离散性使其无法连续优化；而微调等基于梯度的方法通常只适用于特定模型，技能无法跨智能体迁移。<br>方法：提出 Skill.png，把技能做成一张图片：通过冻结视觉语言模型的视觉编码器，用梯度下降优化图像像素，得到可随输入附带的&quot;图像技能&quot;；单张图片可针对多模型集成联合优化；也可与文本技能混合使用。<br>为什么值得看：在 4 个视觉语言模型、4 个基准的 16 种设置中，Skill.png 在 9 种上显著优于前沿 LLM 优化的文本技能，且推理时仅需 64–256 个图像 token，而非约 900–2000 个文本 token；集成优化的图像可在集成内模型间迁移。需注意仍有 7 种设置未胜出，效果与模型和任务有关。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26296">SKILL.PNG: Learning Agent Skills in Pixel Space</a>
+            <p class="keywords">关键词：agent 技能（agent skills）、视觉语言模型（vision-language models）、像素空间（pixel space）、哈索·普拉特纳研究所（HPI）、技能迁移（skill transfer）</p>
+          </li>
+          <li class="item">
+            <p>机构：IBM<br>核心价值问题：长程任务中的 LLM 智能体常以重复的程序性方式失败（如 API 分页错误、实体解析错误、无问而答）；从自身历史中学习能否改进、以及&quot;该记住多少&quot;才合适，缺乏来自真实部署的经验总结。<br>方法：构建一条自蒸馏记忆流水线：先从智能体自身轨迹中每 episode 挖掘 1–3 条简短经验，再整合成带支持度计数的指南集，推理时注入全部或精选子集；该流水线随开源 altk-evolve 库发布，并部署于 IBM 的 CUGA 智能体与 watsonx Orchestrate 平台。<br>为什么值得看：在 AppWorld 基准上，强模型随指南增多持续提升——DeepSeek-V3.2 用全部 191 条指南时任务完成率 +9.5 分、场景完成率 +16.1 分；而弱模型 gpt-oss-120b 用全部 199 条为 51.2%（基线 39.9%），用约 29 条精选子集反而达到 55.4%，说明&quot;记住多少&quot;取决于模型能力而非记忆本身。论文还坦承了多处部署踩坑（如一条高支持度指南反而帮倒忙、来源信息在整合中静默丢失），对落地团队有直接参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26361">How Much Should an Agent Remember? Deployment Lessons from Self-Distilled Memory for LLM Agents</a>
+            <p class="keywords">关键词：agent 记忆（agent memory）、自蒸馏（self-distillation）、IBM、AppWorld、经验指南（experience guidelines）</p>
+          </li>
+          <li class="item">
+            <p>机构：武汉大学、中关村人工智能研究院、DeepCybo、哈尔滨工业大学、华中科技大学、南京大学、华东师范大学<br>核心价值问题：潜世界模型通过递归 rollout 比较候选规划，测试时开销大；如何在保持预测搜索收益的同时降低规划延迟，是世界模型落地的关键瓶颈。<br>方法：提出 Fast-JEPA，重组预测计算：先构建目标导向的规划引导搜索，再直接预测完整候选方案的结果进行比较，精化阶段避免递归状态 rollout；同时提出 DynaGoal 基准，在动态分布外条件、执行时限与可控响应延迟下评测世界模型规划。<br>为什么值得看：在 PushT、Reacher、Cube、TwoRoom 四个任务上平均成功率 96.50%，规划速度比 INTACT 快 2.41 倍；在 DynaGoal-Shift 上平均成功率 73.83%、DynaGoal-Deadline 上 87.67%，显示低延迟预测规划在动态与限时条件下的实用价值。需注意结果集中于四个仿真控制任务，真实机器人上的表现未在摘要中体现。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25927">Fast-JEPA: Advancing the Success-Latency Frontier for Latent World Models</a>
+            <p class="keywords">关键词：世界模型（world models）、规划（planning）、潜预测（latent prediction）、武汉大学（Wuhan University）、低延迟（low latency）</p>
+          </li>
+          <li class="item">
+            <p>这是&quot;AI Agents for Beginners&quot;系列第三篇，讲给 Python 智能体加五项实用防护，限制错误决策造成的损害，并逐项测试。做 agent 开发、关心 agent 安全落地的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7529641562629246977">Towards Data Science：为 Python AI Agent 加上五道安全护栏并逐项测试</a>
+            <p class="keywords">关键词：Python agent（Python agents）、agent 安全（agent safety）、防护栏（guardrails）、Towards Data Science、agent 开发（agent development）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1120-0830-academic">
         <header class="round-header">
           <h2 id="round-1120-0830-academic">11 月 20 日 08:30 轮</h2>
