@@ -383,6 +383,42 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1120-0830">
+        <header class="round-header">
+          <h2 id="round-1120-0830">11 月 20 日 08:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Deepgram 的 CEO 在新加坡金融科技节期间接受当地电台 MONEY FM 89.3 采访，谈多语言语音 AI 在金融机构的应用。关注语音 AI 在金融场景落地的可以听听这段采访。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7529580514312368128/">Deepgram：CEO 在新加坡金融科技节谈面向金融机构的多语言语音 AI</a>
+            <p class="keywords">关键词：多语言语音 AI（multilingual voice AI）、金融场景（financial services）、语音识别（speech recognition）、Deepgram、采访（interview）</p>
+          </li>
+          <li class="item">
+            <p>RingCentral 的 AI 接待员（AIR）新增功能：客户预约后可自动发送带预约链接的定制短信。做语音接待、电话 agent 产品的人可以看看这个小更新。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/a-customer-schedules-an-appointment-then-share-7529559336298192897-b1wn-">RingCentral：AI 接待员新增预约后自动发短信</a>
+            <p class="keywords">关键词：AI 接待员（AI receptionist）、语音 agent（voice agents）、预约提醒（appointment reminders）、RingCentral、电话自动化（phone automation）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1120-morning">
+        <header class="round-header">
+          <h2 id="round-1120-morning">11 月 20 日早报</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>OpenAI 11 月 19 日把 GPT-Live-1.1 放进 API：此前只在 ChatGPT Plus/Pro 语音里用的全双工模型，现在开发者也能直接调用（模型标识 gpt-live-1.1）；相比 GPT-Live-1，多语言口音更稳定、对字母数字等精确细节的理解更可靠，还能把复杂任务委派给自选的后端模型。新增的 Standby 配置也值得注意：静音 5–60 秒后模型暂停推理、WebRTC 通话保持接通，待机按每分钟 0.02 美元计费（活跃时 0.05 美元），长时间在线的语音 agent 闲置成本直接降六成。</p>
+            <a class="source-link" href="https://developers.openai.com/api/docs/guides/live">OpenAI：GPT-Live 上手指南</a>
+            <p class="keywords">关键词：全双工语音（full-duplex voice）、实时 API（Realtime API）、GPT-Live-1.1、待机计费（standby billing）、语音 agent（voice agents）</p>
+          </li>
+          <li class="item">
+            <p>Hugging Face 今日上线 OhanTTS-v0.1，一个以亚美尼亚语为重点的流式 TTS 模型：基于多语语音模型再训练，约 160 小时参考录音覆盖 8 种语言（含 61 小时亚美尼亚语），支持 3–10 秒参考音频的声音克隆，也能按文字描述设计声音；音频边生成边流式输出，首包约 331 毫秒。低资源语言难得有带评测（词错率 14.70%）与开源服务的流式 TTS，以 CC BY-NC 4.0 开放非商业使用。</p>
+            <a class="source-link" href="https://huggingface.co/blog/Metric-AI/ohan-tts">Introducing OhanTTS: Armenian Text-to-Speech</a>
+            <p class="keywords">关键词：流式 TTS（streaming TTS）、亚美尼亚语（Armenian）、声音克隆（voice cloning）、低资源语言（low-resource languages）、Hugging Face</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1119-2030">
         <header class="round-header">
           <h2 id="round-1119-2030">11 月 19 日 20:30 轮</h2>
@@ -672,6 +708,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1116-2030">
         <header class="round-header">
           <h2 id="round-1116-2030">11 月 16 日 20:30 轮</h2>
@@ -812,8 +850,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1115-1230">
         <header class="round-header">
           <h2 id="round-1115-1230">11 月 15 日 12:30 轮</h2>
@@ -5168,6 +5204,72 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1120-0830-academic">
+        <header class="round-header">
+          <h2 id="round-1120-0830-academic">11 月 20 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Kyutai、ISIR 索邦大学、Google DeepMind<br>核心价值问题：语音助手想&quot;露脸&quot;需要实时生成说话虚拟形象，但现有音频驱动头像方法延迟高、难以在单块 GPU 上实时运行，也缺乏开源的流式方案。<br>方法：提出 AURA 流式音频驱动虚拟形象模型，以视频扩散模型根据音频实时生成 576p 视频，单块 GPU 即可实时运行，并与 Kyutai 的 Unmute 语音助手对接；权重、代码与 3 万条视频数据集全部开源。<br>为什么值得看：可实时运行的流式音频驱动头像开源方案，单卡实时出 576p 视频，对语音助手具身化、实时交互化身有直接参考价值；权重、代码与数据集全开源，便于复现。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/meet-aura-a-talking-avatar-you-can-hold-ugcPost-7529560948253024256-gkw9-">Kyutai：发布流式音频驱动虚拟形象 AURA，单卡实时生成 576p 视频</a>
+            <p class="keywords">关键词：音频驱动头像（audio-driven avatars）、流式生成（streaming generation）、视频扩散模型（video diffusion models）、Kyutai、虚拟形象（virtual avatars）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1120-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1120-morning-academic">11 月 20 日早报</h2>
+          <span class="count">9 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：上海交通大学、腾讯、布里斯托大学<br>核心价值问题：全双工语音模型能自然对话、打断、接话，但只会&quot;聊&quot;不会&quot;办事&quot;——工具调用常常在执行前就失败；前后端分离的 agent 里，请求发不出去、发不全，后端就没法执行。<br>方法：提出 Duopra，把后端当作工具来学任务执行：直接调用与后端委派共用同一套动作接口；三阶段训练结合协议 SFT、全双工 RL（奖励及时完整的执行）、以及 thinker 更新后只修 projector 恢复 talker 条件。<br>为什么值得看：同一后端下 Full-Duplex-Bench v3 的 Pass@1 从 4.7% 升到 44.7%，直接调工具 47.7%、经 DeepSeek 后端 49.3%，对话接管指标也有提升，说明任务执行能力可以和对话能力共存，是全双工 agent 从&quot;会聊&quot;走向&quot;能办事&quot;的关键一步。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25773">Duopra: From Full-Duplex Conversation to Full-Duplex Agency</a>
+            <p class="keywords">关键词：全双工 agent（full-duplex agents）、工具调用（tool calling）、上海交通大学（Shanghai Jiao Tong University）、腾讯（Tencent）、对话系统（dialogue systems）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学技术大学<br>核心价值问题：几百 bps 的超低码率下保住可懂度、自然度与细节很难；纯声学编解码器码率偏高，引入语义表征能降码率却增加复杂度。<br>方法：提出纯声学梅尔域神经编解码器 UMelCodec：第一阶段用无混叠 Snake-ConvNeXt 编解码建模时序与谐波结构、因子化单码本 VQ 做超低码率量化、多尺度梅尔谱判别器提升重建；第二阶段轻量 MDCT 神经声码器从重建梅尔谱恢复波形。<br>为什么值得看：325 bps、仅 19.67M 参数、1.93G MACs，LibriTTS 多数客观重建指标优于强基线、主观自然度有竞争力，GPU/CPU 均实时——给带宽受限通信与端侧语音 token 化提供了一个很轻的纯声学方案。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25569">UMelCodec: An Ultra-Low-Bitrate and Lightweight Mel-Domain Neural Speech Codec</a>
+            <p class="keywords">关键词：神经音频编解码器（neural audio codecs）、超低码率（ultra-low bitrate）、梅尔域（mel-domain）、中国科学技术大学（USTC）、语音 token 化（speech tokenization）</p>
+          </li>
+          <li class="item">
+            <p>机构：首尔国立大学<br>核心价值问题：语音场景生成要同时合成清晰语音与多样环境声，但两者语义与声学特性差异大，现有方法用单一混合表征建模整个场景，且依赖人工混合的模拟场景，与真实场景脱节。<br>方法：用 LLM 交错生成语音与环境两路独立 token 流：来源感知的神经音频编解码器从混合音频中提取时间对齐的语音与环境 token，预训练 LLM 按场景描述与语音内容交错生成两路 token；两路 token 直接从混合录音提取，可适配真实野外场景。<br>为什么值得看：在真实场景适配后，可懂度、场景相关性与音质均优于现有方法，且验证了环境声在说话时保持稳定——给影视配音、游戏音频、语音 agent 的环境感知合成提供了新思路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25503">Joint Language Modeling for In-the-Wild Speech-Scene Generation with Distinct Token Representations</a>
+            <p class="keywords">关键词：语音场景生成（speech-scene generation）、环境声（ambient sound）、大语言模型（large language models）、首尔国立大学（Seoul National University）、语音合成（speech synthesis）</p>
+          </li>
+          <li class="item">
+            <p>机构：新加坡国立大学、香港中文大学（深圳）、南京大学<br>核心价值问题：多语混合语音里分离目标语言语音，现有方法只靠语言身份标签做粗粒度声学建模，指导信号太弱。<br>方法：提出语言导向的语义建模框架：预训练语音语义模型经语言感知的 prompt 条件与参数高效微调，生成目标语言聚焦的语义表征，再融入抽取模型，给声学抽取提供结构化语义指导。<br>为什么值得看：在 CommonVoiceMix 上 SI-SDR 最高提升 1.16 dB，持续优于纯声学基线——&quot;目标语言抽取&quot;是个新任务定义，对多语会议、跨语言语音助手里的语言分离有直接参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26317">Language-Oriented Semantic Modeling for Target Language Extraction</a>
+            <p class="keywords">关键词：目标语言抽取（target language extraction）、多语语音（multilingual speech）、语义建模（semantic modeling）、新加坡国立大学（NUS）、语音分离（speech separation）</p>
+          </li>
+          <li class="item">
+            <p>机构：Ata Technology Platforms（伊斯坦布尔）<br>核心价值问题：语音 agent 固定静音时长才开口，要么打断句中停顿、要么回应太慢；轮次结束与句内停顿的区分一直靠启发式。<br>方法：用土耳其语双人视频通话语料 Real-TurnTurk，对比微调的土耳其语 TurnGPT、零样本土耳其语 LM 与已部署的多语检测器，结合说话人语音活动时序与面部特征，在录音与说话人双 disjoint 划分下评估。<br>为什么值得看：微调模型区分轮次结束与停顿优于两个文本基线、校准也最好；文本分数加静音超时后，同等打断率下平均响应延迟缩短，Whisper 自动转录下优势仍在——轮次结束检测这类&quot;小但关键&quot;的 agent 能力有了可复现的评估范式。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25489">When Should a Voice Agent Speak? End-of-Turn Detection in Turkish</a>
+            <p class="keywords">关键词：轮次结束检测（end-of-turn detection）、语音 agent（voice agents）、土耳其语（Turkish）、对话系统（dialogue systems）、实时交互（real-time interaction）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学、OPPO<br>核心价值问题：大音频语言模型会&quot;幻听&quot;——说出音频里不存在的声音事件；已有解释归因于音频注意力不足，但真实与幻觉事件的注意力质量可能相近，只是关注位置不同。<br>方法：用 LatentLens 检索邻近的上下文文本表征，发现真实事件有语义支撑、幻觉事件与其关注的音频表征语义不匹配；据此提出无需训练的 detect-then-mitigate 框架：语义支撑聚合检测幻觉，再用差异化音频掩码抑制幻觉事件、保护有支撑的区域。<br>为什么值得看：在 3 个大音频语言模型、2 个数据集上显著改善幻觉检测与缓解，且框架可解释、无需训练——音频 LLM 可靠性评估有了新工具。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25789">From Attention to Semantics: Detecting and Mitigating Sound Event Hallucinations in Large Audio-Language Models</a>
+            <p class="keywords">关键词：音频大语言模型（audio large language models）、幻觉检测（hallucination detection）、声音事件（sound events）、上海交通大学（Shanghai Jiao Tong University）、模型可靠性（model reliability）</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST<br>核心价值问题：音频 LLM 明明&quot;知道&quot;查询声音何时出现，却说不出来——时间定位答案常常是错的，人们以为是模型听不见。<br>方法：发现少数注意力头能追踪查询声音（随查询变化、随声音移动，移除或阻断会损害时间戳），但答案没有表达这些头追踪的信息；提出无需训练的头引导解码：保留模型对声音是否存在的判断，用这些头的先验重排候选时间戳。<br>为什么值得看：在模型训练后发布的新录音上，mIoU 从 0.07–0.36 提升到 0.48–0.56，在三个音频 LLM 上均有效——把&quot;说不出来&quot;与&quot;听不见&quot;区分开，给音频 LLM 时间定位提供了一个即插即用的改进。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25960">When Sounds Turn Heads: Recovering Event Timing That Audio LLMs Fail to Say</a>
+            <p class="keywords">关键词：音频 LLM（audio LLMs）、事件时间定位（event timing localization）、注意力头（attention heads）、KAIST、时间戳（timestamps）</p>
+          </li>
+          <li class="item">
+            <p>机构：Institute of Language and Speech Processing（希腊雅典研究中心）<br>核心价值问题：韵律重音多大程度上能从文字预测、模型能说出多少、语音信号又补多少，一直没有系统答案。<br>方法：在带词级重音标注的英语朗读语音上，对比冻结/微调文本模型、提示 LLM 与语音模型；并用线性探针检查 LLM 表征里编码了多少重音信息。<br>为什么值得看：文本模型三分类任务最高 68.8%、彼此错误高度重合，LLM 提示后不比词频基线好（哪怕给 500 个示例），而语音模型达 84.7%；探针显示 LLM 表征里编码的重音信息多于提示能引出的——对 TTS 重音建模与 LLM 语音理解都有启发。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25808">Language models represent more about emphasis than they can tell you</a>
+            <p class="keywords">关键词：韵律重音（prosodic emphasis）、大语言模型（large language models）、语音模型（speech models）、TTS、语言理解（language understanding）</p>
+          </li>
+          <li class="item">
+            <p>机构：康考迪亚大学、Mila、麦吉尔大学、加拿大成瘾与心理健康中心（CAMH）<br>核心价值问题：帕金森病男性多于女性，已有研究多用性别不平衡数据，模型可能带性别偏见；性别差异本身也很少被系统研究。<br>方法：用三种预训练语音模型的 embedding 加手工声学特征与多种分类器，在四个持续发音数据集的性别平衡子集上做性别特异性实验，控制性别、疾病状态与年龄。<br>为什么值得看：单性别训练的模型无法跨性别泛化，较大数据集上女性分类准确率更高——帕金森语音检测系统的开发必须把性别作为变量，临床语音 AI 的公平性评估有了实证依据。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.24741">Sex Differences in the Detection of Parkinson&#x27;s Disease from Speech</a>
+            <p class="keywords">关键词：帕金森病（Parkinson's disease）、语音检测（speech detection）、性别差异（sex differences）、临床语音（clinical speech）、康考迪亚大学（Concordia University）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1119-2030-academic">
         <header class="round-header">
           <h2 id="round-1119-2030-academic">11 月 19 日 20:30 轮</h2>
@@ -5388,6 +5490,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1116-2030-academic">
         <header class="round-header">
           <h2 id="round-1116-2030-academic">11 月 16 日 20:30 轮</h2>
@@ -5444,8 +5548,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1115-morning-academic">
         <header class="round-header">
           <h2 id="round-1115-morning-academic">11 月 15 日早报</h2>
@@ -7869,7 +7971,7 @@ Vspoof 2019 LA 上 8.45% EER 接近全监督基线 7.86%，但 2021 DF 域偏移
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 19 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 20 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {

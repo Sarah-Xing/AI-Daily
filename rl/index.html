@@ -383,6 +383,19 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1120-morning">
+        <header class="round-header">
+          <h2 id="round-1120-morning">11 月 20 日早报</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>NVIDIA 在官方技术博客介绍 Dynamo 如何作为 RL 训练的 rollout 服务层，解决 rollout 生成慢、重复计算多、权重更新分发慢和 worker 故障这几类瓶颈：KV 感知路由减少重复 prompt 计算，ModelExpress 用增量权重传输加速权重更新（CoreWeave 实测权重更新快 15 倍），并支持故障 worker 的恢复与接管。微软 AI、Cognition（训 SWE-1.7 时用过）、CoreWeave、Prime Intellect、H Company 已在 RL 流程中使用 Dynamo；开源集成覆盖 verl、NeMo RL、Slime、prime-rl。做大模型 RL 训练基建、关心 rollout 效率的人值得看。</p>
+            <a class="source-link" href="https://developer.nvidia.com/blog/?p=125485">NVIDIA Dynamo：解决 RL 训练 rollout 瓶颈的服务层</a>
+            <p class="keywords">关键词：RL 训练（RL training）、rollout 服务（rollout serving）、KV 缓存（KV caching）、NVIDIA Dynamo、模型训练基建（training infrastructure）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1119-morning">
         <header class="round-header">
           <h2 id="round-1119-morning">11 月 19 日早报</h2>
@@ -442,6 +455,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1116-1630">
         <header class="round-header">
           <h2 id="round-1116-1630">11 月 16 日 16:30 轮</h2>
@@ -468,8 +483,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1114-2030">
         <header class="round-header">
           <h2 id="round-1114-2030">11 月 14 日 20:30 轮</h2>
@@ -908,6 +921,94 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1120-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1120-morning-academic">11 月 20 日早报</h2>
+          <span class="count">16 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Reflection<br>核心价值问题：开源模型能否以前沿推理能力追赶闭源，同时把 RL 训练规模推到新量级；RL 算力继续加，还能不能换来能力提升。<br>方法：Beam 是 5013 亿参数的稀疏 MoE（激活 234 亿），面向编码、推理与 agent 任务，23.8T token 预训练、两阶段 midtraining 做到 1M 上下文；后训练用 1.05 万块 GB300 做全异步 RL，4 周生成 1 亿多 rollouts；硬件-模型协同设计，FP8/NVFP4 量化加 19.3 亿参数的推测解码器 DFlash 2。<br>为什么值得看：据称是公开实验室迄今最大规模 RL 训练之一，且能力随 RL 算力增长未见平台期；有害请求拒绝/转移率 88.9%、无害请求遵从率 81.5%，在开源权重模型的帕累托前沿上有害拒绝率最高。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26358">Beam Model Technical Report</a>
+            <p class="keywords">关键词：大规模 RL（large-scale RL）、稀疏 MoE（sparse MoE）、推理模型（reasoning models）、Reflection、开源权重（open weights）</p>
+          </li>
+          <li class="item">
+            <p>机构：弗吉尼亚理工大学、fal、佐治亚理工学院、IBM 研究院<br>核心价值问题：扩散模型 RL 后训练到底学到了什么——文本渲染、多物体组合这类看似需要输入依赖变换的能力，是否真的需要复杂的输入依赖变换。<br>方法：用一组固定 steering 向量加到冻结基座模型各 block 的输出上（与提示、token、采样种子无关），拟合公开 RL 微调 checkpoint 的速度预测，目标里不用奖励；再把向量从零初始化、直接用在线 RL 训练。<br>为什么值得看：固定偏移就能复现 6 个 RL 微调图像模型 90.0–96.3% 的奖励增益，2 个视频模型上为 89.8% 与 111.9%；在线 RL 训出的向量在文本渲染（OCR）与人类偏好（PickScore）上超过权重版 RL——RL 的大部分收益来自把预训练生成器推向它本来就能算的东西，而非学到新变换。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26627">RL Post-Training in Diffusion Transformers Is Activation Steering</a>
+            <p class="keywords">关键词：扩散模型（diffusion models）、RL 后训练（RL post-training）、激活引导（activation steering）、弗吉尼亚理工大学（Virginia Tech）、图像生成（image generation）</p>
+          </li>
+          <li class="item">
+            <p>机构：密歇根大学安娜堡分校<br>核心价值问题：RL 里要满足时序安全约束（如形式化规约），现有方法把逻辑公式转成自动机做状态增广与奖励塑形，但自动机构造只对小规模线性时序逻辑可行。<br>方法：提出 Actor-Predictor：预测器持续估计部分轨迹未来是否满足规约，学到的特征作为辅助输入给 actor，用 GRPO 与 RWR 优化；理论证明预测足够准时，学到的表示等价于自动机状态。<br>为什么值得看：在网格世界与 Isaac Lab 机器人任务上优于自动机基线，还能处理有限自动机表达不了的非正则规约（如 a^n b^n）。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26313">Actor-Predictor Architecture for Reinforcement Learning with Formal Specification Objectives</a>
+            <p class="keywords">关键词：形式化规约（formal specifications）、时序安全（temporal safety）、GRPO、密歇根大学（University of Michigan）、机器人 RL（robot RL）</p>
+          </li>
+          <li class="item">
+            <p>机构：JetBrains Research、布拉格捷克理工大学<br>核心价值问题：RLVR 训练时固定的 rollout 长度上限只是控制成本，还是会改变模型行为、损害 test-time scaling？<br>方法：发现&quot;预算内化&quot;效应：训后模型在训练预算之外几乎不多用 token，在预算附近优于基座模型，但更大预算下准确率停止提升、甚至低于基座；在 Qwen3.5-4B、Gemma4-E2B、Nemotron-3-Nano-4B 与数学、程序生成任务上均有观察，且从数学训练迁移到科学与编码任务；消融表明更强 KL 正则与更少截断能保留部分 scaling，但会牺牲预算内准确率；对截断 rollout 强制给出答案可基本消除内化，但也去掉了大部分预算内增益；对人工截断轨迹做 SFT 能复现该效应，自然短轨迹则不能。<br>为什么值得看：把效应定位到长度截断后训练而非 RL 目标本身，对推理模型训练实践有直接指导——上限设多大、怎么截断，都会影响模型在更大推理预算下的表现。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26172">Budget Internalization: Fixed-Budget RLVR Trades Test-Time Scaling for In-Budget Accuracy</a>
+            <p class="keywords">关键词：RLVR、推理预算（inference budget）、test-time scaling、JetBrains Research、长度截断（length truncation）</p>
+          </li>
+          <li class="item">
+            <p>机构：德乌斯托大学<br>核心价值问题：outcome-reward RL 到底能把先验知识改造成什么程度——当正确答案很少出现时，RL 能不能学会它？<br>方法：在可精确求解的拼图世界里从头训小语言模型（贝叶斯玩家对局，先验与正确答案精确已知），系统改变尝试组数、学习率、优化器、GRPO 变体与模型规模，统计&quot;正确动作获胜的尝试组数&quot;与学会与否的关系。<br>为什么值得看：定量给出约 35 个成功组的普适阈值，且阈值背后的&quot;计数&quot;在组数 4–256、模型 130 万–8500 万参数等各种设置下不变，是对 RL 训练机制的基础性刻画。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26084">RL Can Only Reinforce What It Sees Succeed</a>
+            <p class="keywords">关键词：outcome-reward RL、样本效率（sample efficiency）、小语言模型（small language models）、德乌斯托大学（University of Deusto）、RL 机制（RL mechanisms）</p>
+          </li>
+          <li class="item">
+            <p>机构：加州理工学院、Living Intelligence<br>核心价值问题：SFT 加 RLVR 是推理后训练的主流配方，但会把策略压成低多样性模式，重复输出几乎相同，pass@k 随之收敛甚至下降。<br>方法：提出 ROAM-GRPO：训练中检测已解好的题目，转入&quot;离模轨道&quot;，提示模型产出不同的解题策略，经 LLM 评判验证逻辑有效性与差异性后自蒸馏回策略。<br>为什么值得看：在 MATH lvl5 的 1000 题子集上训 Qwen3.5-2B，峰值 pass@16 提升 4.7%，正确输出间的嵌入余弦距离扩大约 1.5–2 倍，是针对多样性坍缩的直接修复。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25926">ROAM-GRPO: Enforcing Reasoning Diversity in GRPO via Routed Off-mode Approach Mining</a>
+            <p class="keywords">关键词：GRPO、多样性（diversity）、推理（reasoning）、加州理工学院（Caltech）、pass@k</p>
+          </li>
+          <li class="item">
+            <p>机构：南京航空航天大学<br>核心价值问题：持续 RL 要求模型学新能力又不忘旧任务，传统持续学习只强调&quot;保住知识、减少干扰&quot;，但 RL 的第一性原理是策略改进——能不能从策略改进出发重新设计回放？<br>方法：用 performance difference lemma 把历史性能变化刻画为当前策略在历史任务分布上的期望优势，据此提出对比似然回放（CoLiR）：对比最终任务策略在正确答案上的似然增益与初始策略在错误答案上的似然下降来打分选回放 prompt，任务边界处选出、在后续训练中均匀回放，KL 正则只加在回放 prompt 上。<br>为什么值得看：在 MRCL 上三个 Qwen3-VL 规模均取得最优的平均最终准确率与平均任务准确率，同时保持新任务性能；回放构建只需少量跨策略打分、无需额外生成回答。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25989">Policy Improvement-Guided Replay for Continual Reinforcement Learning</a>
+            <p class="keywords">关键词：持续 RL（continual RL）、回放（replay）、灾难性遗忘（catastrophic forgetting）、南京航空航天大学（NUAA）、多模态（multimodal）</p>
+          </li>
+          <li class="item">
+            <p>机构：得克萨斯大学奥斯汀分校<br>核心价值问题：LLM 做预测时，预测更准不等于下游决策成本更低——当预测要作为优化问题的参数时，该怎么训预测器？<br>方法：提出决策聚焦 RL（DFRL）：用下游决策后悔值的负值作奖励直接优化 LLM 预测器，不要求下游问题凸或可微；用启发式热启动与奖励修正解决奖励评估昂贵的问题。<br>为什么值得看：在真实 H&amp;M 交易与商品描述的库存规划上，相对 SFT 降低后悔值 31.4%、相对最强传统预测基线降低 12.4%，是 RL 后训练的新应用方向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25597">Decision-Focused Reinforcement Learning for LLM Post-Training</a>
+            <p class="keywords">关键词：决策聚焦学习（decision-focused learning）、LLM 后训练（LLM post-training）、库存规划（inventory planning）、得克萨斯大学奥斯汀分校（UT Austin）、后悔值（regret）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学技术大学、南洋理工大学、清华大学、卡内基梅隆大学、同济大学<br>核心价值问题：全球中期天气预报既要高效生成集合以刻画不确定性，又要服务极端事件预警等下游应用——能不能把 GPT 式&quot;预训练＋RL 后训练&quot;范式搬到天气预报？<br>方法：WeatherCraft：多尺度 tokenizer 把大气状态表成粗到细的 token 层级，Transformer 建模时间与尺度因果依赖；直接采样生成多样集合，精确 token 对数概率让 GRPO 无需对评估器求导即可最大化下游任务奖励。<br>为什么值得看：ERA5 上 15 天预报归一化 RMSE 相对最强确定性基线降低 17.6%，用 KV 缓存推理比 GenCast 快约 18 倍；奖励后训练还改善了持续陆地高温极端与海洋热极端的预报。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25570">Reinforcement-Aligned Probabilistic Weather Forecasting with Discrete Tokens</a>
+            <p class="keywords">关键词：天气预报（weather forecasting）、概率预测（probabilistic forecasting）、GRPO、中国科学技术大学（USTC）、集合预报（ensemble forecasting）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京航空航天大学、卓驭科技（深圳）、浙江大学<br>核心价值问题：视觉-语言导航通常要拿导航域数据微调 VLM 大脑来预测几何目标，这会大幅改动基座权重、损害通用视觉能力——能不能完全不微调大脑就导航？<br>方法：ZeroVLN 慢快框架：给大脑配语义工具调用接口，用自然语言把移动决策传给动作专家；先适配动作专家执行移动请求，再用闭环 RL 联合优化大脑的移动决策与动作专家的连续执行。<br>为什么值得看：在 VLN-CE 基准上大幅超越基于 SFT 的分层 VLN 方法，同时大脑权重几乎不变、通用能力基本保留；据称是首个零导航域 SFT、闭环 agentic RL 联合优化快慢双策略的 VLN 框架。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26414">ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain</a>
+            <p class="keywords">关键词：视觉语言导航（vision-language navigation）、零样本（zero-shot）、慢快框架（slow-fast framework）、北京航空航天大学（Beihang University）、具身智能（embodied AI）</p>
+          </li>
+          <li class="item">
+            <p>机构：加州大学圣迭戈分校、佐治亚理工学院、英伟达<br>核心价值问题：用 EDA 反馈做 RL 正在推进硬件设计 LLM，但要训出硬件工程 agent，需要覆盖多任务、跨工具调用保持状态、支持大层级与并行 rollout 的环境——目前还没有。<br>方法：SiliconGym：解耦版本化工作区、预算执行与验收门控评分，从模块级 RTL、testbench、PPA 任务扩展到多轮仓库修复与全层级 SoC 流程；流式分发让工具检查与生成重叠。<br>为什么值得看：据称是首个面向硬件设计与验证的跨任务、跨工具链通用 RL 环境；256 条回答的 RL 批次比原生 ChipSeek 快 21.9%，开源后端训出的功能正确性能干净迁移到商业仿真。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25658">SiliconGym: A Versatile Reinforcement Learning Environment for Agentic EDA</a>
+            <p class="keywords">关键词：EDA、硬件设计（hardware design）、RL 环境（RL environments）、加州大学圣迭戈分校（UC San Diego）、芯片验证（chip verification）</p>
+          </li>
+          <li class="item">
+            <p>机构：达姆施塔特工业大学（计算机系）、德国人工智能研究中心（DFKI）、卡内基梅隆大学、黑森州人工智能中心<br>核心价值问题：全身控制的模仿学习与 RL 缺一个统一基准——形态多、仿真后端不一、动作捕捉数据与真机部署各自分散。<br>方法：LocoMuJoCo：MuJoCo（CPU）与 MJX/MjWarp（GPU）统一 API，9 种人形、3 种骨骼、4 种四足形态，每种人形配精选动作捕捉数据并支持 AMASS/LAFAN1 重定向；观测、奖励、控制模式、地形与域随机化均可插拔，附 JAX 实现的 RL/IL 算法与真机部署仓库。<br>为什么值得看：面向全身控制的综合性开源基准，MIT 开源，对机器人 RL 基础设施有直接价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26293">LocoMuJoCo: A Comprehensive Imitation Learning Benchmark for Whole-Body Control</a>
+            <p class="keywords">关键词：全身控制（whole-body control）、模仿学习（imitation learning）、人形机器人（humanoid robots）、达姆施塔特工业大学（TU Darmstadt）、开源基准（open benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、中国电信人工智能研究院（TeleAI）、上海科技大学、上海交通大学、Gamma Robotics<br>核心价值问题：人形行为基础模型靠大规模动作模仿与并行 RL 获得多样技能，但宽泛的行为能力不等于在不同物理条件下的精确执行——策略容易为折中而牺牲环境特异的精度。<br>方法：ECHO 上下文内行为基础模型：混合与退火采样在一阶段预训练中建立行为先验；上下文表示与残差适配从交互历史中学习结构化动力学表示，指导对冻结先验的残差修正，无需测试时参数更新即可适配。<br>为什么值得看：在多种动作与物理条件下优于全部基线，并在 Unitree G1 真机上完成全身遥操作（含极限杂技、地形交互）与负载自适应演示。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25778">ECHO: In-Context Behavior foundation model for Humanoid Whole-Body Control</a>
+            <p class="keywords">关键词：人形机器人（humanoid robots）、行为基础模型（behavior foundation models）、上下文学习（in-context learning）、浙江大学（Zhejiang University）、遥操作（teleoperation）</p>
+          </li>
+          <li class="item">
+            <p>机构：FuturixAI Research<br>核心价值问题：RL 只能教模型奖励能识别的东西——答案检查器精确但需要参考答案，学到的奖励模型与 LLM 评判通用但分数不是概率。<br>方法：RLCDR：把 LLM 转成决策模型，对回答提类型化问题（&quot;最终答案对吗？&quot;&quot;第一处错误在哪一步？&quot;），一次前向读出概率分布，对选项顺序去偏、约一百个标签做校准；用此作无参考奖励训 GRPO。<br>为什么值得看：在 MATH500 上 72.2% 提到 76.8%，追平答案键监督的 76.9%，且无奖励 hack 迹象；找首错步骤优于专用 7B 过程奖励模型（ProcessBench F1 0.772 对 0.722）。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25135">Calibrated Decision Rewards: Training Language Models with a Judge That Knows How Sure It Is</a>
+            <p class="keywords">关键词：奖励模型（reward models）、校准（calibration）、GRPO、FuturixAI、数学推理（math reasoning）</p>
+          </li>
+          <li class="item">
+            <p>机构：达姆施塔特工业大学、hessian.AI<br>核心价值问题：让 LLM 估计自己答案的置信度时，逐题按对错给奖励会把置信度推向 0 或 1——理论最优却无法实现，还破坏了跨题可比性，选答时反而没用。<br>方法：CARE 跨题弃答奖励估计：在一组问答上、多个风险容忍度下由置信度导出弃答阈值，每个置信度按它落在阈值正确一侧与否获得奖励——置信度相对其他题被强化，而非对照自身的二值标签。<br>为什么值得看：5% 风险下覆盖率从 0.8% 跃升至 42.4%，且在 HotpotQA 上训练后跨分布泛化到常识、推理与数学基准（12.3% 提到 23.6%）。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25292">Cross-Question Reliable Reinforcement Learning</a>
+            <p class="keywords">关键词：置信度估计（confidence estimation）、可靠 RL（reliable RL）、弃答（abstention）、达姆施塔特工业大学（TU Darmstadt）、跨分布泛化（cross-distribution generalization）</p>
+          </li>
+          <li class="item">
+            <p>机构：蒙特利尔综合理工学院、多伦多大学、Mila（魁北克人工智能研究所）、向量研究所（Vector Institute）<br>核心价值问题：分布 RL 想学完整的回报分布，但现有算法只覆盖很窄的一类分布。<br>方法：φTD：在频域（特征函数）上计算损失，统一分位数与类别式两大流派，并能学习以往无法刻画的连续混合分布等更宽的参数族。<br>为什么值得看：方法论上的统一与扩展，在合成基准与大规模深度 RL 环境上都带来性能提升。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25208">φTD: Distributional Reinforcement Learning using Characteristic Functions</a>
+            <p class="keywords">关键词：分布 RL（distributional RL）、特征函数（characteristic functions）、蒙特利尔综合理工学院（Polytechnique Montréal）、Mila、价值分布（value distributions）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1119-1630-academic">
         <header class="round-header">
           <h2 id="round-1119-1630-academic">11 月 19 日 16:30 轮</h2>
@@ -1263,6 +1364,8 @@
           </li>
         </ol>
       </section>
+<details class="archive">
+        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1116-morning-academic">
         <header class="round-header">
           <h2 id="round-1116-morning-academic">11 月 16 日早报</h2>
@@ -1351,8 +1454,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1115-1230-academic">
         <header class="round-header">
           <h2 id="round-1115-1230-academic">11 月 15 日 12:30 轮</h2>
@@ -2183,7 +2284,7 @@ on>
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 19 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 20 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
