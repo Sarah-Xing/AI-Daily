@@ -383,6 +383,34 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1121-morning">
+        <header class="round-header">
+          <h2 id="round-1121-morning">11 月 21 日早报</h2>
+          <span class="count">4 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Picsart 11 月 20 日上线 Picsart Platform，把自家平台背后的创作 AI 能力开放给开发者与企业：一个集成即可调用 30 多家供应商的 250+ 视频、音频、图像与文本模型，外加 Picsart 自家的编辑模型；提供 REST API、Python/TypeScript SDK、CLI、试玩场和 MCP 服务器（Picsart Media Studio，可接 Claude 等助手）。值得看的是&quot;模型聚合层&quot;正在成为一类产品：模型每周上新，开发者不用再逐家接 API；但要注意有第三方视频指出其定价相对官方有明显加价（该说法未经核实，仅作提醒）。</p>
+            <a class="source-link" href="https://www.businesswire.com/news/home/20261120520968/en/Picsart-Opens-the-AI-Behind-Its-Platform-to-Developers-Businesses">Picsart Opens the AI Behind Its Platform to Developers &amp; Businesses（BusinessWire 官方通稿）</a>
+            <p class="keywords">关键词：创作 AI（creative AI）、模型聚合（model aggregation）、API 平台（API platforms）、视频生成（video generation）、MCP</p>
+          </li>
+          <li class="item">
+            <p>AMD 11 月 20 日在 ROCm 博客发布 Nitro-P：端到端像素空间文生图扩散框架，抛弃 VAE 解码器，改用 patch 级 E-MMDiT 做语义建模 + 轻量 U-Net 做像素重建的分层设计，文本编码用 Qwen3-1.7B，2500 万图文对从头训练。单张 Instinct MI300X 上 512×512 时 GenEval 0.88、10.26 样本/秒，1024×1024 时 GenEval 0.87；一步蒸馏版 512×512 达 90.02 样本/秒、GenEval 0.85。权重与完整训练代码均已开源。值得看的是像素空间路线在 AMD 自家硬件上拿出了可用的质量-速度平衡，且是完全开源可复现的基线。</p>
+            <a class="source-link" href="https://rocm.blogs.amd.com/artificial-intelligence/nitro-p/README.html">AMD 发布 Nitro-P（ROCm 官方博客）</a>
+            <p class="keywords">关键词：文生图（text-to-image）、像素空间扩散（pixel-space diffusion）、ROCm、AMD、开源（open source）</p>
+          </li>
+          <li class="item">
+            <p>Kling AI 11 月 19 日在 X 上宣布 Kling 4.0 开始支持原生 4K 输出，10-bit HDR 在 4K 与 1080p 下均可用，画面无需再经过放大直接以交付分辨率出片，高光与阴影细节保留更好、色带更少。此前这两项在 Kling 4.0 功能页上一直标为&quot;即将推出&quot;，这次正式兑现；但官方未说明 HDR 标准、编码封装与 4K 渲染价格。这是昨日窗口内的发布、昨日早报未推，特此补推。</p>
+            <a class="source-link" href="https://www.vp-land.com/stories/kling-4-0-adds-native-4k-and-10-bit-hdr-output">Kling 4.0 开启原生 4K 与 10-bit HDR（VP Land 报道，媒体消息；源为 Kling AI 官方 X 帖）</a>
+            <p class="keywords">关键词：视频生成（video generation）、4K、HDR、Kling、AI 视频（AI video）</p>
+          </li>
+          <li class="item">
+            <p>FlashML-org/FreeVideo 是一个本地推理引擎，把 MiniMax H3 视频生成模型搬到用户自己的消费级 GPU 上跑，按硬件自适应内存与算力策略，11 月 20 日单日新增 383 星、累计约 3.3K 星。值得看的是开源视频模型从&quot;云端 API&quot;走向&quot;本地可跑&quot;的配套工具正在成型；但 MiniMax H3 本身的社区许可证限制较多（不含美/欧/英/韩等地区），本地跑之前须先确认授权范围。</p>
+            <a class="source-link" href="https://github.com/FlashML-org/FreeVideo">FreeVideo：本地运行 MiniMax H3 的推理引擎（GitHub 仓库）</a>
+            <p class="keywords">关键词：本地推理（local inference）、视频生成（video generation）、MiniMax、消费级 GPU（consumer GPUs）、开源工具（open-source tools）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1120-1630">
         <header class="round-header">
           <h2 id="round-1120-1630">11 月 20 日 16:30 轮</h2>
@@ -608,7 +636,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1117-2030">
+                  <details class="archive">
+        <summary>历史归档（11 月 17 日及之前）</summary>
+<section class="round" aria-labelledby="round-1117-2030">
         <header class="round-header">
           <h2 id="round-1117-2030">11 月 17 日 20:30 轮</h2>
           <span class="count">1 条</span>
@@ -621,7 +651,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1117-1630">
+<section class="round" aria-labelledby="round-1117-1630">
         <header class="round-header">
           <h2 id="round-1117-1630">11 月 17 日 16:30 轮</h2>
           <span class="count">3 条</span>
@@ -644,7 +674,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1117-1230">
+<section class="round" aria-labelledby="round-1117-1230">
         <header class="round-header">
           <h2 id="round-1117-1230">11 月 17 日 12:30 轮</h2>
           <span class="count">1 条</span>
@@ -657,8 +687,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1116-1630">
         <header class="round-header">
           <h2 id="round-1116-1630">11 月 16 日 16:30 轮</h2>
@@ -3614,6 +3642,79 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1121-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1121-morning-academic">11 月 21 日早报</h2>
+          <span class="count">13 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：弗吉尼亚理工大学、英伟达<br>核心价值问题：扩散蒸馏把教师的多步采样压缩成几步，分布匹配类方法常用 reverse-KL 目标，有 mode-seeking 偏差，会牺牲样本多样性；能否在支持任意步数采样的同时恢复教师的完整后验分布？<br>方法：提出后验匹配蒸馏（PMD），把 mode-covering 的后验采样与任意步生成结合：在固定噪声状态下，匹配学生样本的指数重加权均值与对应的教师后验均值；在高斯 corruption 下，指数倾斜后验均值只需一次教师评估即可得到；并证明在一邻域内匹配倾斜均值可唯一确定完整后验；整个过程无需辅助的学生分数网络。<br>为什么值得看：在 SDXL 与 FLUX.2 4B 上，PMD 在 4 步方法中取得最好的 FID，同时提示对齐与感知质量也领先或持平。需注意摘要未给出具体 FID 数值，量级需看正文。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26629">Posterior Matching Distillation</a>
+            <p class="keywords">关键词：扩散蒸馏（diffusion distillation）、后验匹配（posterior matching）、图像生成（image generation）、SDXL、FLUX</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学技术大学、上海交通大学、不列颠哥伦比亚大学、哈尔滨工业大学<br>核心价值问题：交互式游戏世界模型用视频模型把引擎给出的场景表示渲染成画面，但长时游玩中难以跟上不断变化的条件、在不同 proxy 表示与目标风格之间也难以保持视觉连续。<br>方法：提出 ContextRenderer，自回归视频扩散框架：动态上下文学习（DCL）做 chunk 级交互监督，循环历史压缩（RHC）在有限 token 预算内保持视觉连续，跨表示流对齐（CRFA）把 proxy 重建与外观/交互变化连起来；并自建交互数据集 WorldPrism（agent 搭建的世界、AAA 游戏实录与开源视频）。<br>为什么值得看：在 GWM-Bench 与 Solar-Bench 上优于以往方法，面向&quot;可玩的游戏世界渲染&quot;这个真实场景。需注意摘要未给出具体指标数字，领先幅度需看正文。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25838">ContextRenderer: Dynamic-Context Video Generation for Interactive Game Worlds</a>
+            <p class="keywords">关键词：游戏世界模型（game world models）、视频生成（video generation）、交互式渲染（interactive rendering）、自回归（autoregressive）、视觉连续性（visual continuity）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学技术大学<br>核心价值问题：多镜头视频生成每 pass 只能渲染有限时长，长片要靠拼接局部片段，叙事推进与视觉身份会在镜头之间漂移。<br>方法：提出 CaT-Movie，全局故事规划器加局部门窗渲染器：规划器用大语言模型扩展用户请求、由确定性代码维护分镜板，编译出自包含的分镜提示并从生成历史索引参考帧；渲染器用参考路由稀疏自注意力与分镜交叉注意力传递身份、同时隔离各分镜的文本条件；并自建 35 万+电影镜头数据集（语义状态转移、实体 grounding、多粒度请求标注）与 CaT-MBench 基准。<br>为什么值得看：直接针对长片连贯性这个真痛点，方法、数据与评测配套。需注意摘要未给出具体指标数字。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25620">CaT-Movie: Balancing Global Planning and Local Rendering for Long Multi-Shot Video Generation</a>
+            <p class="keywords">关键词：多镜头视频生成（multi-shot video generation）、长视频（long videos）、故事规划（story planning）、身份一致性（identity consistency）、电影（cinema）</p>
+          </li>
+          <li class="item">
+            <p>机构：阿里巴巴高德 AMAP、南洋理工大学<br>核心价值问题：多数世界模型只重视频美感，物理 grounding 弱、长时间几何不一致，根源是缺乏显式 4D 建模。<br>方法：提出 Plan4D，可生成的可规划 4D 世界模型：模型拼接架构把 Depth Anything 3 与 LongCat-Video 结合，并加辅助 DPT 头预测场景流；从观测场景上下文与文本指定动作出发，同时预测未来 RGB 视频与稠密 4D 几何（深度、相机、点云、场景流）。<br>为什么值得看：能规划并生成复杂、长程、细粒度的动态 3D 场景动作，视觉保真与几何精度同步提升。需注意摘要未给出具体数字，评测细节需看正文。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26516">Plan4D: Generative Plannable 4D Worlds</a>
+            <p class="keywords">关键词：4D 世界模型（4D world models）、几何建模（geometric modeling）、场景流（scene flow）、视频生成（video generation）、规划（planning）</p>
+          </li>
+          <li class="item">
+            <p>机构：厦门大学、东南大学、香港城市大学、新加坡国立大学<br>核心价值问题：高分辨率能让视频世界模型渲染更精细的场景结构与纹理，但直接生成高分辨率视频的计算与显存成本极高。<br>方法：提出 ScaleWorld，因果视频模型把低分辨率世界预测与高分辨率精化统一进同一个共享 backbone：每个视频 chunk 先做低分辨率预测、再一步高分辨率精化，无需单独的精化模型；并为预测与精化分别维护因果状态（低分长历史、高分短历史）；再用任务非对称在线策略蒸馏（TA-OPD）把专家教师的预测与精化行为迁入共享学生。<br>为什么值得看：一个模型同时做预测与精化、支持流式高分辨率世界视频，架构上干净。需注意摘要未给出具体指标数字。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26615">ScaleWorld: High-Resolution World Generation through Shared Prediction and Refinement</a>
+            <p class="keywords">关键词：高分辨率视频生成（high-resolution video generation）、世界模型（world models）、流式生成（streaming generation）、因果建模（causal modeling）、蒸馏（distillation）</p>
+          </li>
+          <li class="item">
+            <p>作者：Kun Zhou、Wenmian Yang、Zhensheng Wang、Weijia Jia<br>核心价值问题：DiT 缓存加速已是标配，但缓存按图像级指标评判，不检查渲染的文字是否正确；缓存会在不被察觉的情况下改写文字。<br>方法：把缓存误差沿 classifier-free guidance（CFG）分解，定位到 guidance 项（条件与无条件预测之差，缓存外推最差）；提出 GuideCache，只对 guidance 误差最大的 token 重算 CFG 双分支，复用缓存已存的 guidance 项。<br>为什么值得看：在 Z-Image 上，TaylorSeer 省 2.9 倍 FLOPs 时词准确率从 62% 掉到 46%（而 ImageReward 与 CLIP 分数几乎不变，说明图像级指标查不出这个问题）；GuideCache 在省 2.4 倍 FLOPs 下恢复到全量计算的提示保真度，在 Z-Image 上文字渲染不亚于甚至优于 ToC。需注意摘要在 ToC 对比处表述不完整，具体口径需看正文。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25382">Text Lives in the Guidance: Preventing Silent Text Rewriting in Cached Diffusion Transformers</a>
+            <p class="keywords">关键词：扩散模型加速（diffusion acceleration）、缓存（caching）、文字渲染（text rendering）、DiT、推理优化（inference optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：哈尔滨工业大学<br>核心价值问题：视频世界模型到底学到了物理定律，还是只是在模仿运动？整体运动与外观分数回答不了这个问题。<br>方法：用非线性受迫响应做探针：激励摇晃悬挂物的支座，引入双视觉-数值条件，把六个图生视频 backbone 只用 flow-matching 损失适配来预测该运动；再用动力学与几何的泰勒展开设计三档测试检验学到了哪一层规律。<br>为什么值得看：Wan 预测准确且泛化到未见过的激励、物体、姿态与场景；六个模型都复现了线性响应（含共振），五个捕捉到高阶动力学（含非线性软化），而软化在训练中仅占摆动平方位移的 0.74%；双摆与摇摆块的扩展显示持续动力学比短暂撞击学得更忠实。需注意结论集中于受控摆系统，作者也指出学习到的动力学可能因状态估计或传播出错而不显现。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25626">Physical Laws without Physics Loss? Probing Learned Dynamics in Video World Models through Forced Response</a>
+            <p class="keywords">关键词：视频世界模型（video world models）、物理规律（physical laws）、动力学（dynamics）、探针（probing）、泛化（generalization）</p>
+          </li>
+          <li class="item">
+            <p>机构：华中科技大学、腾讯<br>核心价值问题：流式世界模型的推测方法用外部打分器验算草稿：打分只覆盖打分器自身的评价维度、还要额外解码与打分成本，而且分数只给结论不给修正，被拒的草稿只能 costly 重生成。<br>方法：提出 SpecWM，统一的免训练推理框架：用目标模型的潜速度场直接在潜空间验算草稿 chunk，验算同时产出可复用的修正量；两档阈值三分流——接受、一步精化（提感知质量）、三步精化（强化相机跟随与轨迹一致）或拒绝。<br>为什么值得看：在 WBench Navigation 上比目标模型快 1.63 倍、视觉质量更好，NavScore 从草稿的 75.99 提升到 85.63。需注意评测集中于导航场景。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26211">SpecWM: Turning Verification into Refinement for Streaming World Models</a>
+            <p class="keywords">关键词：流式世界模型（streaming world models）、推测解码（speculative decoding）、潜空间验证（latent verification）、导航（navigation）、推理加速（inference acceleration）</p>
+          </li>
+          <li class="item">
+            <p>机构：乔治梅森大学、独立研究者<br>核心价值问题：全景图可作多镜头视频生成的共享场景背景，但现有全景生成只吃文本或单张输入图。<br>方法：单个模型从文本 + 0–4 张四相机 rig 视角图生成完整等距柱状全景：两阶段微调预训练文生图 rectified-flow transformer，第一阶段把各条件视图连同相机槽位 ID 追加进 token 序列、视图数训练时变化，一个权重覆盖全部输入设置；第二阶段针对无条件视图覆盖的区域提出 UR-GRPO，用视觉语言模型成对偏好奖励该区域的生成候选（监督训练的损失只看 ground truth 噪声潜变量、从不打分模型自己生成的全景，所以改用 RL）。<br>为什么值得看：一个权重覆盖 0–4 视图全部设置，未覆盖区域用 RL 而非监督微调来改进，思路干净。需注意摘要未给出具体指标数字。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25389">Zero to Four Views: Unified Panorama Generation and Preference RL for Unobserved Regions</a>
+            <p class="keywords">关键词：全景图生成（panorama generation）、多视图（multi-view）、偏好优化（preference optimization）、RL、文生图（text-to-image）</p>
+          </li>
+          <li class="item">
+            <p>机构：首尔国立大学、EverEx<br>核心价值问题：文生图 RL 后训练依赖外部奖励模型（需标注偏好、易被 reward hacking）；而生成器自身去噪准确率作为内在奖励时，同一 prompt 组内的绝对自信心主要反映图像复杂度，排正确样本近乎随机。<br>方法：提出 CANDOR（Contrastive Alignment from Null-referenced Denoising lOg-Ratio），用共享噪声探针下无条件与条件去噪误差的对数比，衡量 prompt 对模型去噪自身样本的帮助，抵消与 prompt 无关的难度；作为 Flow-GRPO 的唯一奖励。<br>为什么值得看：同 prompt 两两比较中 60%（组合生成）与 63%（文字渲染）排对更好样本；相对基底与先前的绝对自信心奖励，文字渲染、美学与人类偏好分数均提升，且更强的 CFG 达不到同样增益。需注意 60%/63% 本身不算高，胜在无需外部奖励模型。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25457">CANDOR: Contrastive Self-Denoising Rewards for Label-Free Text-to-Image Post-Training</a>
+            <p class="keywords">关键词：文生图（text-to-image）、RL 后训练（RL post-training）、自监督奖励（self-supervised rewards）、去噪（denoising）、无标注学习（label-free learning）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学院深圳先进技术研究院、中国科学院大学、澳门大学<br>核心价值问题：DiT 每采样步都要完整前向，训练无关缓存靠复用或预测网络输出，但常用方法需按模型校准跳过准则或维护逐层预测历史。<br>方法：把动态模态分解（DMD）用于扩散采样：对一小段历史的精确速度拟合 DMD，只预测调度器消费的速度；带 horizon 感知的门控决定何时跳过——每次真实评估时把网络输出与预测对比，误差越大越快重新评估，并设连续跳过步数上限。<br>为什么值得看：无需训练、无需逐模型离线校准曲线、内存开销可忽略；在四个 SOTA 图/视频模型上 2.6–3.8 倍加速且高度保真基底输出。需注意摘要未给出保真度具体指标。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25689">D3-Cache: Accelerating Diffusion Models with Dynamic Mode Decomposition</a>
+            <p class="keywords">关键词：扩散模型加速（diffusion acceleration）、缓存（caching）、动态模态分解（dynamic mode decomposition）、无训练（training-free）、推理优化（inference optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：华中科技大学、新加坡国立大学等<br>核心价值问题：现有 3D 生成从固定输入合成场景，难以随新观测持续扩展与修正世界；迭代方法把真实观测与生成内容融进同一表示、把生成内容当成既定结构，早期错误会累积。<br>方法：提出 World-delta，不确定性感知持久世界建模 + delta 引导扩散：视觉证据编码把新图像的几何语义线索融进统一世界 token；观测校准世界建模区分观测支撑内容与临时补全假设，新证据驱动选择性 world delta 修正冲突假设、保留已支撑内容；增量世界扩散只在 delta 掩码区域生成。<br>为什么值得看：把&quot;世界&quot;做成可随观测持续修正的持久状态而非一次性生成，面向具身与建图类持续观测场景。需注意摘要未给出具体指标数字。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25802">World-delta: Continually Integrating Observations for Incremental 3D Scene Generation</a>
+            <p class="keywords">关键词：3D 场景生成（3D scene generation）、持续建模（continual modeling）、世界模型（world models）、不确定性（uncertainty）、具身智能（embodied AI）</p>
+          </li>
+          <li class="item">
+            <p>CVPR 2027 补充材料截止 11 月 23 日（提醒）：CVPR 2027（2027 年 6 月 20–25 日，西雅图）主会投稿已于 11 月 16 日截止，补充材料截止为 11 月 23 日（AoE）。ICCV 2027 与 SIGGRAPH 2027 的征稿尚未发布。</p>
+            <a class="source-link" href="https://cvpr2023.thecvf.com/Conferences/2027/Dates">CVPR 2027 日期与截止时间（官方）</a>
+            <p class="keywords">关键词：CVPR 2027、投稿截止（submission deadline）、计算机视觉（computer vision）、会议（conferences）、补充材料（supplementary materials）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1120-1230-academic">
         <header class="round-header">
           <h2 id="round-1120-1230-academic">11 月 20 日 12:30 轮</h2>
@@ -3786,7 +3887,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1117-morning-academic">
+      <details class="archive">
+        <summary>历史归档（11 月 17 日及之前）</summary>
+<section class="round" aria-labelledby="round-1117-morning-academic">
         <header class="round-header">
           <h2 id="round-1117-morning-academic">11 月 17 日早报</h2>
           <span class="count">9 条</span>
@@ -3839,8 +3942,6 @@
           </li>
         </ol>
       </section>
-<details class="archive">
-        <summary>历史归档（11 月 12 日及之前）</summary>
       <section class="round" aria-labelledby="round-1116-morning-academic">
         <header class="round-header">
           <h2 id="round-1116-morning-academic">11 月 16 日早报</h2>
@@ -5610,7 +5711,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 20 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 21 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
