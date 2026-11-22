@@ -383,6 +383,44 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1122-morning">
+        <header class="round-header">
+          <h2 id="round-1122-morning">11 月 22 日早报</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Lakonik（斯坦福与 Luma AI 相关研究项目）发布 pi-H3 1.0：为 MiniMax H3 提供的 2 步/4 步适配器，结合 pi-Flow v2 少步蒸馏与 DWD（Decoding Without a Decoder）技术，DWD 版在最后一步直接预测像素、不经过视频 VAE 解码。作者称单张 B200 上 5 秒 768p 视频 2 步仅需 3.81 秒、比官方快速版 Sol-H3 快 2.4–2.7 倍；权重、推理代码、Gradio 演示与 ComfyUI 支持均已放出。值得看的是&quot;无 VAE 解码器&quot;正在成为视频/图像生成加速的一条新路线，且这是 H3 生态从云端 API 走向本地可跑的又一块拼图；但作者自己注明 DWD 用于 H3&quot;仍属实验性&quot;，且适配器受 MiniMax H3 社区许可证约束（美/欧/英/韩等地区受限）。</p>
+            <a class="source-link" href="https://huggingface.co/Lakonik/pi-H3">pi-H3：2–4 步生成 MiniMax H3 视频，无需 VAE 解码器（Hugging Face 模型页 Lakonik/pi-H3）</a>
+            <p class="keywords">关键词：视频生成（video generation）、少步蒸馏（few-step distillation）、MiniMax H3、本地推理（local inference）、无 VAE 解码（decoder-free）</p>
+          </li>
+          <li class="item">
+            <p>法国开源实验室 Kyutai 发布 AURA（AUdio-dRiven streaming Avatar）：输入一张肖像照加实时语音，流式生成口型同步的说话头视频，因果架构加滚动 KV 缓存、无需多秒音频前瞻。AURA 1.3B 在单张 H100 上以 20.7 fps 生成 576p 视频（快于 16 Hz 播放速率，可实时交互），AURA 5B 以 9.7 fps 生成 720p；论文、代码、两个尺寸的权重、3 万条合成视频数据集与在线演示全部公开。值得看的是这是首个开源权重的实时流式 talking-head 模型，可直接接进语音助手做&quot;会动的脸&quot;；但两个模型均为非商业许可证（1.3B 为 CC BY-NC 4.0，5B 为 Snap 非商业许可），且主要面向英语语音。</p>
+            <a class="source-link" href="https://kyutai.org/blog/2026-11-20-aura/">AURA：实时音频驱动流式虚拟人（Kyutai 官方博客，2026-11-20）</a>
+            <p class="keywords">关键词：虚拟人（talking head）、音频驱动（audio-driven）、实时流式（real-time streaming）、开源权重（open weights）、Kyutai</p>
+          </li>
+          <li class="item">
+            <p>Meta 在编码 agent Muse Code 中加入原生 3D 生成功能：agent 在编码会话里可按文字描述或单张参考图生成带纹理的 3D 网格，以 GLB 文件存入项目，用于游戏、3D 打印与场景可视化；分 Nano（快、便宜）与 Pro（高质量）两档，计入 Muse Code 订阅额度（基础套餐约每 5 小时 30 个模型）。值得看的是生成式 3D 正在被嵌进开发工作流而非独立工具，agent 可自主判断何时&quot;做个 3D 模型最合适&quot;；但生成的是静态未绑定骨骼的单个物体，角色动画与场景组装仍需另接工具，且不提供公开 API。</p>
+            <a class="source-link" href="https://dev.meta.ai/docs/muse-code/asset-generation">Muse Code 3D 资产生成（Meta 官方文档，dev.meta.ai）</a>
+            <p class="keywords">关键词：3D 生成（3D generation）、编码 agent（coding agents）、Muse Code、Meta、GLB</p>
+          </li>
+          <li class="item">
+            <p>Google 在 Gemini 应用中上线 GIF 生成功能：用文字、图片或视频可直接生成约 3 秒的循环 GIF，可复制粘贴或下载为 .gif 文件，底层是现有的 Gemini Omni 1.2 Flash 视频模型（11 月 5 日已发布），这次新的是 GIF 输出形态而非新模型。功能向 8 个国家（美、加、英、澳、日、韩、德、法）18 岁以上用户逐步开放。值得看的是视频生成正在下沉为日常轻量表达工具（表情包、反应动图），而非只做长视频；但这只是既有模型的功能叠加、创新有限。</p>
+            <a class="source-link" href="https://www.digitaltrends.com/cool-tech/google-gemini-ai-gif-generation/">Gemini 现在能自己做 GIF 了（Digital Trends 报道，媒体消息；源为 @GeminiApp 官方 X 帖，2026-11-20）</a>
+            <p class="keywords">关键词：GIF 生成（GIF generation）、Gemini、视频模型（video models）、轻量表达（lightweight expression）、Google</p>
+          </li>
+          <li class="item">
+            <p>Ideogram 发布 4.6 版图像生成与编辑模型：原生 4K 输出（最高 4096×4096，无需放大）、Precise Edit 支持多步连续精修且编辑区域外的内容漂移更小、色彩准确度提升，API 新增 Generate 与 Precise Edit 两个端点，4K 生成每张 $0.06–$0.20、4K 编辑最高 $0.60。Ideogram 称其在 Rapidata 多步图像编辑榜上以 1892 分居首，并表示将跳过 4.5、直接开源 4.6 权重（未给时间）。值得看的是&quot;多步编辑不漂移&quot;直击生图编辑的真痛点，4K 原生输出也与 Kling 4.0 同日呼应了&quot;分辨率之争&quot;；但榜单快照日期（11 月 17 日）早于发布日、且与 4.5 的分差在误差范围内，厂商分数仅供参考。</p>
+            <a class="source-link" href="https://ideogram.ai/models/4.6">Ideogram 4.6 模型页（Ideogram 官方）</a>
+            <p class="keywords">关键词：图像生成（image generation）、4K、图像编辑（image editing）、多步精修（multi-step refinement）、Ideogram</p>
+          </li>
+          <li class="item">
+            <p>Google 在 Genie 4 登陆 Project Genie（11 月 18 日，Ultra 订阅用户）之后一天，将其开放给开发者：通过 Gemini API（Interactions API）与 Google AI Studio 调用 models/genie-4，可用文字或参考图开局、键盘与新提示实时操控，输出 720p/24fps 立体声同步的世界流，每会话上限 120 秒，视频输出约 $17.50/百万 token（约合每秒 $0.10 左右）。值得看的是世界模型从&quot;围观演示&quot;走向&quot;可编程调用&quot;，Google 明确建议的用途包括交互体验原型、空间概念可视化与机器人/agent 训练数据；但会话短、对象持久性在 45–90 秒后下降，且需付费 API 密钥、无免费层。</p>
+            <a class="source-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/">Genie 4 现已通过 Gemini API 提供（Google 官方博客，2026-11-19）</a>
+            <p class="keywords">关键词：世界模型（world models）、Genie 4、开发者 API（developer APIs）、交互式视频（interactive video）、Google</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1121-1630">
         <header class="round-header">
           <h2 id="round-1121-1630">11 月 21 日 16:30 轮</h2>
@@ -592,7 +630,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1118-2030">
+                                                <details class="archive">
+        <summary>历史归档（11 月 18 日及之前）</summary>
+<section class="round" aria-labelledby="round-1118-2030">
         <header class="round-header">
           <h2 id="round-1118-2030">11 月 18 日 20:30 轮</h2>
           <span class="count">2 条</span>
@@ -610,7 +650,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1118-1630">
+<section class="round" aria-labelledby="round-1118-1630">
         <header class="round-header">
           <h2 id="round-1118-1630">11 月 18 日 16:30 轮</h2>
           <span class="count">1 条</span>
@@ -623,7 +663,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1118-1230">
+<section class="round" aria-labelledby="round-1118-1230">
         <header class="round-header">
           <h2 id="round-1118-1230">11 月 18 日 12:30 轮</h2>
           <span class="count">2 条</span>
@@ -641,7 +681,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1118-0830">
+<section class="round" aria-labelledby="round-1118-0830">
         <header class="round-header">
           <h2 id="round-1118-0830">11 月 18 日 08:30 轮</h2>
           <span class="count">2 条</span>
@@ -659,7 +699,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1118-morning">
+<section class="round" aria-labelledby="round-1118-morning">
         <header class="round-header">
           <h2 id="round-1118-morning">11 月 18 日早报</h2>
           <span class="count">1 条</span>
@@ -672,8 +712,6 @@
           </li>
         </ol>
       </section>
-                  <details class="archive">
-        <summary>历史归档（11 月 17 日及之前）</summary>
 <section class="round" aria-labelledby="round-1117-2030">
         <header class="round-header">
           <h2 id="round-1117-2030">11 月 17 日 20:30 轮</h2>
@@ -3678,6 +3716,84 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1122-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1122-morning-academic">11 月 22 日早报</h2>
+          <span class="count">14 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：南京大学、KlingAI Research、北京大学、香港科技大学（广州）、香港大学、香港科技大学<br>核心价值问题：Code2Video 用 agent 生成的 3D 代理指导视频生成，但怎么构建代理、怎么写提示才能得到最好效果，此前缺乏系统研究。<br>方法：通过对照实验与盲测研究代理粒度、物理仿真与提示策略的取舍；据此提出 Coda-DaVinci：任务自适应地在代理引导与直接生成间选择、按实体调整建模粒度，并用多 agent 流程做视觉检查与独立评审来修复场景。<br>为什么值得看：在 VTR 指令遵循与 R2M 场景一致性上领先，物理合理性优于直接生成、真实感优于其他 Code2Video 基线；长视频的事件结构与连续性也有提升（但转场稳定性与场景设定遵循仍有限制，作者有说明）。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26595">Coda-DaVinci: Reimagining Video Generation with Code2Video</a>
+            <p class="keywords">关键词：视频生成（video generation）、Code2Video、3D 代理（3D proxies）、多 agent（multi-agent）、Coda-DaVinci</p>
+          </li>
+          <li class="item">
+            <p>机构：洛桑联邦理工学院 CVLab<br>核心价值问题：前馈 3D 重建的稠密全局注意力随视角数平方增长，无法扩展到大规模多视角重建。<br>方法：提出 SGAR：借鉴经典 SfM&quot;3D 结构来自几何匹配区域&quot;的思想，每个 patch 只注意少量由轻量 key 选择模块选出的跨视角 patch（按 3D 邻近度预测），以几何引导的稀疏注意力替代稠密注意力，可微调接入现有前馈模型。<br>为什么值得看：在 1,000 个视角下比稠密注意力快 12 倍且位姿精度稳定（现有稀疏方法会失效），同等时间预算下重建几何最完整；是&quot;经典几何先验 + 学习&quot;的干净结合。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26493">SGAR: Feed-Forward 3D Reconstruction via Sparse Geometry-Guided Attention</a>
+            <p class="keywords">关键词：3D 重建（3D reconstruction）、稀疏注意力（sparse attention）、多视角（multi-view）、几何引导（geometry-guided）、SGAR</p>
+          </li>
+          <li class="item">
+            <p>机构：麻省理工学院<br>核心价值问题：视频扩散 Transformer 跨去噪步复用 KV 缓存，长视频生成的缓存迅速成为瓶颈；直接量化时间上相距远的缓存向量误差很大。<br>方法：提出 TRQ（时间旋转量化）：利用相邻视频 token 的 KV 缓存存在稳定的每通道模式，为每块时间相邻缓存向量拟合正交旋转（参数化为 2×2 平面旋转树 + 固定 Hadamard 变换），再做 2 比特量化；旋转按每个视频在线拟合，不改模型权重，并发布融合 Triton 内核。<br>为什么值得看：2 比特、同等压缩下，LongCat-Video-13B 的 VBench 主体一致性从 90.38 提升到 92.02，HY-WorldPlay-8B 从 86.33 提升到 87.61；对长视频生成的部署成本有直接意义。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26334">Online Temporal Rotations for 2 Bit KV-Cache Quantization in Video Diffusion Transformers</a>
+            <p class="keywords">关键词：KV 缓存量化（KV-cache quantization）、视频扩散（video diffusion）、2 比特量化（2-bit quantization）、长视频（long videos）、TRQ</p>
+          </li>
+          <li class="item">
+            <p>机构：Philo AI、香港城市大学<br>核心价值问题：实时流式视频生成需要适配不同分辨率与算力预算的连续缩放因子，但定标超分模型要么下采样浪费算力、要么重训 DiT 成本高且改变共享生成先验。<br>方法：提出 FlexVSR 解耦框架：冻结 DiT，仅用轻量 latent 适配器 ReLSA（0.274M 可训练参数、7.3 H100 GPU 小时）把目标网格 latent 精修后送入 DiT，只在少数尺度上监督即可泛化到连续尺度。<br>为什么值得看：在连续尺度上达到与原生尺度方法相当或更优的重建与时序质量，延迟更低，且能泛化到未见过的连续尺度，补上了流式生成超分的连续尺度空白。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26178">FlexVSR: Continuous-Scale Super-Resolution for Streaming Video Generation</a>
+            <p class="keywords">关键词：流式视频生成（streaming video generation）、超分（super-resolution）、连续尺度（continuous scale）、轻量适配器（lightweight adapters）、FlexVSR</p>
+          </li>
+          <li class="item">
+            <p>机构：北京大学、北京智源人工智能研究院、AI Robotics<br>核心价值问题：第三人称转第一人称视频生成（Exo2Ego）对 AR/VR 与具身机器人演示合成很有用，但现有方法只做固定长度片段、延迟高、操作区域退化。<br>方法：提出 StreamEgo：流式双分支先验提供像素对齐的外观与骨骼运动学引导，区域感知损失课程稳定多目标扩散训练，再蒸馏为分块自回归模型，支持无界、通用化的实时流式生成。<br>为什么值得看：单张 H100 上 24.3 FPS 的实时流式 Exo2Ego 生成；从离线短片到实时流式是这类应用落地的关键一步。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26165">StreamEgo: Streaming Exocentric-to-Egocentric Video Generation</a>
+            <p class="keywords">关键词：第一人称视频生成（egocentric video generation）、实时流式（real-time streaming）、AR/VR、具身机器人（embodied robotics）、StreamEgo</p>
+          </li>
+          <li class="item">
+            <p>机构：复旦大学、海军军医大学、上海交通大学<br>核心价值问题：用多段文本提示生成连贯长视频时，提示切换处要么断裂闪烁、背景跳变，要么过度保留旧语义、出现重影与重复主体。<br>方法：提出 FreqSync 训练无关框架：把提示切换建模为频率选择性边界耦合——相邻片段共享稳定的低中频结构与运动线索，高频的提示特异细节保持目标主导，并用残差约束显式控制。<br>为什么值得看：在过渡平滑度与提示对齐上达到 SOTA，同时保持感知视频质量；训练无关意味着可直接用于现有文生视频模型。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26098">Frequency-Synchronized Boundary Coupling for Training-Free Multi-Prompt Long Video Generation</a>
+            <p class="keywords">关键词：长视频生成（long video generation）、多提示（multi-prompt）、训练无关（training-free）、频率耦合（frequency coupling）、FreqSync</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST、RLWRLD<br>核心价值问题：世界模型生成的视频越来越逼真，却常常抓不住&quot;动作微小变化如何改变未来观测&quot;——这限制了它在机器人策略评估与基于模型的规划中的使用。<br>方法：提出 AFFECT 辅助训练目标：给策略动作注入时间相关噪声，训练世界模型使其生成视频对噪声的响应与真实录像一致，无需从同一初始状态重复执行；学习的是动作扰动引起的视觉变化分布。<br>为什么值得看：在 DROID 上，世界模型内策略成功率与真实机器人成功率的相关性从 0.47 升至 0.79，FVD 最多低 23%；用于规划选动作时任务成功率最多提升 8.3%。按归类规则：讲世界模型本身（动力学保真度）归生成式。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25980">Learning What Actions Change: Action Effect Matching for Dynamics-Faithful World Models</a>
+            <p class="keywords">关键词：世界模型（world models）、动力学保真度（dynamics fidelity）、动作效应（action effects）、机器人策略评估（robot policy evaluation）、AFFECT</p>
+          </li>
+          <li class="item">
+            <p>机构：基础模型研究所、阿联酋穆罕默德·本·扎耶德人工智能大学<br>核心价值问题：机器人世界模型只给定动作或机器人渲染，难以推断场景如何响应——被操作物体会塌陷或运动与动作不一致。<br>方法：把动力学预测与视觉渲染分离，以 3D 点动力学为中间代理：把首帧提升为 3D 点、用学习的点动力学模型模拟其对机器人运动的响应，再把模拟点渲染回视频模型可读的像素对齐视频。<br>为什么值得看：在 DROID 数据集两种不同架构的渲染器上，物体运动误差降低 8.6% 与 6.2%，真实双臂机器人上降低 8.1%，且不损失图像质量；更准确的动力学能直接转化为更准确的物体运动。按归类规则：讲世界模型本身归生成式。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25946">Point Dynamics as Proxy for Robotic World Models</a>
+            <p class="keywords">关键词：机器人世界模型（robot world models）、3D 点动力学（3D point dynamics）、视觉渲染（visual rendering）、DROID、动力学预测（dynamics prediction）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学院信息工程研究所、中国科学院大学、华东师范大学、阿里巴巴<br>核心价值问题：给流式图像生成模型一张平色块草稿、配写实提示，它仍会生成&quot;平平的&quot;图——为什么草稿的平坦外观如此顽固？<br>方法：追踪到 VAE 隐空间中区域均值起作用的跨尺度机制：把照片区域压平会系统性地偏移其隐均值，沿各 backbone 共享的通道方向；通过场交换实验（FLUX.1-dev、Qwen-Image）验证，并给出像素抖动、均值场缩放、早期边界保持等免训练干预。<br>为什么值得看：把&quot;生成器顽固保留草稿平坦感&quot;这一常见现象解释到了编码器曲率与条件高斯流的机理层面，并给出可直接用的干预方法，是少见的生成机制分析工作。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25930">Why Flat Drafts Stay Flat: Region-Mean Latents Govern Texture in Flow-Based Image Generation</a>
+            <p class="keywords">关键词：图像生成（image generation）、VAE 隐空间（VAE latent space）、流式模型（flow models）、纹理（texture）、机制分析（mechanistic analysis）</p>
+          </li>
+          <li class="item">
+            <p>机构：哈尔滨工业大学、中关村学院、中国科学技术大学<br>核心价值问题：按连续指令做序列图像编辑时，既要满足新要求，又要保留之前仍有效的要求；检索图与精确掩码都无法单独决定如何调和同区域的不同属性。<br>方法：提出 TRACE：把&quot;持续的属性&quot;与其视觉载体分离，主动目标绑定确定保留什么、载体选择提供合适像素、色调校准减少高光阴影附近的偏色；并在完整请求检查下优先局部外观操作。<br>为什么值得看：在冻结编辑器、独立视觉评审、新源图与完整序列基准上支持联合颜色-材质恢复，且局部执行能保留周围场景；序列编辑是图像编辑产品化的真实痛点。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25648">TRACE: Attribute Execution for Sequential Image Editing</a>
+            <p class="keywords">关键词：序列图像编辑（sequential image editing）、属性执行（attribute execution）、局部编辑（local editing）、TRACE、图像编辑（image editing）</p>
+          </li>
+          <li class="item">
+            <p>机构：悉尼大学、印第安纳大学、香港大学、麻省理工学院<br>核心价值问题：图像色彩增强以往学的是少数专家的目标，覆盖的美学选择有限；直接用大生成模型编辑又会连语义结构一起改掉。<br>方法：提出 AesDistill：用 4 个开源大生成模型生成 64,644 张编辑图作教师目标（约 3,360 H100 GPU 小时），蒸馏出仅 1.13M 参数的学生模型，以置信度加权监督学习教师的色彩变化、同时保留源图语义结构。<br>为什么值得看：12 个美学与 4 个图像质量评估模型下，教师目标全部高于 FiveK 与 PPR10K 专家目标均值；学生模型胜过全部 20 个基线、仅次于 4 位教师——&quot;向生成模型蒸馏美学&quot;是色彩增强的新路子。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25635">AesDistill: Distilling Generative Aesthetics for Image Color Enhancement</a>
+            <p class="keywords">关键词：图像色彩增强（image color enhancement）、美学蒸馏（aesthetic distillation）、学生模型（student models）、教师目标（teacher targets）、AesDistill</p>
+          </li>
+          <li class="item">
+            <p>机构：Canva、伦敦玛丽女王大学、马林加州立大学<br>核心价值问题：平面设计是多层 RGBA 图层的有序组合，现有分层模型每层用整幅空间隐网格表示，尺寸随图层总面积线性膨胀。<br>方法：提出 ProtoDiffusion：基于 ProtoVAE，把设计编码为一个共享空间原型 + 每层一个候选向量（N 层共 HW+N 个 token，而非 N×HW），联合去噪原型与固定候选槽，自动决定层数与布局，支持图生设计与文生设计。<br>为什么值得看：文生设计 FID 66.41（FLUX.2 基线 86.84），比同 backbone 的&quot;生成再分解&quot;级联快 19.1 倍；层编辑可复用的分层生成表示对设计工具有直接意义。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26586">ProtoDiffusion: Token-per-Layer Generative Modeling of Multi-Layer Images</a>
+            <p class="keywords">关键词：分层图像生成（layered image generation）、平面设计（graphic design）、扩散模型（diffusion models）、ProtoDiffusion、图层编辑（layer editing）</p>
+          </li>
+          <li class="item">
+            <p>机构：厦门大学、东北大学、同济大学<br>核心价值问题：世界模型越来越多地用于模拟物理交互，但训练数据的长尾分布会让模型偏向常见物理规则——即使观测证据支持罕见规则。<br>方法：提出 TailWorld 基准：用同一预测初态下的两条参考未来（遵循演示规则 vs 遵循常见规则）度量模型对常见动力学的偏向；并提出 RIFT 方法，学习规则如何影响物体运动、从校准交互中推断当前规则，显式控制训练频率对规则推断的影响。<br>为什么值得看：在不同训练不平衡与分布偏移下，RIFT 提升了预测准确率与物理一致性，尤其改善罕见动力学的预测；&quot;世界模型更信先验而非视觉证据&quot;是值得警惕的系统性偏差。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26366">World Models Favor Learned Priors over Visual Evidence</a>
+            <p class="keywords">关键词：世界模型（world models）、物理先验（physical priors）、长尾分布（long-tail distribution）、基准（benchmarks）、TailWorld</p>
+          </li>
+          <li class="item">
+            <p>机构：伊利诺伊大学厄巴纳-香槟分校、纽约大学、卡内基梅隆大学<br>核心价值问题：文生图扩散模型每步去噪都有干净图像估计（预览），但测试时搜索的评判器是为成品图建的——评早期预览近乎瞎猜，评晚了又要为注定失败的候选付出去噪成本。<br>方法：发现结局在去噪开始时就已由种子或采样器前几步决定、且已显现在早期预览中；提出 Keystone：把提示编译为关于物体、数量、颜色、位置的类型化问题，让现成多模态决策模型回答，以此评判预览；无需训练。<br>为什么值得看：在 GenEval 上，SD3.5-Medium 的自适应搜索与剪枝在不到一半生成算力下显著优于 best-of-8；作为即插即用评判器也能提升 best-of-N 与渐进式剪枝等方法，且在 4 个基底模型、3 个基准上无需重调即保持优势。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25530">Keystone: Judging Previews at Key Steps for Test-Time Search in Diffusion Models</a>
+            <p class="keywords">关键词：测试时搜索（test-time search）、文生图（text-to-image）、扩散模型（diffusion models）、评判器（judges）、Keystone</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1121-morning-academic">
         <header class="round-header">
           <h2 id="round-1121-morning-academic">11 月 21 日早报</h2>
@@ -3862,7 +3978,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1118-2030-academic">
+                  <details class="archive">
+        <summary>历史归档（11 月 18 日及之前）</summary>
+<section class="round" aria-labelledby="round-1118-2030-academic">
         <header class="round-header">
           <h2 id="round-1118-2030-academic">11 月 18 日 20:30 轮</h2>
           <span class="count">1 条</span>
@@ -3875,7 +3993,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1118-morning-academic">
+<section class="round" aria-labelledby="round-1118-morning-academic">
         <header class="round-header">
           <h2 id="round-1118-morning-academic">11 月 18 日早报</h2>
           <span class="count">8 条</span>
@@ -3923,8 +4041,6 @@
           </li>
         </ol>
       </section>
-      <details class="archive">
-        <summary>历史归档（11 月 17 日及之前）</summary>
 <section class="round" aria-labelledby="round-1117-morning-academic">
         <header class="round-header">
           <h2 id="round-1117-morning-academic">11 月 17 日早报</h2>
@@ -5747,7 +5863,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 21 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 22 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
