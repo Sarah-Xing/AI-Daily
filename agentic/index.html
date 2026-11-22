@@ -383,6 +383,39 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1122-1230">
+        <header class="round-header">
+          <h2 id="round-1122-1230">11 月 22 日 12:30 轮</h2>
+          <span class="count">5 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>他总结了 Anthropic 的《Claude Code 创业公司指南》，提炼了 14 家用 Claude Code 构建产品的创业公司的 5 条经验：快速交付、把机械的 80% 自动化、用规则校验、敢于重构、从原型到试用到生产。正在用 Claude Code 做产品的团队可以对照看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:7037632-7530289400056791040/">Misam Razz：Anthropic《Claude Code 创业公司指南》的 5 条经验</a>
+            <p class="keywords">关键词：Claude Code、创业公司（startups）、AI 编程（AI coding）、产品开发（product development）、Anthropic</p>
+          </li>
+          <li class="item">
+            <p>这篇文章指出，AI agent 能发现错误却未必能修复它——发现问题不等于具备恢复能力。文章讨论了检测与修复之间的落差，对做 agent 可靠性的人是个值得琢磨的提醒。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/an-ai-agent-can-spot-a-mistake-and-still-share-7530366336212979712-KjcF/">Towards Data Science：AI agent 能发现错误，却未必能修复它</a>
+            <p class="keywords">关键词：agent 可靠性（agent reliability）、错误检测（error detection）、错误修复（error recovery）、AI agent</p>
+          </li>
+          <li class="item">
+            <p>他介绍了用多 agent AI、数字孪生和厂商中立的机器人中间件来优化 SAP S/4HANA Fashion 仓库运营的做法，目标是在问题发生前预测并优化。关注企业级 agent 落地与仓储场景的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/claymodel_sap-enterprisearchitecture-agenticai-share-7530352520146137089-ETyd/">Elias Hasnat：多 agent AI + 数字孪生优化 SAP 仓库运营</a>
+            <p class="keywords">关键词：多 agent AI（multi-agent AI）、数字孪生（digital twins）、仓库运营（warehouse operations）、SAP、企业落地（enterprise deployment）</p>
+          </li>
+          <li class="item">
+            <p>他分享了 Fintech NerdCon 上&quot;面向 agent 世界的钱包&quot;分会场的结论：想赢的钱包必须做到可靠的体验、守住用户信任与控制权，还要和 agent 公司分享经济收益。关注 agent 支付与钱包赛道的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/vignesh-sreedhar_i-just-got-back-from-fintech-nerdcon-and-ugcPost-7530117765626523648-o_ta/">Vignesh Sreedhar：Fintech NerdCon：面向 agent 世界的钱包要赢在三点</a>
+            <p class="keywords">关键词：agent 支付（agent payments）、数字钱包（digital wallets）、Fintech NerdCon、信任与控制（trust and control）、agent 经济（agent economy）</p>
+          </li>
+          <li class="item">
+            <p>他向 Nodes AI 2027 提交了一个 session，主题是&quot;不闲聊：一个能读懂业务运转、向前推演并直接行动的 AI agent&quot;。这只是一次会议投稿、不是已发布产品，对 agent 在业务运营场景的构想感兴趣的人可以留意。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/marcospinedo_happy-to-share-that-ive-just-submitted-my-share-7530304364637208576-uYPL/">Marcos Pinedo：向 Nodes AI 2027 提交 agent 读业务、做推演的 session</a>
+            <p class="keywords">关键词：AI agent、业务运营（business operations）、会议投稿（conference submission）、Nodes AI 2027、前瞻推演（forward-looking reasoning）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1122-0830">
         <header class="round-header">
           <h2 id="round-1122-0830">11 月 22 日 08:30 轮</h2>
@@ -8981,6 +9014,25 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1122-1230-academic">
+        <header class="round-header">
+          <h2 id="round-1122-1230-academic">11 月 22 日 12:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Google Research、Google DeepMind<br>核心价值问题：现有的机器学习工程（MLE）评测大多只让 agent 改单个文件、很快就被刷爆了，怎么系统地衡量并控制&quot;仓库级 MLE 任务到底有多难&quot;？<br>方法：提出代码复杂度指数（CCI），只用代码结构特征就能预测基准的平均解出率（8 个公开基准上 R²=0.951）；再用 BuggyMLE 框架让 agent 往正常 ML 仓库里注入可控 bug，合成了 6600 多个带 bug 的仓库变体，并据此建成难度分级的 BuggyMLE-Bench-Lite；在三档难度课程上微调的 Qwen3.5-9B 在该基准上能媲美前沿模型。<br>为什么值得看：它把&quot;任务难度&quot;从玄学变成了可度量的指标，还给出了可规模化生成难度可控 MLE 任务的办法，做 agent 评测与训练的人值得看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/omarsar_banger-paper-from-google-on-ml-engineering-share-7530350658399666177-cycu/">Elvis S.：Google 的 BuggyMLE：往 ML 仓库里注 bug，系统化拉高 agent 难度</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25088">arXiv:2611.25088</a>
+            <p class="keywords">关键词：机器学习工程（machine learning engineering）、agent 评测（agent evaluation）、任务难度（task difficulty）、BuggyMLE、代码复杂度（code complexity）</p>
+          </li>
+          <li class="item">
+            <p>Anthropic 推出了一条免费的 Claude Forward Deployed Engineer 自学路径，约 9.5 小时，覆盖 agent 循环、工具、MCP、真实代码库里的 Claude Code、MCP 服务器与 agent 技能，还有试点设计。这是 Anthropic 1 亿美元 Frontier Academy 的一部分，目标是培训 1 万名工程师。想系统学 agent 工程的人可以直接走官方路径。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/anthropic-just-dropped-a-free-path-to-become-share-7530309240683393024-GzoJ/">Science：Anthropic 免费推出 Claude 部署工程师自学路径（约 9.5 小时）</a>
+            <p class="keywords">关键词：部署工程师（forward deployed engineers）、agent 工程（agent engineering）、Claude Code、MCP、免费课程（free courses）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1122-0830-academic">
         <header class="round-header">
           <h2 id="round-1122-0830-academic">11 月 22 日 08:30 轮</h2>
