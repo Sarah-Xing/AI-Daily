@@ -409,7 +409,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-morning">
+                  <details class="archive">
+        <summary>历史归档（11 月 19 日及之前）</summary>
+<section class="round" aria-labelledby="round-1119-morning">
         <header class="round-header">
           <h2 id="round-1119-morning">11 月 19 日早报</h2>
           <span class="count">3 条</span>
@@ -432,8 +434,6 @@
           </li>
         </ol>
       </section>
-            <details class="archive">
-        <summary>历史归档（11 月 18 日及之前）</summary>
 <section class="round" aria-labelledby="round-1117-2030">
         <header class="round-header">
           <h2 id="round-1117-2030">11 月 17 日 20:30 轮</h2>
@@ -934,6 +934,114 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1123-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1123-morning-academic">11 月 23 日早报</h2>
+          <span class="count">20 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：巴赫切谢希尔大学<br>核心价值问题：RLVR 里到底该用全量微调还是 LoRA？大家只看秩和参数量，忽略了更新的几何结构，导致高秩 LoRA 会突然崩掉。<br>方法：在统一冷启动 GRPO 流程下扫 LoRA 秩，发现 DeepMath-Hard 上 r=64 时准确率 73.1%、r=128 时骤降至 4.7%（秩坍缩）；对比之下 DoRA 与 QuanTA 在更宽优化区间内保持稳定、只更新不到 0.6% 的参数就接近全量微调；谱分析显示坍缩的 LoRA 更新能量集中在极少数方向。<br>为什么值得看：给做 RLVR 的人一个直接可用的避坑结论——别只调秩，要看更新结构；结构化 adapter 是更稳的省参数路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27148">Structure Over Scale：RLVR 里的秩坍缩与结构化 adapter</a>
+            <p class="keywords">关键词：RLVR、LoRA、秩坍缩（rank collapse）、结构化 adapter（structured adapters）、DoRA</p>
+          </li>
+          <li class="item">
+            <p>机构：南洋理工大学、亚马逊 AGI<br>核心价值问题：无 critic 的 RLVR 给 response 里每个 token 同样的 advantage，但真正决定成败的只是少数“分叉点”token，现有按熵加权的启发式量不准 token 的实际影响。<br>方法：把 token 的影响形式化为 forking value（下一 token 选择带来的成功概率方差），发现它可分解为分叉后果与分叉概率，而后者可由 softmax 直接得到、且随 token 在 response 内的熵秩指数衰减；据此设计 CreditFilter，按熵秩指数窗口给 token 加权，无需额外前向。<br>为什么值得看：在 Qwen3-8B-Base 上比 DAPO 在 MATH500 高 7.7 分、AIME24/25 高 10.5/9.1 分，改动小、即插即用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27227">CreditFilter：给 RLVR 的 token 按分叉价值加权</a>
+            <p class="keywords">关键词：RLVR、token 信用分配（token credit assignment）、分叉价值（forking value）、CreditFilter、数学推理（math reasoning）</p>
+          </li>
+          <li class="item">
+            <p>作者：Zhe Dong、Fang Qin<br>核心价值问题：RLVR 训练里，把采样文本解码再重编码可能训到同一字符串的不同 token 序列、奖励却一样；这个重 token 化会把更新推多远、方向是否一致，没人量过。<br>方法：从同一 checkpoint 对比同一批 rollout 的规范更新与切分 token 后的更新：Qwen2.5-0.5B 三位数加法上，约每 25 个 token 切一个，更新位移达到换一批数据的 0.556 倍；比例随切分比例上升、且与切哪些 token 有关；同一 checkpoint 内不同 batch 的位移方向一致；还在表格模型里证明了除零梯度步外、不同 token 化下的全梯度步不可能一致。<br>为什么值得看：一个容易被忽略的 RLVR 实现细节，实测影响量级接近换 batch；做 RLVR 训练 pipeline 的人值得检查自己的编解码路径。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27083">重 token 化会把 RLVR 更新推多远</a>
+            <p class="keywords">关键词：RLVR、重 token 化（retokenization）、训练稳定性（training stability）、token 序列（token sequences）、实现细节（implementation details）</p>
+          </li>
+          <li class="item">
+            <p>机构：伊利诺伊大学厄巴纳-香槟分校、纽约大学、耶鲁大学<br>核心价值问题：outcome reward 只给整条轨迹一个分数，步骤级信用分配通常要步骤标签、学 critic 或请 LLM 当裁判，成本高。<br>方法：把通用决策模型（回答 yes/no 问题并给出概率）零样本转成通用过程奖励模型 DM-PRM：每步问一个问题、把标准化答案加进 advantage；无需步骤标签、微调或 critic，可插进任何策略梯度方法。<br>为什么值得看：Qwen2.5-1.5B 上 GRPO 在 ALFWorld 提升 20 多分、WebShop 提升 10 多分，超过 critic 版 PPO 与 GiGPO 等基线；一个模型、一个问题模板就能跨环境复用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27068">DM-PRM：决策模型零样本变过程奖励模型</a>
+            <p class="keywords">关键词：过程奖励模型（process reward models）、决策模型（decision models）、DM-PRM、零样本（zero-shot）、agent 训练（agent training）</p>
+          </li>
+          <li class="item">
+            <p>机构：伊利诺伊理工学院、威斯康星大学密尔沃基分校<br>核心价值问题：奖励模型与 LLM 裁判常被量化到 4bit 以省钱，大家只看 benchmark 准确率几乎不动就以为没事，但这项检查其实接近失明。<br>方法：在 8 个奖励模型（0.6B–8B）、3 个生成式裁判、4 种 4bit 量化器上实测：量化改写了 RewardBench 上 1.1%–12.3% 的成对偏好判定，而总准确率最多只动 0.03 分——因为修掉的错和引入的错互相抵消；翻转集中在全精度 margin 相对量化噪声很小的“脆弱窗口”。<br>为什么值得看：直接关系到 RLHF 实践里“奖励模型能不能量化”的判断；还发现对抗压力下某些量化器的有害/有益翻转比高达 146:54，下游选型会因此改变。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27155">量化奖励模型的“脆弱窗口”</a>
+            <p class="keywords">关键词：奖励模型量化（reward model quantization）、RLHF、脆弱窗口（fragile window）、4bit 量化（4-bit quantization）、偏好判定（preference judgments）</p>
+          </li>
+          <li class="item">
+            <p>机构：高丽大学<br>核心价值问题：对齐 LLM 要同时满足多个经常冲突的价值，现有偏好优化把它们压成单一隐式信号，多目标扩展也在共享参数空间里优化，跨价值冲突没解决。<br>方法：MAPES 把冲突解决做成一等公民：先把监督分解成在隔离参数子空间里训练的价值专家，再用偏好感知的价值合并 + 轻量 harmonization 阶段把合并模型与专家集成对齐。<br>为什么值得看：在 5 个偏好对齐基准上超过强 DPO 变体与多目标基线，GSM8K 与 GPQA 没有明显退化；给多价值对齐提供了一条“先分后合”的清晰路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27133">MAPES：多价值对齐的专家分解与合并</a>
+            <p class="keywords">关键词：多价值对齐（multi-value alignment）、偏好优化（preference optimization）、MAPES、专家合并（expert merging）、DPO</p>
+          </li>
+          <li class="item">
+            <p>机构：香港科技大学（广州）<br>核心价值问题：LLM 的 RL 后训练要在同一批 GPU 上跑 rollout 解码（访存主导、batch 越跑越小）和 dense learner（计算主导），现有系统要么串行轮换、要么整卡切分，都有浪费。<br>方法：提出第三种执行布局 CTRL：每块 GPU 上 learner rank 与常驻 rollout 引擎共存（CUDA MPS），优化器状态放 host 内存、策略权重逐层流式过 GPU 窗口；发布门控保证无丢失的 staleness 上界。<br>为什么值得看：在 H100/A800/RTX 4090、Qwen3 模型上 24 组配置中达到 verl 异步基线 1.11–2.24 倍吞吐，staleness 上限为 2；对自建 RL 训练栈的人有直接参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27119">CTRL：训练与 rollout 在同一 GPU 上共存</a>
+            <p class="keywords">关键词：RL 训练系统（RL training systems）、rollout、CTRL、GPU 利用率（GPU utilization）、吞吐量（throughput）</p>
+          </li>
+          <li class="item">
+            <p>作者：Heyang Xu、HanWen Hao、Qianren Mao、Zhuo Liu、Qili Zhang、Sheng Yang、Jianxin Li<br>核心价值问题：长文生成只用一个 outcome reward 优化整篇文档，监督信号延迟又粗，定位不了错在哪一段、信用分不下去。<br>方法：把长文按语义切成段级决策，每段带前缀上下文生成以保持连贯，再用 rubric 奖励（ adherence、连贯性、相关性）给每段打分，算 stepwise advantage 做局部策略更新；在同一 GRPO 框架下与 outcome 监督对照。<br>为什么值得看：在多个 LLM 与两个长文基准上持续优于 outcome 监督与同等预算的推理时基线；结论是监督粒度要与长文的语义结构对齐。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27348">SH-PRM：长文生成的短视程过程监督</a>
+            <p class="keywords">关键词：长文生成（long-form generation）、过程监督（process supervision）、SH-PRM、GRPO、奖励设计（reward design）</p>
+          </li>
+          <li class="item">
+            <p>机构：华中科技大学、蚂蚁集团、华中师范大学<br>核心价值问题：扩散模型的 RL 后训练常把目标奖励刷上去、却丢了整体生成质量，是一种奖励 hack；CFG 已知能提升视觉清晰度与提示对齐，但它的结构在 RL 里没被利用。<br>方法：把 CFG 与 RL 统一看作同一预测空间里的修正向量，发现 RL 修正向预训练 CFG 修正的投影可诊断质量相关结构的保留情况；据此提出 Conditional Contrast Regularization，用冻结参考模型的条件对比作局部结构先验。<br>为什么值得看：把“奖励-质量权衡”从玄学变成可诊断、可约束的问题；做扩散模型 RL 的人可以直接借鉴这个正则思路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27288">CCR：用 CFG 结构约束扩散模型的 RL</a>
+            <p class="keywords">关键词：扩散模型 RL（diffusion model RL）、CFG、奖励 hack（reward hacking）、CCR、正则化（regularization）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学<br>核心价值问题：LLM agent 预测真实世界事件时，ReAct 的上下文越攒越长、outcome 奖励又慢又 noisy，分不清是推理扎实还是运气好。<br>方法：harness 侧用 Proactive Belief-State Management（fold 工具把长上下文压缩成紧凑信念态再重启探索），训练侧用五维 outcome-blind rubric（SEIPH）给过程质量奖励；用 PPO/GRPO 后训练 35B 模型得到 DeepForecaster。<br>为什么值得看：DeepForecaster-PPO 在 ForecastBench 与 Polymarket-Sim 上 Brier 分数双双最佳，超过 DeepSeek-V4-Pro、Kimi-K2.6、GPT-5.5 等前沿 agent；把“信念态管理 + 过程奖励”这套组合拳打通了。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27286">DeepForecaster：信念态管理 + 过程奖励做事件预测</a>
+            <p class="keywords">关键词：事件预测（event forecasting）、信念态管理（belief-state management）、过程奖励（process rewards）、DeepForecaster、agent 预测（agent forecasting）</p>
+          </li>
+          <li class="item">
+            <p>机构：威斯康星大学麦迪逊分校、华盛顿大学<br>核心价值问题：多轮 agent 只有 episode 末尾一个二值奖励，GRPO 这类轨迹级方法把同一个 advantage 广播到每一轮，会奖励赢局里的幸运绕路、惩罚输局里的正确早期步骤。<br>方法：WEIR 是 actor-critic 框架：维护跨迭代的规范动作前缀树（指数折扣访问计数），用 minimax drift-aware shrinkage 目标训练前缀条件 critic，在稀疏节点用单轨迹回报、密集节点用池化均值；并用 Neyman 分层按任务难度分配 rollout 预算。<br>为什么值得看：针对多轮 agent 信用分配这个真痛点，给了一套有理论支撑（Doob 方差守恒恒等式）的 turn-level 方案。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27570">WEIR：多轮 agent 的前缀树 turn 级信用分配</a>
+            <p class="keywords">关键词：多轮 agent（multi-turn agents）、信用分配（credit assignment）、WEIR、turn 级 critic（turn-level critic）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：Phi Labs、Quantiphi<br>核心价值问题：小模型做 agent 又便宜又能高并发，但多步推理与工具使用弱；把小模型接上强模型当 advisor，光靠 harness 设计不够，还得教会它什么时候问、怎么跟进建议。<br>方法：ADAPT 是多阶段 post-training：完全从策略自己的 rollout、按环境 outcome 学习，不用学 reward 模型、不用人工标注，教会 SLM 以成本敏感的方式求助并执行建议。<br>为什么值得看：TextWorld 成功率 24.5%→77.3%、LiveCodeBench 21.8%→56.0%、GAIA 17.5%→49.3%，每任务只问 advisor 约 1–2 次；对想低成本部署 agent 的人很实用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27443">ADAPT：教小模型什么时候向强模型求助</a>
+            <p class="keywords">关键词：小模型 agent（small model agents）、求助策略（help-seeking）、ADAPT、成本敏感（cost-sensitive）、后训练（post-training）</p>
+          </li>
+          <li class="item">
+            <p>机构：湖南大学、纽约大学<br>核心价值问题：多模态搜索 agent 的训练配方把可搜索世界当成固定的：新问题可能格式正确、可验证，但证据不在检索后端里，agent 查对了却什么都捡不到，还被当成策略错来惩罚；这种“不可达负例”每轮都在积累。<br>方法：Search-RSI 是递归自改进框架，沿着 agent 的能力边界扩展搜索世界：每轮由当前策略诊断自己部分掌握的任务区域（跳数、关系稀有度、干扰密度），在那里连同证据一起长出新任务；探针意见不一致的进 RL、够不着的变成 hint 引导的演示。<br>为什么值得看：在 9 个多模态搜索基准上，静态任务增长饱和后它还在提升，平均准确率比基底配方在 9B/27B 上提升 9.8/9.5 分，只用 1.27 倍算力、不依赖外部模型。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27780">Search-RSI：沿能力边界扩展搜索世界</a>
+            <p class="keywords">关键词：多模态搜索 agent（multimodal search agents）、自改进（self-improvement）、Search-RSI、任务扩展（task expansion）、RL 训练（RL training）</p>
+          </li>
+          <li class="item">
+            <p>机构：南京大学、Cirquar Technologies<br>核心价值问题：用世界模型做 VLA 的 model-based RL 能省真实交互，但图像/视频世界模型太贵，latent 世界模型又有复合误差、且与 VLA 的视觉输入接口不兼容。<br>方法：提出轻量残差 MBRL 框架 LS-MBPO：Hierarchical Forcing（密集因果监督 + 自回归反馈）抑制复合误差，Latent Subchunk Rollouts 用冻结 VLA 的动作块做潜空间子块精修，再加 Progress-Conditioned Branch-Start Curriculum 从后往前移动想象起点。<br>为什么值得看：在 LIBERO、RoboTwin 与真实 ALOHA 机器人上，任务表现与训练效率都优于现有方法；把 latent 世界模型真正接进了 VLA 的 RL 训练。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27645">LS-MBPO：VLA 的轻量 latent 世界模型 RL</a>
+            <p class="keywords">关键词：VLA、世界模型 RL（world model RL）、LS-MBPO、机器人操作（robot manipulation）、latent 模型（latent models）</p>
+          </li>
+          <li class="item">
+            <p>作者：Shuai Peng、Yongkai Liao、Yuxin Cheng、Haoyuan Wang、Jian Huang<br>核心价值问题：VLA 模型抓取失败后常常继续搬运而不重试，本体感觉线索让策略误判阶段、且训练数据里几乎没有重试监督。<br>方法：用力反馈把演示切成 approach-grasp 与 transport-placement 两段、分别训策略；再从 approach-grasp 策略初始化一个专用重试策略，用失败后状态做局部 RL 精修；推理时控制器结合力反馈与抓取指令状态协调两段策略、检测失败并触发重试；还建了力增强的 LIBERO-SUCTION 数据集。<br>为什么值得看：把“失败恢复”从部署时补丁变成了训练内机制；对做 VLA 落地的人来说，抓取失败重试是真实机器人最常见的失效模式之一。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27011">FoRe：力引导的 VLA 抓取失败自主恢复</a>
+            <p class="keywords">关键词：VLA、抓取失败恢复（grasp failure recovery）、力反馈（force feedback）、FoRe、机器人（robotics）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京航空航天大学、南洋理工大学<br>核心价值问题：四足机器人靠 domain randomization 对付未建模动力学与外扰时，策略要对所有可能情况都留余量，跟踪精度与泛化范围难以兼得。<br>方法：把负载变化、质心偏移、执行器退化与外力统一成一个关节空间扰动，用非线性观测器在线估计（不需要关节加速度测量），估计值既做前馈力矩补偿、又 augment 策略观测；另给快变接触效应配了解析接触估计。<br>为什么值得看：在 11 种仿真动力学条件下，速度跟踪误差比 SOTA 基线降低 18.1%–57.0%；是“显式估计扰动”胜过“盲目随机化”的一个干净例证。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27061">PACE：显式扰动估计的鲁棒四足运动</a>
+            <p class="keywords">关键词：四足机器人（quadruped robots）、扰动估计（disturbance estimation）、鲁棒运动（robust locomotion）、PACE、sim-to-real</p>
+          </li>
+          <li class="item">
+            <p>机构：北京邮电大学、中国传媒大学<br>核心价值问题：足式机器人运动常用深度图或在线高程图做感知，前者有深度传感器建模误差、后者怕漂移与错位；LiDAR 直接测几何，但原始点云没有适合高频控制的紧凑结构化表示。<br>方法：在传感层从真实 LiDAR 恢复逐帧角采样模式、用 GPU 光线投射在仿真里复现，在表示层把仿真与真实回波统一编码成球面距离图像（spherical range image），端到端训练、无需 teacher-student 蒸馏、在线建图或自适应。<br>为什么值得看：range-image 策略的 sim-to-real 迁移优于深度图与高程图基线；给足式机器人感知提供了一条更干净的 LiDAR 路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27223">LiDAR 球面距离图像做足式机器人 sim-to-real</a>
+            <p class="keywords">关键词：足式机器人（legged robots）、LiDAR 感知（LiDAR perception）、sim-to-real、球面距离图像（spherical range images）、运动控制（locomotion control）</p>
+          </li>
+          <li class="item">
+            <p>机构：布拉格捷克技术大学、查理大学<br>核心价值问题：用人形机器人世界模型反传想象回报训练跟踪器很快，但世界模型给的一阶策略梯度有多少在仿真器里站得住脚，没人量过。<br>方法：实测发现梯度范数最大的 0.5% 想象 rollout 占了总梯度范数的 22%，但仿真器不认可它们；于是把每条 rollout 的动作梯度范数截断在 batch 中位数的 10 倍，按预测梯度范数采样想象起点，并在世界模型与 critic 都预测回报最低处重置 episode。<br>为什么值得看：在 Unitree G1 跟踪器上，SuperMimic 基线的归一化回报从 0.953 提到 0.967、最差 1% 片段从 0.65 提到 0.76，达到基线最终回报只需 40% 的迭代与一半训练时间；对世界模型 RL 的可信度问题给了可量化的回答。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27648">截断世界模型策略梯度做人形运动跟踪</a>
+            <p class="keywords">关键词：人形机器人（humanoid robots）、世界模型 RL（world model RL）、策略梯度截断（policy gradient clipping）、运动跟踪（motion tracking）、SuperMimic</p>
+          </li>
+          <li class="item">
+            <p>机构：清华大学深圳国际研究生院、腾讯、鹏城实验室<br>核心价值问题：与奖励无关的表征能让 RL agent 跨任务复用知识，但表征容量有限时，该捕捉什么样的统计依赖、保留哪些成分、丢掉其余部分对决策有什么影响，一直没有清楚的回答。<br>方法：对参考策略构造动作中心、正滞后的典型依赖矩阵（CDM），分离当前动作超出当前状态的额外预测贡献；对其做 SVD 得到谱通用优势特征（SUAF），通过线性奖励投影恢复延迟优势；证明谱刻画了动作与未来状态-动作访问之间的互信息，并决定了奖励特定的近似误差。<br>为什么值得看：给通用优势特征这套思想补上了理论地基：保留主导模态在两种准则下都是最优秩约束近似；还给出了从无奖励数据学习 SUAF 的方法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27919">SUAF：谱通用优势特征</a>
+            <p class="keywords">关键词：通用优势特征（general advantage features）、SUAF、表征学习（representation learning）、RL 理论（RL theory）、谱方法（spectral methods）</p>
+          </li>
+          <li class="item">
+            <p>机构：密歇根州立大学<br>核心价值问题：用形式化规约指导 RL（把期望行为写成规约、转成 shaped reward）已有工作，但都假设其他 agent 策略固定，处理不了对抗、部分可观测下的多智能体博弈。<br>方法：SLICR 引入策略逻辑（Strategy Logic），可显式量化 agent 的策略，并用线性时序逻辑刻画目标与约束；既推理 agent 该如何满足规约，也推理该如何应对其他 agent 的策略。<br>为什么值得看：在 Predator-Prey、Google Research Football 与自研的 SMAC-HARD 扩展上验证了有效性与可扩展性；把规约引导 RL 推进到了对抗多智能体场景。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27865">SLICR：策略逻辑引导的多智能体 RL</a>
+            <p class="keywords">关键词：多智能体 RL（multi-agent RL）、规约引导（specification-guided）、SLICR、策略逻辑（strategy logic）、博弈（games）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1121-1230-academic">
         <header class="round-header">
           <h2 id="round-1121-1230-academic">11 月 21 日 12:30 轮</h2>
@@ -1048,7 +1156,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-1630-academic">
+                              <details class="archive">
+        <summary>历史归档（11 月 19 日及之前）</summary>
+<section class="round" aria-labelledby="round-1119-1630-academic">
         <header class="round-header">
           <h2 id="round-1119-1630-academic">11 月 19 日 16:30 轮</h2>
           <span class="count">1 条</span>
@@ -1061,7 +1171,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-morning-academic">
+<section class="round" aria-labelledby="round-1119-morning-academic">
         <header class="round-header">
           <h2 id="round-1119-morning-academic">11 月 19 日早报</h2>
           <span class="count">16 条</span>
@@ -1149,8 +1259,6 @@
           </li>
         </ol>
       </section>
-                  <details class="archive">
-        <summary>历史归档（11 月 18 日及之前）</summary>
 <section class="round" aria-labelledby="round-1118-1630-academic">
         <header class="round-header">
           <h2 id="round-1118-1630-academic">11 月 18 日 16:30 轮</h2>
@@ -2323,7 +2431,7 @@ on>
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 22 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 23 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {

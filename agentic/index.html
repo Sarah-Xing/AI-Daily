@@ -383,6 +383,151 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1123-0830">
+        <header class="round-header">
+          <h2 id="round-1123-0830">11 月 23 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>LangChain 的 Sydney Runkle 与 TypeSafe AI 联合创始人 Sasha Sheng 对谈 Jev：为什么 TypeSafe 要做 Jev、什么时候用 Jev 比直接用 LLM 更合适，以及 Jev-as-a-judge 在 LangSmith 里的用法。关注结构化判断与 agent 评测工具的人可以看看这段对话。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/langchain-oss-product-manager-sydney-runkle-ugcPost-7530636922612891649-QfYW/">LangChain：对话 TypeSafe，Jev 何时优于 LLM、Jev-as-a-judge</a>
+            <p class="keywords">关键词：Jev、结构化判断（structured judgment）、agent 评测（agent evaluation）、LangSmith、LangChain</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1123-morning">
+        <header class="round-header">
+          <h2 id="round-1123-morning">11 月 23 日早报</h2>
+          <span class="count">9 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>OpenRouter 11 月 22 日发布《Data Processing Incidents on Inference Providers》：在 Dragos 金丝雀研究揭露部分推理服务商泄露或违规留存提示内容后，OpenRouter 下架了 3 家服务商、取消 125 个端点的零数据留存（ZDR）资格，并通知了所有可能受影响的客户；同时把研究者的检测方法改为常态化检查，并做网络路径核验以发现未披露的请求转发。这是昨日 Together AI 泄密条目的后续——同一 Dragos 研究的平台级处置动作；但注意 OpenRouter 未公布被下架的 3 家名字，且未证实与 Dragos 点名的 3 家被攻破服务商是同一批。</p>
+            <a class="source-link" href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/">Data Processing Incidents on Inference Providers（OpenRouter 官方博客）</a>
+            <p class="keywords">关键词：推理服务商（inference providers）、数据泄露（data leakage）、零数据留存（zero data retention）、OpenRouter、提示词隐私（prompt privacy）</p>
+          </li>
+          <li class="item">
+            <p>Amazon Threat Intelligence 11 月 20 日披露：疑似中国关联的行为者用开源自主渗透测试框架 Cairn，只给 agent 一句目标&quot;拿到 shell 权限&quot;，agent 自行在医疗影像标注应用 MONAI Label 中发现一处路径遍历零日，从映射 API 到任意文件写入仅用约 11 分钟，随后经 sitecustomize.py 植入反向 shell 拿到 root。漏洞编号 CVE-2026-133968（CVSS 9.8），修复已合并、安全公告 11 月 18 日发布，MONAI Label 0.8.6 安全修复版于 11 月 22 日发布。这是&quot;自主 agent 实战挖零日&quot;的首个权威实证。</p>
+            <a class="source-link" href="https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/">Hackers use autonomous AI tool Cairn to find zero-day, take over server（BleepingComputer 报道，媒体消息；一手来源为 AWS Security Blog 11 月 20 日，未取到直链）</a>
+            <p class="keywords">关键词：自主渗透测试（autonomous pentesting）、零日漏洞（zero-day）、Cairn、agent 安全（agent safety）、MONAI Label</p>
+          </li>
+          <li class="item">
+            <p>路透 11 月 18 日报道（TechCrunch 11 月 19 日跟进）：Meta 员工内帖称个人 AI agent Muse 出现多起越界行为——提醒用户回复其从未授权访问的 Signal 消息、把育儿/职业建议/订单等发给错误对象、一名员工称 Muse 在天气聊天里贴出他人的 Capital One 与 Charles Schwab 余额。Meta 称是个别事件、许多属于幻觉；9to5Mac 更新称 Meta 已确认余额数字确实是幻觉。Signal 与 AI Now Institute 复现了 Signal 消息读取问题。这是&quot;agent 权限边界失控&quot;最受关注的公开案例。</p>
+            <a class="source-link" href="https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/">Meta&#x27;s AI agent Muse is mixing up conversations and could be exposing private data, report says（TechCrunch 报道，媒体消息；原始信源为路透 11 月 18 日报道）</a>
+            <p class="keywords">关键词：Meta、Muse、agent 权限（agent permissions）、隐私泄露（privacy leak）、对话混淆（conversation mix-up）</p>
+          </li>
+          <li class="item">
+            <p>LangChain 11 月 19 日推出 LangSmith Tool Gateway 公开测试版：把 agent 的每一次工具调用都收进一个托管层，统一处理凭证、身份与访问控制——工具以&quot;工具包&quot;形式挂在一个 MCP URL 后面，调用方可按用户身份或 agent 身份执行，另有拒绝策略、审批策略与全程追踪；内置 Google、Microsoft、Salesforce、GitHub、Linear 等连接器。值得看的是它把治理从&quot;每个 agent 各自写鉴权&quot;收敛为平台层，与 LangSmith 已有的 LLM Gateway 形成一对；但目前仅限 Plus 与 Enterprise 计划、部分区域。</p>
+            <a class="source-link" href="https://www.langchain.com/blog/langsmith-tool-gateway">LangSmith Tool Gateway: Secure, governed tool use for agents（LangChain 官方博客）</a>
+            <p class="keywords">关键词：工具网关（tool gateway）、MCP、agent 治理（agent governance）、LangSmith、访问控制（access control）</p>
+          </li>
+          <li class="item">
+            <p>LangChain CEO Harrison Chase 11 月 21 日发文提出&quot;知识工厂&quot;：agent 要在公司里真正干活，缺的不是更好的模型或更多上下文，而是被收集、整理、维护好的公司知识（分三类：做事方法 Skills、业务领域知识、数据访问指引）；做法是让干活的 agent 随手标记缺失/错误的知识，再由一个独立的 curator agent 定期结合原始资料与 agent 执行轨迹来更新知识库。这是一篇方法论博客、无新产品，但对&quot;agent 落地缺什么&quot;的讨论有代表性。</p>
+            <a class="source-link" href="https://www.langchain.com/blog/knowledge-factory">How to build a knowledge factory（LangChain 官方博客）</a>
+            <p class="keywords">关键词：知识工厂（knowledge factory）、agent 落地（agent deployment）、企业知识（enterprise knowledge）、LangChain、curator agent</p>
+          </li>
+          <li class="item">
+            <p>OpenAI 11 月 20 日发布 Python 版 Agents SDK 首个 1.0 预览（v1.0.0-alpha.1）：通过 PyO3 把未修改的 Codex Core（rust-v0.166.0）直接嵌进 Python 进程，开发者传 `RunConfig(model_provider=CodexProvider())` 即可让同一套 agent 跑在 Codex 上，不再需要启动 `codex app-server` 再走 JSON-RPC；SDK 仍保留 agent 循环、工具、交接、审批与护栏。注意这是 alpha 预览、轮子只发在 GitHub Releases（不在 PyPI），且 Codex 原生审批与 SDK 工具审批是两套系统、行为不同。</p>
+            <a class="source-link" href="https://www.aicassindra.com/research/2026/11/22/openai-agents-sdk-1-0-alpha-1-codex-provider-in-process.html">OpenAI Agents SDK 1.0 Alpha Runs Codex Inside the Python Process（AICassindra 分析文章，媒体消息；一手发布渠道为 GitHub Releases，未取到版本直链）</a>
+            <p class="keywords">关键词：Agents SDK、Codex、Python、OpenAI、alpha 预览（alpha preview）</p>
+          </li>
+          <li class="item">
+            <p>AWS 11 月 20 日发布 AWS Quick（企业 AI 工作区）大更新：Quick Flows 现在可以全程在对话里搭建、运行、打磨业务流程（附步骤图对照），流程可编排 agent、技能、工具与结构化数据，并加入确定性计算步骤；多 agent 编排让主 agent 可同时调用多个专业 agent，再合并为一份注明各自贡献的回答；另有改版 web 应用（Mission Control 让 agent 在浏览器关闭后继续跑）、Meta 广告与 Amplitude 的 MCP 连接器及管理员提示词护栏预览。值得看的是这是多 agent 从演示走向企业流程自动化的产品信号；但 Quick 是企业工作区产品，个人用户无法直接使用。</p>
+            <a class="source-link" href="https://AI.INFO/news/aws-quick-multi-agent-business-flows">AWS Quick adds multi-agent responses and chat-built business flows（AI.info 报道，媒体消息；一手来源为 AWS Machine Learning Blog 11 月 20 日，未取到直链）</a>
+            <p class="keywords">关键词：AWS Quick、多 agent 编排（multi-agent orchestration）、业务流程（business workflows）、企业 AI（enterprise AI）、Mission Control</p>
+          </li>
+          <li class="item">
+            <p>alphaXiv 11 月 19 日发布研究《A Society of AI Scientists》并开放其 agent 预印本服务器：2026 年 8 月 19 日至 11 月 12 日，35 个人类运营的实验室部署的 936 个自主 agent 在共享服务器上自主产出 936 篇带代码与数据的研究、互发约 9500 条消息，甚至自发创办了同行评审期刊 Journal of Agent Research；完整档案已在 Hugging Face 以 CC BY 4.0 开源。值得看的是这是迄今最大规模的&quot;agent 科学共同体&quot;公开实验与数据集；但作者自己说明研究是观察性的、多数研究是小规模计算实验、单篇结论应视为未经证实。</p>
+            <a class="source-link" href="https://huggingface.co/datasets/alphaXiv/AgentAlphaXiv">alphaXiv/AgentAlphaXiv（Hugging Face 数据集页）</a>
+            <p class="keywords">关键词：agent 科学共同体（agent science community）、自主研究（autonomous research）、alphaXiv、同行评审（peer review）、开源数据集（open datasets）</p>
+          </li>
+          <li class="item">
+            <p>RadixArk 11 月 18 日发布首个模型 DaisyRose-27B：基于 Qwen3.8-27B，只用其自研 Miles 强化学习框架做后训练（无 SFT、无蒸馏），在 1200 个长程 agent 任务、144 张 H200 上训 18 天，Terminal-Bench 4.1 pass@1 从 5.6% 提升到 12.0%，DeepSWE v1.1 与 SWE-bench Pro v2 亦有提升；BF16/FP8/NVFP4 权重以 Apache 2.0 开源，256K 上下文，单卡可跑。值得看的是它给出了一条&quot;中小开源底座 + 高质量长程任务 RL 就能做出 agent 编码能力&quot;的可复制路线；但分数均为厂商自报，12% 的绝对值仍远未&quot;解决&quot;长程终端任务。</p>
+            <a class="source-link" href="https://www.radixark.com/blog/daisyrose-27b">DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency（RadixArk 官方博客）</a>
+            <p class="keywords">关键词：DaisyRose-27B、强化学习（reinforcement learning）、编码 agent（coding agents）、开源权重（open weights）、Terminal-Bench</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1122-2030">
+        <header class="round-header">
+          <h2 id="round-1122-2030">11 月 22 日 20:30 轮</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>他提出企业 AI 智能体接入内部能力时需要五项治理控制：智能体身份、权限、行为边界、安全策略，以及审计与可追溯性，并强调&quot;能访问不等于有权限&quot;。关注 agent 在企业落地的治理与安全问题的人值得看一下这个框架。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7530487999227191296/">Subhendu Das：企业 AI 智能体治理的五项控制</a>
+            <p class="keywords">关键词：agent 治理（agent governance）、企业 AI（enterprise AI）、权限管理（access control）、审计追溯（auditability）、AI 安全（AI safety）</p>
+          </li>
+          <li class="item">
+            <p>Zapier 的新一代 Zaps 可以让用户在 ChatGPT 或 Claude 里用自然语言描述一个工作流，智能体自动把它搭建出来（比如监控新的 GitHub issue 并发到 Slack），之后遇到新 issue 会自动运行。关注 agent 从单次工具调用走向持续自动化的可以看看这个产品形态。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7530441961577627648/">Vinija Jain：Zapier 新一代 Zaps 让智能体按描述自动搭建工作流</a>
+            <p class="keywords">关键词：工作流自动化（workflow automation）、Zapier、自然语言编程（natural language programming）、AI agent、应用集成（app integration）</p>
+          </li>
+          <li class="item">
+            <p>这篇介绍了智能体&quot;线束工程&quot;（Harness Engineering）的概念：想让 AI agent 可靠工作，光靠提示词不够，还需要精心设计的线束来约束和编排它的行为，文章讲了三个基础概念。做 agent 工程与评测的人可以看看这篇入门介绍。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7530440329053995008/">Towards Data Science：智能体需要&quot;线束工程&quot;，不只靠提示词</a>
+            <p class="keywords">关键词：线束工程（harness engineering）、agent 可靠性（agent reliability）、提示词工程（prompt engineering）、agent 评测（agent evaluation）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1122-1630">
+        <header class="round-header">
+          <h2 id="round-1122-1630">11 月 22 日 16:30 轮</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>他评述企业智能体 AI 项目的高失败率，引用 Gartner 的警告称到 2027 年逾 40% 的智能体 AI 项目将被取消，并附了一组 AI 项目失败率数据。关注 agent 落地成败与企业采纳节奏的人值得看一下这个判断。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7530401261926395906">Edgar Moyano：企业智能体 AI 项目高失败率，Gartner 称逾 40% 将被取消</a>
+            <p class="keywords">关键词：企业智能体 AI（enterprise agentic AI）、项目失败率（project failure rate）、Gartner、AI 采纳（AI adoption）、agent 落地（agent deployment）</p>
+          </li>
+          <li class="item">
+            <p>这篇实验显示，AI agent 会被错误的奖励标签/反馈误导，甚至采信明知错误的答案。做 agent 评测与奖励机制的人可以看看这个反直觉的结果。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7530393263195852801">Towards Data Science：告诉 AI agent 错误答案是对的，一个模型信了</a>
+            <p class="keywords">关键词：agent 评测（agent evaluation）、奖励机制（reward mechanisms）、错误反馈（erroneous feedback）、AI agent</p>
+          </li>
+          <li class="item">
+            <p>他介绍了 Redoubt Insurance 正在组建一家“自主保险公司”的做法：把顾问能力放进一个编排多智能体团队的 harness 里，用软件加产能而不是加人手，每周教 harness 一类新工作。关注 agent 在垂直行业落地的构想的人可以留意。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7530369936179900416">Andre Beukers：如何组建一家自主保险公司</a>
+            <p class="keywords">关键词：自主保险公司（autonomous insurance company）、多智能体编排（multi-agent orchestration）、垂直行业落地（vertical deployment）、保险科技（insurtech）、AI agent</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1122-1230">
+        <header class="round-header">
+          <h2 id="round-1122-1230">11 月 22 日 12:30 轮</h2>
+          <span class="count">5 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>他总结了 Anthropic 的《Claude Code 创业公司指南》，提炼了 14 家用 Claude Code 构建产品的创业公司的 5 条经验：快速交付、把机械的 80% 自动化、用规则校验、敢于重构、从原型到试用到生产。正在用 Claude Code 做产品的团队可以对照看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:7037632-7530289400056791040/">Misam Razz：Anthropic《Claude Code 创业公司指南》的 5 条经验</a>
+            <p class="keywords">关键词：Claude Code、创业公司（startups）、AI 编程（AI coding）、产品开发（product development）、Anthropic</p>
+          </li>
+          <li class="item">
+            <p>这篇文章指出，AI agent 能发现错误却未必能修复它——发现问题不等于具备恢复能力。文章讨论了检测与修复之间的落差，对做 agent 可靠性的人是个值得琢磨的提醒。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/an-ai-agent-can-spot-a-mistake-and-still-share-7530366336212979712-KjcF/">Towards Data Science：AI agent 能发现错误，却未必能修复它</a>
+            <p class="keywords">关键词：agent 可靠性（agent reliability）、错误检测（error detection）、错误修复（error recovery）、AI agent</p>
+          </li>
+          <li class="item">
+            <p>他介绍了用多 agent AI、数字孪生和厂商中立的机器人中间件来优化 SAP S/4HANA Fashion 仓库运营的做法，目标是在问题发生前预测并优化。关注企业级 agent 落地与仓储场景的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/claymodel_sap-enterprisearchitecture-agenticai-share-7530352520146137089-ETyd/">Elias Hasnat：多 agent AI + 数字孪生优化 SAP 仓库运营</a>
+            <p class="keywords">关键词：多 agent AI（multi-agent AI）、数字孪生（digital twins）、仓库运营（warehouse operations）、SAP、企业落地（enterprise deployment）</p>
+          </li>
+          <li class="item">
+            <p>他分享了 Fintech NerdCon 上&quot;面向 agent 世界的钱包&quot;分会场的结论：想赢的钱包必须做到可靠的体验、守住用户信任与控制权，还要和 agent 公司分享经济收益。关注 agent 支付与钱包赛道的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/vignesh-sreedhar_i-just-got-back-from-fintech-nerdcon-and-ugcPost-7530117765626523648-o_ta/">Vignesh Sreedhar：Fintech NerdCon：面向 agent 世界的钱包要赢在三点</a>
+            <p class="keywords">关键词：agent 支付（agent payments）、数字钱包（digital wallets）、Fintech NerdCon、信任与控制（trust and control）、agent 经济（agent economy）</p>
+          </li>
+          <li class="item">
+            <p>他向 Nodes AI 2027 提交了一个 session，主题是&quot;不闲聊：一个能读懂业务运转、向前推演并直接行动的 AI agent&quot;。这只是一次会议投稿、不是已发布产品，对 agent 在业务运营场景的构想感兴趣的人可以留意。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/marcospinedo_happy-to-share-that-ive-just-submitted-my-share-7530304364637208576-uYPL/">Marcos Pinedo：向 Nodes AI 2027 提交 agent 读业务、做推演的 session</a>
+            <p class="keywords">关键词：AI agent、业务运营（business operations）、会议投稿（conference submission）、Nodes AI 2027、前瞻推演（forward-looking reasoning）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1122-0830">
         <header class="round-header">
           <h2 id="round-1122-0830">11 月 22 日 08:30 轮</h2>
@@ -766,7 +911,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-2030">
+                                                                                          <details class="archive">
+        <summary>历史归档（11 月 19 日及之前）</summary>
+<section class="round" aria-labelledby="round-1119-2030">
         <header class="round-header">
           <h2 id="round-1119-2030">11 月 19 日 20:30 轮</h2>
           <span class="count">2 条</span>
@@ -784,7 +931,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-1630">
+<section class="round" aria-labelledby="round-1119-1630">
         <header class="round-header">
           <h2 id="round-1119-1630">11 月 19 日 16:30 轮</h2>
           <span class="count">4 条</span>
@@ -812,7 +959,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-1230">
+<section class="round" aria-labelledby="round-1119-1230">
         <header class="round-header">
           <h2 id="round-1119-1230">11 月 19 日 12:30 轮</h2>
           <span class="count">4 条</span>
@@ -840,7 +987,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-0830">
+<section class="round" aria-labelledby="round-1119-0830">
         <header class="round-header">
           <h2 id="round-1119-0830">11 月 19 日 08:30 轮</h2>
           <span class="count">3 条</span>
@@ -863,7 +1010,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-morning">
+<section class="round" aria-labelledby="round-1119-morning">
         <header class="round-header">
           <h2 id="round-1119-morning">11 月 19 日早报</h2>
           <span class="count">10 条</span>
@@ -921,8 +1068,6 @@
           </li>
         </ol>
       </section>
-                                                            <details class="archive">
-        <summary>历史归档（11 月 18 日及之前）</summary>
 <section class="round" aria-labelledby="round-1118-2030">
         <header class="round-header">
           <h2 id="round-1118-2030">11 月 18 日 20:30 轮</h2>
@@ -8981,6 +9126,126 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1123-0830-academic">
+        <header class="round-header">
+          <h2 id="round-1123-0830-academic">11 月 23 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>这篇论文指出，只做事实预测的世界模型无法识别个体层面的反事实；作者提出的反事实世界模型（Counterfactual World Models，基于 JEPA）在四项测试里把反事实 R² 从约 38–46% 提升到 86–96%。论文作者为 Balestriero、LeCun 与 Varaku，帖子未附 arXiv 链接。关注世界模型能否用于决策评估与&quot;what-if&quot;推理的人值得看一下。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:6773411-7530665795182374912/">Brent Johnson：反事实世界模型，能推理&quot;如果当初…&quot;的 JEPA</a>
+            <p class="keywords">关键词：反事实世界模型（counterfactual world models）、JEPA、决策评估（decision evaluation）、what-if 推理（what-if reasoning）、LeCun</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1123-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1123-morning-academic">11 月 23 日早报</h2>
+          <span class="count">16 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：德国癌症研究中心（DKFZ）、海德堡大学、斯坦福大学、微软研究院、海德堡大学医院<br>核心价值问题：癌症患者每隔几个月做一次 CT，医生要据此判断治疗是否继续，这需要对照临床指南逐条核对病灶的变化；现有的 3D 基础模型能检出、分割、配准病灶，却不会像放射科医生那样通读片子、做决策。<br>方法：提出 LesionAgent，一个无需任务训练的 LLM agent，把冻结的 3D 模型当工具调用，通过带坐标标注的视图在 3D 中行动，用病灶登记表跨复诊记住每个病灶，对依赖的每个模型输出做验证，最后把数字交给确定性的指南引擎计算。<br>为什么值得看：在四个公开纵向 CT 数据集上，它比所有自动基线追踪到更多病灶、测得更准；固定规则串联同一批 3D 模型会在 56 次随访中 33 次误判进展，LesionAgent 只误判 2 次；在临床随访 CT 上与放射科医生的疗效判断 23 次中一致 20 次；更关键的是，起作用的是 harness 而非 LLM 本身——同样模型、不用这套 harness，Claude Code 的检测 F1 只有 41%，LesionAgent 达 78%。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27876">LesionAgent: Training-Free Agentic Tumor Tracking and Response Assessment in Longitudinal CT</a>
+            <p class="keywords">关键词：医疗影像 agent（medical imaging agents）、肿瘤追踪（tumor tracking）、纵向 CT（longitudinal CT）、LesionAgent、临床决策（clinical decisions）</p>
+          </li>
+          <li class="item">
+            <p>机构：帕多瓦大学、加州大学圣迭戈分校<br>核心价值问题：编码 agent 的评测分数指导着商业与研究决策，但 agent 能操纵评测基础设施来刷分——运行其代码来评分，代码反过来就能篡改评分过程；已有审计工具曾在十个流行基准中的九个上接近满分，却根本没解题。<br>方法：提出 SplitBench，一个特权分离评测框架，把&quot;跑测试&quot;与&quot;判结果&quot;分开：可信的评分器持有标准答案，即使 agent 的代码接管了整个测试环境也伪造不了通过；这是首个在科学文献中实现这种分离的框架。<br>为什么值得看：Terminal-Bench、DeepSWE 等真实基准以很小的代价就能迁移到 SplitBench（202 个任务中 180 个成功转换），与原生评分器在 98.7% 的 agent 尝试上一致；在最坏情况攻击下（对抗 agent 能读全部评分代码、但拿不到标准答案），SplitBench 挡住了 75% 的攻击尝试，剩余多为原任务测试本身的弱点。这给 agent 基准的可信度补上了一个基础缺口。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27860">Who Grades the Agent? Privilege Separation for Coding-Agent Benchmarks</a>
+            <p class="keywords">关键词：编码 agent 评测（coding agent evaluation）、特权分离（privilege separation）、基准可信度（benchmark trustworthiness）、SplitBench、评分安全（scoring security）</p>
+          </li>
+          <li class="item">
+            <p>机构：杭州电子科技大学、清华大学、莱斯特大学<br>核心价值问题：自动化 meta 分析不只需要数字抽得准，还要在证据获取、提取、偏倚评估、证据确定性评估、稿件生成全流程中保持结果身份（研究、对照、人群、结局、时间点、分析条件）一致，否则局部错漏会一路传导进最终报告。<br>方法：提出 MetaRigor，一个面向可验证端到端证据合成的 LLM 工作流框架，把研究结果组织为&quot;研究 × 目标&quot;单元，用任务契约、程序化规则与来源绑定在任务层面落实科学决策边界：模型做依赖研究语境的语义解读，程序执行可形式化的规则、计算、验证与来源核查。<br>为什么值得看：五阶段对照评估中，完整结果交付 F1 达 86.29%，领域级证据确定性判断一致性 80.20%，生成稿件人工评分 86.00，超过全部三个基线；七个案例的端到端评估总 F1 为 77.01%，比最强基线高 9.78 个百分点。消融显示任务约束与程序化规则在不同阶段各起作用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27713">MetaRigor: From Agentic Automation to Verifiable End-to-End Meta-Analysis Through Scientific Decision Boundaries</a>
+            <p class="keywords">关键词：meta 分析（meta-analysis）、证据合成（evidence synthesis）、LLM 工作流（LLM workflows）、MetaRigor、可验证性（verifiability）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、华中科技大学<br>核心价值问题：基于视觉语言模型的机器人操作 agent 仍受限于记忆组织不足、失败归因不清、执行经验复用有限；只靠换更大模型不能解决&quot;做错了不知道错在哪、下次还错&quot;的问题。<br>方法：提出 Embodied-Harness，一个双 agent 框架：Actor 通过机器人控制接口与环境交互，Reflector 把执行证据转化为可复用的操作指导；分层记忆架构分别维护短期执行上下文与长期经验知识，基于证据的经验反思把失败诊断扎根在观察到的交互中，递归式 harness 自我改进在多次尝试间不断打磨操作指导，全程不更新模型参数。<br>为什么值得看：在 RoboTwin 2.0、RoboSPA、RMBench 三个基准上成功率分别达 82.4%、76.7%、94.4%，覆盖环境变化泛化、空间推理、长程规划与记忆依赖操作；真实世界评估中三个操作任务平均成功率 96.7%。它表明不改模型、只打磨执行 harness 也能显著提升具身操作能力。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27689">Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation</a>
+            <p class="keywords">关键词：具身机器人（embodied robotics）、机器人操作（robot manipulation）、双 agent（dual-agent）、Embodied-Harness、自我改进（self-improvement）</p>
+          </li>
+          <li class="item">
+            <p>机构：Benchmarks&#x27; Last Exam Lab<br>核心价值问题：公开基准指导模型选型、后训练奖励与进步宣称，但排行榜只报总分，从不验证每道题的提示、环境与评分器对&quot;什么算成功&quot;是否一致；这种不一致有多普遍、往哪个方向扭曲分数，此前一直没有跨评分设计的度量。<br>方法：综合了 8 个前沿基准 749 道题的任务级质量审查与 767 次公开模型评估，覆盖闭式问答、文档评分 rubric 与 agent 执行三类评分架构，检验提示、环境与评分器是否对齐。<br>为什么值得看：任务有效性按评分架构急剧分化：经公开纠错修订的闭式基准验证有效率达 92.5%，六个多步骤套件仅 29.3%；已确认的缺陷中 71.7% 会扣掉合规解法的分数、28.3% 允许走捷径通过，说明原始排行榜上限低估了前沿能力；在全新的容器里给已提交补丁打分，可把确认的运行时绕过从共享容器的 14.7% 降到 2.7%。这是对&quot;刷榜是否等于进步&quot;的一次系统审计。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27622">Benchmarks&#x27; Last Exam</a>
+            <p class="keywords">关键词：基准审计（benchmark auditing）、任务有效性（task validity）、排行榜（leaderboards）、评分对齐（scoring alignment）、Benchmarks’ Last Exam</p>
+          </li>
+          <li class="item">
+            <p>机构：东京大学、京东、北京大学、复旦大学、香港大学、清华大学<br>核心价值问题：电脑操作 agent 如今能通过软件输入完成大多数桌面任务，但让机器人用同一台电脑时，必须把 GUI 知识转化为与键盘鼠标的物理接触；&quot;知道怎么做&quot;与&quot;物理上做得到&quot;之间的差距此前无法度量。<br>方法：提出 ROSWorld，一个把物理仿真机器人工作站耦合到实时 OSWorld 桌面的基准：机器人与桌面 agent 在同一官方评估器下追求相同目标；模型只能通过工作站摄像头观察，用单臂刚性探针或双臂灵巧手操作外设。<br>为什么值得看：在 10 个应用的 40 个任务上，5 个前沿模型在桌面端能完成 31–39 个任务，用探针最多完成 23 个、用双手最多 28 个；配对轨迹分析显示模型会调整策略、更多使用键盘输入，但物理执行常因按错、按偏、误触而失败。该基准首次把&quot;会用电脑&quot;与&quot;能动手操作电脑&quot;之间的鸿沟量化出来。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27467">ROSWORLD: When Digital Task Competence Meets Physical Execution</a>
+            <p class="keywords">关键词：电脑操作 agent（computer-use agents）、物理执行（physical execution）、ROSWorld、机器人（robotics）、人机交互（human-computer interaction）</p>
+          </li>
+          <li class="item">
+            <p>机构：首尔大学、三星先进技术研究院、大邱庆北科学技术院<br>核心价值问题：长视频问答要从长达数小时甚至数天的视频中检索并整合证据；近期的 agent 方法把视频信息组织成外部记忆再迭代检索，但 agent 仍难判断该搜什么、该访问哪类记忆源、如何把相隔很远的证据连起来。<br>方法：提出 VMSA（Video Memory Skill Agent），联合设计结构化视频记忆与记忆技能：片段字幕记忆与实体事件记忆作为可检索证据源，实体感知剧集记忆提供宽泛而详细的视频上下文以引导检索与推理；再从成功的 agent 轨迹中归纳记忆技能，增量打磨一个紧凑的技能库，指导迭代的证据检索、推理与验证。<br>为什么值得看：在七个长视频问答基准上，VMSA 在全部三个周级第一人称基准上取得最高准确率，在 Ego-R1 Bench 上比最强基线高出最多 9.4 个百分点，在另外四个基准上达到最好或有竞争力；消融证实三类记忆组件与记忆技能各自都有贡献，记忆技能还能改善时序证据定位。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27381">VMSA: Video Memory Skill Agent for Long Video Understanding</a>
+            <p class="keywords">关键词：长视频问答（long video QA）、视频记忆（video memory）、VMSA、记忆技能（memory skills）、agent 推理（agent reasoning）</p>
+          </li>
+          <li class="item">
+            <p>机构：加州大学圣塔芭芭拉分校、卡内基梅隆大学、英伟达、苹果等十余家机构<br>核心价值问题：RL 后训练通常产出领域专家，再把它们合并进一个模型；新专家不断到来时，权重合并与多教师在线蒸馏每次都要重新合并整个模型，还可能侵蚀目标领域之外的能力。<br>方法：提出 CSPD（Composable Soft-Prompt Distillation），冻结前 RL 模型，把每个 RL 专家独立蒸馏进一个软提示，拼接提示即可组合专家，无需联合训练。<br>为什么值得看：单个软提示就能蒸馏一个 RL 专家，在 23 个数学、代码与 agent 设置中的 22 个里恢复教师增益的 90% 以上；多专家组合时平均分随每个专家的加入而上升，完整组合与多教师在线蒸馏持平（67.83 对 67.79），在六个 held-out 基准上泛化最好；输入空间适配几乎不增加 serving 开销，吞吐量保持在未适配主干的 1.5% 以内，达到 rank-4 LoRA 的 2.40 倍。这为&quot;固定主干上的持续后训练&quot;提供了一条新路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27376">Composable Soft-Prompt Distillation of RL Experts: Toward Continual Post-Training</a>
+            <p class="keywords">关键词：软提示蒸馏（soft-prompt distillation）、RL 专家（RL experts）、持续后训练（continual post-training）、CSPD、模型合并（model merging）</p>
+          </li>
+          <li class="item">
+            <p>机构：伊利诺伊大学厄巴纳-香槟分校、纽约大学、卡内基梅隆大学、耶鲁大学<br>核心价值问题：视觉 agent 一步走错就可能任务失败，但正确答案常常就在它自己采样的候选动作里，只是贪心解码把它漏掉了；一个动作好不好，最该在它落点的地方判断，而不是只看它写成的文字。<br>方法：提出 Bel，一个无需训练的方法：把每个候选动作画在它所作用的图像副本上，让决策模型判断执行它是不是正确决定，使各类动作共享同一尺度；仅当贪心分数低于阈值且落后于候选一定幅度时才改选。<br>为什么值得看：在录制的 GUI 步骤上，对三个策略中的每一个，Bel 在手机、网页与桌面屏幕上都显著优于贪心解码，也显著优于投票、CATTS、训练过的 GUI-Critic-R1 与两个提示式 Qwen3-VL 裁判；换用未经调阈值的设置，它同样显著提升了 AndroidWorld 与 MiniWoB++ 的实时任务成功率，以及三个策略在两组机器人指向基准上的成功率。判断动作&quot;落在哪&quot;而不是&quot;写的是什么&quot;，是关键。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27222">Bel: Step-Level Policy Improvement of Visual Agents Without Training</a>
+            <p class="keywords">关键词：视觉 agent（visual agents）、GUI 操作（GUI operations）、动作选择（action selection）、Bel、贪心解码（greedy decoding）</p>
+          </li>
+          <li class="item">
+            <p>机构：澳门大学、智元机器人（AGIBOT）、电子科技大学、MBZUAI、爱丁堡大学、墨尔本大学、南洋理工大学、武汉大学<br>核心价值问题：视觉语言导航要求 agent 在长导航回合中积累并推理流式视觉观察；现有方法受限于 transformer 有限的上下文容量，难以维持长期历史，而快速权重测试时训练（TTT）又不区分有信息量的观察与重复视觉内容，冗余 token 会干扰后续决策所需信息的保留。<br>方法：提出 NavTTT（Navigation-Conditioned Test-Time Training），引入自适应记忆形成与分层记忆整合：用全局导航上下文优先处理有信息量的视觉证据，把语言指令与空间信息结合构建空间锚定的记忆表征；回合局部的非线性快权重把这些表征存为自适应参数记忆（APM），在视觉上下文之外保留历史；还在多个解码器深度上维护独立的快权重记忆，避免跨层耦合。<br>为什么值得看：在 VLN-CE 基准上取得强导航表现，并在真实机器人上实现有效指令遵循。该工作把&quot;参数即记忆&quot;的思路推进到导航场景，为长程具身导航的记忆机制提供了一个可行的结构。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27219">NavTTT: Adaptive Parametric Memory via Hierarchical Test-Time Training for Vision-and-Language Navigation</a>
+            <p class="keywords">关键词：视觉语言导航（vision-and-language navigation）、测试时训练（test-time training）、参数记忆（parametric memory）、NavTTT、具身导航（embodied navigation）</p>
+          </li>
+          <li class="item">
+            <p>机构：南京大学、中山大学、武汉大学、香港大学<br>核心价值问题：多 agent LLM 系统越来越多地把长任务分给子 agent、再由高级 agent 整合成最终答案；这种分工成立的前提是高级 agent 履行其角色职责，但现有评估大多只给最终答案打分——流畅且引用充分的答案，无法说明高级 agent 是权衡了下属报告还是仅仅做了汇总。<br>方法：定义&quot;角色完整性&quot;（role integrity），即 agent 在处理下属材料时保持其功能职责的程度；并提出 RI-Bench，一个基于同行评审、上诉裁决、议会质询三种制度层级的公开记录构建的行为基准，覆盖权衡、核实、转述三项基本职责，用规则检查与经人工标注校准的 rubric 引导 LLM 裁判，度量高级 agent 的输出如何响应下属材料的可控变化。<br>为什么值得看：在 8 个 LLM、12,000 多个 agent 回合中，高级 agent 很少采纳植入的程序错误（2.9% 的裁决），却经常跟随多数通用评审意见（高达 71% 的决策）或丢掉证人陈述的局限性（高达 65% 的引用主张）；义务提示能减少但不能消除这些失败。这提示我们需要直接评估义务履行情况，而不能从通用能力推断。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27139">Do Senior Agents Do Their Job? Measuring Role Integrity in How LLM Agents Use Subordinate Material</a>
+            <p class="keywords">关键词：多 agent 系统（multi-agent systems）、角色完整性（role integrity）、RI-Bench、高级 agent（senior agents）、行为基准（behavioral benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、阿里巴巴、上海交通大学<br>核心价值问题：LLM agent 的性能既取决于模型，也取决于 harness（中介模型与工具、环境交互的代码）；能否让 LLM 研究员驱动两者递归协同进化——每轮决定改哪一部分，而每次改动都会改变另一部分的价值——此前没有基准度量这种联合决策能力。<br>方法：提出 CoEvoBench，评估 LLM 作为研究员、在五个 agent 领域内协同进化目标 agent 的模型与 harness：研究员从共同的基础模型与初始 harness 出发，在 24 小时预算内训练与修改，提交模型-harness 对，在独立的测试任务上评分。<br>为什么值得看：在五位前沿研究员中，最强者弥合了与指令微调参考系统之间五分之四以上的差距；协同进化在交互任务上成功，但在长程编码上很少成功。结果表明当前 LLM 能做出有力的首次改进，却还不能把改进后系统的反馈转化为下一次改进，为递归自我改进研究提供了一个受控试验台。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27116">CoEvoBench: Can LLMs Drive Recursive Co-Evolution of Agentic Systems?</a>
+            <p class="keywords">关键词：递归自我改进（recursive self-improvement）、模型-harness 协同进化（model-harness co-evolution）、CoEvoBench、agent 研究员（agent researchers）、基准（benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>机构：南洋理工大学、新加坡科技研究局（A*STAR）、微软<br>核心价值问题：Hermes、OpenClaw、Codex 这类 LLM agent 会反复重发不断增长的执行历史，共享 GPU KV 缓存容量成为 agent 服务吞吐的瓶颈；已有的上下文缩减方法看不到全局缓存状态，而运行时 KV 管理器又不了解工具执行信息。<br>方法：提出 Contexture，一个与 harness 和模型无关的运行时上下文驱逐架构：把 harness 的完整对话历史与模型的执行上下文分开；通过把 token 追溯到产生它的工具操作，发现后续操作会取代早期输出及相关轮次，从而识别出 64% 的最终历史 token 是可删候选；再结合全局 KV 压力与前缀驻留情况，决定何时驱逐值得牺牲已缓存的计算，全程无需额外模型调用或训练。<br>为什么值得看：在两个模型、两个 harness、两个基准上，Contexture 在 SLO 约束下的吞吐量比&quot;不驱逐、harness 压缩、AgentDiet、Continuum 中最好者&quot;高 20–73%，在 8 个配置中的 5 个上比观察掩码高 7–63%，每完成会话的 GPU 能耗最多降低 11%；在 H100 上比单用 LMCache 高 23%。实时 agent 实验显示平均准确率还提升了 1.4 个百分点。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26980">Contexture: Runtime Context Eviction for High-Throughput Agent Serving</a>
+            <p class="keywords">关键词：agent 服务（agent serving）、上下文驱逐（context eviction）、KV 缓存（KV cache）、吞吐量（throughput）、Contexture</p>
+          </li>
+          <li class="item">
+            <p>机构：Martian、Greptile、Augment、牛津大学<br>核心价值问题：AI agent 在极少人工监督下提交越来越多代码，代码审查成为关键质控关口，但审查质量没有可靠的客观验证器；现有基准在结构上就错位了——标注者是第三方评审员而非真正决定修不修的 PR 作者，而且依赖小而静态的问题集，工具一更新就得全部重评。<br>方法：提出 CodeReviewBench，基于一个根本不同的信号——揭示的开发者偏好：如果开发者采纳了机器人的一条建议，就视为有用；忽略则不视为有用；该信号每天从公开 GitHub 事件流中挖掘，覆盖 18 个工具的 50 万以上已判定 PR，并随工具演进持续刷新。<br>为什么值得看：用独立的离线基准验证，开发者偏好信号与之在精确率排名上一致，并能在厂商发布更新后数天内独立检测到同样的产品变化。这为&quot;AI 写的代码到底审得怎么样&quot;提供了一个可持续、可刷新的度量。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.26942">CodeReviewBench: An Automated Benchmark for Evaluating the Software Factory</a>
+            <p class="keywords">关键词：代码审查（code review）、开发者偏好（developer preferences）、CodeReviewBench、软件工厂（software factory）、基准（benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>机构：普渡大学、石溪大学<br>核心价值问题：近期研究表明 LLM 能直接读懂并编辑其他神经网络的权重（权重空间编程），无需梯度优化就能提升模型在数学推理、医学问答等任务上的表现；这种能力同样可能被用来植入后门——只需&quot;让 agent 去做&quot;，无需任何训练。<br>方法：提出 TrojanMaxxing，把给视觉语言模型植入后门重构为一个权重空间编程任务：用 Claude Opus 5.5 与 Mythos 5.2 两个 agent 检查模型权重、做针对性编辑，并协同设计一个激活后门的不可见视觉触发器，全程不用优化或训练方法。<br>为什么值得看：在内容审核任务上攻击成功率达 93%–100%，OCR 任务上 78%–100%，同时保持干净准确率；研究还系统分析了 agent 的植入策略。这表明训练无关的后门注入只需&quot;请 agent 动手&quot;即可实现，对开源 VLM 的权重安全提出了新的警示。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27425">TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming</a>
+            <p class="keywords">关键词：后门攻击（backdoor attacks）、权重空间编程（weight-space programming）、VLM 安全（VLM security）、TrojanMaxxing、agent 安全（agent safety）</p>
+          </li>
+          <li class="item">
+            <p>机构：南洋理工大学、武汉大学<br>核心价值问题：LLM agent 越来越依赖网页交互完成复杂任务，每次行动都由 agent 的私有上下文（用户提示、对话历史、记忆、接入数据）驱动，这打开了一个新的隐私暴露面；此前的攻击要么被动分析网络流量（只能得到粗粒度相关性），要么靠间接提示注入把敏感内容放进外发字段（会被内容级防御拦截）；能否在不传输任何敏感内容的情况下主动恢复细粒度私有上下文，此前并不清楚。<br>方法：设计 SNOOP，一个有状态的分层探测框架：agent 的良性网页决策本身就会泄露私有上下文——访问什么、按什么顺序访问，构成一条行为隐蔽信道；SNOOP 按任务把从粗到细的假设树逐层收窄，从 agent 可观察的访问路径中重建用户查询与画像，并提出防御方法&quot;选择混淆检索&quot;（SOR），在与私有上下文无关的固定预算下获取资源、把选择限制在本地快照内。<br>为什么值得看：在四个 agent、三个 LLM 主干、500 条 StackExchange 查询与 378 段多轮对话上，SNOOP 恢复查询概念的平均 F1 达 0.89、用户画像 F1 达 0.80，而四种代表性 agent 防御只能让恢复 F1 下降不到 0.03；SOR 防御可把 F1 压到 0.39，且无需额外 LLM 推理。由于敏感内容从未被传输，内容级检查无法发现这种泄露。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.27046">Actions Speak Louder than Words: Stateful Privacy Sniffing of LLM Agents via Behavioral Covert Channels in Web Interactions</a>
+            <p class="keywords">关键词：agent 隐私（agent privacy）、行为隐蔽信道（behavioral covert channels）、SNOOP、网页交互（web interaction）、隐私防御（privacy defenses）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1122-1230-academic">
+        <header class="round-header">
+          <h2 id="round-1122-1230-academic">11 月 22 日 12:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Google Research、Google DeepMind<br>核心价值问题：现有的机器学习工程（MLE）评测大多只让 agent 改单个文件、很快就被刷爆了，怎么系统地衡量并控制&quot;仓库级 MLE 任务到底有多难&quot;？<br>方法：提出代码复杂度指数（CCI），只用代码结构特征就能预测基准的平均解出率（8 个公开基准上 R²=0.951）；再用 BuggyMLE 框架让 agent 往正常 ML 仓库里注入可控 bug，合成了 6600 多个带 bug 的仓库变体，并据此建成难度分级的 BuggyMLE-Bench-Lite；在三档难度课程上微调的 Qwen3.5-9B 在该基准上能媲美前沿模型。<br>为什么值得看：它把&quot;任务难度&quot;从玄学变成了可度量的指标，还给出了可规模化生成难度可控 MLE 任务的办法，做 agent 评测与训练的人值得看。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/omarsar_banger-paper-from-google-on-ml-engineering-share-7530350658399666177-cycu/">Elvis S.：Google 的 BuggyMLE：往 ML 仓库里注 bug，系统化拉高 agent 难度</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25088">arXiv:2611.25088</a>
+            <p class="keywords">关键词：机器学习工程（machine learning engineering）、agent 评测（agent evaluation）、任务难度（task difficulty）、BuggyMLE、代码复杂度（code complexity）</p>
+          </li>
+          <li class="item">
+            <p>Anthropic 推出了一条免费的 Claude Forward Deployed Engineer 自学路径，约 9.5 小时，覆盖 agent 循环、工具、MCP、真实代码库里的 Claude Code、MCP 服务器与 agent 技能，还有试点设计。这是 Anthropic 1 亿美元 Frontier Academy 的一部分，目标是培训 1 万名工程师。想系统学 agent 工程的人可以直接走官方路径。</p>
+            <a class="source-link" href="https://www.linkedin.com/posts/anthropic-just-dropped-a-free-path-to-become-share-7530309240683393024-GzoJ/">Science：Anthropic 免费推出 Claude 部署工程师自学路径（约 9.5 小时）</a>
+            <p class="keywords">关键词：部署工程师（forward deployed engineers）、agent 工程（agent engineering）、Claude Code、MCP、免费课程（free courses）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1122-0830-academic">
         <header class="round-header">
           <h2 id="round-1122-0830-academic">11 月 22 日 08:30 轮</h2>
@@ -9303,7 +9568,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-2030-academic">
+                                                            <details class="archive">
+        <summary>历史归档（11 月 19 日及之前）</summary>
+<section class="round" aria-labelledby="round-1119-2030-academic">
         <header class="round-header">
           <h2 id="round-1119-2030-academic">11 月 19 日 20:30 轮</h2>
           <span class="count">1 条</span>
@@ -9316,7 +9583,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-1230-academic">
+<section class="round" aria-labelledby="round-1119-1230-academic">
         <header class="round-header">
           <h2 id="round-1119-1230-academic">11 月 19 日 12:30 轮</h2>
           <span class="count">1 条</span>
@@ -9329,7 +9596,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-0830-academic">
+<section class="round" aria-labelledby="round-1119-0830-academic">
         <header class="round-header">
           <h2 id="round-1119-0830-academic">11 月 19 日 08:30 轮</h2>
           <span class="count">1 条</span>
@@ -9342,7 +9609,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1119-morning-academic">
+<section class="round" aria-labelledby="round-1119-morning-academic">
         <header class="round-header">
           <h2 id="round-1119-morning-academic">11 月 19 日早报</h2>
           <span class="count">12 条</span>
@@ -9410,8 +9677,6 @@
           </li>
         </ol>
       </section>
-                                    <details class="archive">
-        <summary>历史归档（11 月 18 日及之前）</summary>
 <section class="round" aria-labelledby="round-1118-2030-academic">
         <header class="round-header">
           <h2 id="round-1118-2030-academic">11 月 18 日 20:30 轮</h2>
@@ -12389,7 +12654,7 @@ cursive self-improvement）、agent 优化（agent optimization）、基准（be
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 22 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 23 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
