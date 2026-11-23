@@ -383,6 +383,44 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1123-1230">
+        <header class="round-header">
+          <h2 id="round-1123-1230">11 月 23 日 12:30 轮</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>作者用 AssemblyAI 的语音转文字和语音合成为自己搭了一个语音 agent，TTS 还克隆了他自己的声音，据说像到能骗过他妈妈。这篇更像学习手记而非产品发布：他照着官方文档一步步做，记录了 STT/TTS 工作流和 API 集成的心得。刚想动手做第一个语音 agent 的人可以看看这个诚实的入门例子。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7530724418919055361">Shivam Jha：用 AssemblyAI 给自己搭语音 agent，TTS 克隆了自己的声音</a>
+            <p class="keywords">关键词：AssemblyAI、语音 agent（voice agents）、TTS 声音克隆（TTS voice cloning）、STT、入门教程（getting started）</p>
+          </li>
+          <li class="item">
+            <p>AssemblyAI 把 Dictation API 做快了，称延迟已追平自家的 Sync API，用同一条推理路径，支持流式转录、逐句中间结果和端点检测，适合快速轮转的听写场景。帖子很短、正文没给基准数字，关键信息就是延迟持平的说法和流式听写这个用法。做实时转录或听写功能、且用 AssemblyAI 的人值得留意。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7530720079844585472">AssemblyAI：Dictation API 提速，延迟追平 Sync API</a>
+            <p class="keywords">关键词：AssemblyAI、Dictation API、流式转录（streaming transcription）、低延迟（low latency）、听写（dictation）</p>
+          </li>
+          <li class="item">
+            <p>Rime 的语言学家解释，为什么教语音模型学字形与音素的关系——也就是音素条件建模——能让 TTS 正确读出人名、缩写和多音字等难词，帖子还附了一张发音错误率对比图：Rime 5.3%，ElevenLabs 6.2%/6.4%，Cartesia 6.7%，Murf 7.1%，Inworld 8.6%。完整文章在评论区链接里。这是少见的从语言学角度讲清 TTS 设计取舍、还附横向数据的厂商帖子，关注 TTS 发音准确性的人值得看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7530719480549724160">Lily Clifford：Rime 为什么用音素条件建模做 TTS</a>
+            <p class="keywords">关键词：Rime、音素条件建模（grapheme-to-phoneme modeling）、TTS 发音（TTS pronunciation）、发音错误率（pronunciation error rate）、ElevenLabs</p>
+          </li>
+          <li class="item">
+            <p>Canary Speech 与 Intermountain Health 合作的一项研究称，用声音生物标志物可以区分多发性硬化症患者，附白皮书下载，图中模型准确率约 0.90、AUC 约 0.94。这是公司发布的白皮书而非经核实的同行评审论文，标题数字按厂商自述理解。关注语音健康应用和临床合作验证的人可以看看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7530719382977646592">Canary Speech：声音生物标志物可检测多发性硬化症</a>
+            <p class="keywords">关键词：Canary Speech、声音生物标志物（voice biomarkers）、多发性硬化症（multiple sclerosis）、Intermountain Health、白皮书（white paper）</p>
+          </li>
+          <li class="item">
+            <p>睡前故事应用 Lullable 回答了用户最常问的问题——是不是真人在读：它坦承声音是合成的，同时指出，夜间能用的声音得撑满整个故事、而非只在十秒 demo 里好听。评论区 Taylor H. 的一点很有用：长音频到第 39 分钟还不发平，比大多数 demo 更能说明 TTS 水平。关心 TTS 透明度和长音频韵律问题的人值得看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7530717825930485760">Lullable：睡前故事 TTS 坦承合成，长音频韵律才是考验</a>
+            <p class="keywords">关键词：Lullable、睡前故事（bedtime stories）、TTS 透明度（TTS transparency）、长音频（long-form audio）、韵律（prosody）</p>
+          </li>
+          <li class="item">
+            <p>作者分享了一个本地模块化语音到语音流程：Silero VAD、Moonshine 做 ASR、Qwen 或 Gemma 做语言模型、Qwen3-TTS 合成，完整代码在评论区。帖子强调这是一个框架而非单一模型，整条链路本地运行、注重隐私。想从零搭本地语音 agent 的人可以直接拿这套组件选型作起点。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7530717695206641666">Deepak Kamboj：本地搭语音 agent 的 Hugging Face 语音到语音框架</a>
+            <p class="keywords">关键词：本地语音 agent（local voice agents）、Silero VAD、Moonshine、Qwen3-TTS、隐私（privacy）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-0830">
         <header class="round-header">
           <h2 id="round-1123-0830">11 月 23 日 08:30 轮</h2>
