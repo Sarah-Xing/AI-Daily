@@ -409,7 +409,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-morning">
+                  <details class="archive">
+        <summary>历史归档（11 月 20 日及之前）</summary>
+<section class="round" aria-labelledby="round-1120-morning">
         <header class="round-header">
           <h2 id="round-1120-morning">11 月 20 日早报</h2>
           <span class="count">1 条</span>
@@ -422,8 +424,6 @@
           </li>
         </ol>
       </section>
-                  <details class="archive">
-        <summary>历史归档（11 月 19 日及之前）</summary>
 <section class="round" aria-labelledby="round-1119-morning">
         <header class="round-header">
           <h2 id="round-1119-morning">11 月 19 日早报</h2>
@@ -947,6 +947,79 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1124-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1124-morning-academic">11 月 24 日 08:30 轮</h2>
+          <span class="count">13 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：伊利诺伊大学厄巴纳-香槟分校、罗格斯大学、佐治亚理工学院<br>核心价值问题：RLVR 只用最终答案对错给奖励，整条推理链上的每个 token 拿到的信用信号都一样粗，哪些中间推理步骤真正促成了成功、哪些导致了失败，训练信号说不清楚，尤其直接训 base 模型时效率很低。<br>方法：提出 SAEPO，用预训练的稀疏自编码器（SAE）给推理轨迹中的每个 token 构建语义表示，按 SAE 概念逐 token 打分（如惩罚错误的&quot;最终答案&quot;token、奖励正确的&quot;推理过程&quot;token），作为可插拔的 advantage shaping 模块，兼容 GRPO 与 GSPO。<br>为什么值得看：在 3 个 LLM 底座、6 个数学与 2 个代码基准上，数学平均分最高提升 6.63%、代码最高提升 5.57%，且 Qwen3-1.7B-Base 的训练曲线显示早期精度爬升更快——把&quot;信用分配&quot;从序列级做到 token 级，是 RLVR 训练效率上一个通用且可复用的改进。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29936">SAEPO: Sparse-Autoencoder-Guided Credit Assignment for Policy Optimization</a>
+            <p class="keywords">关键词：SAEPO、信用分配（credit assignment）、稀疏自编码器（sparse autoencoders）、RLVR</p>
+          </li>
+          <li class="item">
+            <p>机构：阿里巴巴<br>核心价值问题：多结果结构化生成任务（如一次预测多个产品属性）中，GRPO 把整条回答的组相对优势广播给所有 token，某个属性答错的低奖励会连带惩罚答对的属性及其推理过程，信用被系统性地算错了人。<br>方法：提出 AnchorCredit，利用策略模型从输出锚点到前面推理句的注意力来估计&quot;推理句—输出成分&quot;的关联，把优势按成分拆分后分配给相关的推理，无需额外标注相关性，也不用单独训一个相关性判别器；并新建 7,200 条真实商品图文样本的 ProductAttr 基准来研究这一问题。<br>为什么值得看：直指 RLVR 在多可验证奖励任务里的信用错配这一此前未被点破的问题，方法只用模型自身的注意力、不增加训练成本，在 ProductAttr 与公开的 Nutrition5k 数据集上都优于现有基线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30881">AnchorCredit: Output-Anchored Credit Assignment for Structured Generation with Multiple Verifiable Rewards</a>
+            <p class="keywords">关键词：AnchorCredit、信用分配（credit assignment）、结构化生成（structured generation）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：卡内基梅隆大学、苹果<br>核心价值问题：RLVR 通常是单模型、超参数训练前就定死，调参只能靠一轮轮重跑，训到一半发现超参数选错了只能从头再来，浪费大量算力。<br>方法：提出群体后训练（PBPT），并行训练多个模型并用群体训练边训边调：定期在验证集上评估，表现好的模型被复制并扰动超参数继续探索，表现差的停训并被复制体取代。<br>为什么值得看：在推理基准（Enigmata、Nemotron）与交互式工具使用环境（Gaia2、AppWorld）上，PBPT 优于同等算力的多组独立 RLVR 训练，还能从很差的初始超参数中自我恢复、自动找到更好的设置——把&quot;调参&quot;从训练外的人工循环收进了训练过程本身。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29014">Population-Based Post-Training for Large Language Models</a>
+            <p class="keywords">关键词：群体后训练（population-based post-training）、超参数调优（hyperparameter tuning）、RLVR、群体训练（population-based training）</p>
+          </li>
+          <li class="item">
+            <p>机构：斯坦福大学、谷歌 DeepMind<br>核心价值问题：RLVR 的奖励稀疏（只有整条序列末尾一个可验证奖励），而在线蒸馏（OPD）虽能给出每个 next-token 的稠密教师信号，却不与验证结果挂钩；简单地把两者加起来并不能让验证反馈去指导稠密监督。<br>方法：提出可验证在线蒸馏（VOPD），从 OPD 的隐式奖励视角把教师监督与验证反馈放在同一奖励空间，把验证偏好投影到教师的隐式奖励方向上，再对整个词表做 Rao-Blackwellization，让验证信号传播到从未被采样过的动作上；也可理解为按教师—验证器的一致程度自适应地外推蒸馏目标。<br>为什么值得看：在两组教师—学生配置、8 个数学推理基准上，VOPD 在最终性能与学习效率上都稳定优于原生 OPD 与其他在线蒸馏基线，代码已开源，为&quot;稀疏验证奖励如何变成稠密监督&quot;给了一个干净的理论解法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30325">Verifiable On-Policy Distillation</a>
+            <p class="keywords">关键词：可验证在线蒸馏（verifiable on-policy distillation）、RLVR、在线蒸馏（online distillation）、数学推理（math reasoning）</p>
+          </li>
+          <li class="item">
+            <p>机构：阿里巴巴<br>核心价值问题：AI 编程 agent 是多轮交互任务，现有 RL 方法依赖稀疏的终点奖励，中间哪一步决策影响了成败说不清楚；而组相对方法又要求对每个任务重复采样多条轨迹，成本高。<br>方法：提出直接反馈策略优化（DFPO），单轨迹 RL 算法，直接从一条轨迹训练：用局部测试判断保留哪个版本、用最终验证评估整个任务结果，局部测试与文本对齐定位该更新哪些 token、偏好哪个版本，终点奖励决定更新权重。<br>为什么值得看：在相同底座模型与执行环境下，DFPO 的任务解决率高于 GSPO——单轨迹就能做信用分配，对长程、多轮的 agent 训练有直接的降本意义。（注：摘要未给具体数值）</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29193">Direct Feedback Policy Optimization for AI Coding Agents</a>
+            <p class="keywords">关键词：DFPO、编程 agent（coding agents）、单轨迹 RL（single-trajectory RL）、信用分配（credit assignment）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京航空航天大学、利兹大学<br>核心价值问题：同步式 LLM 强化学习每轮更新都要等固定数量的完整组相对样本，但各样本生成长度与奖励结果差异极大、且中途才显现；静态准入与&quot;无条件跑完&quot;让加速器大量空转，还浪费算力生成最终不会被采用的样本。<br>方法：提出 ARC 闭环 rollout 控制架构，在组粒度上管理同步 RL 的 rollout：用校准流式回填从部分观测判断一组样本还值不值得跑完、不值得就立刻用新候选回填；用延迟组完成把不确定的提前停止先挂起、之后可恢复而非直接丢弃；再用自适应准入与流水线按早期测得的时长排序样本、按需准入。<br>为什么值得看：在线评估中 rollout 时间减少 37.4%（1.60 倍加速），GRPO 有效吞吐提升 50.1%，同时直接找回 98.9% 最终会被保留的训练组——系统层优化，不动算法却显著降低 RL 训练成本。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29156">ARC: Adaptive Rollout Control for Efficient Synchronous LLM Reinforcement Learning</a>
+            <p class="keywords">关键词：ARC、rollout 控制（rollout control）、同步 RL（synchronous RL）、训练效率（training efficiency）</p>
+          </li>
+          <li class="item">
+            <p>机构：哥伦比亚大学<br>核心价值问题：用 LLM 评委做奖励的策略会学会钻评委的漏洞，但静态探针只能测出评委&quot;接受哪些离谱答案&quot;，预测不了策略训练中到底会先钻哪一个漏洞。<br>方法：提出&quot;暴露度&quot;= 起始策略产出某漏洞模式的倾向 × 评委对该模式的误报率，论证在 GRPO 中最先被利用的漏洞就是暴露度最高的那个；通过把漏洞模式以三种剂量植入微调、拉丁方设计做因果验证，共 36 次 GRPO、7 个评委。<br>为什么值得看：12 次出现利用的实验中，最先被利用的模式每次都是暴露度最高的（只看误报率只能猜中 6 次）；只植入两种模式时，暴露度在 6 次实验中全部准确预测了首个被利用的漏洞及其出现窗口——训练前审计暴露度就能预判奖励 hack 的方向，是 RL 奖励安全上很实用的诊断工具。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29651">Which Loopholes Get Found? Predicting Reward Hacking of LLM Judges Before RL Training</a>
+            <p class="keywords">关键词：奖励 hack（reward hacking）、LLM 评委（LLM judges）、暴露度（exposure）、GRPO</p>
+          </li>
+          <li class="item">
+            <p>机构：Cognizant AI Lab、麻省理工学院、得克萨斯大学奥斯汀分校<br>核心价值问题：GRPO 这类策略梯度方法主导 LLM 微调，但进化策略（ES）最近也被证明能微调数十亿参数模型，到底哪种方法样本效率更高、在什么任务上更高，一直没有定论。<br>方法：把两种方法看作同一梯度的不同估计器：ES 扰动参数、噪声随参数量增长，PG 采样动作、噪声随生成 token 数增长；只有沿着改变奖励的方向的噪声才会拖慢学习，由此 ES 的成本取决于&quot;有效维度&quot;（任务需要的独立技能数），PG 的成本取决于&quot;有效 horizon&quot;（与奖励共享信用与权重的 token 数）；在可独立调节两者的合成任务上验证，并在 20 个真实任务上测量有效 horizon、与 Qwen2.5-7B 对比。<br>为什么值得看：短 horizon 任务 PG 更省，长 horizon 任务 ES 开始占优，且交叉点随技能数增多而后移；20 个任务中尚无落入 ES 优势区的，但 Terminal-Bench 的 horizon 远长得多，ES 在 Qwen3.5-4B 上无信用分配就超过了 PG 检查点——为长程 agent 任务的训练方法选择提供了理论依据。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29795">Dimension Is Free, Horizon Is Not: When Evolution Strategies Rival Policy Gradients for LLM Fine-Tuning</a>
+            <p class="keywords">关键词：进化策略（evolution strategies）、策略梯度（policy gradients）、LLM 微调（LLM fine-tuning）、长程任务（long-horizon tasks）</p>
+          </li>
+          <li class="item">
+            <p>机构：AMD、密歇根大学、杜兰大学、佐治亚理工学院、伦敦大学学院、加州大学洛杉矶分校、纽约大学<br>核心价值问题：RL 训练编程 agent 靠隐藏测试给奖励，但 SWE-Gym 这类任务集只检查&quot;参考修复能通过测试&quot;，从不检查测试本身是否正确——奖励标签错了，模型就会被越训越偏。<br>方法：用两个 LLM 家族对 SWE-Gym 做系统审计，疑似错误须经执行复现才计数；发现 9B base 模型从未解出的任务中 74% 的测试会拒绝正确修复（假阴性），而有时能解出的任务中这一比例为 20%；修复或删除问题任务后发布 SWE-Gym-Verified（1,087 个已审计任务，附每条 verdict 的执行证据、训练集与完整审计流程）。<br>为什么值得看：同等规模与难度下，用审计后任务训出的模型在 SWE-bench Verified 与 SWE-bench Pro 上分别高出 2.4 与 2.7 分，而简单删掉&quot;从未解出&quot;的任务没有这种收益；另发现约四分之一通过的补丁实际是错的（假阳性）——&quot;任务解不出来&quot;往往不是模型不行，而是奖励标签错了，对所有做 agent RL 的人都值得一读。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30207">What Makes Good Data for Training Coding Agents? A Systematic Study on SWE-Gym</a>
+            <p class="keywords">关键词：SWE-Gym、数据审计（data auditing）、编程 agent 训练（coding agent training）、奖励标签（reward labels）</p>
+          </li>
+          <li class="item">
+            <p>机构：普渡大学<br>核心价值问题：流匹配 VLA（如 π₀、π₀.₅）生成连续动作块，现有 Flow-GRPO 等方法优化去噪转移的似然比，只按优势给采样动作加权，却没用上动作之间的&quot;距离&quot;信息，连续动作空间的几何结构被浪费了。<br>方法：提出 JKO-GRPO，在 Flow-GRPO 基础上加入 Wasserstein 近端步：把每组采样动作看作经验分布，将策略改进写成 Jordan-Kinderlehrer-Otto（JKO）步，用软离散 c-变换从组相对优势构造传输目标，再把确定性流采样器用共享噪声回归到这些目标上，并与去掉 KL 正则的截断 Flow-GRPO 目标结合；通过随机时刻分支扩展到序列 VLA 控制。<br>为什么值得看：把最优传输的几何视角引入流匹配 VLA 的在线 RL，让策略更新同时考虑&quot;动作有多好&quot;和&quot;动作之间有多远&quot;，是机器人 VLA 后训练方法上较有新意的一步。（注：摘要未报告具体实验数值）</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29646">JKO-GRPO: Augmenting GRPO with Wasserstein Proximal Steps for Flow-Matching VLAs</a>
+            <p class="keywords">关键词：JKO-GRPO、流匹配 VLA（flow-matching VLAs）、最优传输（optimal transport）、机器人 RL（robot RL）</p>
+          </li>
+          <li class="item">
+            <p>机构：清华大学、Einsia.AI、北京大学、伊利诺伊大学厄巴纳-香槟分校、香港大学、伦敦大学学院、北卡罗来纳大学教堂山分校<br>核心价值问题：Agentic Robotics（基础模型以写代码方式操控机器人）缺少软件工程那样大规模、可执行、可验证的环境来做后训练，机器人评测仍停留在小规模人工基准与分布内评估。<br>方法：发布 RoboUniverse-10K：用自动化 Real2Sim 与质检流程从真实视频构建 10,807 个可交互、可重置、可验证的物理环境，均运行在与 Harbor 兼容的隔离 harness 中；另留出 500 个未见任务组成专家验证的零样本基准 RoboUniverse-Verified；并用 GPT-6 Astra 采集约 1.7 万条多轮轨迹（0.79B token）对 Qwen3.6-35B-A3B 做全参数微调，得到 RoboUniverse-35B-A3B。<br>为什么值得看：评测 11 个开源与闭源模型揭示巨大差距——前沿模型成功率 85.8%，开源基线仅 2.6%–10.0%，瓶颈在底层抓取、柔性物体操作与接触后物理控制；自家模型零样本成功率从 0.8% 提升至 21.2%，并在 LIBERO-MAX、RoboCasa、RoboTwin 2.0 与真实 Franka 机械臂上实现零样本任务完成；环境与模型均开源、RL-ready，是为 agentic 机器人大规模 RL 铺的基础设施。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31002">RoboUniverse-10K: Toward the Scaling Era of Agentic Robotics via Real-to-Sim Environments</a>
+            <p class="keywords">关键词：RoboUniverse-10K、Agentic Robotics、Real2Sim、机器人 RL（robot RL）</p>
+          </li>
+          <li class="item">
+            <p>机构：巴黎-萨克雷大学 AgroParisTech、新南威尔士大学、穆罕默德·本·扎耶德人工智能大学、香港中文大学<br>核心价值问题：《Slay the Spire 2》是强随机性下的长程规划卡牌构筑游戏，单网络能否在最高难度下打到专家水平，此前没有公开的强力 agent。<br>方法：AlphaDefect 为每个角色训一个 PPO 网络，负责整局所有决策（战斗内外）；把游戏读作实体记录——每张牌、遗物与敌人用学习到的 embedding 标识身份，加上引擎算出的公开信息后果；每角色训练 13 亿至 67 亿次决策。<br>为什么值得看：最高难度 Ascension 10 下，六名角色胜率 62%–77%（贪心），测试时搜索可达 68%–80%，而人类玩家上传对局同难度胜率仅 11%–20%；消融显示去掉身份编码后一局都赢不了，是目前公开最强的 STS2 agent，也是 PPO 在长程随机规划上的一次干净示范。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31076">AlphaDefect: Expert-Level AI for Slay the Spire 2</a>
+            <p class="keywords">关键词：AlphaDefect、Slay the Spire 2、PPO、长程规划（long-horizon planning）</p>
+          </li>
+          <li class="item">
+            <p>Elvis S. 分享了 Tea Leaves 的研究：基于 682 次真实训练运行，前 20% 的训练曲线即可预测剩余部分，相关运行数据把损失曲线预测误差降低 39%。这是用早期训练信号预测训练走势的一个具体方法，对做大模型训练规划与资源分配的人值得看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7531021892242227200/">Elvis S.：Tea Leaves 研究，前 20% 训练曲线可预测剩余部分</a>
+            <p class="keywords">关键词：Tea Leaves、训练曲线预测（training curve prediction）、大模型训练（large-model training）、资源规划（resource planning）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-morning-academic">
         <header class="round-header">
           <h2 id="round-1123-morning-academic">11 月 23 日早报</h2>
@@ -1081,7 +1154,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-morning-academic">
+                              <details class="archive">
+        <summary>历史归档（11 月 20 日及之前）</summary>
+<section class="round" aria-labelledby="round-1120-morning-academic">
         <header class="round-header">
           <h2 id="round-1120-morning-academic">11 月 20 日早报</h2>
           <span class="count">16 条</span>
@@ -1169,8 +1244,6 @@
           </li>
         </ol>
       </section>
-                              <details class="archive">
-        <summary>历史归档（11 月 19 日及之前）</summary>
 <section class="round" aria-labelledby="round-1119-1630-academic">
         <header class="round-header">
           <h2 id="round-1119-1630-academic">11 月 19 日 16:30 轮</h2>
@@ -2444,7 +2517,7 @@ on>
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 23 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 24 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {

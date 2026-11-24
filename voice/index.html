@@ -383,6 +383,54 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1124-morning">
+        <header class="round-header">
+          <h2 id="round-1124-morning">11 月 24 日 08:30 轮</h2>
+          <span class="count">8 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Sarvam AI 于 11 月 23 日发布 Sarvam Dictate：把 Saaras v4 语音识别与一个专为听写微调的 Sarvam 105B 模型串在一次 API 调用里，直接输出&quot;说话人想写的文本&quot;，能处理口语重复、自我纠正和中英/印地语混杂，定价每分钟音频 ₹0.50。Sarvam 自称在自家 Kivi 听写应用的实测中，比 Gemini 3.5 Transcribe 少约 40% 的字符编辑量（公司自测数据，未经独立验证），是印度语言语音应用的一个值得关注的落地。</p>
+            <a class="source-link" href="https://www.sarvam.ai/blogs/sarvam-dictate">Sarvam Dictate：fast, accurate dictation（Sarvam 官方博客）</a>
+            <p class="keywords">关键词：Sarvam Dictate、听写（dictation）、语音识别（speech recognition）、印度语言（Indian languages）</p>
+          </li>
+          <li class="item">
+            <p>Murf AI 的 Finch 流式 STT 模型于 11 月 23 日正式可用（GA）：在 AI4Bharat 等机构的 Voice of India 基准上，11 种印度语言的转写准确率据称均居流式模型第一，停顿到最终文本仅 50 毫秒；与自家 Falcon TTS 搭配，STT+TTS 合计延迟可低于 150 毫秒，定价 $0.12/小时。Finch 分 Indic（11 种印度语言+印度英语）与 Global（英语及 6 种欧洲语言）两个版本，标志着 Murf 从语音生成正式扩展到语音识别。</p>
+            <a class="source-link" href="https://murf.ai/api/docs/changelog">Murf API Changelog：Speech to Text is generally available（Murf 官方文档）</a>
+            <p class="keywords">关键词：Murf、Finch、流式语音识别（streaming speech recognition）、低延迟（low latency）</p>
+          </li>
+          <li class="item">
+            <p>Neuphonic 于 11 月 23 日发布 NeuDecide：一个仅约 60M 参数、43MB 的音频优先决策模型，听到语音指令后直接预测工具调用、无需先转写成文字，可在单核 CPU 上运行（MacBook M3、三星 S24+、树莓派 5 均已测试），模型与演示已开源。它的定位是动作集合固定的低功耗硬件语音交互（如浏览器内嵌、家电），把语音指令做成本地化、低延迟的&quot;语音→动作&quot;直通，思路与常规 ASR+LLM 链路不同。</p>
+            <a class="source-link" href="https://huggingface.co/neuphonic/neudecide">NeuDecide（Hugging Face 模型页）</a>
+            <p class="keywords">关键词：NeuDecide、语音到动作（speech-to-action）、端侧模型（on-device models）、低功耗（low power）</p>
+          </li>
+          <li class="item">
+            <p>Phonic 与 Recall.ai 合作，让 Phonic 的实时语音 agent 可直接接入会议：Recall.ai 处理音频接入，Phonic 负责语音到语音对话。这是语音 agent 打通会议场景的完整链路，合作双方均为该赛道的头部公司，Phonic 此前曾获 a16z 投资。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7531025099295035392/">Amanda Zhu：Phonic 与 Recall.ai 合作，实时语音 agent 接入会议</a>
+            <p class="keywords">关键词：Phonic、Recall.ai、实时语音 agent（real-time voice agents）、会议集成（meeting integration）</p>
+          </li>
+          <li class="item">
+            <p>Synthflow AI 推出面向催收场景的语音 AI agent Vector，可通过电话、短信与邮件独立完成从首次联系到结果的全流程，支持德语、欧盟区部署。这是语音 agent 推进到受监管的金融催收场景的例子，号称比人工催收多 40% 的有效联系，11 月 26 日在法兰克福有现场演示。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7531025331088953344/">Synthflow AI：推出面向催收场景的语音 AI agent Vector</a>
+            <p class="keywords">关键词：Synthflow、语音 agent（voice agents）、催收（debt collection）、电话自动化（phone automation）</p>
+          </li>
+          <li class="item">
+            <p>Krisp 联合创始人 Davit Baghdasaryan 的每周语音 AI 盘点：一帖汇总本周主要动态，包括 Twilio、ElevenLabs 收购 Kotoba、Amazon Polly、OpenAI Live Dictation、Anthropic Claude Meetings、Gladia、Reson8 开源 Rumble-2-Flash 等，并提到语音 AI 融资达 95 亿美元、同比增长 67%。适合快速补齐本周信息。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7531021075732705280/">Davit Baghdasaryan：每周语音 AI 摘要</a>
+            <p class="keywords">关键词：语音 AI 周报（weekly roundup）、ElevenLabs、OpenAI、语音 AI 融资（voice AI funding）</p>
+          </li>
+          <li class="item">
+            <p>Software Mansion 发布的开源零样本声音克隆 TTS 模型 Reverb-TTS：仅 297M 参数，由 OmniVoice 蒸馏剪枝而来，支持英/德/法/西/意/波/葡 7 种语言，3–10 秒参考音频即可克隆声音。在 Open TTS Leaderboard（11 月 21 日快照）上平均 WER 1.80% 排名第一，超过比它大 100 倍以上的模型；同时提供 int8/int4 端侧格式，可在手机和浏览器内运行。（11 月 19 日发布，本周登上 HF 趋势榜，此前未推过，特此补推。）</p>
+            <a class="source-link" href="https://huggingface.co/software-mansion/Reverb-TTS">Reverb-TTS</a>
+            <p class="keywords">关键词：Reverb-TTS、零样本声音克隆（zero-shot voice cloning）、TTS、开源模型（open-source models）</p>
+          </li>
+          <li class="item">
+            <p>Wispr Flow 发布 Canto-2 语音转文字模型，覆盖 15 种语言，最难的人名与术语识别率从 41% 提升至 69%，本周在 Wispr Flow 上线。Canto-2 针对最个人化、最难识别的词（如同事姓名、团队内部术语）做了优化，评测基于真实口述场景，对照了其他六家模型；模型比 Canto-1 大 10 倍。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7530535479231049728">Tanay Kothari：Wispr Flow 发布 Canto-2 语音转文字模型</a>
+            <p class="keywords">关键词：Wispr Flow、Canto-2、语音转文字（speech-to-text）、专有名词识别（proper noun recognition）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-2030">
         <header class="round-header">
           <h2 id="round-1123-2030">11 月 23 日 20:30 轮</h2>
@@ -618,7 +666,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-2030">
+                                                                              <details class="archive">
+        <summary>历史归档（11 月 20 日及之前）</summary>
+<section class="round" aria-labelledby="round-1120-2030">
         <header class="round-header">
           <h2 id="round-1120-2030">11 月 20 日 20:30 轮</h2>
           <span class="count">1 条</span>
@@ -631,7 +681,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-1630">
+<section class="round" aria-labelledby="round-1120-1630">
         <header class="round-header">
           <h2 id="round-1120-1630">11 月 20 日 16:30 轮</h2>
           <span class="count">3 条</span>
@@ -654,7 +704,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-1230">
+<section class="round" aria-labelledby="round-1120-1230">
         <header class="round-header">
           <h2 id="round-1120-1230">11 月 20 日 12:30 轮</h2>
           <span class="count">8 条</span>
@@ -702,7 +752,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-0830">
+<section class="round" aria-labelledby="round-1120-0830">
         <header class="round-header">
           <h2 id="round-1120-0830">11 月 20 日 08:30 轮</h2>
           <span class="count">2 条</span>
@@ -720,7 +770,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-morning">
+<section class="round" aria-labelledby="round-1120-morning">
         <header class="round-header">
           <h2 id="round-1120-morning">11 月 20 日早报</h2>
           <span class="count">2 条</span>
@@ -738,8 +788,6 @@
           </li>
         </ol>
       </section>
-                                                                              <details class="archive">
-        <summary>历史归档（11 月 19 日及之前）</summary>
 <section class="round" aria-labelledby="round-1119-2030">
         <header class="round-header">
           <h2 id="round-1119-2030">11 月 19 日 20:30 轮</h2>
@@ -5523,6 +5571,99 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1124-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1124-morning-academic">11 月 24 日 08:30 轮</h2>
+          <span class="count">17 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：松尾研究所 / 东京大学<br>核心价值问题：LLM 驱动的 TTS 常把专有名词、同形异音词、数字等读错，却没有显式的发音纠正手段；而微调或权重编辑又可能损伤音质且只能离线做。<br>方法：提出 SpeechSplice，一个训练无关的做法：把目标读法的编码器输出隐状态直接替换到待纠正词的位置；覆盖 10 个公开 TTS 系统、17 个模型-语言组合做跨架构跨语言实验。<br>为什么值得看：人工听评中 98.6%–100% 的判断认为生成语音实现了目标读法，且自然度与未修改合成无显著差异；还明确了发音纠正有效的架构条件（交叉注意力读文本时效果优于共享自注意力）。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30927">SpeechSplice：LLM 式 TTS 的发音控制（arXiv:2611.30927）</a>
+            <p class="keywords">关键词：SpeechSplice、发音纠正（pronunciation correction）、TTS、隐状态编辑（hidden-state editing）</p>
+          </li>
+          <li class="item">
+            <p>机构：日本北陆先端科学技术大学院大学（JAIST）<br>核心价值问题：语音语言模型的 tokenizer 要在低码率下同时保留声学细节和语言内容，语义增强型丢声学细节、声学型增加建模难度，统一 tokenizer 的双目标又会互相干扰。<br>方法：提出 BiSAT，声学与语义双分支用共享索引机制对齐，各自在独立连续空间学习、输出单一离散码流，联合优化两个编码器而不依赖冻结的语义教师目标；基于此搭建零样本 TTS 系统 BiSAT-TTS（自回归文本-语音 LM + 条件流匹配声学解码器）。<br>为什么值得看：重建、理解与诊断分析显示 BiSAT 在野外和域外语音上表现良好；BiSAT-TTS 用更少训练数据就达到与主流语音 LM 式 TTS 基线相当的水平；冻结码的理解结果还支持用码流做强化学习后训练的奖励建模。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30723">BiSAT：语音语言模型的双向对齐语义-声学 tokenizer（arXiv:2611.30723）</a>
+            <p class="keywords">关键词：BiSAT、语音 tokenizer（speech tokenizer）、语义-声学对齐（semantic-acoustic alignment）、零样本 TTS（zero-shot TTS）</p>
+          </li>
+          <li class="item">
+            <p>机构：印度理工学院达瓦德分校 / 印度理工学院查谟分校<br>核心价值问题：语音到语音翻译的评测要同时看语义充分性、说话人相似度和自然度，现有方法大多依赖 ASR 转录文本、只评语义，其他维度要另用指标拼凑。<br>方法：提出 S²SCORE，一个无需文本的多任务统一评测框架，同时建模三个维度并输出经人类校准的综合质量分；用已有评测模型的监督信号训练，无需直接人工标注；另有无参考变体 S²SCORE-QE。<br>为什么值得看：在 5 个语对上与人类判断高度一致；无参考变体全面优于有参考变体，语义充分性预测超过 BLASER 2.0，为语音翻译评测提供了一个统一的免转录方案。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29557">S²SCORE：语音到语音翻译的免文本统一评测指标（arXiv:2611.29557）</a>
+            <p class="keywords">关键词：S²SCORE、语音到语音翻译（speech-to-speech translation）、评测指标（evaluation metrics）、免文本评测（text-free evaluation）</p>
+          </li>
+          <li class="item">
+            <p>机构：国防科技大学（Proceedings of the IEEE 文章；论文脚注仅注明第一作者单位）<br>核心价值问题：语音系统已把流式语音、持久状态、推理、工具调用和具身控制装进同一运行时，语音输入能直接改变数字或物理状态，只看识别或回答质量已无法刻画系统行为。<br>方法：这篇综述/分析文章提出&quot;听觉智能&quot;与&quot;听觉 agency&quot;的区分，定义&quot;承诺边界&quot;（可修正的语音证据变成持久状态、计划或可执行请求的临界点）与&quot;agency 闭环&quot;（执行后经观察、验证、恢复或补偿并传达结果），并梳理全双工交互、推理、记忆、工具与具身控制中的证据。<br>为什么值得看：它指出一个系统性错位：集成速度超过了对集成后系统实际行为的端到端观测；对设计语音 agent 的人来说，这是一份把&quot;说出去的话如何变成已执行的后果&quot;讲清楚的框架性参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29465">Voice Agents：从听觉智能到听觉 agency（arXiv:2611.29465）</a>
+            <p class="keywords">关键词：语音 agent（voice agents）、听觉 agency（auditory agency）、承诺边界（commitment boundary）、综述（survey）</p>
+          </li>
+          <li class="item">
+            <p>机构：印度工程科学与技术学院（IIEST Shibpur）<br>核心价值问题：生成式声音克隆威胁语音认证，但现有深度伪造检测器依赖耗电的高精度模型，不适合边缘硬件。<br>方法：提出 SWIFT，一个手工设计的整数运算检测器，在高频噪声域（合成痕迹集中的频段）工作：一阶整数高通残差驱动九类定点描述子，经校准的梯度提升树与稀疏 L1 元学习器融合；在 PYNQ-Z2 板上以整数前端运行。<br>为什么值得看：在 8 个基准上准确率最高 99.86%、等错率低至 0.03%；每帧数据通路延迟仅 7.85 微秒、功耗 1.734W，证明不用预训练神经网络和浮点单元也能在边缘做音频伪造检测。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29315">SWIFT：面向实时音频伪造检测的手工整数运算 FPGA 引擎（arXiv:2611.29315）</a>
+            <p class="keywords">关键词：SWIFT、音频伪造检测（audio deepfake detection）、FPGA、边缘计算（edge computing）</p>
+          </li>
+          <li class="item">
+            <p>机构：华纳兄弟探索（Warner Bros. Discovery）<br>核心价值问题：长视频娱乐内容的字幕生成很难：音乐、音效、口音、串话和噪声密集，转录质量既取决于声学模型，也取决于切分等周边模块；单次 VAD 会漏掉低能量人声，也会把近静音片段送进解码器引发幻觉与重复。<br>方法：推出 CAST 闭字幕语音转文本流水线：冻结的 Whisper large-v3 搭配分层 VAD（对被拒片段做语义与声学复核）、语言识别、歌词路由及针对性的幻觉检测与修复，单块 NVIDIA L4 运行；2026 年 8 月底已进入其闭字幕流水线的生产语音转文本环节。<br>为什么值得看：在 100 个内部素材（60.46 小时）上，相对 WhisperX 流水线，归一化词错率从 6.99% 降至 5.36%、字幕编辑率从 254.2 降至 221.9 分钟/小时，公开数据集上删除率改善 11%；已部署的工业界 ASR 工程经验值得做长音频字幕的人参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31055">CAST：娱乐电视闭字幕的已部署语音转文本级联系统（arXiv:2611.31055）</a>
+            <p class="keywords">关键词：CAST、闭字幕（closed captioning）、Whisper、长视频转录（long-form transcription）</p>
+          </li>
+          <li class="item">
+            <p>机构：Ata Technology Platforms（土耳其）<br>核心价值问题：用 TTS 合成语音代替真实录音做 ASR 评测集很便宜，但现成的合成测试集估计真实错误率时只相当于几十条真实录音，问题出在哪、能补多少一直没说清。<br>方法：以 507 条土耳其语 Common Voice 录音为对象，构建&quot;合成孪生&quot;阶梯：逐项加入说话人音高、同一说话人克隆、真实录音通道和语速，逐级测量合成副本与真实录音在 ASR 行为上的一致性；在 3 个零样本克隆引擎、6 个和 19 个识别器面板上验证，并在 VoxForge 第二语料上复现。<br>为什么值得看：说话人克隆是关键一步，能把&quot;哪些句子难&quot;的 Spearman 相关性从 0.41 提到 0.55；最好的孪生体相当于 70–122 条真实录音，而普通合成语音只相当于约 9 条；文末还给了实用的合成测试集制作流程与报告清单。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30694">Synthetic Twins：让 TTS 测试集逼近真实录音的土耳其语 ASR 评测（arXiv:2611.30694）</a>
+            <p class="keywords">关键词：合成测试集（synthetic test sets）、ASR 评测（ASR evaluation）、说话人克隆（speaker cloning）、土耳其语（Turkish）</p>
+          </li>
+          <li class="item">
+            <p>机构：彭博 / 马萨诸塞大学阿默斯特分校 / 印第安纳大学布卢明顿分校 / 马里兰大学巴尔的摩郡分校 / 亚马逊<br>核心价值问题：TTS 与声音转换让人能在电话里逼真冒充可信对象，现有防御多为离线分析、在电话失真下退化，或扛不住自适应攻击。<br>方法：提出 Ultrasound Watermark，手机在通话中发射超声波、用内置扬声器和麦克风捕捉面部发音动作的反射，提取运动特征并与外发语音融合生成动态水印；同步的生成器-检测器架构强制跨模态语音-运动一致性，对抗重放、合成语音与模仿发音的攻击；仅用手机已有硬件、额外延迟低于 200 毫秒。<br>为什么值得看：在 iOS 与 Android 上实现，用 22 位说话人、8 部手机、4 种真实环境的 2.5 小时以上同步语音-超声录音验证，对多种攻击与电话失真稳健且不损伤感知音质；把&quot;说话&quot;与&quot;发音动作&quot;物理绑定的思路是反语音诈骗的一个新方向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30106">Ultrasound Watermark：手机上防语音诈骗的实时声学水印（arXiv:2611.30106）</a>
+            <p class="keywords">关键词：超声水印（ultrasound watermarking）、语音诈骗防护（voice fraud prevention）、通话安全（call security）、发音动作（articulatory motion）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京交通大学<br>核心价值问题：流匹配 TTS 模型学到了母语者如何实现一段文本，但这些知识目前只用于合成；能否不生成音频就用它给二语学习者的发音打分？<br>方法：用冻结的 TTS 模型做&quot;反事实速度对比&quot;：比较模型在目标文本与反事实文本（删词或换词）下对同一加噪输入的速度预测误差，差值即为生成式发音优度分；信号集中在高噪声时间步的窄带内，可用母语语音准则定位、闭式规则跨骨干迁移。<br>为什么值得看：在说话人无关的 speechocean762 上，4 个冻结 TTS 模型与人类评分的相关系数达 0.58–0.63，达到零样本 ASR 与音素级基线的水平；与这些基线无标签融合后相关系数从 0.698 提升到 0.757，缓存的帧级分数还能零额外成本标出词级错误。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29985">Scoring L2 Pronunciation：用冻结流匹配 TTS 模型给二语发音打分（arXiv:2611.29985）</a>
+            <p class="keywords">关键词：发音评分（pronunciation scoring）、流匹配 TTS（flow-matching TTS）、二语学习（second-language learning）、零样本（zero-shot）</p>
+          </li>
+          <li class="item">
+            <p>作者：Firoj Paudel<br>核心价值问题：低资源语言的双语 TTS 往往依赖大模型；一个包含神经波形解码器的完整端到端 24kHz 英-尼泊尔语双语 TTS 系统能做到多小？<br>方法：提出 PAWP-TTS，非自回归架构、推理时不用语言模型：确定性的规则+词典双语前端保留尼泊尔语原生对立、避免印地语语音干扰，网络只建模声学；并研究&quot;权重空间编程&quot;——检查引导的零训练权重编辑能否定点修复发音或时序缺陷。<br>为什么值得看：1.5M 参数版本（5.98MB）英语与尼泊尔语字符错误率分别为 1.50% 与 1.75%，281K 参数版本仍可懂；权重编辑确有选择性（96 个权重上词边界停顿选择性达 27:1）但严格对照下没有带来准确率增益，这个&quot;阴性结果&quot;本身对权重编辑研究有提醒意义；代码、ONNX 图与权重已开源。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29455">PAWP-TTS：紧凑双语英-尼泊尔语语音合成（arXiv:2611.29455）</a>
+            <p class="keywords">关键词：PAWP-TTS、双语 TTS（bilingual TTS）、尼泊尔语（Nepali）、轻量模型（lightweight models）</p>
+          </li>
+          <li class="item">
+            <p>机构：腾讯元宝 / 腾讯 Ethereal Audio Lab<br>核心价值问题：连续语音隐变量的自回归 TTS 能避免量化信息损失，但隐空间通常先单独学好再冻结，难以同时满足高保真重建与自回归可预测性。<br>方法：提出 Tenlai-TTS 2.0，端到端学习连续语音表示：容量受控高斯瓶颈的语音编码器 + LLM 与自回归扩散 Transformer（AR-DiT）头 + 流匹配梅尔谱解码器 + 多任务识别模型；联合优化重建、识别与下一 patch 预测目标，再用可微重建与识别反馈优化 LLM 与 AR-DiT，最后做强化学习。<br>为什么值得看：在 Seed-TTS-eval 上，反馈优化把中文测试集 test-hard 字符错误率从 8.32% 降至 7.08%，强化学习后进一步降至 6.29%，英文词错率降至 1.08%，说话人相似度 0.766–0.811；为连续表示 TTS 的端到端训练提供了一条可复现的路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29226">Tenlai-TTS 2.0：连续表示 LLM 式 TTS 的端到端训练（arXiv:2611.29226）</a>
+            <p class="keywords">关键词：Tenlai-TTS 2.0、连续语音表示（continuous speech representations）、LLM 式 TTS（LLM-based TTS）、端到端训练（end-to-end training）</p>
+          </li>
+          <li class="item">
+            <p>机构：莫斯科物理技术学院 / 俄罗斯高等经济大学（HSE）/ 车里雅宾斯克州立大学<br>核心价值问题：语音大语言模型通常只在&quot;有答案的问题&quot;上评测；当录音根本无法支撑答案时，它们会不会编造？而常用的诊断方法本身可靠吗？<br>方法：在合成语音上诊断显示 Qwen2-Audio 对 92.5% 的不可回答问题编造答案，而 ASR 级联仅 2.5% 幻觉；但在 376 道基于真人朗读的 SQuAD 2.0 原生问题上结论反转——级联幻觉率 67.7%、端到端模型 69.8%；配对实验把效应定位在 ASR 环节；最后把&quot;生成前注意力探针&quot;迁移到多模态场景。<br>为什么值得看：它量化了一个此前只被当作局限提及的问题：合成语音基准的偏差大到足以反转结论；探针以 0.773 AUROC 预测模型何时会强行作答，而十次采样的语义熵对此毫无信号——因为模型每次都自信地编造同一个答案；对语音问答评测的方法论有直接警示。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29393">Can Speech LLMs Recognize When Audio Evidence Is Insufficient?（arXiv:2611.29393）</a>
+            <p class="keywords">关键词：语音大语言模型（speech LLMs）、幻觉（hallucination）、不可回答问题（unanswerable questions）、评测方法（evaluation methodology）</p>
+          </li>
+          <li class="item">
+            <p>机构：冈山县立大学 / AI and Humans Lab / 静冈大学<br>核心价值问题：研究人与具身 AI agent 的合作，需要多方能在同一共享环境里同时进行口头对话与物理操作，但缺少可复用的实验平台。<br>方法：提出 EMIP，基于 Minecraft 的具身多方交互平台：互联网客户端-服务器架构把多个人类与多个 AI agent 接入同一虚拟环境，支持全双工语音通信与同步物理交互；提供基于 MCP 的环境观测、物理动作执行与音频输入输出接口，支持单客户端集中控制 agent 群组、多 agent 协同搬运等；源代码已在 GitHub 公开。<br>为什么值得看：它把语音对话、物理动作与 agent 控制统一到一个可复用的实验框架里，附带观察历史记录与回放等实验支持功能；做多人多 agent 语音交互与具身协作研究的人可以直接拿来用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29333">EMIP：具身多方交互平台（arXiv:2611.29333）</a>
+            <p class="keywords">关键词：EMIP、多方交互（multi-party interaction）、具身 AI（embodied AI）、Minecraft、语音通信（voice communication）</p>
+          </li>
+          <li class="item">
+            <p>机构：Ryquo / App-In Club<br>核心价值问题：语音 agent 提前开口等于把一次预测变成不可撤销的公开承诺；如何在不被打脸的前提下尽早说话？<br>方法：提出 SayWhen，一个测试时控制器：选出跨多种续写方案共享的任务导向动作并控制其作为语音释放，持续的否决机制会在后续转录推翻候选内容时阻止播放；定义&quot;无悔早期语音&quot;（RFES）指标衡量无冲突的端点前释放。<br>为什么值得看：在 30 任务的 τ-Voice 模拟中，基于模式的候选在 21/30 任务上实现无悔早期语音，符合条件的音频平均比用户语音端点早 1.51 秒；它把&quot;能公开承诺什么&quot;变成了语音 agent 控制中一个显式的可度量单元。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31101">SayWhen：低后悔早期语音的集合值语义承诺（arXiv:2611.31101）</a>
+            <p class="keywords">关键词：SayWhen、早期语音（early speech）、语音 agent（voice agents）、低后悔（low regret）</p>
+          </li>
+          <li class="item">
+            <p>机构：加州大学圣塔芭芭拉分校 / 哥伦比亚大学<br>核心价值问题：自监督语音编码器是语音伪造检测的主流前端，但通行做法是全量微调，域内准、跨域差；冻结编码器时，哪种编码器配哪种后端跨域表现最好？<br>方法：固定一个近期的 SSL+常数 Q 倒谱特征交叉注意力融合框架，冻结编码器，交叉比较 XEUS 与 Wav2Vec2 XLSR-53 两种编码器 × MHFA 池化与 AASIST 两种后端，在 ASVspoof 2019 LA、2021 LA/DF、In-the-Wild 与 ASVspoof 5 上三种子评估。<br>为什么值得看：冻结的 XEUS 配 MHFA 相对 XLSR-53 在 LA21、DF21 与 ASV5 上把误差降低 58%–77%，且仅更新不到 40 万参数（微调基线 3.16 亿），在 ASVspoof 5 上还赢了微调基线；编码器与后端的搭配会互相影响，这对部署伪造检测的选型有直接指导。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29865">Characterizing Frozen SSL Encoders and Backends for Cross-Domain Speech Deepfake Detection（arXiv:2611.29865）</a>
+            <p class="keywords">关键词：自监督语音编码器（self-supervised speech encoders）、语音伪造检测（speech deepfake detection）、XEUS、跨域泛化（cross-domain generalization）</p>
+          </li>
+          <li class="item">
+            <p>机构：加州大学圣塔芭芭拉分校<br>核心价值问题：冻结的自监督语音编码器常用于音频伪造检测，但用哪一层通常凭开发集定；这个选择在歌声伪造检测与信号损坏下可靠吗？<br>方法：在 CtrSVDD 歌声伪造检测基准上，给冻结的 XEUS 与 XLS-R 的每一层各训练一个检测头，外加一个可学习的层混合，在干净音频及噪声、混响、有损编码下测试。<br>为什么值得看：干净音频上中间层优于最后一层，可学习的层混合也赢不了最佳单层；开发集选出的层比测试集最优层等错率高 2.3（XEUS）与 4.1（XLS-R）个百分点；最佳层还会随信号条件漂移——仅凭域内开发集与干净音频选层并不可靠。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29871">Which Layer to Trust?（arXiv:2611.29871）</a>
+            <p class="keywords">关键词：歌声伪造检测（singing voice deepfake detection）、层选择（layer selection）、XEUS、XLS-R</p>
+          </li>
+          <li class="item">
+            <p>机构：宾夕法尼亚州立大学<br>核心价值问题：预训练音频嵌入被广泛用作声音事件检测等常开声学感知任务的中间表示，但它们可能在不暴露原始音频的情况下泄露说话人身份等敏感信息。<br>方法：提出一个审计框架：表示级用统计依赖度量嵌入与敏感信息表示之间的关联，攻击级用轻量对抗探针直接从嵌入中恢复敏感属性；在 CLAP、PANNs、AST、YAMNet 四种常用表示上审计说话人身份与性别泄露。<br>为什么值得看：说话人识别的平衡准确率达 0.43–0.72，性别信息同样可被强烈恢复，CLAP 泄露最多、YAMNet 最少；两种度量趋势一致，说明中间音频表示并非天然的隐私保护接口，选表示时应把隐私泄露与下游效用并列考量。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31043">What Do Sound Event Embeddings Reveal?（arXiv:2611.31043）</a>
+            <p class="keywords">关键词：音频嵌入（audio embeddings）、隐私泄露（privacy leakage）、说话人身份（speaker identity）、声音事件检测（sound event detection）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-2030-academic">
         <header class="round-header">
           <h2 id="round-1123-2030-academic">11 月 23 日 20:30 轮</h2>
@@ -5605,7 +5746,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-1230-academic">
+                              <details class="archive">
+        <summary>历史归档（11 月 20 日及之前）</summary>
+<section class="round" aria-labelledby="round-1120-1230-academic">
         <header class="round-header">
           <h2 id="round-1120-1230-academic">11 月 20 日 12:30 轮</h2>
           <span class="count">1 条</span>
@@ -5618,7 +5761,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-0830-academic">
+<section class="round" aria-labelledby="round-1120-0830-academic">
         <header class="round-header">
           <h2 id="round-1120-0830-academic">11 月 20 日 08:30 轮</h2>
           <span class="count">1 条</span>
@@ -5631,7 +5774,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-morning-academic">
+<section class="round" aria-labelledby="round-1120-morning-academic">
         <header class="round-header">
           <h2 id="round-1120-morning-academic">11 月 20 日早报</h2>
           <span class="count">9 条</span>
@@ -5684,8 +5827,6 @@
           </li>
         </ol>
       </section>
-                              <details class="archive">
-        <summary>历史归档（11 月 19 日及之前）</summary>
 <section class="round" aria-labelledby="round-1119-2030-academic">
         <header class="round-header">
           <h2 id="round-1119-2030-academic">11 月 19 日 20:30 轮</h2>
@@ -8385,7 +8526,7 @@ Vspoof 2019 LA 上 8.45% EER 接近全监督基线 7.86%，但 2021 DF 域偏移
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 23 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 24 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
