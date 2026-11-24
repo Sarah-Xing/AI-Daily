@@ -383,6 +383,24 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1123-2030">
+        <header class="round-header">
+          <h2 id="round-1123-2030">11 月 23 日 20:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>StudioX AI 现在支持 Agent2Agent（A2A）：不同平台搭建的 agent 不用联网也能协同工作，用开放的 A2A 标准打通。这是给断网部署（air-gapped）的企业环境准备的 agent 互操作方案。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:6773411-7530831757236019200/">Patrick Gilberg：StudioX AI 支持 Agent2Agent，断网部署也能协同</a>
+            <p class="keywords">关键词：Agent2Agent（A2A）、agent 互操作（agent interoperability）、断网部署（air-gapped deployment）、开放标准（open standards）</p>
+          </li>
+          <li class="item">
+            <p>便宜的单次 LLM 调用会通过重试、工具调用、fallback 模型和人工复核悄悄变贵：作者提醒，agent 的成本应该按&quot;完成一个结果&quot;来预算，而不是按单次调用算。这是给做 agent 成本核算的人一个很实在的提醒。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:1378157-7530806666515324928/">Deepika Mishra：AI agent 的重试循环正在悄悄变成成本中心</a>
+            <p class="keywords">关键词：agent 成本（agent costs）、重试循环（retry loops）、工具调用（tool calling）、成本核算（cost accounting）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-1630">
         <header class="round-header">
           <h2 id="round-1123-1630">11 月 23 日 16:30 轮</h2>
@@ -9177,6 +9195,19 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1123-2030-academic">
+        <header class="round-header">
+          <h2 id="round-1123-2030-academic">11 月 23 日 20:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：University of California, San Diego<br>核心价值问题：工具增强的 LLM agent 常常不分青红皂白地调用工具，哪怕模型自己能直接回答；每次多余调用都浪费 API 费用和延迟，但此前没有基准系统研究&quot;到底什么时候才需要调用工具&quot;。<br>方法：提出 When2Tool 基准（18 个环境，15 个单跳加 3 个多跳，覆盖计算规模、知识边界、执行可靠性三类工具必要性，每类三档难度）；探测生成前隐状态发现工具必要性可线性解码（6 个模型 AUROC 0.89–0.96）；基于此提出 Probe&amp;Prefill：用轻量线性探针读隐状态信号，预填一句引导句来决定是否调用工具，开销小于 1 毫秒。<br>为什么值得看：Probe&amp;Prefill 在全部测试模型上把工具调用减少 38%、准确率仅降 1.7%，远好于提示词与先推理再行动两类基线；在真实 Search-o1 agent 基准上 API 调用最多减少 56% 且无准确率下降，给 agent 省调用成本提供了一个几乎零成本的通用办法。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7530798534410018816">Tsui-Wei (Lily) Weng：NeurIPS 2026 论文 When2Tool，模型其实早就知道何时需要调用工具</a>
+            <p class="keywords">关键词：工具调用（tool calling）、When2Tool、NeurIPS 2026、线性探针（linear probes）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-0830-academic">
         <header class="round-header">
           <h2 id="round-1123-0830-academic">11 月 23 日 08:30 轮</h2>
