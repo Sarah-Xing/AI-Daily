@@ -383,6 +383,24 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1124-morning">
+        <header class="round-header">
+          <h2 id="round-1124-morning">11 月 24 日 08:30 轮</h2>
+          <span class="count">2 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>蚂蚁集团 inclusionAI 11 月 23 日凌晨悄悄把 Ling-3.2-air 传上 Hugging Face，无博客、无技术报告、无发布帖，只有模型卡：124B 总参数、每 token 激活 5.5B 的混合线性 MoE（35 层 Kimi Delta Attention + 7 层门控 MLA），原生多模态（文本、图像、视频理解），262K 原生上下文（YaRN 可扩至 1M），FP8 权重约 129GB，MIT 协议。Artificial Analysis 智能指数给它 23 分，在同级模型中偏高；上线当天即有 vLLM 与 SGLang 的支持。值得看的是 MIT 协议 + 5.5B 激活参数的组合让它成为目前最易本地部署的大型多模态开源模型之一；但厂商未做任何发布，基准分数未经独立验证。</p>
+            <a class="source-link" href="https://huggingface.co/inclusionAI/Ling-3.2-air">inclusionAI/Ling-3.2-air（Hugging Face 模型页，一手）</a>
+            <p class="keywords">关键词：Ling-3.2-air、inclusionAI、开源模型（open-source models）、多模态（multimodal）</p>
+          </li>
+          <li class="item">
+            <p>Christopher B. 分享澳大利亚 AI 联合特别委员会的最终报告：内容包括创作者付费机制、丹麦式面孔/声音/肖像权、边疆实验室强制事件报告与训练数据透明度。这是 AI 治理方向一份值得留意的官方报告，其中声音/肖像权部分与语音 AI 直接相关。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7531020031464198144/">Christopher B.：澳大利亚 AI 委员会最终报告，创作者付费与声音/肖像权</a>
+            <p class="keywords">关键词：澳大利亚 AI 委员会（Australian AI committee）、创作者付费（creator compensation）、声音肖像权（voice and likeness rights）、AI 治理（AI governance）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-2030">
         <header class="round-header">
           <h2 id="round-1123-2030">11 月 23 日 20:30 轮</h2>
@@ -585,7 +603,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-1630">
+                                                                  <details class="archive">
+        <summary>历史归档（11 月 20 日及之前）</summary>
+<section class="round" aria-labelledby="round-1120-1630">
         <header class="round-header">
           <h2 id="round-1120-1630">11 月 20 日 16:30 轮</h2>
           <span class="count">4 条</span>
@@ -613,7 +633,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-1230">
+<section class="round" aria-labelledby="round-1120-1230">
         <header class="round-header">
           <h2 id="round-1120-1230">11 月 20 日 12:30 轮</h2>
           <span class="count">10 条</span>
@@ -671,8 +691,6 @@
           </li>
         </ol>
       </section>
-                                                                  <details class="archive">
-        <summary>历史归档（11 月 19 日及之前）</summary>
 <section class="round" aria-labelledby="round-1119-2030">
         <header class="round-header">
           <h2 id="round-1119-2030">11 月 19 日 20:30 轮</h2>
@@ -3816,6 +3834,79 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1124-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1124-morning-academic">11 月 24 日 08:30 轮</h2>
+          <span class="count">13 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：马里兰大学帕克分校、Google<br>核心价值问题：4D 时空视觉缺乏通用表征协议，感知（深度、相机估计）与生成要么各走单向管线、要么由未对齐的单模态空间拼凑。<br>方法：提出统一 4D 潜空间作为世界感知与生成的共同协议：多模态 VAE 把复杂的 4D 视觉外观、几何与动态压缩融合成同一潜空间，让感知与生成共用一套架构与优化循环。<br>为什么值得看：把&quot;GPT 式统一表征&quot;的思路推进到 4D 视觉世界，感知与生成共用一套架构与优化循环，为世界模型提供了一个通用表征协议。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31209">WorldLatent: A Unified 4D Latent Space for World Perception and Generation</a>
+            <p class="keywords">关键词：WorldLatent、4D 潜空间（4D latent space）、世界模型（world models）、世界感知与生成（world perception and generation）</p>
+          </li>
+          <li class="item">
+            <p>机构：NAVER Cloud、韩国科学技术院（KAIST）<br>核心价值问题：统一多模态模型想把视觉理解与生成装进一个模型，但理解与生成用的视觉表征是异构的，预训练 VLM 的知识难以被生成有效利用。<br>方法：Integral 通过两个互补组件把预训练 VLM 转成统一多模态模型：Abstraction Fusion 聚合冻结视觉编码器的层次表征构造共享视觉 token；Block-wise MoT 引入只在 block 边界与 VLM 交互的轻量生成流。<br>为什么值得看：这一设计在保留预训练理解能力的同时打通了生成，让统一多模态模型不再为生成另起一套表征。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31237">Let Vision-Language Models Generate Images through Their Representations</a>
+            <p class="keywords">关键词：统一多模态模型（unified multimodal models）、视觉语言模型（vision-language models）、图像生成（image generation）、Integral</p>
+          </li>
+          <li class="item">
+            <p>机构：宾夕法尼亚大学、NVIDIA<br>核心价值问题：从单张照片出发生成一段长的、可控相机漫游的视频，既要记住已见场景、又要在未见处有落点；记忆法能保住已见内容但相机走远就漂移，布局法能精确定位但布局要人工撰写。<br>方法：两者结合：持久点云记忆锚定已见场景，VLM 在未见区域撰写 3D 布局（一物体一标注框）。<br>为什么值得看：关键发现是两个模型之间的接口可以出乎意料地粗糙——粗粒度的布局就够用了，视频模型不再&quot;无锚可依&quot;，长视频生成的可控性因此变得更易实现。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31239">Lyris: Layout-Guided Long Video Generation with Persistent 3D Memory</a>
+            <p class="keywords">关键词：Lyris、长视频生成（long video generation）、3D 记忆（3D memory）、相机控制（camera control）</p>
+          </li>
+          <li class="item">
+            <p>机构：Adobe Research、弗吉尼亚大学<br>核心价值问题：现代视觉生成模型把身份、涂鸦、深度图、运动视频等一切条件都 token 化追加到输入，条件 token 很快主导计算成本。<br>方法：先引入基于编解码的 token 剪枝（&quot;识别真正新内容&quot;正是经典视频编解码早已解决的问题），再用 on-policy 自蒸馏（OPSD）训练 DiT 适配器学会剪枝模式。<br>为什么值得看：在自研视频扩散模型、16 种条件模态上，平均剪掉 66% 的条件 token、质量几乎不降，去噪快 2 倍，KV 缓存模式下显存最多省 73%。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31184">On-Policy Codec Distillation for Efficient All-in-One Video Generation</a>
+            <p class="keywords">关键词：视频生成（video generation）、token 剪枝（token pruning）、条件扩散模型（conditional diffusion models）、效率优化（efficiency）</p>
+          </li>
+          <li class="item">
+            <p>机构：宾夕法尼亚大学、Roblox、斯坦福大学<br>核心价值问题：FlowMap 蒸馏本是少步生成的自然路线，但自回归视频生成中少步模型仍依赖分布匹配蒸馏（DMD）才有竞争力，代价是牺牲样本多样性并需要一个大的双向教师。<br>方法：分析独立 AR FlowMap 蒸馏的瓶颈并引入两种互补引导：anti-drifting guidance（训一个辅助模型模仿学生的漂移、作负向引导分支）与 motion-aware guidance（定位运动 patch、选择性施加跳层引导）。<br>为什么值得看：4 步 π-Flow 学生可媲美从 14B 教师蒸馏的 DMD 学生，30 秒 rollout 漂移更小；少步自回归视频生成因此不再必须依赖大双向教师。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31164">Analyzing and Improving FlowMap Distillation of Autoregressive Video Models</a>
+            <p class="keywords">关键词：FlowMap 蒸馏（FlowMap distillation）、自回归视频生成（autoregressive video generation）、少步生成（few-step generation）、DMD</p>
+          </li>
+          <li class="item">
+            <p>机构：佐治亚理工学院、Dolby<br>核心价值问题：文生图扩散模型的偏好调优大部分算力花在生成候选图像上，但训练 prompt 通常是均匀随机采的，许多生成的图对模型对齐几乎没有信号。<br>方法：SPROUT 把 prompt 选择拆成效用分数、效用估计器与批次选择：用纯文本模型预测每个 prompt 的目标导向效用（DGPO 下即目标从该 prompt 的一组图像产生的梯度范数），每轮用观测到的效用重拟合，再经随机接受规则成批；除训练用的图之外不再生成任何图像。<br>为什么值得看：把偏好调优的算力从&quot;盲目生成候选图&quot;转到&quot;先算哪个 prompt 值得生成&quot;，让偏好调优的采样效率有了可量化的抓手。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31163">SPROUT: Predicting Objective-Grounded Prompt Utility for Efficient Text-to-Image Preference Tuning</a>
+            <p class="keywords">关键词：SPROUT、文生图（text-to-image）、偏好调优（preference tuning）、prompt 选择（prompt selection）</p>
+          </li>
+          <li class="item">
+            <p>机构：KlingAI Research、复旦大学、华南师范大学、浙江大学<br>核心价值问题：文生图模型能从自己的错误中学习，但用视觉语言 critic 改写后的 prompt 作自教师蒸馏几乎不提升对齐，还会吸收 critic 无意加入的场景细节（如光照、景物）。<br>方法：Hindsight Twins（HinT）把 critic 的修订模板分别填入&quot;预期修正&quot;与&quot;观察到的错误&quot;，只蒸馏两者的速度差，并锚定在用户原 prompt 上。<br>为什么值得看：把&quot;改写全文&quot;的纠缠拆开，只蒸馏真正有用的修正信号，让文生图模型的自我改进不再以吸收多余细节为代价。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31048">Distill the Correction, Not the Rewrite: Hindsight Twins for Self-Improving Text-to-Image Models</a>
+            <p class="keywords">关键词：Hindsight Twins、文生图（text-to-image）、自教师蒸馏（self-teacher distillation）、自我改进（self-improvement）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港科技大学<br>核心价值问题：前向扩散强化学习（不反传轨迹即可确定性 ODE 采样）越来越流行，但现有方法本质上依赖带符号的奖励加权回归，隐含&quot;策略速度等于行为边际速度&quot;的理想假设——在分类器无关引导（CFG）rollout、离线/异策略更新下该假设不成立，会注入基线诱导的梯度漂移、破坏训练稳定。<br>方法：提出瞬时轨迹分布匹配（iTDM），经后验分数恒等式取瞬时极限，得到样本级梯度目标。<br>为什么值得看：在 GenEval2 上达 0.87，速度约为 DGPO/NFT/AWM 的 3 倍；为扩散模型的强化学习补上了一个更干净的梯度目标。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30986">Reinforcing Diffusion Models by Instantaneous Trajectory Distribution Matching</a>
+            <p class="keywords">关键词：扩散模型强化学习（diffusion RL）、轨迹分布匹配（trajectory distribution matching）、iTDM、GenEval2</p>
+          </li>
+          <li class="item">
+            <p>机构：SenseTime Research、新加坡南洋理工大学 S-Lab、ACE Robotics<br>核心价值问题：第一人称人类视频与异构机器人记录蕴含丰富动力学，但要么没有动作标签、要么没有共享动作空间；潜在动作模型（LAM）从头训练逆动力学与前动力学模型，在像素重建与潜容量之间权衡。<br>方法：把预训练视频世界模型本身看作 LAM：一个视频扩散 transformer 同时作逆动力学与前动力学模型，可学习动力学寄存器是两者间唯一的因果桥梁，在仅运动不同的反事实时间对上训练。<br>为什么值得看：Native 潜在动作在 LARY 基准的动作分类与控制回归上优于现有 LAM；基于它的 PAWlicy 范式下，3.8B 模型在 RoboTwin 2.0 平均成功率达 93.6%。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30898">World Models as Native Latent Action Models</a>
+            <p class="keywords">关键词：世界模型（world models）、潜在动作模型（latent action models）、机器人控制（robot control）、PAWlicy</p>
+          </li>
+          <li class="item">
+            <p>机构：帝国理工学院 Embodied Dexterity Lab（DexLab）<br>核心价值问题：世界模型能让机器人预见动作后果，但通常依赖昂贵且难扩展的带动作标签交互数据，且与训练时的特定 embodiment 绑定。<br>方法：直接从重定向的人类操作演示点云中学连续动作表征，对比目标保证跨 embodiment 的运动一致；统一的潜动作空间直接作为模型预测控制的搜索空间，无需 embodiment 专属的动作解码器。<br>为什么值得看：学到的潜动作可直接从预测的几何运动中恢复成可执行机器人指令，实现向未见机器人形态的零样本迁移。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30907">DexLatentWorld: 3D Cross-Embodiment Latent Action World Models for Zero-Shot Robotic Manipulation</a>
+            <p class="keywords">关键词：DexLatentWorld、跨 embodiment（cross-embodiment）、潜动作（latent actions）、机器人操作（robot manipulation）</p>
+          </li>
+          <li class="item">
+            <p>机构：纽约大学（NYU）<br>核心价值问题：交互式世界模型按玩家动作自回归生成虚拟环境，但仅凭视觉历史难以可靠捕捉独立行动的 NPC 的演变状态，尤其当它们在镜头之外。<br>方法：把 agent 状态演化与自回归视觉生成分开：轻量状态模型不消耗生成帧、仅从动作传播角色动态（结合运动先验与学到的场景相关修正），预测状态再经新颖条件机制引导自回归扩散 transformer。<br>为什么值得看：无需显式场景几何图或可见性测试，即可指示角色所在位置，多 agent 交互世界的状态一致性因此有了轻量解法。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30042">SWAM: State-aware World Action Model for Multi-Agent 3D Environments</a>
+            <p class="keywords">关键词：SWAM、多 agent 世界模型（multi-agent world models）、状态感知（state awareness）、交互式环境（interactive environments）</p>
+          </li>
+          <li class="item">
+            <p>机构：吉林大学、上海交通大学、华中科技大学、中国科学院自动化研究所<br>核心价值问题：4D occupancy 预测要预测驾驶场景数秒后的 3D 语义占据；把未来分成不变、变化与未见三部分后发现，当前基于相机的世界模型在&quot;不变&quot;部分最弱——留不住已经看过的东西，而不是预测不了变化。<br>方法：PersistWorld 把相机帧流式写入锚定在场景中的持久 3D 世界状态，每帧只写一次，evolver 沿自车轨迹预测任意时刻的状态。<br>为什么值得看：在 Occ3D-nuScenes 上，相对最好的相机世界模型，IoU 在 1–3 秒提升 19 点、8 秒内提升 18–24 点，速度快 2 倍多。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30573">Write, Evolve, Read: Streaming Cameras into a Persistent World State for 4D Occupancy Forecasting</a>
+            <p class="keywords">关键词：PersistWorld、4D occupancy 预测（4D occupancy forecasting）、自动驾驶（autonomous driving）、世界状态（world state）</p>
+          </li>
+          <li class="item">
+            <p>Daniel Svonava 评测了阿里 Qwen3-Reranker-4B 在电商搜索中的表现，结果仅排第二。他的 RAG 实验显示，LLM 自带的知识已覆盖大部分检索收益，检索带来的增量有限。这对做 RAG 选型的人是个值得参考的实测结论。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7531025212285403136/">Daniel Svonava：Qwen3-Reranker-4B 电商搜索评测仅排第二</a>
+            <p class="keywords">关键词：Qwen3-Reranker、RAG、电商搜索（e-commerce search）、检索（retrieval）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-morning-academic">
         <header class="round-header">
           <h2 id="round-1123-morning-academic">11 月 23 日早报</h2>
@@ -4068,7 +4159,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1120-1230-academic">
+                        <details class="archive">
+        <summary>历史归档（11 月 20 日及之前）</summary>
+<section class="round" aria-labelledby="round-1120-1230-academic">
         <header class="round-header">
           <h2 id="round-1120-1230-academic">11 月 20 日 12:30 轮</h2>
           <span class="count">10 条</span>
@@ -4126,8 +4219,6 @@
           </li>
         </ol>
       </section>
-                        <details class="archive">
-        <summary>历史归档（11 月 19 日及之前）</summary>
 <section class="round" aria-labelledby="round-1119-morning-academic">
         <header class="round-header">
           <h2 id="round-1119-morning-academic">11 月 19 日早报</h2>
@@ -6064,7 +6155,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 23 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 24 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
