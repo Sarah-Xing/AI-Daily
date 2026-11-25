@@ -4433,42 +4433,42 @@
         <ol class="items">
           <li class="item">
             <p>机构：浙江大学、上海创新研究院、上海人工智能实验室<br>核心价值问题：像素空间视频扩散建模一直依赖专用架构，现有方法常需预训练自编码器、辅助细节器、级联或 U-Net 跳连。<br>方法：提出 JVT，一个简单的大 patch DiT 风格 Transformer，直接在像素空间做视频扩散，不用预训练自编码器、辅助细节器、级联阶段或跳连；系统研究了视频 patch 嵌入、register token 与自适应层归一化。<br>为什么值得看：生成质量可与隐空间扩散基线媲美（类别条件与无条件均如此）；像素空间形式天然支持像素对齐的多模态联合生成，演示的相机条件 RGB-深度生成在相机跟随上优于纯 RGB 基线，还能直接给出场景几何。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.18549">JVT：像素空间视频扩散也可以很简单</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18549">JVT: Just Video Transformer makes pixel-space video diffusion simple</a>
             <p class="keywords">关键词：像素空间视频扩散（pixel-space video diffusion）、DiT、视频生成（video generation）、多模态生成（multimodal generation）</p>
           </li>
           <li class="item">
             <p>机构：伊利诺伊大学香槟分校<br>核心价值问题：把扩散模型蒸馏成少步学生模型能大幅提速，但会严重坍缩多样性——不同随机种子的样本几乎没有变化。<br>方法：通过探查学生与教师的内部表征发现，多样性坍缩源于激活方差集中到更少的方向上（而非生成能力本身丢失），且集中在初始去噪步的某个中间 block；据此提出 ReDiverse：训练时用轻量适配器把学生激活回归到教师（ReDiverse-FT），推理时沿预计算的教师主方向无训练引导激活（ReDiverse-TF）。<br>为什么值得看：定位到了多样性坍缩的根因并给出训练/推理两种修复，在图像与视频蒸馏基准上恢复样本多样性的同时保持生成质量，并有用户研究佐证。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.18550">ReDiverse：蒸馏模型多样性坍缩的根因与修复</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18550">Restoring Diversity in Distilled Image and Video Generators by Probing Activations</a>
             <p class="keywords">关键词：扩散模型蒸馏（diffusion model distillation）、多样性坍缩（diversity collapse）、少步生成（few-step generation）、激活对齐（activation alignment）</p>
           </li>
           <li class="item">
             <p>机构：Zeus AI<br>核心价值问题：机器学习天气模型已能媲美业务预报，但仍依赖昂贵的数据同化系统提供的分析场；已有的观测到观测模型又缺少同化系统的递归滤波循环。<br>方法：从 18 个全球观测系统直接端到端学习同化—预报循环：从观测推断隐状态、逐小时推进、每小时用新观测修正，并能预测任一观测系统在任意位置的测量值，全程不用再分析资料。<br>为什么值得看：留出站点的集合预报在温度、露点、风速上 12 小时内击败 NOAA 全球集合预报系统（GEFS），校准优于 GEFS 与 ECMWF 集合；降水、云顶高度、太阳辐照等从未作为推理输入的量也能以不亚于业务产品的技巧推断；一小时全球分析在一块 GPU 上约 1.5 分钟完成。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.18393">WeatherDreamer：从多模态地球观测直接学习世界模型</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18393">WeatherDreamer: Learning a World Model from Multimodal Earth Observations</a>
             <p class="keywords">关键词：天气模型（weather models）、世界模型（world models）、数据同化（data assimilation）、地球观测（Earth observations）</p>
           </li>
           <li class="item">
             <p>机构：斯坦福大学、加州理工学院<br>核心价值问题：流模型的训练目标（速度、噪声或干净数据）是人工选定的，这个选择强烈影响训练与采样质量。<br>方法：提出各向异性流模型（AnisoFlow），把固定预测目标换成完全可学习的目标：沿联合学习的基底的每个方向给噪声分量单独学一个非负权重；闭式映射从网络预测恢复速度，架构、流匹配损失与采样器都不变。<br>为什么值得看：ImageNet 256×256 上 FID 从 JiT 基线的 1.90 降到 1.55，仅靠学习预测目标、不改表征对齐与架构；在像素空间文生图上也提升图像质量，并在低精度推理下基本消除 patch 接缝伪影。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17767">AnisoFlow：让流模型自己学预测目标</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17767">Learning Anisotropic Prediction Targets for Flow Models</a>
             <p class="keywords">关键词：流模型（flow models）、预测目标学习（prediction target learning）、图像生成（image generation）、FID</p>
           </li>
           <li class="item">
             <p>机构：首尔国立大学<br>核心价值问题：统一多模态模型的生成路径面对密集组合提示时常漏物体、属性绑定失败、空间关系出错，而同一模型的理解路径却能定位这些短语。<br>方法：提出结构自教学（SST），把理解路径内部注意力图中的短语级支撑掩码转为训练时结构信号：短语局部对比对齐与短语级布局脚手架，在训练中调制生成路径的中间空间状态、推理时移除。<br>为什么值得看：无需外部结构标注训练、无需推理时额外输入，在多个统一多模态模型上组合保真度超过同数据 LoRA 微调，且推理零额外成本。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.18261">SST：用理解路径教生成路径画对组合</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18261">Structural Self-Teaching for Compositional Generation in Unified Multimodal Models</a>
             <p class="keywords">关键词：统一多模态模型（unified multimodal models）、组合生成（compositional generation）、自教学（self-teaching）、文生图（text-to-image）</p>
           </li>
           <li class="item">
             <p>机构：北京理工大学、NVIDIA<br>核心价值问题：视频扩散 Transformer 的注意力是推理瓶颈，虽高度稀疏可加速，但逐查询的细粒度选择与 GPU 的分块执行粒度相冲突。<br>方法：提出无训练稀疏注意力算子 Token2Tile：在线低秩空间中做逐查询打分与逐查询残差近似，再把选中 key 打包进 GPU tile 执行，兼顾逐查询精度与分块效率。<br>为什么值得看：在 MiniMax-H3 与 Wan2.1-14B 上相对稠密 FlashAttention-3 端到端加速 1.48–1.54 倍，VBench 分数与稠密差距在 0.5 分以内；在 H3 上比 SOL 与 SubBlock 高 5.5–6.8 dB，在 Wan 上比 SOL 高 4.6–4.8 dB。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17930">Token2Tile：视频 DiT 的无训练稀疏注意力加速</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17930">Token2Tile: Token-Wise Sparse Attention with Tile Execution through a Low-Rank Space for Video DiTs</a>
             <p class="keywords">关键词：视频扩散 Transformer（video diffusion transformers）、稀疏注意力（sparse attention）、推理加速（inference acceleration）、无训练优化（training-free optimization）</p>
           </li>
           <li class="item">
             <p>机构：哈尔滨工业大学（深圳）<br>核心价值问题：文生图幻觉基准多围绕扩散模型设计，对自回归视觉模型（VAR）诊断价值有限；且现有提示要么对现代模型已无挑战，要么很少测试多重要求在同一图中的交互。<br>方法：构建 InfiHall-Bench，411 条提示由属性绑定、空间关系、动作关系、部件一致性、场景一致性五项基础技能系统组合而成，平均每条覆盖 4.05 项标注技能；并提出置信度掩码幻觉缓解（CMHM），在教师强制微调中按每尺度预测置信度降权可靠 token、聚焦不确定预测。<br>为什么值得看：能区分现有组合基准评为相当的模型；发现 VAR 模型的语义错误呈尺度持续性、很少被后续精细尺度纠正；CMHM 持续优于均匀 LoRA 微调。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.18053">InfiHall-Bench：自回归文生图的幻觉评测基准</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.18053">InfiHall-Bench: A Benchmark for Hallucination Evaluation in Autoregressive Text-to-Image Generation</a>
             <p class="keywords">关键词：文生图幻觉（text-to-image hallucination）、自回归视觉模型（autoregressive vision models）、评测基准（evaluation benchmarks）、幻觉缓解（hallucination mitigation）</p>
           </li>
           <li class="item">
             <p>机构：里尔大学<br>核心价值问题：文生视频已达商业规模，但其环境影响几乎未被研究，服务商极少披露视频产量与能耗。<br>方法：实测两家商业平台的年视频产量，建立从训练到存储的完整前瞻足迹模型，预测不同增长情景下的排放。<br>为什么值得看：若保持增长，即使技术持续改进，排放到 2030 年将上升近 75 倍；若用量维持在 2026 年水平，同样的技术改进可减排约五分之二；作者指出这只是保守下限——只覆盖了一家 AI 服务。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17938">AI 视频生成的环境账：2030 年排放或涨 75 倍</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17938">Measured from the feed: the unsustainable growth of AI video generation</a>
             <p class="keywords">关键词：AI 视频生成（AI video generation）、环境影响（environmental impact）、碳排放（carbon emissions）、能耗（energy consumption）</p>
           </li>
         </ol>
@@ -4512,7 +4512,7 @@
         <ol class="items">
           <li class="item">
             <p>机构：蚂蚁 inclusionAI<br>核心价值问题：现有世界模型只模拟物理世界、把推理决策当成外部控制，里面没有能实时感知用户并回应的“活”的存在；全双工互动要求系统一边持续听看用户（语音、视频、文本），一边实时回应、打断或保持沉默，而不是等用户说完再生成。<br>方法：提出 Reciprocal World Model（RWM），把智能与物理现实并列为世界的两大要素；Duo v1 是其模块化实现：Intent 模块（语言模型）用自回归方式做持续交互推理与参与决策，每 chunk 输出 &lt;speak&gt; 或 &lt;wait&gt;；Realization 模块（因果音视频联合扩散）按意图隐状态生成视频与立体声音频；两者通过 chunk 级条件与同步 token 在统一时间线上对齐（每 chunk 约 0.71 秒、17 帧），再用 dual rollout distillation 缓解分布偏移，训出四步流式生成器。<br>为什么值得看：首个把意图认知与音视频行为生成放进同一个流式世界模型的全双工系统，能自发对话、处理打断，还能共享实物、重塑虚拟场景、玩音视频游戏；蚂蚁集团 inclusionAI 已把主页、GitHub 与 HF 上线，是全双工语音 agent 与世界模型交叉方向的新参考点。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.15131">Duo v1</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.15131">Duo: A Reciprocal World Model for Full-Duplex Interaction</a>
             <p class="keywords">关键词：世界模型（world models）、全双工互动（full-duplex interaction）、音视频生成（audio-video generation）、蚂蚁集团（Ant Group）</p>
           </li>
         </ol>
@@ -4525,7 +4525,7 @@
         <ol class="items">
           <li class="item">
             <p>机构：Roblox / 加州大学默塞德分校 / 宾夕法尼亚大学 / 得克萨斯大学奥斯汀分校<br>核心价值问题：前沿视频生成模型都在 VAE 潜空间里工作，压缩虽让训练可行，却限制了高分辨率、逐帧可控与实时交互——分辨率翻倍则 token 数翻四倍，条件也只能作用于帧组。<br>方法：保留扩散 Transformer，把 VAE 解码器换成轻量卷积 head，让模型直接逐帧生成像素；关键发现是预测干净视频而非速度、配合更大的噪声偏移；从 Wan2.1-14B 微调，仅约 130 万训练片段即与潜空间基线质量相当。<br>为什么值得看：同等每帧 token 数下分辨率翻倍至 960×1664，深度条件编辑在快速运动下保持对齐，自回归蒸馏后控制延迟从 495ms 降到 34ms、下一帧即响应——把视频扩散模型抬回像素空间，对实时世界模型与交互式视频生成有直接启发。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17336">Back to Pixels: Lifting Latent Video Diffusion into Pixel Space (PixVid)</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17336">Back to Pixels: Lifting Latent Video Diffusion into Pixel Space</a>
             <p class="keywords">关键词：视频扩散（video diffusion）、像素空间生成（pixel-space generation）、实时视频（real-time video）、视频编辑（video editing）</p>
           </li>
           <li class="item">
@@ -4535,7 +4535,7 @@
           </li>
           <li class="item">
             <p>机构：浙江大学 / 西湖大学 AGI Lab / StepFun<br>核心价值问题：分布匹配蒸馏（DMD）把扩散模型蒸馏为少步学生模型时，现有方法让辅助的 fake 模型在中间态或全部去噪步上训练，学生更新信号与中间分布纠缠——即使学生最终输出已与教师一致，匹配信号仍不为零。<br>方法：eDMD 改为只在学生的最终输出上训练单个共享 fake 模型来纠正匹配方向，使蒸馏信号只针对最终输出分布。<br>为什么值得看：把蒸馏目标收敛到真正关心的最终输出分布，思路干净、改动小，对少步扩散蒸馏的后续工作有直接参考价值；但摘要未给 headline 数字，效果幅度需读全文确认。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17194">Endpoint Distribution Matching for Few-Step Diffusion Distillation (eDMD)</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17194">eDMD: Endpoint Distribution Matching for Few-Step Diffusion Distillation</a>
             <p class="keywords">关键词：扩散蒸馏（diffusion distillation）、少步生成（few-step generation）、分布匹配（distribution matching）、模型压缩（model compression）</p>
           </li>
           <li class="item">
@@ -4573,32 +4573,32 @@
         <ol class="items">
           <li class="item">
             <p>机构：华中科技大学。<br>核心价值问题：视频世界模型探索真实动态场景时，能否保住主体身份、事件进程和重访地点的一致性——现有评测只看感知质量与跟随相机，测不到这些。<br>方法：745 条单镜头源视频（真实与 AI 生成，三档难度 3–25 秒），配键盘动作相机路线，6 个维度 24 项人工验证子指标；评测 8 个模型；另提训练无关的 WanderLand 框架。<br>为什么值得看：没有模型能在重访地点保持一致，片段越长越丢相机控制与源动态；WanderLand 在 5 个模型上所有维度均提升，源动态保真度最高提升 8.3 分，是首个针对视频条件世界模型探索能力的基准。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12557">WanderBench（arXiv:2611.12557）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12557">WanderBench: Can World Models Explore Dynamic Worlds from Video?</a>
             <p class="keywords">关键词：视频世界模型（video world models）、动态场景探索（dynamic scene exploration）、评测基准（evaluation benchmarks）、相机控制（camera control）</p>
           </li>
           <li class="item">
             <p>机构：上海交通大学（另有上海创新研究院、Noematrix、西湖大学、同济大学参与）。<br>核心价值问题：给世界动作模型加动作学习会不会破坏视频预训练得来的语言-视频对齐，数据与监督该怎么配一直缺少系统指导。<br>方法：汇集约 47,000 小时通用视频、第一人称视频、UMI 演示与机器人演示，系统比较语言-视频监督、语言-视频-动作监督及联合监督，并研究标注质量、联合训练配方与架构的影响。<br>为什么值得看：选定配置下仅用 RoboTwin Clean 演示后训练，Easy 条件成功率 88.10%、Hard 条件 61.56%；三项真实世界任务成功率 40.00%，最强基线 23.33%，泛化优势明确，且数据、训练代码与模型权重均已开源。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12870">SWAM（arXiv:2611.12870）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12870">SWAM: Scaling World Action Models with Cross-Modal Alignment</a>
             <p class="keywords">关键词：世界动作模型（world action models）、跨模态对齐（cross-modal alignment）、机器人操作（robot manipulation）、视频预训练（video pretraining）</p>
           </li>
           <li class="item">
             <p>机构：得克萨斯大学奥斯汀分校与 Roblox。<br>核心价值问题：视频扩散模型太贵，混合分辨率生成此前质量掉得厉害且要预先指定高清区域，限制了实用。<br>方法：双分辨率注意力、混合分辨率解码器、由 DiT 自身知识选定高清区域，解决混合分辨率的三个根因。<br>为什么值得看：只处理 30% 的全分辨率 token，Wan2.1 14B 上去噪加速 4.8 倍（1.3B 上 3.8 倍），几乎所有指标优于此前方法；用户研究中 90% 以上成对比较优于此前混合分辨率方法，质量接近全分辨率。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12069">MPEG-Diffusion（arXiv:2611.12069）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12069">MPEG-Diffusion: Mixed-Resolution Video Generation</a>
             <p class="keywords">关键词：视频生成（video generation）、混合分辨率（mixed resolution）、扩散模型（diffusion models）、推理加速（inference acceleration）</p>
           </li>
           <li class="item">
             <p>机构：美团 LongCat 团队（论文第一页仅署团队名&quot;Meituan LongCat Team&quot;，无个人作者与单位）。<br>核心价值问题：有限离散词表能走多远——能否像语言 token 一样统一视觉的理解、生成与编辑。<br>方法：在冻结的预训练编码器上加轻量残差调制与双分支目标，注入重建感知线索；分组乘积量化扩容量而不拉长序列。<br>为什么值得看：在 12 个视觉理解基准、4 个生成基准和 1 个图像编辑基准上达到或超过专用基线，说明一个紧凑离散词表可以成为通用的视觉货币，是统一多模态建模的关键一步。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12426">dNaViT（arXiv:2611.12426）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12426">dNaViT: Discrete Codes are General-Purpose Visual Representations</a>
             <p class="keywords">关键词：离散视觉表示（discrete visual representations）、多模态建模（multimodal modeling）、视觉理解（visual understanding）、图像生成（image generation）</p>
           </li>
           <li class="item">
             <p>机构：香港科技大学与阿里巴巴（Alibaba Token Hub / 阿里巴巴集团）。<br>核心价值问题：视频生成模型画面逼真但物理上不可信，而有监督微调有离线失配、强化学习奖励稀疏难定。<br>方法：把可执行代码作为特权物理上下文（PhysOPSD-Engine 把真实物理场景转成可验证仿真程序），在策略上自蒸馏框架中用双层物理特权加共享 rollout 噪声下的可控物理变体，暴露因果动态差异。<br>为什么值得看：仅 3K 样本就在多个骨干模型上显著提升物理合理性，优于 SFT 与 RL 基线，同时保留通用视频生成质量，&quot;代码即物理先验&quot;是一条新路。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12411">PhysOPSD（arXiv:2611.12411）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12411">PhysOPSD: Code as Privilege for Physically Plausible Video Generation</a>
             <p class="keywords">关键词：视频生成（video generation）、物理合理性（physical plausibility）、代码先验（code priors）、自蒸馏（self-distillation）</p>
           </li>
           <li class="item">
             <p>机构：西安交通大学。<br>核心价值问题：激光雷达点云与 3D 语义占据两种模态通常各自预测或启发式级联，错失相互正则的机会。<br>方法：在共享 BEV 隐空间内用单流统一预测两种模态，混合 range-voxel 自编码器加缓存历史上下文的流匹配生成器。<br>为什么值得看：占据预测 IoU 提升 10.9%，激光雷达 Chamfer 距离降低 30.1%，单张 RTX 4090 上超过 25 FPS 实时吞吐，精度与速度兼得。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.11912">LO-World（arXiv:2611.11912）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.11912">LO-World: Unified BEV Latent Modeling for Joint 4D Occupancy and LiDAR Forecasting</a>
             <p class="keywords">关键词：4D 占据预测（4D occupancy prediction）、激光雷达（LiDAR）、自动驾驶（autonomous driving）、BEV 表示（BEV representations）</p>
           </li>
         </ol>
@@ -4797,27 +4797,27 @@
         <ol class="items">
           <li class="item">
             <p>香港科技大学与香港中文大学（深圳）提出 VA-TDM：用可学习的 critic 比较学生与教师的速度场做少步扩散蒸馏，统一分数蒸馏、Fisher 匹配与矩匹配；论文自报文生图与文生视频均达 4 步 SOTA，并扩展到 33B 的 MiniMax-H3，人类偏好 61.33% 胜过同为 4 步的 Fast-H3。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06796">VA-TDM：少步扩散蒸馏的统一视角</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06796">VA-TDM: A Unified View for Improving Few-Step Diffusion Models by Velocity Adversarial Distillation</a>
             <p class="keywords">关键词：扩散蒸馏（diffusion distillation）、少步生成（few-step generation）、文生图（text-to-image）、文生视频（text-to-video）</p>
           </li>
           <li class="item">
             <p>中国科学技术大学、华南理工大学与华为提出免训练框架 Chronos：用语义提示锚定、视觉帧锚定与度量引导候选路由解决身份保持视频生成的保真与可控张力；论文自报在 ACM MM 2026 身份保持视频生成挑战赛单段与多段两条赛道双料第一。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.05893">Chronos：身份保持视频生成</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.05893">Chronos: Sequential Identity-Preserving Video Generation by Temporal Anchoring</a>
             <p class="keywords">关键词：身份保持视频生成（identity-preserving video generation）、免训练（training-free）、视频生成（video generation）、ACM MM</p>
           </li>
           <li class="item">
             <p>西安交通大学与阿里云通义点金团队提出 Prism：让统一多模态模型自采样图文交错轨迹、按两条链的可靠性状态决定训练动作，实现理解与生成的双向自教；论文自报 SenseNova-U1 生成侧 GenEval 从 85.8 升至 89.2，理解侧 MME 总分同步提升。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06343">Prism：统一多模态模型的双向自教</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06343">Prism: Bidirectional Self-Teaching for Unified Multimodal Models</a>
             <p class="keywords">关键词：统一多模态模型（unified multimodal models）、自教（self-teaching）、理解与生成（understanding and generation）、图文交错（interleaved image-text）</p>
           </li>
           <li class="item">
             <p>索邦北巴黎大学、巴黎西岱大学、华东师范大学与大连交通大学提出 TouchéWorld：把手部连续动作接进相机控制的世界模型，让用户在生成环境里边漫游边动手；配套 TouchéBench 从手部跟随、相机-手协调、在线交互、物体响应四方面评估交互能力。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06061">TouchéWorld：可上手互动的生成式世界</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06061">TouchéWorld tech report: Towards Online Unified Camera--Hand Exploration in Generative Worlds</a>
             <p class="keywords">关键词：世界模型（world models）、手部交互（hand interaction）、相机控制（camera control）、生成环境（generative environments）</p>
           </li>
           <li class="item">
             <p>香港中文大学 MMLab、商汤科技与上海人工智能实验室提出 TailSteer：只在去噪轨迹尾部做保持性修正，解决多轮图像编辑的累积漂移；论文自报在 FLUX、SenseNova、Qwen 三个模型家族上多轮漂移大幅下降，保持性能可与 GPT-Image-2.5 Sunburst 媲美甚至超过。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06741">TailSteer：抗漂移的多轮图像编辑</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06741">TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing</a>
             <p class="keywords">关键词：多轮图像编辑（multi-turn image editing）、抗漂移（anti-drift）、去噪轨迹（denoising trajectory）、FLUX</p>
           </li>
         </ol>
