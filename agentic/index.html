@@ -9530,7 +9530,7 @@
           <li class="item">
             <p>机构：Google Research、Google DeepMind<br>核心价值问题：现有的机器学习工程（MLE）评测大多只让 agent 改单个文件、很快就被刷爆了，怎么系统地衡量并控制&quot;仓库级 MLE 任务到底有多难&quot;？<br>方法：提出代码复杂度指数（CCI），只用代码结构特征就能预测基准的平均解出率（8 个公开基准上 R²=0.951）；再用 BuggyMLE 框架让 agent 往正常 ML 仓库里注入可控 bug，合成了 6600 多个带 bug 的仓库变体，并据此建成难度分级的 BuggyMLE-Bench-Lite；在三档难度课程上微调的 Qwen3.5-9B 在该基准上能媲美前沿模型。<br>为什么值得看：它把&quot;任务难度&quot;从玄学变成了可度量的指标，还给出了可规模化生成难度可控 MLE 任务的办法，做 agent 评测与训练的人值得看。</p>
             <a class="source-link" href="https://www.linkedin.com/posts/omarsar_banger-paper-from-google-on-ml-engineering-share-7530350658399666177-cycu/">Elvis S.：Google 的 BuggyMLE：往 ML 仓库里注 bug，系统化拉高 agent 难度</a>
-            <a class="source-link" href="https://arxiv.org/abs/2611.25088">arXiv:2611.25088</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.25088">BuggyMLE: Scaling Machine Learning Engineering Difficulty with Bug Injection</a>
             <p class="keywords">关键词：机器学习工程（machine learning engineering）、agent 评测（agent evaluation）、任务难度（task difficulty）、BuggyMLE、代码复杂度（code complexity）</p>
           </li>
           <li class="item">
@@ -10178,42 +10178,42 @@
         <ol class="items">
           <li class="item">
             <p>机构：麦吉尔大学、Mila 魁北克人工智能研究所<br>核心价值问题：现有可复现的网页 agent 基准只覆盖少数网站、只测文本和视觉，而真实浏览器工作涉及多种应用、多模态内容和有状态流程，音视频内容也从未被纳入评测。<br>方法：构建 WebArena-Pro，300 个任务、20 个自托管网站、6 类领域，音视频首次作为与文本、视觉并列的核心观测模态并配有专用抽取动作；任务经人工撰写、LLM 初筛、人工验证，支持隔离并行、可复现评测。<br>为什么值得看：在可复现、人工标注的网页 agent 基准中覆盖最广、多模态支持最全；Codex 搭配 GPT 6.1 Sol 与 Claude Code 搭配 Claude Opus 5.5 并列最佳 62.3%，通用 agent 配置仅 30.3% 左右，差距揭示了专用 agent 框架的价值。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17955">WebArena-Pro：可复现的多模态网页 agent 基准</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17955">WebArena-Pro: A Heterogeneous, Multimodal, Reproducible Benchmark for Web Agents</a>
             <p class="keywords">关键词：网页 agent 基准（web agent benchmarks）、多模态评测（multimodal evaluation）、音视频观测（audio-video observations）、可复现评测（reproducible evaluation）</p>
           </li>
           <li class="item">
             <p>机构：普林斯顿大学<br>核心价值问题：LLM agent 执行多步工具调用时，完成任务与遵守安全策略常常冲突——拦下不安全动作会让 agent 卡住、无从恢复。<br>方法：执行前生成结构化计划并做形式化验证，确认符合规范后才允许调用工具；执行中以已验证计划同时约束轨迹合规，并在动作被拦时提供恢复指引。<br>为什么值得看：在多个工具使用基准上，平均任务成功率达到最强基线的 1.7 倍，且零违反策略规范，说明安全与效用不必二选一。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17880">Soteria：形式化验证加运行时 enforcement 的安全 agent</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17880">Soteria: Formally Verified Planning with Runtime Enforcement for Safe LLM Agents</a>
             <p class="keywords">关键词：安全 agent（safe agents）、形式化验证（formal verification）、运行时约束（runtime enforcement）、工具调用安全（tool-use safety）</p>
           </li>
           <li class="item">
             <p>机构：阿里巴巴集团<br>核心价值问题：电商 agent 面临需求漂移与执行工具持续演进，单次训练的模型很快掉队，人工定期重训又太慢、太费人力。<br>方法：把每日生产证据转化为奖励路由、熵优先的训练数据，并做受治理的奖励演化与检查点过渡，在累计评估的控制下更新模型，学新行为的同时保留已验收行为。<br>为什么值得看：已部署在阿里巴巴 1688 平台的 B2B 采购 agent Yuancai 上，在真实生产 agent 的实验中对新需求的适应更强、旧行为保留更好，是少见的已落地持续自训练系统。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17814">G-CAST：电商 agent 的受治理持续自训练</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17814">G-CAST: Governed Continual Self-Training for E-Commerce Agents under Evolving Demands</a>
             <p class="keywords">关键词：持续自训练（continual self-training）、电商 agent（e-commerce agents）、奖励演化（reward evolution）、生产部署（production deployment）</p>
           </li>
           <li class="item">
             <p>机构：内华达大学里诺分校<br>核心价值问题：多智能体系统的评测常拿它与单次贪心解码比较，把“多 agent 协作”的收益与“采样次数、推理算力”的收益混在一起。<br>方法：综合 9 项实证研究、516 种多智能体配置，按六维资源向量组织，并建立四级基线梯子（单次、等采样数、等资源预算等），用多层随机效应模型做元分析。<br>为什么值得看：结论是负面的——在可比基线（等采样数或等预算）下，多智能体平均准确率反而低 0.042，74% 的可比对照中不优于基线；只有证据分区、外部验证或模型间误差多样性时协作才有正收益，给多智能体研究划了一条基线红线。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17610">多 agent 还是多采样？一项 516 配置的元分析泼冷水</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17610">More Agents, More Samples, or More Thinking? Untangling Coordination, Ensembling, and Test-Time Compute in Multi-Agent LLMs</a>
             <p class="keywords">关键词：多智能体评测（multi-agent evaluation）、元分析（meta-analysis）、基线比较（baseline comparison）、采样效率（sampling efficiency）</p>
           </li>
           <li class="item">
             <p>机构：南加州大学<br>核心价值问题：agent 取消预订、删除文件夹前，到底是什么阻止它按错误假设行动——是工具返回的内容，还是用户说的话？<br>方法：借用语言学的预设理论做实验，改变工具返回的是“列出两条匹配记录”“只给计数”还是“不显示第二条”，以及用户是否陈述了与记录矛盾的主张，观察 36 个 agent 在何种条件下会先行动。<br>为什么值得看：只给计数时多数 agent 仍会按看到的那条记录行动，列出两条才能有效阻止；在零售基准中加入同名同邮编顾客后，约四分之一对话出现写错账户的情况；结论直接指向工具返回设计与评测方式——查找必须列出或核对竞争记录。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17639">Agent 按什么行动：工具返回还是用户的话</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17639">What LLM Agents See and What Users Say</a>
             <p class="keywords">关键词：agent 行为（agent behavior）、工具返回设计（tool return design）、预设理论（presupposition theory）、账户安全（account safety）</p>
           </li>
           <li class="item">
             <p>机构：加州大学尔湾分校<br>核心价值问题：用 Claude Opus 5.5 这类前沿 agent 查数据库，每天 1 万次查询一年要花 7 万多美元，还慢、还要把敏感查询发给外部 API。<br>方法：7B 非自回归 text-to-SQL 模型 LuthorSQL 作为“系统 1”快筛：单次前向预测查询计划的槽位分数，编译运行最多 32 个候选计划并用训练好的验证器挑选；不确定时才升级给慢速 LLM agent。<br>为什么值得看：单模型在 BIRD 隐藏测试集上执行准确率 68.03%、单 GPU 每问 0.84 秒，8-bit 量化仅需 9GB；与 Claude Opus 5.5 级联后在 227 个截止后数据库问题上回答近一半问题、API 成本降 33.3% 且准确率不变。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17780">LuthorSQL：7B 模型给慢速 agent 做 text-to-SQL 快筛</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17780">LuthorSQL: A One-Pass Text-to-SQL Model as System 1 for a Slower LLM Agent</a>
             <p class="keywords">关键词：text-to-SQL、7B 模型（7B models）、agent 成本优化（agent cost optimization）、数据库查询（database queries）</p>
           </li>
           <li class="item">
             <p>机构：加州大学伯克利分校<br>核心价值问题：联合世界动作模型同时生成未来动作与状态，但模仿轨迹并不能保证轨迹真正有效、符合动力学。<br>方法：提出世界动作轨迹优化（WATO），把生成的动作与未来状态共同作为动力学约束轨迹优化的参考，并把任务损失通过优化后的轨迹反传训练生成器；部署时直接生成候选轨迹并用世界模型排序，无需迭代优化。<br>为什么值得看：7 个视觉控制环境平均成功率从模仿基线的 79.9% 提升到 91.7%，超过多个基于模型、目标条件 RL 与生成式控制基线；部署时比交叉熵方法快 11.5 倍、世界模型评估次数少 600.5 倍。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17626">WATO：让世界动作模型生成的轨迹真正可执行</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17626">Joint World Action Models through Differentiable Trajectory Optimization</a>
             <p class="keywords">关键词：世界动作模型（world-action models）、轨迹优化（trajectory optimization）、视觉控制（visual control）、动力学约束（dynamics constraints）</p>
           </li>
           <li class="item">
             <p>机构：哈佛大学<br>核心价值问题：针对单个 LLM agent 的对齐训练，迁移到多智能体团队时会失效，但失效机制与修复办法尚不清楚。<br>方法：在败血症分诊、新闻推荐两项任务与 10 项咨询提案生成任务上做对照实验，检验互评、群聊协调等干预，并归因于责任扩散。<br>为什么值得看：发现责任扩散是主因——团队中的 agent 更少主动检查系统级安全失败、更易忽视或推诿问题；设专职安全负责人、由协调 agent 发布安全规范文档能有效恢复单 agent 的对齐水平。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.17820">Aligning AI Teams：多 agent 团队的对齐为何失效</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.17820">Aligning AI Teams</a>
             <p class="keywords">关键词：多智能体对齐（multi-agent alignment）、责任扩散（diffusion of responsibility）、安全负责人（safety ownership）、团队协作（team coordination）</p>
           </li>
         </ol>
@@ -10395,32 +10395,32 @@
         <ol class="items">
           <li class="item">
             <p>机构：南洋理工大学（另有清华大学、中山大学、Aumovio Singapore 参与）。<br>核心价值问题：多模态 agent 积累越来越长的交互历史后，如何找回真正相关的记忆，并按查询需求取用不同形式的证据。<br>方法：横向把记忆片段按文本与视觉锚点组织成关系图，对语义检索到的种子做邻居扩展以找回互补信息；纵向让每条记忆保留摘要、字幕、定位视觉视图、原图与交互历史等多形态证据，由轻量可训练选择器为每条记忆自适应组合证据子集。<br>为什么值得看：在三个多模态记忆基准上全面提升任务表现，同时 token 消耗比最高效的同类基线减少约 90%，长期记忆的成本问题有了一个可落地的解法。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12872">HiVe-Mem（arXiv:2611.12872）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12872">HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents</a>
             <p class="keywords">关键词：多模态 agent（multimodal agents）、长期记忆（long-term memory）、记忆检索（memory retrieval）、token 效率（token efficiency）</p>
           </li>
           <li class="item">
             <p>机构：上海人工智能实验室（Sage-Taiyi Team）。<br>核心价值问题：科学发现 agent 如何像科学家一样做元认知调控——根据已有理解决定下一步研究什么、用什么方法。<br>方法：显式监控证据、假设与未解问题，据此调整研究目标并选择可复用的推理方法，把元认知调节做成架构本身。<br>为什么值得看：在 265 项任务、50 篇论文、10 个学科的 Taiyi-Bench 上 8 项指标全部第一，总分 54.0、对最强基线 AI Scientist-v2 的 47.9；专家指导的化学实验验证中，钴催化羰基化产率从痕量提至 84%，光催化烯丙胺化从 13% 提至 69%，不只是纸面指标。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12762">Sage-Taiyi（arXiv:2611.12762）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12762">Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery</a>
             <p class="keywords">关键词：科学发现 agent（scientific discovery agents）、元认知（metacognition）、多智能体系统（multi-agent systems）、AI for Science</p>
           </li>
           <li class="item">
             <p>机构：美国西北大学。<br>核心价值问题：多智能体科学发现中 agent 没有共享记忆会丢观测、重复劳动，固定角色流程与交接方式则会让错误一直传下去。<br>方法：共享证据图加三个可编辑组件（角色与协调、记忆的记录/检索/接收方式），用候选探针引导下一轮编排的选择，实现任务局部的递归自我改进。<br>为什么值得看：Autonomous Science Bench 上 GPT-6-Astra 尝试的解决数从 8/18 提至 12/18；ScienceAgentBench 14/38（基线 11/38），AppWorld 11/20（基线 5/20），共享记忆与编排自适应叠加后收益明确。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12552">SciMARS（arXiv:2611.12552）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12552">SciMARS: Multi-Agent Recursive Self-Improvement for Closed-Loop Scientific Discovery</a>
             <p class="keywords">关键词：多智能体科学发现（multi-agent scientific discovery）、共享记忆（shared memory）、自我改进（self-improvement）、AI for Science</p>
           </li>
           <li class="item">
             <p>机构：微软。<br>核心价值问题：常驻助手要先从用户工作区里自己发现待办事项再去执行，但现有基准都是直接把任务交给 agent，测不到&quot;发现&quot;这一步。<br>方法：AutoBuddy-Bench 把组织的人员、项目、业务系统与事件历史建成时序图，渲染成邮件、聊天、文档等真实工作区产物，从事件中派生带标准答案的任务，按 agent 对工作区的改动打分；参考 agent AutoBuddy 在独立会话中执行任务。<br>为什么值得看：只换 backbone 的对照揭示任务丢失位置随模型能力系统性迁移——弱模型多丢在发现环节，中等模型发现了却不执行，最强模型主要在执行业务系统操作时失败；且发现精度与执行质量弱相关，说明&quot;发现&quot;与&quot;执行&quot;是两种不同能力，要分开练。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12393">AutoBuddy（arXiv:2611.12393）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12393">AutoBuddy: Evaluating Proactive, Always-On Agents on Task Discovery and Execution in a Simulated Workplace</a>
             <p class="keywords">关键词：常驻 agent（persistent agents）、任务发现（task discovery）、基准评测（benchmarking）、工作区自动化（workspace automation）</p>
           </li>
           <li class="item">
             <p>机构：东京大学与 Third Intelligence。<br>核心价值问题：世界模型要在陌生环境里学会新机制，需要看多少次？这是&quot;用世界模型做规划决策&quot;的关键成本问题，按归类规则归 Agentic AI。<br>方法：在 ARC-AGI-3 上建 MechEval，标注 20 个游戏中的 69 种机制并逐曝光评分；35M 参数视觉 Transformer WARC 在其他游戏上预训练，每步之后全参数更新，做测试时训练。<br>为什么值得看：未见过的游戏上五分之四的机制预测准确率达到 80% 以上，一半机制约 80 次曝光即达标（不更新时只有七分之一能做到）；闭环玩法中 WARC-Agent 把探索器的官方效率分从 0.15 提至 0.46（约三倍），Kaggle 隐藏游戏得分 0.20。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.12324">How Many Exposures Does a World Model Need?（arXiv:2611.12324）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.12324">How Many Exposures Does a World Model Need? Learning Unseen Game Mechanics at Test Time</a>
             <p class="keywords">关键词：世界模型（world models）、测试时训练（test-time training）、游戏机制学习（game mechanics learning）、ARC-AGI</p>
           </li>
           <li class="item">
             <p>机构：华盛顿大学（另有艾伦人工智能研究所、宾夕法尼亚大学、斯坦福大学、西北大学等参与）。<br>核心价值问题：前沿 agent 能否在长周期里持续优化真实 AI 基础设施，而不是只在短评测里刷分。<br>方法：多层次长周期 infra 优化任务基准，6 个模型、150 次运行、每次 24 小时预算，总计超 10,000 GPU 小时。<br>为什么值得看：150 次运行中有 135 次在后半程仍继续改进，说明短评测会漏掉优化收益和排名变化；Claude Opus 5.5 把 KV-cache 平均压缩率从人类设计的 Quant-VideoGen 编解码器的 6.82% 提至 19.86%，agent 已能发现优于人类设计的 infra 方案。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.11995">Infrathon（arXiv:2611.11995）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.11995">Infrathon: Benchmarking Language Agents for Real-World, Long-Horizon AI Infra Optimization</a>
             <p class="keywords">关键词：agent 基准（agent benchmarks）、基础设施优化（infrastructure optimization）、长周期任务（long-horizon tasks）、GPU 优化（GPU optimization）</p>
           </li>
         </ol>
@@ -10578,7 +10578,7 @@ cursive self-improvement）、agent 优化（agent optimization）、基准（be
         <ol class="items">
           <li class="item">
             <p>机构：Google Cloud AI Research、滑铁卢大学。<br>核心价值问题：科学发现的终极愿景是问题驱动的自主研究——人类专家给一个根本挑战，AI 自己摸清知识边界、发现瓶颈、系统性推进前沿；现有 AI 科学家多是辅助工具（提假设、帮分析），做不到端到端无人干预的完整发现循环。<br>方法：提出 ScientistTwo 全自主多智能体框架：输入一个初始问题，自动建立 SOTA 基线、提出新假设、协调专门 agent 跑端到端发现流程；用多数据集、多指标做实验，自动消融精炼方法，再用闭环模拟同行评审反驳引擎验证结果。在 ICLR/ICML/NeurIPS 级别论文上做基准测试，声称自主生成专家级可发表论文和完整可验证代码库，解法超过人类 SOTA。<br>为什么值得看：这是 AI 从“科研助手”走向“科研先锋”的标志性一步——如果属实，科研的假设、实验、验证、写论文全链条都能无人干预；但要提醒：它“评审分高于人类论文”是在自动化 AI 评审 agent 下测的，不是人类评审员，含金量要打折扣；做 agent、做科学发现的人都值得看原文再判断。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2609.19644">ScientistTwo（arXiv:2609.19644）</a>
+            <a class="source-link" href="https://arxiv.org/abs/2609.19644">ScientistTwo: Pioneering the Human Knowledge Frontier with Autonomous AI</a>
             <p class="keywords">关键词：AI 科学家（AI scientists）、自主科研（autonomous research）、多智能体系统（multi-agent systems）、同行评审（peer review）</p>
           </li>
         </ol>
@@ -10789,32 +10789,32 @@ cursive self-improvement）、agent 优化（agent optimization）、基准（be
         <ol class="items">
           <li class="item">
             <p>BenchFlow 联合伯克利、加州理工、哈佛、斯坦福、亚马逊等 30 余家机构发布 FrontierPhysics：56 个由物理学家基于真实研究设计的任务，要求 agent 完成查文献、定计划、做实验、写手稿全流程；论文自报没有任何配置能在 168 次 rollout 中通过超过 46 次，短板是推理严谨性而非知识。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06910">FrontierPhysics：面向端到端物理研究的 agent 评测</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06910">FrontierPhysics: Evaluating Agents for End-to-End Physics Research</a>
             <p class="keywords">关键词：agent 评测（agent evaluation）、物理研究（physics research）、多机构基准（multi-institution benchmark）、端到端研究（end-to-end research）</p>
           </li>
           <li class="item">
             <p>帝国理工学院与牛津大学发布 Airlock：给多智能体系统加运行时溯源隔离，用溯源 DAG 追踪受污染的执行、只切断最小范围的受污染路径；论文自报拦截全部告警后的错误执行、零泄漏，比 A2A、LangGraph 原生控制多保留 68–96 个百分点的健康工作。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06727">Airlock：多智能体系统的选择性在线故障隔离</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06727">Airlock: Bounding the Multi-Agent Blast Radius via Selective Online Containment</a>
             <p class="keywords">关键词：多智能体系统（multi-agent systems）、运行时隔离（runtime isolation）、故障隔离（fault isolation）、溯源（provenance tracking）</p>
           </li>
           <li class="item">
             <p>马来西亚拉曼大学、新加坡国立大学等团队实证：合法签名的 MCP 工具可在正常工作时暗藏木马，把机密数据塞进发往合规目的地的请求，Meta 的 MCPGuard-Dynamic 全部 7 种配置均未拦住；提出的 germline execution 让每次调用在只拿到授权数据的临时副本中运行，153 次攻击运行零泄漏。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06585">Signed, Sealed, Leaked：签名 MCP 工具链中的信任缺口</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06585">Signed, Sealed, Leaked: Trust Beyond Signature for MCP Toolchains</a>
             <p class="keywords">关键词：MCP、供应链安全（supply chain security）、数据泄露（data exfiltration）、提示注入（prompt injection）</p>
           </li>
           <li class="item">
             <p>清华大学 AI Agent Group 提出 Coca-Cola：把工具观测压缩为连续潜在 token 而非文本，用动作保持训练只保留对决策关键的信息；论文自报 token 消耗降低 70%–89%、端到端运行时间缩短 24%–56%，任务表现不降反升。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06500">Tools Need Not Speak in Text：用潜在 token 压缩 agent 的工具上下文</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06500">Tools Need Not Speak in Text: Latent Context Compression for Agents</a>
             <p class="keywords">关键词：工具上下文压缩（tool context compression）、潜在 token（latent tokens）、token 效率（token efficiency）、agent 推理（agent reasoning）</p>
           </li>
           <li class="item">
             <p>独立研究者提出 SARBLOH：一个零参数的确定性感知引擎把 ARC-AGI-3 的整数网格转为对象清单与几何简报，让 agent 写算法假设而非逐个输出低级动作；论文自报公开集 rubric 分从 3/28 升至 25/28、token 用量减少 89.4%，官方隐藏评测得分 16.53；单作者自报成绩，复现待观察。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06793">SARBLOH：感知而非规划决定 ARC-AGI-3 表现</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06793">Transforming Integer Grids to Spatial Intuition: Perception, Not Planning, Governs ARC-AGI-3</a>
             <p class="keywords">关键词：ARC-AGI、对象感知（object perception）、几何推理（geometric reasoning）、确定性引擎（deterministic engine）</p>
           </li>
           <li class="item">
             <p>南京航空航天大学牵头、清华、北航、同济参与的 SecureGARD：给工具调用 agent 加本体论治理，把异构工具调用映射到共享语义动作，做 ready/waiting/forbidden 三态裁决；论文自报在 AgentDojo、ASB、AgentDyn 三个基准的间接提示注入设定下攻击成功率均为 0%，且受攻击下的任务效用高于基线。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2611.06682">SecureGARD：给工具调用 agent 加本体论治理</a>
+            <a class="source-link" href="https://arxiv.org/abs/2611.06682">SecureGARD: Dynamic Ontology-Guided Governance for Secure Tool-Using LLM Agents</a>
             <p class="keywords">关键词：工具调用安全（tool-calling safety）、本体论治理（ontology governance）、间接提示注入（indirect prompt injection）、AgentDojo</p>
           </li>
         </ol>
