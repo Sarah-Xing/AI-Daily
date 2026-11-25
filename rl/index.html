@@ -2532,6 +2532,8 @@ on>
         }
 
         var haystacks = [];
+        // 搜索前各归档的展开状态：搜索时自动展开含匹配条目的归档，清空搜索时恢复原状
+        var archiveStates = new Map();
 
         panels.forEach(function (panel) {
           Array.prototype.forEach.call(panel.querySelectorAll(".round"), function (round) {
@@ -2586,6 +2588,25 @@ on>
             var count = round.querySelector(".count");
             if (count) {
               count.textContent = q === "" ? count.dataset.orig : "找到 " + visible + " 条";
+            }
+          });
+
+          // 搜索时自动展开含匹配条目的归档，清空搜索时恢复原状
+          Array.prototype.forEach.call(panel.querySelectorAll("details.archive"), function (details) {
+            if (q === "") {
+              if (archiveStates.has(details)) {
+                details.open = archiveStates.get(details);
+                archiveStates.delete(details);
+              }
+            } else {
+              if (!archiveStates.has(details)) {
+                archiveStates.set(details, details.open);
+              }
+              var hasMatch = false;
+              Array.prototype.forEach.call(details.querySelectorAll(".item"), function (item) {
+                if (!item.classList.contains("hidden")) hasMatch = true;
+              });
+              details.open = hasMatch;
             }
           });
 
