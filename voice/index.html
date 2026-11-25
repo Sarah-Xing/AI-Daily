@@ -6974,7 +6974,7 @@ Vspoof 2019 LA 上 8.45% EER 接近全监督基线 7.86%，但 2021 DF 域偏移
         <ol class="items">
           <li class="item">
             <p>机构：上海交通大学 X-LANCE 实验室、上海创新研究院、阿里巴巴 Token Foundry<br>核心价值问题：流式语音翻译必须在只听到部分输入时决定是否开口译，但整句级语料只给最终译文、不告诉“哪段输入支撑哪段译文”；且说出去的语音无法像文字那样悄悄修改，时机一旦错了就无法挽回。<br>方法：把整句级语音对切成语义对齐的增量训练样本，学习一个 READ/WRITE 门控策略（640 毫秒固定输入网格上可调阈值），Thinker 生成译文、Talker 生成语音，阈值调高即要求更强证据再开口，无需重训。<br>为什么值得看：一个检查点即可在质量-延迟间换挡，英中方向在 FLEURS 上有竞争力、在内部 9 语对测试上领先所比流式系统，且作者承诺开源模型与代码；这是“流式翻译何时译”从固定等待策略走向语义证据驱动的一步。</p>
-            <a class="source-link" href="https://arxiv.org/abs/2610.36777">arXiv</a>
+            <a class="source-link" href="https://arxiv.org/abs/2610.36777">S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation</a>
             <p class="keywords">关键词：流式语音翻译（streaming speech translation）、语义监督（semantic supervision）、READ/WRITE 门控（READ/WRITE gating）、质量-延迟权衡（quality-latency tradeoff）</p>
           </li>
           <li class="item">
