@@ -12969,15 +12969,18 @@ cursive self-improvement）、agent 优化（agent optimization）、基准（be
             var count = round.querySelector(".count");
             if (count) count.dataset.orig = count.textContent;
             Array.prototype.forEach.call(round.querySelectorAll(".item"), function (item) {
-              // 匹配范围仅限条目正文（p），不含序号（CSS 计数器）和链接辅助文字（a/.source-note）
+              // 匹配范围：条目正文（p）+ 标题链接文字（a）
               var paras = Array.prototype.map.call(item.querySelectorAll("p"), function (el) {
+                return el.textContent;
+              });
+              var links = Array.prototype.map.call(item.querySelectorAll("a"), function (el) {
                 return el.textContent;
               });
               haystacks.push({
                 item: item,
                 round: round,
                 panel: panel,
-                text: paras.join(" ").toLowerCase()
+                text: paras.concat(links).join(" ").toLowerCase()
               });
             });
           });
