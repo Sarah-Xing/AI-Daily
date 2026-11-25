@@ -383,6 +383,19 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1125-morning">
+        <header class="round-header">
+          <h2 id="round-1125-morning">11 月 25 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>香港大学与字节跳动 Seed 开源了 Laminar，一个面向大模型与长程 agent 的异步 RL 后训练框架，把 rollout、经验缓冲、训练与权重同步拆成彼此独立的循环，1024 卡集群上训练吞吐最高提升 5.48 倍。实测 Qwen3-Coder-30B-A3B-Instruct 在 SWE-bench Verified 上从 46.6% 提升到 52.2%，且比基线少用 33% 样本与 64% GPU 小时。注意其与基线的对比用了不同 GPU，数字需打折看；代码 Apache-2.0 开源，基于 verl 与 Uni-Agent。</p>
+            <a class="source-link" href="https://github.com/verl-project/laminar">Laminar：香港大学与字节跳动 Seed 开源的异步 RL 后训练框架</a>
+            <p class="keywords">关键词：RL 后训练（RL post-training）、异步训练（asynchronous training）、大模型 agent（large-model agents）、开源框架（open-source frameworks）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1123-2030">
         <header class="round-header">
           <h2 id="round-1123-2030">11 月 23 日 20:30 轮</h2>
@@ -396,7 +409,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-1230">
+                  <details class="archive">
+        <summary>历史归档（11 月 21 日及之前）</summary>
+<section class="round" aria-labelledby="round-1121-1230">
         <header class="round-header">
           <h2 id="round-1121-1230">11 月 21 日 12:30 轮</h2>
           <span class="count">1 条</span>
@@ -409,8 +424,6 @@
           </li>
         </ol>
       </section>
-                  <details class="archive">
-        <summary>历史归档（11 月 20 日及之前）</summary>
 <section class="round" aria-labelledby="round-1120-morning">
         <header class="round-header">
           <h2 id="round-1120-morning">11 月 20 日早报</h2>
@@ -947,6 +960,84 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1125-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1125-morning-academic">11 月 25 日 08:30 轮</h2>
+          <span class="count">14 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：卡内基梅隆大学、伊利诺伊大学厄巴纳-香槟分校、Tufa Labs、哈佛大学<br>核心价值问题：RL 后训练的 rollout 通常每轮更新后就丢弃，学到的东西只留在模型权重里——这些被丢掉的 rollout 本身到底保留了多少 RL 学到的知识，能不能直接复用？<br>方法：发现直接在存档 rollout 上重跑原 RL 算法会灾难性崩溃，原因是分布偏移；改用最大似然（不区分回答对错、按生成顺序重放）就能恢复在线 RL 的性能，单个 MLE 更新几乎能复现整条在线 RL 学习曲线，只用最后几步的 rollout 常常就足以恢复最终模型的性能。<br>为什么值得看：结论出人意料且有实操意义——RL 的大部分算力花在“发现更好的采样分布”而非“从样本中学习”，存档 rollout 可直接复用，未来 RL 训练数据的保存与复用方式可能因此改变。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.33102">Reinforcement Learning Can Be Recovered From Its Own Rollouts</a>
+            <p class="keywords">关键词：RL 后训练（RL post-training）、rollout 复用（rollout reuse）、最大似然（maximum likelihood）</p>
+          </li>
+          <li class="item">
+            <p>机构：南洋理工大学<br>核心价值问题：长任务 agent 常在证据不足时就匆忙作答（“偷懒”），而结局奖励只看最终答案对错，蒙对的和有证据支撑的拿同样的分，训不出“何时该继续搜集证据、何时该作答”。<br>方法：提出可验证信念 RL（RLVB），训练时用模拟器算出的精确后验判断证据是否充分：证据不足时奖励继续探索、证据充分时奖励作答；无需评委、critic 或奖励模型，也不读 agent 自己写的信念行；并新建视觉解谜基准 Pro Worlds。<br>为什么值得看：3 个视觉语言模型、3 个基准共 9 组设置全部提升，平均提升 17.1%，而结局奖励下的 GRPO/PPO 平均还不如 base 模型；且比带 LLM 评委过程奖励的 PPO 平均高 9.3%、GPU 小时少用 1.6 倍——“按证据充分度给奖励”是一个可直接复用的 RL 奖励设计思路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32884">Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe</a>
+            <p class="keywords">关键词：可验证信念（verifiable beliefs）、agent 探索（agent exploration）、奖励设计（reward design）</p>
+          </li>
+          <li class="item">
+            <p>机构：延世大学<br>核心价值问题：多模态 RLVR 用同一组优势信号同时优化视觉编码器、投影层和 LLM，哪怕看错了图、答案蒙对了，视觉模块也会被错误地奖励——感知对错与答案对错纠缠在一起，信用算错了模块。<br>方法：提出模块专属策略优化（MSPO），用感知检查清单（关于图像信息的辅助问题）的回答算出置信度感知的感知奖励（CaPR），单独指导视觉编码器的更新，投影层与 LLM 仍用基于结果的 GRPO 更新。<br>为什么值得看：在 7 个数学与通用推理基准上，3B 与 7B 两个尺度平均都优于现有 RL 微调模型——把“分模块算信用”的思路从语言模型扩展到了多模态 RL，方法通用、可迁移到其他多模态 RLVR 训练。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32687">Are We Rewarding the Wrong Module? Module-Specific Policy Optimization for Multimodal Reinforcement Learning</a>
+            <p class="keywords">关键词：多模态 RL（multimodal RL）、信用分配（credit assignment）、视觉编码器（vision encoders）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港大学、上海交通大学、哈尔滨工业大学、北京大学、商汤科技、电子科技大学、新加坡国立大学、浙江大学、上海科技大学<br>核心价值问题：深度搜索 agent 要反复检索、改写查询、验证证据，单步检索不够用；现有 agent 训练缺少“每条线索都必须独立检索验证、证据链共同锁定唯一答案”的高质量数据与长程 RL 训练方法。<br>方法：推出 Bathys 9B 与 27B 两个深度搜索 agent，训练管线覆盖可验证问题合成、SFT、KTO（二值轨迹反馈）与在线 RL（CM-GSPO，在上下文压缩下优化执行子轨迹），数据上每条线索都改写为间接引用、保留可验证的证据链。<br>为什么值得看：BrowseComp 上 9B 得 66.51%、27B 得 80.49%（带轨迹自验证与条件重试的评测协议），是深度搜索 agent 的新成绩标杆；SFT→KTO→在线 RL 的完整训练配方对做搜索 agent 的团队可直接参考。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32660">Bathys: Advancing Deep Search Agents</a>
+            <p class="keywords">关键词：深度搜索 agent（deep search agents）、在线 RL（online RL）、BrowseComp</p>
+          </li>
+          <li class="item">
+            <p>机构：General Reasoning<br>核心价值问题：多个 agent 协同做事时，延迟是硬约束——并行分工能省时间，但怎么训练一个“组织”而不是一群各自为战的 agent，让它们在截止时间前分工、审稿、协调？<br>方法：提出集体奖励 RL（RLCR），一个 CEO 加最多 8 名专家共享同一策略、通过消息板与工作区协作，用共同的结果奖励训练；推出 Avalon-M1-Mini（120B），在 147 个环境中训练。<br>为什么值得看：8 人组织执行让 IMO-ProofBench-Advanced 从 23.8% 提升到 39.0%，12 个基准平均分与单 agent 相当、延迟只有约三分之一；训练中组织自发形成层级、加强同行评审——多 agent 组织化训练的首个可复用配方；但安全评估发现外部上报行为在两个监督场景中持续下降，值得留意。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32539">Avalon-M1: Reinforcement Learning from Collective Rewards</a>
+            <p class="keywords">关键词：多 agent 协作（multi-agent collaboration）、集体奖励（collective rewards）、组织化训练（organizational training）</p>
+          </li>
+          <li class="item">
+            <p>机构：Scale AI、卡内基梅隆大学<br>核心价值问题：PPO 带 critic、GRPO 不带 critic，两者都报过好成绩，但到底什么时候 critic 值得要、什么时候可以省，一直没有系统性的答案，全凭经验选。<br>方法：在统一的 actor 目标下比较 GRPO 与 PPO，用梯度方向与真实策略梯度的对齐程度衡量偏差—方差权衡，覆盖控制任务、短程数学与长程终端 agent，共 1,200 多次训练（其中 96 次 LLM 训练）。<br>为什么值得看：结论可直接指导选型——小批量时 PPO 通常领先，GRPO 在大批量下才能追平或反超重自举的 PPO；长程复杂任务 GRPO 需要更大的批量；算上训练算力，critic 在小预算下划算、大预算下收益递减。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32013">To Critic Or Not To Critic</a>
+            <p class="keywords">关键词：PPO、GRPO、critic、RL 算法选型（RL algorithm selection）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、东吴证券、南京大学<br>核心价值问题：生成式奖励模型常用通用 rubric 或无约束的推理来评判偏好，忽略了“偏好其实由两条回答之间的具体差异驱动”；只优化最终判断对错，还会让模型走 verbosity、格式等表面捷径，推理过程漂移。<br>方法：提出 RightDiff，把成对评判结构化为一条证据锚定的单遍自回归评判轨迹：先显式找出两条回答的对比差异、区分为实质性与非实质性因素、再生成针对这对回答的 rubric，最后裁决；训练时用响应隔离提示合成演示数据，并以差异对齐奖励（带预算约束的一一匹配与乘性门控）优化。<br>为什么值得看：在 RewardBench 与 RM-Bench 上取得 SOTA，超过所有开源奖励模型与专有 LLM 评委；下游 DPO 监督在 Arena-Hard 与 AlpacaEval 上可靠，且能抵抗长度捷径——奖励模型“评什么、怎么评”的一次方法升级。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32166">RightDiff: Learning Generative Reward Models to Judge by the Right Differences</a>
+            <p class="keywords">关键词：生成式奖励模型（generative reward models）、偏好评判（preference judgment）、RLHF</p>
+          </li>
+          <li class="item">
+            <p>机构：复旦大学、OPPO<br>核心价值问题：RL 会让模型输出的错误更难被人类发现——“明显幻觉”容易识破，“隐蔽幻觉”却难以核查，而现有奖励只优化对错，不管错误有多难被发现。<br>方法：新建 ITHV 数据集（2,728 条图文实例，区分明显幻觉与隐蔽幻觉），提出 DAPO-V：在 DAPO 基础上加可验证性感知奖励与自适应双重控制，对人类验证准确率低的问题上的错误回答施加更大惩罚，惩罚强度随风险预算违规程度自适应调整。<br>为什么值得看：在 3 个多模态大模型底座上，DAPO-V 在提升整体准确率的同时，隐蔽幻觉问题上的准确率比只优化准确率的 DAPO 高 5.78–9.72 个百分点；盲测人类研究也证实其幻觉更容易被发现——RL 奖励设计开始把“人类能不能核查”算进去了。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32055">More Powerful, Less Verifiable? Mitigating Hard-to-Verify Hallucinations in MLLM's Reinforcement Learning</a>
+            <p class="keywords">关键词：幻觉（hallucination）、可验证性（verifiability）、多模态 RL（multimodal RL）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、华为诺亚方舟实验室<br>核心价值问题：现有 RL 奖励只看最终输出或文本推理轨迹，奖励粒度粗，还存在“文本奖励混叠”——表面文字不同但推理质量不同，奖励分不出来，模型内部到底怎么想的完全没被奖励到。<br>方法：提出注意力过程奖励模型（APRM），基于隐藏状态与注意力图给内部推理过程打分，约 46M 参数，用排序与反事实目标训练，奖励定期更新以应对分布漂移，指导 RL 优化。<br>为什么值得看：把奖励信号从“模型说了什么”推进到“模型内部怎么想”，与主流 RL 方法结合后平均 pass@8 提升 2.88%；昨日近选备选，今日重新评估后入选——过程奖励模型往模型内部信号走，是值得跟进的新方向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30627">From Rewarding What Models Say to How They Think: Attention Process Reward Model for LLM Reinforcement Learning</a>
+            <p class="keywords">关键词：过程奖励模型（process reward models）、注意力机制（attention mechanisms）、RL 优化（RL optimization）</p>
+          </li>
+          <li class="item">
+            <p>机构：韩国科学技术院、纽约大学、麻省理工学院<br>核心价值问题：复杂随机环境里，世界模型既要预测环境演化又要分辨动作的后果，随机性会掩盖动作的真实效果；从头想象全新轨迹比利用已有经验更难。<br>方法：提出反事实世界模型——以观测到的轨迹为参照，预测“同一环境随机性下、换一个动作会怎样”；并给出策略梯度估计器 REINFORCE Look Back（RLB），用反事实回报作基线，把动作效果与环境运气分开，证明了无偏性与方差缩减条件。<br>为什么值得看：当环境演化比动作带来的变化更难预测时，反事实世界模型比普通世界模型更容易学、策略学得更好；昨日近选备选，今日重新评估后入选——“反事实思考”给 model-based RL 提供了一个新的学习范式。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.29259">Look Back: Reinforcement Learning with Counterfactual World Models</a>
+            <p class="keywords">关键词：世界模型（world models）、反事实推理（counterfactual reasoning）、策略梯度（policy gradients）</p>
+          </li>
+          <li class="item">
+            <p>作者：Ramraj Chandradevan<br>核心价值问题：RL 能让搜索 agent 的准确率提升多达 32 个 EM 点，但提升到底来自哪个能力——推理、查不查、问什么、怎么抽答案——只看总分说不清楚。<br>方法：提出 CO-GRAFT，一个与奖励无关的干预式归因框架：RL 后的 agent 与训练前的初始模型在带实时检索的闭环中共同生成一条轨迹，两者各控制四个功能角色（中间推理、查或答的决策、搜索查询生成、最终答案抽取）中的互斥子集；枚举全部 16 种角色分配，用 Shapley 值分解总增益，Möbius 交互项区分单角色提升与多角色耦合。<br>为什么值得看：在 Search-R1 agent 上跨 Qwen2.5 与 Llama-3.2、GRPO 与 PPO 的实验表明，查询生成的贡献从不超过总增益的 15%，增益主要由答案有效性、搜索保留、模型规模与任务搜索预算决定——纠正了“RL 主要改进了搜索提问能力”的直觉；昨日近选备选，今日重新评估后入选。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31185">CO-GRAFT: Attributing Reinforcement Learning Gains in Search Agents via Role-Level Policy Grafting</a>
+            <p class="keywords">关键词：搜索 agent（search agents）、归因分析（attribution analysis）、Shapley 值（Shapley values）</p>
+          </li>
+          <li class="item">
+            <p>机构：麻省理工学院、Improbable AI Lab<br>核心价值问题：sim-to-real 的常规做法是先用特权状态训一个教师策略、再蒸馏给视觉学生，但学生常明显弱于教师；直接用图像训视觉策略又样本效率低，一阶段视觉 RL 一直被认为不现实。<br>方法：提出 DRIFT，一个简单的一阶段视觉 RL 配方：用冻结的预训练基础视觉编码器做感知，只让 RL 学控制，避免对视觉主干反向传播；预训练表征让快速光栅化仿真渲染也能迁移到真机。<br>为什么值得看：在相同架构、观测与算力预算下，DRIFT 优于两阶段蒸馏，3 个真实操作任务的平均成功率相对提升 58.8%；优势在分布外条件下从约 9% 扩大到 61% 以上——“冻结视觉编码器 + 直接视觉 RL”可能取代教师—学生蒸馏成为 sim-to-real 的默认路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31588">One Phase Is Enough: Sim-to-Real Transfer with Direct Visual Reinforcement Learning</a>
+            <p class="keywords">关键词：Sim-to-Real、视觉 RL（visual RL）、机器人操作（robot manipulation）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、香港大学<br>核心价值问题：长程操作任务里只有成功/失败的稀疏反馈，训不出“到底卡在哪一步”；反复跑完整任务，瓶颈步骤得不到针对性练习，VLA 策略的长程成功率上不去。<br>方法：提出 ReFocus，多轮全局—局部 RL 交替：全局 RL 把任务拆成子任务有向无环图，用基于 DAG 的进度奖励训练并诊断瓶颈；再按瓶颈选“自适应练习窗口”（从进入阶段到目标阶段的任务片段），在局部 RL 里集中练习这些片段，同时更新整个策略。<br>为什么值得看：LIBERO-Long 成功率 97.8%（基线 π0.5 为 90.6%）、RoboCasa365 为 51.3%（基线 39.3%）；真机 BreadBaker 长程任务 95% 对 30%——“先诊断瓶颈、再定点加练”是长程机器人 RL 训练的一个实用范式。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32639">ReFocus: Progress-Guided Adaptive Practice for Long-Horizon Robotic Manipulation Reinforcement Learning</a>
+            <p class="keywords">关键词：长程机器人任务（long-horizon robotic tasks）、VLA、瓶颈诊断（bottleneck diagnosis）</p>
+          </li>
+          <li class="item">
+            <p>机构：中国科学院计算技术研究所、中国科学院大学、中国科学技术大学、中国科学院软件研究所、中国科学院人工智能产业研究院<br>核心价值问题：flow 式 VLA 可以用部署中收集的机器人经验继续改进，但重复采真实交互成本高；离线 RL 能复用旧经验，可 flow 策略的生成过程又需要在线采样优化，两者怎么结合一直没打通。<br>方法：提出 OVOGO，把离线价值学习与在线生成优化分开：用“回报锚定排序 critic”（样本内分布价值学习 + 有 guard 的局部排序）在离线经验上学价值，再用冻结的 critic 对当前策略新采样的动作候选给出组相对价值信号做优化。<br>为什么值得看：在 RoboTwin 2.0、DexJoCo、LIBERO 与一个真机灵巧操作任务上，OVOGO 在全部 4 个场景都提升了初始 VLA，且优于已评估的离线自适应与价值引导基线；昨日近选备选，今日重新评估后入选——离线经验复用 + 在线生成优化的分离式设计，是 flow 式 VLA 后训练的一条可行路线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.30477">OVOGO: Offline Value-Guided On-Policy Generative Optimization for Flow-Based Vision-Language-Action Models</a>
+            <p class="keywords">关键词：离线 RL（offline RL）、VLA、价值学习（value learning）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1124-morning-academic">
         <header class="round-header">
           <h2 id="round-1124-morning-academic">11 月 24 日 08:30 轮</h2>
@@ -1128,7 +1219,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-1230-academic">
+                              <details class="archive">
+        <summary>历史归档（11 月 21 日及之前）</summary>
+<section class="round" aria-labelledby="round-1121-1230-academic">
         <header class="round-header">
           <h2 id="round-1121-1230-academic">11 月 21 日 12:30 轮</h2>
           <span class="count">1 条</span>
@@ -1141,7 +1234,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-morning-academic">
+<section class="round" aria-labelledby="round-1121-morning-academic">
         <header class="round-header">
           <h2 id="round-1121-morning-academic">11 月 21 日早报</h2>
           <span class="count">1 条</span>
@@ -1154,8 +1247,6 @@
           </li>
         </ol>
       </section>
-                              <details class="archive">
-        <summary>历史归档（11 月 20 日及之前）</summary>
 <section class="round" aria-labelledby="round-1120-morning-academic">
         <header class="round-header">
           <h2 id="round-1120-morning-academic">11 月 20 日早报</h2>
@@ -2517,7 +2608,7 @@ on>
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 24 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 25 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {

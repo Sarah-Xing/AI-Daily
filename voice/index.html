@@ -383,6 +383,49 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1125-morning">
+        <header class="round-header">
+          <h2 id="round-1125-morning">11 月 25 日 08:30 轮</h2>
+          <span class="count">7 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>据 Digital Health News 11 月 24 日报道，Innovaccer 将其 Gravity 语音 AI 平台接入 Grok Voice，面向患者互动场景：预约、日程确认、随访与出院后关怀等电话流程，支持 25 种以上语言、按 HIPAA 合规要求部署，现已向客户开放。这是 xAI 语音模型进入高监管医疗场景的一个落地信号，也显示语音 agent 正从通用客服向垂直行业深水区推进。文中数据（半年内患者语音互动从约 25 万次增至 500 万次以上）为公司口径，未经独立验证。</p>
+            <a class="source-link" href="https://www.digitalhealthnews.com/innovaccer-integrates-grok-voice-into-gravity-voice-ai-agents-for-patient-engagement">Innovaccer Integrates Grok Voice Into Gravity Voice AI Agents for Patient Engagement（Digital Health News，媒体消息）</a>
+            <p class="keywords">关键词：Grok Voice、医疗语音 agent（healthcare voice agents）、患者互动（patient engagement）、HIPAA 合规（HIPAA compliance）</p>
+          </li>
+          <li class="item">
+            <p>Trigent 于 11 月 24 日发布 Calypso 托管式语音 agent 服务，主打&quot;验证优先&quot;：企业可在 24 小时内把业务流程变成可运行的语音 agent，用真实通话检验效果与 ROI，再决定是否投入基础设施。卖点不是模型本身，而是把语音 agent 部署前的试错成本与风险前置，对想上语音 agent 但怕翻车的企业有参考价值。</p>
+            <a class="source-link" href="https://trigent.com/ms/calypso/">ArkOS Calypso — The Managed AI Voice Agent Platform（Trigent 官方产品页）</a>
+            <p class="keywords">关键词：托管语音 agent（managed voice agents）、验证优先（verification-first）、企业部署（enterprise deployment）</p>
+          </li>
+          <li class="item">
+            <p>NERDDISCO 发布的开源 TTS 家族 kale-tts-1 中的最小档：仅 7.5M 参数、14.8MB 单文件，内置 10 个合成音色，在三星平板 CPU 上 44 倍实时、首句仅 0.09 秒出声，还能在浏览器里跑 WebGPU/WASM。训练数据、蒸馏配方与评测脚本全部公开，是近期&quot;小模型端侧语音&quot;这波里完成度很高的一例。（2026 年 11 月 19 日发布，本周登上 HF 趋势榜，此前未推过，特此补推。）</p>
+            <a class="source-link" href="https://huggingface.co/KaleComputer/kale-tts-1-nano">kale-tts-1-nano：7.5M 参数的超小英语 TTS，14.8MB 跑在 CPU 上</a>
+            <p class="keywords">关键词：TTS、超小模型（tiny models）、端侧推理（on-device inference）、CPU 实时（real-time CPU）</p>
+          </li>
+          <li class="item">
+            <p>作者在语音 AI 客服/医疗交接场景中做了一个反直觉实验：给语音加降噪反而让语音转文字变差。他用 50 段模拟伤员交接录音（含无线电、重叠语音和战场噪声）对比了 19 个 STT 模型和 4 种降噪方法。最难的 10 段口述数字准确率上，原始音频为 86.0%，Meta Denoiser 为 80.2%，DeepFilterNet3 为 78.5%，全部 50 段上原始音频也略胜一筹，值得语音管线工程师参考&quot;为人耳优化&quot;与&quot;为模型优化&quot;的取舍。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7531287628156174336">Rasal Varaprath：给语音加降噪反而让语音转文字变差的实验</a>
+            <p class="keywords">关键词：语音降噪（speech denoising）、语音转文字（speech-to-text）、STT 评测（STT evaluation）</p>
+          </li>
+          <li class="item">
+            <p>作者质疑客服语音 AI 最常用的&quot;containment rate（拦截率）&quot;指标，指出电话没接通人工不等于问题解决，有时只是客户放弃了。他用医院&quot;出院率&quot;类比，认为分诊只是入口、真正解决才是出院，未来买家会追问&quot;再入院率&quot;式的回访指标。帖子对评估语音客服供应商和设计衡量口径很有参考价值，提醒不要只看漂亮的拦截数字。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7531352089919397888">Richard L.：拦截率是客服语音 AI 最具误导性的指标</a>
+            <p class="keywords">关键词：客服语音 AI（customer service voice AI）、拦截率（containment rate）、评估指标（evaluation metrics）</p>
+          </li>
+          <li class="item">
+            <p>Cerence AI 与 AUDI AG、微软合作推出 Mobile Work Agent，让奥迪车主通过语音优先的方式在车内使用 Outlook 和 Teams，入口是 Audi 应用商店中的&quot;connected work&quot;。帖子引用了奥迪乘员交互负责人 Poorab Sarmah 的评价，并称评论区附有相关新闻稿链接。这是车载语音助手落地的产品级案例，适合关注车内语音 agent 的读者。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7531380734918422529">Cerence AI：与奥迪、微软合作推出车载 Mobile Work Agent</a>
+            <p class="keywords">关键词：车载语音助手（in-car voice assistants）、Mobile Work Agent、Outlook、Teams</p>
+          </li>
+          <li class="item">
+            <p>Twilio 官方给出一个 30 行代码、分 4 步搭建语音 AI agent 的示例，搭配 Twilio 自家的 Zeu 和 OpenAI 的 Craig。代码量很小，适合想快速跑通一个语音 agent 原型的开发者照着试。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7531390829391777793">Twilio：30 行代码搭建语音 AI agent</a>
+            <p class="keywords">关键词：语音 agent（voice agents）、Twilio、低代码示例（low-code examples）、OpenAI</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1124-1630">
         <header class="round-header">
           <h2 id="round-1124-1630">11 月 24 日 16:30 轮</h2>
@@ -676,7 +719,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-1630">
+                                                                              <details class="archive">
+        <summary>历史归档（11 月 21 日及之前）</summary>
+<section class="round" aria-labelledby="round-1121-1630">
         <header class="round-header">
           <h2 id="round-1121-1630">11 月 21 日 16:30 轮</h2>
           <span class="count">1 条</span>
@@ -689,7 +734,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-morning">
+<section class="round" aria-labelledby="round-1121-morning">
         <header class="round-header">
           <h2 id="round-1121-morning">11 月 21 日早报</h2>
           <span class="count">3 条</span>
@@ -712,8 +757,6 @@
           </li>
         </ol>
       </section>
-                                                                              <details class="archive">
-        <summary>历史归档（11 月 20 日及之前）</summary>
 <section class="round" aria-labelledby="round-1120-2030">
         <header class="round-header">
           <h2 id="round-1120-2030">11 月 20 日 20:30 轮</h2>
@@ -5617,6 +5660,79 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1125-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1125-morning-academic">11 月 25 日 08:30 轮</h2>
+          <span class="count">13 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Mirco Ravanelli 预告将于 11 月 26 日星期四 11:00–12:00 ET 在 Conversational AI Reading Group 分享语音大模型如何表示语音，涉及 FocalCodec、DyCAST、WavSLM 和 Facto 等音频 tokenization 研究。讲座还将讨论高效、实时、全双工对话式 AI 的开放研究挑战，附 Zoom 详情链接。对关注语音 LLM 和实时对话架构的读者来说，这是值得收藏的近期讲座信息。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7531384092593045505">Mirco Ravanelli：Conversational AI Reading Group 讲座预告——语音大模型如何表示语音</a>
+            <p class="keywords">关键词：语音大语言模型（speech LLMs）、音频 tokenization（audio tokenization）、讲座（lecture）、实时对话（real-time dialogue）</p>
+          </li>
+          <li class="item">
+            <p>机构：Idiap 研究所 / 洛桑联邦理工学院（EPFL）<br>核心价值问题：语音活动检测是转录、说话人日志和语音语言模型等流程的第一步，但有监督检测器依赖标注数据、无监督方法在远场和噪声下表现差，能否不训练检测器、只用冻结的语音基础模型表征做无监督 VAD？<br>方法：提出 ClusterVAD：先用少量无转录语音拟合一次——对冻结自监督编码器表征做 PCA 白化、k-means 聚类，再以音节响度（sonority）给每个簇打上语音/非语音标签；推理时由簇分配算出逐帧语音概率，再用每条录音单独拟合的二状态隐马尔可夫模型做无阈值判决。<br>为什么值得看：覆盖会议、远场、噪声、普通话和构音障碍语音的多个基准上，暂停级参考的检测误差最低、说话人轮次级参考上也有竞争力，说明语音基础模型本身已内含语音/非语音区分能力，可零标注复用。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.33059">ClusterVAD: Threshold-Free Unsupervised Voice Activity Detection with Pre-Trained Neural Representations</a>
+            <p class="keywords">关键词：语音活动检测（voice activity detection）、无监督学习（unsupervised learning）、自监督表征（self-supervised representations）</p>
+          </li>
+          <li class="item">
+            <p>机构：内盖夫本-古里安大学 / 柏林工业大学<br>核心价值问题：空间音频的语音增强既要提升语音质量和可懂度，又要保留声场的空间特性，但时频掩蔽在哪个信号表示域上施加、效果和空间保真度有何不同，一直缺乏系统比较。<br>方法：在模拟混响声场中系统比较时频掩蔽在麦克风域、波束形成域和一阶 Ambisonics 域的表现，同时考察理想比值掩蔽与轻量深度学习掩蔽估计器，按语音重建、感知质量、可懂度、混响保留和双耳空间线索保留五项指标评估。<br>为什么值得看：给出明确的设计指南——波束形成域的通道专用掩蔽语音质量和可懂度最高，Ambisonics 域的通道专用掩蔽最能保留残余干扰的空间特性，而一阶 Ambisonics 用共享掩蔽只需一个掩蔽估计网络、性能接近通道专用，是实用的折中方案。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32910">Mask-Based Speech Enhancement for Spatial Audio: Effects of Signal Representation and Channel-Specific Masking</a>
+            <p class="keywords">关键词：语音增强（speech enhancement）、空间音频（spatial audio）、时频掩蔽（time-frequency masking）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港中文大学（深圳）<br>核心价值问题：Qwen3-Omni 的 Talker 预测 16 个码本的 12.5 Hz 音频编解码器标签，但生成这些训练标签的编码器未公开，外部无法训练匹配的新音色；社区只知道&quot;能用 Mimi 解码&quot;，却不知道标签到底是哪个编码器、什么精度、什么实现跑出来的。<br>方法：三重探针锁定标签编码器——白盒回归证明 Talker、多 token 预测器和 Code2Wav 的码本嵌入表与 Kyutai Mimi 前 16 个码本逐层匹配；再用 13 个已知标签训练的码语言模型校准的 Talker 似然测试，区分出 Talker 偏好 moshi 包 bf16 权重的 Mimi 标签；同时发现 transformers 版 MimiModel 在输入长度不是 1920 样本倍数时最后一帧编码与 Kyutai 版不同。<br>为什么值得看：给出可直接复用的编码配方、标签检查器和 Talker 微调工具包，并揭示一个实际坑：LoRA 微调后 44–55% 的生成句尾出现噪声爆音，补齐输入即可消除，对所有想给 Qwen3-Omni 定制音色的人都有直接价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32286">Reproducing the Speech Labels of Qwen3-Omni's Talker: Mimi in bf16, and a Last-Frame Pitfall</a>
+            <p class="keywords">关键词：Qwen3-Omni、语音合成（speech synthesis）、音频编解码器（neural audio codecs）、Mimi</p>
+          </li>
+          <li class="item">
+            <p>机构：北京邮电大学 / 公安部第一研究所<br>核心价值问题：音频原生 ASR 模型有很强的语音-语言先验，但其紧凑的声学接口与唇语识别漫长的帧级视觉特征不匹配，能否把音频 ASR 的能力迁移到纯视觉的唇语识别上？<br>方法：提出 CIF-Query Bridge：复用预训练 Paraformer 唇语编码器的连续积分-触发（CIF）预测器生成 token 级查询，经两层交叉注意力桥对完整帧序列精炼，再经线性适配器接入 Qwen3-ASR 原有的投影器和解码器，推理时完全不需要音频。<br>为什么值得看：在中文唇语数据集 CMLR 上纯视觉推理取得 7.97% 字错率，相对原生 Paraformer 的 11.78% 绝对降低 3.81 个点（相对 32.3%），展示了用轻量桥接复用音频 ASR 大模型做唇语识别的可行路径。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32697">Cif-query bridging for audio-native asr transfer to visual speech recognition</a>
+            <p class="keywords">关键词：唇语识别（lip reading）、ASR、跨模态迁移（cross-modal transfer）、Qwen3-ASR</p>
+          </li>
+          <li class="item">
+            <p>机构：Scott-Morgan 基金会 / SMF Labs<br>核心价值问题：给语音基础模型做构音障碍语音适配时，LoRA 该放在编码器的哪几层？已有策略是先探测音素信息在编码器哪层最易解码、就把适配器放那里，但这个推断是否可靠从未被严格检验。<br>方法：在 Qwen3-ASR 和 Whisper-small 两个模型、中文 CDSD 与英文 UASpeech 两个构音障碍语料上做 2×2 对照：同一流程下测四条音素误差曲线，检验&quot;最陡提升、最低带均误差、拐点位置&quot;三种从曲线到适配带的映射能否复现最优配置。<br>为什么值得看：结论是否定的——三条启发式规则都失效，最优适配带是模型和语料相关的（CDSD 上 Qwen3-ASR 偏好上三分之一、Whisper-small 偏好全块 LoRA），且在 Qwen3-ASR×UASpeech 上靠近输入端适配比不适配还差 9.90 个百分点；作者建议直接在手头模型和语料上做小规模适配扫描，而非照搬探测曲线。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32455">Phoneme-identity depth profiles do not reliably predict LoRA placement for dysarthric ASR</a>
+            <p class="keywords">关键词：构音障碍语音（dysarthric speech）、LoRA、ASR 适配（ASR adaptation）</p>
+          </li>
+          <li class="item">
+            <p>机构：巴黎西岱大学 / SCIAM / 里士满大学<br>核心价值问题：神经音频编解码器已成为语音语言模型的基础设施，但研究多关注解码重建质量，编码端到底在码本里存了什么信息、尤其是韵律信息是否被编码，几乎没有系统研究。<br>方法：以 Moshi 对话 agent 和 Hibiki 语音翻译使用的 Mimi 编解码器为对象，逐步重合成改变音高、时长和滑音的英语语音，用典型相关分析（CCA）检验 8 个码本与韵律特征的相关性，并用后验图（posteriorgram）检验码本与音素预测的关系。<br>为什么值得看：发现第一个码本（codebook_0）明显主导且与音段特征强相关，而其余码本与韵律特征只呈中度相关——对理解语音 token 里语义与韵律的分工、以及设计可控语音合成的编解码器有直接启发。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32795">Is Prosody Encoded in the Neural Audio Codec Mimi?</a>
+            <p class="keywords">关键词：神经音频编解码器（neural audio codecs）、韵律（prosody）、Mimi、语音语言模型（speech language models）</p>
+          </li>
+          <li class="item">
+            <p>机构：微软研究院非洲分部（内罗毕）<br>核心价值问题：低资源语言在 ASR 基准中长期代表性不足，现有评测多只看高资源语言的平均分，既不区分架构范式、也不兼顾推理效率，非洲语言的 ASR 表现究竟如何缺乏可靠答案。<br>方法：推出 PazaBench：整合 6 个公开语料、覆盖 39 种非洲语言、199,438 条评测 utterance，在统一可复现框架下评测 52 个公开 ASR 模型（15 个模型家族、编码器-only、编码器-解码器、LLM-based 三种架构范式），同时报告 WER/CER 与逆实时因子（RTFx），并做架构感知的统计检验与语言复杂度分析。<br>为什么值得看：首个大规模、架构感知且兼顾精度-效率权衡的非洲低资源语言 ASR 基准，评测流程与结果已在 Hugging Face 公开，对低资源场景的模型选型和部署有直接参考价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31578">PazaBench: Large-Scale ASR Benchmark for Low-Resource Languages in Africa</a>
+            <p class="keywords">关键词：非洲语言（African languages）、低资源 ASR（low-resource ASR）、评测基准（benchmarks）</p>
+          </li>
+          <li class="item">
+            <p>机构：克卢日-纳波卡理工大学 / 布加勒斯特理工大学 / Bitdefender / Mila / 拉瓦尔大学<br>核心价值问题：音频 deepfake 检测器能判断一段语音是真是假，却说不清&quot;为什么&quot;；现有的可解释性指标（保真度、忠实度）拿满分，是否就等于解释真的可信？<br>方法：用优化方法为 wav2vec2 检测器训练一个解释器，生成时频掩码作为显著性图，在标准指标上拿到近乎满分；再做受控扰动实验——把已知频带替换为声码器版本，检验解释能否定位被改动的频带，并比较四种掩码填充信号的影响。<br>为什么值得看：揭示一个反直觉的结论：满分解释未必可解释——被改频带固定时能定位、变化时定位基本掉到随机水平，且填充信号的选择就能把定位从远高于随机拉到随机水平而指标毫无反映；对高风险场景下 deepfake 检测的可信度评估是重要提醒。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32593">Perfect Scores, Misplaced Explanations: A Controlled Study of Explainability in Audio Deepfake Detection</a>
+            <p class="keywords">关键词：音频 deepfake 检测（audio deepfake detection）、可解释性（explainability）、wav2vec2</p>
+          </li>
+          <li class="item">
+            <p>机构：佐治亚理工学院 / Adobe 研究院<br>核心价值问题：全面的对话字幕不仅要转录说什么，还要标出每句话何时说、是谁说的；现有音视频大模型在多人场景下时间戳粗糙、说话人归属也不可靠，而&quot;何时&quot;与&quot;是谁&quot;本是紧密耦合的两个任务。<br>方法：提出 DiaCap：先在 22.5 万条精选片段上监督微调（合成标注管线把音视频大模型的说话人归属与语音对齐器的精确时间戳结合），再用 2,900 条人工修正片段做强化学习，奖励分解为时间戳、说话人分组、说话人绑定三项；另有端到端变体 DiaCap-E2E 直接输出完整对话字幕。<br>为什么值得看：在 DiaDemBench 上与 Gemini 4 Argon 的音视频 diarization 持平，时间戳精度大幅领先（76.59 对 42.76 TIME），且在多语言和分钟级长视频上保持稳健，对会议记录、多人对话理解等场景有直接价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.33153">DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning</a>
+            <p class="keywords">关键词：对话字幕（dialogue captioning）、说话人日志（speaker diarization）、音视频理解（audio-visual understanding）</p>
+          </li>
+          <li class="item">
+            <p>机构：萨尔大学<br>核心价值问题：Vorbis 和 Opus 用简单快速的熵编码器，不适配录音的统计特性；通用压缩器对已压缩音频几乎无能为力，能否在不改变解码结果的前提下把音频文件再压小？<br>方法：推出 Balrogg，首个针对 Vorbis 和 Opus 的无损重压缩器：撤销原熵编码、改用自适应上下文混合模型重编码——Vorbis 码本条目拆成有符号小整数元组分五阶段二值化编码，Opus 符号用以编解码器概率表为先验的自适应模型编码，CELT 层的 PVQ 索引递归拆分为脉冲计数；解码后恢复原始文件，校验和与签名保持有效。<br>为什么值得看：默认级别下 Vorbis 音乐缩小 16.2%、Vorbis 语音 10.6%、Opus 语音 5.4%，而 xz、zstd、ZPAQ、bzip3 在同一文件上最多只省 4.1%；工具已按 GPLv3 开源，对音频存档与传输有实用价值。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32641">Lossless Re-Encoding of Vorbis and Opus Audio Files</a>
+            <p class="keywords">关键词：音频压缩（audio compression）、Vorbis、Opus、无损重编码（lossless re-encoding）</p>
+          </li>
+          <li class="item">
+            <p>机构：法提赫苏丹穆罕默德瓦克夫大学（土耳其伊斯坦布尔）<br>核心价值问题：冻结自监督编码器的逐层分析常被用来定位伪造信息在哪一层，但 ASVspoof 2019 评测集里真录音的首尾静音比伪造的更长，检测器可能只是在利用&quot;静音捷径&quot;——已发表的层排序去掉静音后还成立吗？<br>方法：对冻结的 WavLM Base 逐层训练小分类器，在 ASVspoof 2019 LA 与零样本 In-the-Wild 上做 2×2 训练/测试设计（保留静音 vs 去除静音），用说话人级自助法估计不确定性，并量化零填充如何通过组归一化改变 WavLM 特征。<br>为什么值得看：40 dB 阈值下去静音后域内误差每层都上升 6.3–19.9 个百分点，层排序只部分保留（Kendall's τ 域内 0.58、In-the-Wild 0.73–0.76）；结论是层分析研究应同时报告保留与去除静音两种条件，且提取 WavLM 特征时不应零填充——对 deepfake 检测的评测方法论是扎实的纠偏。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32457">Do Layer Rankings Survive Silence Trimming? The Silence Shortcut in Frozen WavLM Representations for Audio Deepfake Detection</a>
+            <p class="keywords">关键词：音频 deepfake 检测（audio deepfake detection）、WavLM、静音捷径（silence shortcut）、评测方法（evaluation methodology）</p>
+          </li>
+          <li class="item">
+            <p>机构：丹佛大学<br>核心价值问题：理解多人对话要同时判断&quot;谁在说话&quot;和&quot;说给谁听&quot;，现有系统多在单通道离线片段上做、还用模型自我评价做对齐奖励，既丢掉了麦克风阵列的空间信息，奖励也无法验证。<br>方法：提出 BEARING：以麦克风阵列测得的声源方向为核心信号，无标签校准把方向注册到相机画面中，作为视觉语言模型的视觉提示、与视觉主动说话人检测做可靠性加权融合，并构成可验证的对齐奖励（被点名的说话人必须位于声音来向）；全部决策在线进行，前瞻时长为显式参数。<br>为什么值得看：在 9,498 条带收听者标注的 utterance 上，方向提示把说话人准确率从 54% 提升到 74%，可验证奖励在 GRPO、奖励排序微调和 DPO 下均优于自我评价奖励；对实时多人对话理解与具身 agent 的感知是一条几何优先的新思路。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31735">BEARING: Who Is Talking to Whom? Grounding Acoustic Direction in Vision for Online Multi-Party Conversation</a>
+            <p class="keywords">关键词：多人对话（multi-party conversation）、声源定位（sound source localization）、视觉语言模型（vision-language models）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1124-supplement-academic">
         <header class="round-header">
           <h2 id="round-1124-supplement-academic">11 月 24 日补推</h2>
@@ -5782,7 +5898,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-morning-academic">
+                              <details class="archive">
+        <summary>历史归档（11 月 21 日及之前）</summary>
+<section class="round" aria-labelledby="round-1121-morning-academic">
         <header class="round-header">
           <h2 id="round-1121-morning-academic">11 月 21 日早报</h2>
           <span class="count">3 条</span>
@@ -5805,8 +5923,6 @@
           </li>
         </ol>
       </section>
-                              <details class="archive">
-        <summary>历史归档（11 月 20 日及之前）</summary>
 <section class="round" aria-labelledby="round-1120-1230-academic">
         <header class="round-header">
           <h2 id="round-1120-1230-academic">11 月 20 日 12:30 轮</h2>
@@ -8585,7 +8701,7 @@ Vspoof 2019 LA 上 8.45% EER 接近全监督基线 7.86%，但 2021 DF 域偏移
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 24 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 25 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {

@@ -383,6 +383,54 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1125-morning">
+        <header class="round-header">
+          <h2 id="round-1125-morning">11 月 25 日 08:30 轮</h2>
+          <span class="count">8 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Midjourney 与 Spellbrush 11 月 24 日发布 Niji V8，这是自 1 月 Niji 7 以来动漫/插画线的首次大版本更新：官方称其为迄今最快、最连贯的 Niji 模型，提示遵循更精确；最大变化是新增专用编辑模型，可用角色表+背景图把同一角色摆进新姿势、新场景，补上了 Niji 6 时代 cref 功能缺失后的角色一致性缺口。值得注意的是 Niji 8 不再像 Niji 7 那样靠重复措辞复现同一角色，改走参考图路线，且厂商未公布任何基准分数与速度数字，“最快”只是官方说法；仅限付费订阅（Basic 起 10 美元/月），Discord 加 `--niji 8` 或网页端 Version 菜单选用。</p>
+            <a class="source-link" href="https://nijijourney.com/blog/niji-8">Welcome to Niji 8!（Midjourney 官方博客，一手）</a>
+            <p class="keywords">关键词：Niji、动漫生成（anime generation）、角色一致性（character consistency）、Midjourney</p>
+          </li>
+          <li class="item">
+            <p>Sand.ai 11 月 24 日发布旗舰视频生成模型 MAGI-2：多头潜变量 MoE 架构，总参数 480B、每 token 激活约 28B、约 4T token 预训练；一次生成最长 30 秒 1080p 25fps 视频并同步生成对白、音效与音乐，支持最多 20 个图文音参考与精确时间线控制、视频编辑。目前只能在 Higgsfield 网站与 API 上使用（独家），API 价 0.08 美元/秒（30 秒约 2.40 美元）。值得看的是它在 Higgsfield 自家 Video Arena 首秀排第二（1146 分，落后 Seedance 2.5），但该榜单由独家销售方运营，仅供参考；另须写清：Sand.ai 与 Higgsfield 承诺的 400B/480B 开源权重至今只有“即将推出”，无日期、无协议、无下载，8 月那个真正开源的只是小得多的 MAGI-2 Preview（114B，Apache 2.0），不要混淆。</p>
+            <a class="source-link" href="https://sand.ai/blog/magi-2">MAGI-2（Sand.ai 官方博客，一手）</a>
+            <p class="keywords">关键词：视频生成（video generation）、MAGI-2、多模态（multimodal）、Higgsfield</p>
+          </li>
+          <li class="item">
+            <p>MiniMax 11 月 24 日宣布 H3 Family，把 8 月开源的视频模型 H3 与 11 月 10 日发布的图片模型 H3-Image 整合成产品线：视频三档——H3（2K/768P，0.5 元/秒起）、H3-Highspeed（768P/480P，0.26 元/秒起）、H3-Lite（768P/480P，0.16 元/秒起）；图片两档——H3-Image（25 元/百万 token）与 H3-Image Highspeed（4K，50 元/百万 token）。官方称 100 天内社区基于 H3 衍生出 1472 个模型、下载超 1.48 亿次，另有 fal、Suno、HeyGen、Pika 等 10 余家合作方的衍生模型列入家族目录。这次不是新模型发布，而是开源生态的商业化收口，值得看的是它把“速度档”思路从语言模型复制到了视频/图片生产；但速度与价格对比数字（快 150–200%、便宜 50–70%）均为厂商自称，无第三方基准。</p>
+            <a class="source-link" href="https://minimax.cn/h3-family">MiniMax H3 Family（MiniMax 官方页面，一手）</a>
+            <p class="keywords">关键词：MiniMax、视频模型（video models）、开源生态（open-source ecosystem）、定价（pricing）</p>
+          </li>
+          <li class="item">
+            <p>Canva 11 月 23 日宣布 MCP 服务器全面开放（取消等候名单），同时在 Claude 与 ChatGPT 里上线视频生成功能：用户给一段 brief、批准一份带时间轴的制作方案后，即可得到可编辑的品牌视频（基于 Seedance 2.5 等模型），还能在侧栏改文字、换图、调版式，一键打开进 Canva。同一批还包括设计/图片生成、背景移除、Magic Layers 的 REST API、扩展 CLI 与自家图片模型 Canva Craft 的 API/MCP 开放。这是生成式能力第一次以“可编辑的设计资产”而非成品视频的形式嵌进聊天助手，值得看；但须写清：视频功能仅限部分市场，Claude 端仅限付费订阅。此条在 11 月 23 日发布，昨日早报窗口内但未被收录，故作漏网补推。</p>
+            <a class="source-link" href="https://www.canva.com/newsroom/news/canva-mcp-video-generation/">Campaign-ready video generation, Magic Layers and several new ways to create with Canva + AI assistants（Canva 官方新闻中心，一手）</a>
+            <p class="keywords">关键词：Canva、MCP、视频生成（video generation）、设计工具（design tools）</p>
+          </li>
+          <li class="item">
+            <p>亚马逊 11 月 23 日宣布签署协议，收购以色列生成式视频公司 Decart 的 Decart Optimization Stack（DOS）专有技术，并接收三位联合创始人及研究工程团队，目标是让模型在自家 Trainium 芯片上跑得更快更便宜；交易须经监管批准。值得注意的是交易明确不包括 Decart 的实时视频模型 Lucy 与世界模型 Oasis，约 75 亿美元的价格是 Bloomberg 引述知情人士的说法、亚马逊官方未证实。此条在 11 月 23 日宣布，昨日早报未收录，故作漏网补推；归类上偏芯片/产业，但标的公司是生成式视频厂商，列入生成式生态。</p>
+            <a class="source-link" href="https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization">Amazon to purchase Decart's AI optimization technology（亚马逊官方新闻稿，一手）</a>
+            <p class="keywords">关键词：亚马逊（Amazon）、Decart、芯片优化（chip optimization）、收购（acquisition）</p>
+          </li>
+          <li class="item">
+            <p>10 张照片级写实图片全部出自开源图像模型 SenseNova U1.6，帖子附了试用、权重与 GitHub 链接。开源模型做到这个写实程度值得留意，感兴趣可以直接点链接试。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:7037632-7531391855381372928">Masita Faradila：开源图像模型 SenseNova U1.6 的 10 张写实图</a>
+            <p class="keywords">关键词：图像生成（image generation）、SenseNova、开源模型（open-source models）、写实图片（photorealistic images）</p>
+          </li>
+          <li class="item">
+            <p>科普小语言模型（SLM）与大语言模型（LLM）的 7 点区别：成本、速度、性能，以及 2026 年各自适合什么场景。概念讲得清楚，适合需要向团队或客户解释“小模型够不够用”的人参考。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:7037632-7531391066709676032">Azhar .：小语言模型与大语言模型的 7 点区别</a>
+            <p class="keywords">关键词：小语言模型（small language models）、LLM、模型选型（model selection）</p>
+          </li>
+          <li class="item">
+            <p>面向欧洲的 DeepSeek v4.1 Flash 1017 模型 API 上线，Modal 称其性能接近 Claude Haiku 5.5 级别，速度快、适合编码与 agent 工作流。欧洲用户现在可以直接通过 Modal 调用，关注 DeepSeek 新模型落地的人可以留意。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7531389040206622720">Modal：欧洲区 DeepSeek v4.1 Flash 1017 模型 API</a>
+            <p class="keywords">关键词：DeepSeek、模型 API（model APIs）、欧洲（Europe）、编码 agent（coding agents）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1124-2030">
         <header class="round-header">
           <h2 id="round-1124-2030">11 月 24 日 20:30 轮</h2>
@@ -578,7 +626,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-1630">
+                                                                  <details class="archive">
+        <summary>历史归档（11 月 21 日及之前）</summary>
+<section class="round" aria-labelledby="round-1121-1630">
         <header class="round-header">
           <h2 id="round-1121-1630">11 月 21 日 16:30 轮</h2>
           <span class="count">1 条</span>
@@ -591,7 +641,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-1230">
+<section class="round" aria-labelledby="round-1121-1230">
         <header class="round-header">
           <h2 id="round-1121-1230">11 月 21 日 12:30 轮</h2>
           <span class="count">3 条</span>
@@ -614,7 +664,7 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-morning">
+<section class="round" aria-labelledby="round-1121-morning">
         <header class="round-header">
           <h2 id="round-1121-morning">11 月 21 日早报</h2>
           <span class="count">4 条</span>
@@ -642,8 +692,6 @@
           </li>
         </ol>
       </section>
-                                                                  <details class="archive">
-        <summary>历史归档（11 月 20 日及之前）</summary>
 <section class="round" aria-labelledby="round-1120-1630">
         <header class="round-header">
           <h2 id="round-1120-1630">11 月 20 日 16:30 轮</h2>
@@ -3873,6 +3921,74 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1125-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1125-morning-academic">11 月 25 日 08:30 轮</h2>
+          <span class="count">12 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>作者：Zihao Liu<br>核心价值问题：整张 4K 画布微调成本太高，局部训练又会在高清区域留下不自然的重复条纹。<br>方法：把 Qwen-Image 2.0 改成分块自回归生成，每块以 1K 尺度预测、以上方与左方高清邻块加压缩历史缩略图为条件，共享画布坐标系融合两种历史；另有波前并行推理排程。<br>为什么值得看：4K 评测优于 FLUX-3-Image-Klein 的直接 4K 生成，比同 backbone 全图 4K 微调质量更好、训练与推理成本更低，Qwen 图像模型的高清短板补上了。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32736">Qwen-Image-HD: Autoregressive Diffusion for High Definition Image Generation</a>
+            <p class="keywords">关键词：图像生成（image generation）、4K、高清生成（high-definition generation）、自回归扩散（autoregressive diffusion）</p>
+          </li>
+          <li class="item">
+            <p>机构：弗吉尼亚理工大学<br>核心价值问题：循环扩散 Transformer 省参数又可调深度，但从头训练等于重付一次预训练成本。<br>方法：Dooop 把已有强预训练非循环扩散 Transformer 蒸馏为权重共享的循环学生模型，以不动点迭代逐循环向教师对齐，推理时循环数任意可调，还能用循环间引导提质。<br>为什么值得看：SD3-medium 的学生只用约 37% 参数、2–4 个循环就追平教师四项指标均值，2 循环仅用约 58% 算力，循环架构的落地成本大降。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31977">Distill to Loop: Turning Pretrained Diffusion Transformers into Looped Models with Adjustable Depth</a>
+            <p class="keywords">关键词：扩散模型（diffusion models）、模型蒸馏（model distillation）、循环架构（recurrent architectures）</p>
+          </li>
+          <li class="item">
+            <p>机构：Roblox、澳大利亚国立大学、罗格斯大学<br>核心价值问题：纯手部动作生成一直缺数据——现有数据集把手当刚性末端、标注粗、规模小，泛化不起来。<br>方法：发布约 54.2 万条序列、884 小时、9550 万帧的野外文本配对手部动作数据集，严苛灵巧度过滤聚焦复杂双手动作，每段配五级粒度标注与 393 维双手表征，并系统评测三类生成器。<br>为什么值得看：规模比先前工作大一个数量级，补齐了手部生成的数据缺口，评测还揭示了语义对齐与运动合理性之间的尖锐分化。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31766">RoMo Hands: A Large Scale Richly Organized Text to Hand Motion Dataset</a>
+            <p class="keywords">关键词：手部动作生成（hand motion generation）、数据集（datasets）、文本到动作（text-to-motion）</p>
+          </li>
+          <li class="item">
+            <p>机构：阿里巴巴、清华大学、南洋理工大学、北京大学、南京大学、香港科技大学<br>核心价值问题：具身仿真缺“能用的物理资产”——物体要有可执行的物理表示才能组合成任务场景。<br>方法：构建 1,010,386 条资产记录的物理资产宇宙（刚体 52.5 万、铰接 40.2 万、可变形 8.3 万），配统一接口做任务条件场景组合，RoboTwin 五任务验证。<br>为什么值得看：用 RFW-R 资产训练的策略干净场景成功率 71.2%、随机化下 41.8%，超最强基线 15.8 与 10.6 个百分点，是生成式具身仿真走向规模化的底座工作。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.33013">RFW-W: Scaling Physical Asset Universes for Generative Embodied Simulation</a>
+            <p class="keywords">关键词：具身仿真（embodied simulation）、物理资产（physical assets）、机器人（robotics）</p>
+          </li>
+          <li class="item">
+            <p>机构：英伟达、首尔国立大学、斯坦福大学<br>核心价值问题：视频世界模型长交互中外貌会遗忘重造——表面离开视野再回来，渲染器只能凭空再发明一次。<br>方法：M2R 用显式 3D 网格当“地址”，把生成特征存在物体表面的各自坐标系里，表面重现时光栅化网格取回，记忆随表面而非帧数增长。<br>为什么值得看：仅合成数据训练即可零样本迁移到真实室内扫描与 coding agent 搭建的世界，物体恒常性翻倍有余、跨 agent 一致性接近翻倍，720p 实时 40 FPS 渲染。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32445">A Mesh to Remember: Persistent Appearance for Interactive Video Worlds</a>
+            <p class="keywords">关键词：视频世界模型（video world models）、物体恒常性（object permanence）、3D 网格（3D meshes）</p>
+          </li>
+          <li class="item">
+            <p>机构：伦敦大学学院、牛津大学<br>核心价值问题：一直是训练 agent 去操作现成电脑，有没有可能反过来——训练生成模型本身成为电脑。<br>方法：把桌面当作交互式世界模型，按历史屏幕与键鼠动作预测下一屏；惊奇门控槽记忆（Memory-JEPA）记下屏外内容，VLM 探索式查询桥接推理，残差渲染器只预测帧间潜变量变化。<br>为什么值得看：长闭环中被遮挡文件的回忆率 64.2%（随机 33.3%）、终端文字 OCR 准确率从 1.3% 升至 50.1%，且显式记忆可在测试时移植、因果改变渲染内容，是世界模型的新方向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32811">Interactive Neural Computers</a>
+            <p class="keywords">关键词：世界模型（world models）、交互式计算（interactive computing）、记忆（memory）</p>
+          </li>
+          <li class="item">
+            <p>机构：KAIST、浦项科技大学<br>核心价值问题：实时交互视频生成里用户一换提示，流式模型仍跟着旧提示走，换提示与保连续不可兼得。<br>方法：定位病根为“上下文惯性”（上一块成为强先验压制新提示），提出免训练的残差引导——在缓存外对重噪的上一块用新提示去噪一次，把残差加到下一块去噪早期。<br>为什么值得看：无需训练、无需逐模型调参，每块只多一次前向，就能让已有流式模型（含带专用切换机制的）在多轮切换下跟上新提示且基本不损失画质。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32820">Residual Guidance for Real-Time Interactive Video Generation</a>
+            <p class="keywords">关键词：实时视频生成（real-time video generation）、交互视频（interactive video）、流式生成（streaming generation）</p>
+          </li>
+          <li class="item">
+            <p>机构：麻省理工学院<br>核心价值问题：语言模型里“潜意识学习”（用无意义数字序列蒸馏偏好）已够离奇，它会不会跨模态传染到图像生成。<br>方法：经数字序列蒸馏的偏好会改变视觉语言模型生成与表征图像的方式；再用 weight lens 从单个训练模型的权重中识别潜意识特质。<br>为什么值得看：学生模型作文本编码器时，扩散模型生成学生偏好的动物的频率确实上升（颜色与风格不受影响），且 weight lens 几乎能识别每个学生的特质——包括图像上没显现的特质，安全意涵不小。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.31870">Subliminal Learning Crosses Modalities</a>
+            <p class="keywords">关键词：潜意识学习（subliminal learning）、跨模态（cross-modal）、AI 安全（AI safety）</p>
+          </li>
+          <li class="item">
+            <p>机构：清华大学、鹏城实验室、哈尔滨工业大学<br>核心价值问题：视频生成模型整段轨迹事先预测，误差累积导致后半段物理失真越来越严重。<br>方法：STEP 是免训练闭环框架，每轮只做一小段：量取场景状态、规划下一物理事件并渲染成控制片段、潜变量引导生成、校验事件是否发生、否则重采样。<br>为什么值得看：在三个冻结生成器上都提升了 Physics-IQ Verified 与 PhyGenBench 的物理合理性，且无需训练即可迁移到新生成器。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32337">Get the Next Moment Right: Short-Term Event Planning for Physically Plausible Video Generation</a>
+            <p class="keywords">关键词：视频生成（video generation）、物理合理性（physical plausibility）、事件规划（event planning）</p>
+          </li>
+          <li class="item">
+            <p>机构：延世大学<br>核心价值问题：占用世界模型按自车动作预测未来 3D 场景，但预测是否真跟着指定轨迹走，从没被认真检验过。<br>方法：提出 ReCast——以自车轨迹引导的 transformer，用动作引起的几何对应关系做未来预测，历史编码与未来解码解耦；并建反事实动作保真度基准，覆盖分布内、长尾与分布外轨迹。<br>为什么值得看：首次揭示并度量了世界模型的“动作跟随”问题，ReCast 在 Occ3D-nuScenes 上标准预测不掉队、反事实预测（尤其分布外轨迹）明显更好。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32029">Do Occupancy World Models Really Follow Actions?</a>
+            <p class="keywords">关键词：占用世界模型（occupancy world models）、自动驾驶（autonomous driving）、动作跟随（action following）</p>
+          </li>
+          <li class="item">
+            <p>机构：新加坡管理大学、哈尔滨工业大学、福州大学<br>核心价值问题：相机转开再转回，视野外的运动物体在视频扩散模型里会变异或消失，动态持久性一直做不好。<br>方法：OmniPersist 在单阶段扩散模型内耦合透视视频生成与全景演化，全景流低帧率建模，几何锚定对齐空间对应、时间补偿聚合时序。<br>为什么值得看：在新构建的动态基准上，视觉质量、相机可控性、重访一致性与动态持久性全面提升，且不依赖辅助模型或初始全景输入。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32473">OmniPersist: Persistent Dynamic World Modeling via Coupled Panoramic Evolution</a>
+            <p class="keywords">关键词：视频生成（video generation）、动态持久性（dynamic persistence）、全景视频（panoramic video）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学、北京大学、中国人民大学、KlingAI Research 等<br>核心价值问题：多参考图像生成既要保住各主体的外观、又要按指令排布成场景，规划好的关系在合成前从未被显式实例化与检查。<br>方法：把目标构图表示为可执行的 Blender 程序定义的三维场景，coding agent 把场景实例与参考图关联、校验几何与渲染视图并修正程序，代理渲染图作为视觉规划指导生成器。<br>为什么值得看：FLUX 上 DreamOmni2 总成功率比原 backbone 高 28.21 个百分点，SconeEval 达参评模型最高分，agent 式场景规划成了图像生成的有效外挂。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.32462">MAGPIE: Agentic Multi-Reference Image Generation via Executable Scene Construction</a>
+            <p class="keywords">关键词：多参考图像生成（multi-reference image generation）、场景构建（scene construction）、agent 规划（agent planning）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1124-1630-academic">
         <header class="round-header">
           <h2 id="round-1124-1630-academic">11 月 24 日 16:30 轮</h2>
@@ -4138,7 +4254,9 @@
           </li>
         </ol>
       </section>
-      <section class="round" aria-labelledby="round-1121-morning-academic">
+                        <details class="archive">
+        <summary>历史归档（11 月 21 日及之前）</summary>
+<section class="round" aria-labelledby="round-1121-morning-academic">
         <header class="round-header">
           <h2 id="round-1121-morning-academic">11 月 21 日早报</h2>
           <span class="count">13 条</span>
@@ -4211,8 +4329,6 @@
           </li>
         </ol>
       </section>
-                        <details class="archive">
-        <summary>历史归档（11 月 20 日及之前）</summary>
 <section class="round" aria-labelledby="round-1120-1230-academic">
         <header class="round-header">
           <h2 id="round-1120-1230-academic">11 月 20 日 12:30 轮</h2>
@@ -6207,7 +6323,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 24 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 25 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
