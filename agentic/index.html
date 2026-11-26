@@ -383,6 +383,59 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1126-morning">
+        <header class="round-header">
+          <h2 id="round-1126-morning">11 月 26 日 08:30 轮</h2>
+          <span class="count">9 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Hurdle 把评测脚本化成 npm 包，可直接对模型 API、MCP Skills、内部文档跑结构化 agent 评估，结果落表可用于回归。值得看的是它把&quot;agent 评测即代码&quot;从实验室搬到日常 CI，提升产品迭代的可观测性。</p>
+            <a class="source-link" href="https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs">Introducing Hurdle: Run agent evals on your API, skills, and docs（Together AI 官方博客，一手）</a>
+            <p class="keywords">关键词：agent 评测（agent evaluation）、CI 集成（CI integration）、MCP</p>
+          </li>
+          <li class="item">
+            <p>HF 记录了 1000 个 DeepSeek agent 在九天内协作编码出聊天应用 PyBot 的过程，并开源编排框架 Legion 与消息板 Msgboard。值得看的是大规模无权重 agent 的实战可行性与工具链可用性为 agent 协作研究提供了公开基准。</p>
+            <a class="source-link" href="https://huggingfaceswarms-scaling-swarms.hf.space/">Thousand-Agent Swarm: Nine days to PyBot（Hugging Face Spaces）</a>
+            <p class="keywords">关键词：多 agent 协作（multi-agent collaboration）、DeepSeek、开源框架（open-source frameworks）</p>
+          </li>
+          <li class="item">
+            <p>Anthropic 讲清了用 Claude 自动重写关键路径、并以真实生产流量做回归验证的全过程，最终 Rust 版 CPU 降约 70%。值得看的是大模型参与大规模系统重构的可靠工程范式。</p>
+            <a class="source-link" href="https://www.anthropic.com/research/migrating-api-to-rust">Migrating our API to Rust（Anthropic Research，一手）</a>
+            <p class="keywords">关键词：系统重构（system migration）、Rust、Anthropic、生产流量验证（production traffic validation）</p>
+          </li>
+          <li class="item">
+            <p>OpenAI 在 X 宣布 Private Inference 小范围测试，目标是运算阶段也对提示词保密。值得看的是它把隐私边界从网络层推向计算层，但 X 原帖无法打开，暂以媒体消息引用。</p>
+            <a class="source-link" href="https://news.sulat.com/2026/11/26/openai-private-inference/">OpenAI Private Inference 试点的媒体报道（一手来源为 X 帖）</a>
+            <p class="keywords">关键词：隐私计算（private inference）、OpenAI、提示词保密（prompt confidentiality）</p>
+          </li>
+          <li class="item">
+            <p>OpenAI 再次提醒 6 月公布的下线计划，Agent Builder 与 Evals 即将关闭，数据导出截止 11 月 30 日。值得看的是对在用团队的时间表提醒，避免数据丢失。</p>
+            <a class="source-link" href="https://openai.com/index/introducing-agentkit/">Introducing Agent Builder Evals（OpenAI 官方公告，一手）</a>
+            <p class="keywords">关键词：Agent Builder、产品下线（product sunset）、数据导出（data export）</p>
+          </li>
+          <li class="item">
+            <p>Dheeraj Kumar 的每日 AI Quiz 第 44 期讲了三件事：LangGraph 的检查点机制、AI agent 工具调用如何安全执行，以及用 Langfuse 做离线评估。内容偏实操，正在搭 agent、关心工具执行安全性和评估方法的人可以看一看。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:groupPost:6773411-7531752484575436800/">Dheeraj Kumar：Daily AI Quiz #044——LangGraph 检查点、安全工具执行与 Langfuse 离线评估</a>
+            <p class="keywords">关键词：LangGraph、工具调用安全（safe tool use）、Langfuse 评估（evaluation）</p>
+          </li>
+          <li class="item">
+            <p>Aishwarya Naresh Reganti 认为，自主 agent 要真正可用，执行环境必须安全且可复现：她以 Codex 为例，讲用 Docker 沙箱做隔离、日志与复现。正在把 agent 放到生产环境的人可以参考这个思路。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7531589329866002432">Aishwarya Naresh Reganti：自主 agent 需要安全可复现的执行环境（Docker 沙箱）</a>
+            <p class="keywords">关键词：agent 执行环境（execution environment）、Docker 沙箱（Docker sandbox）、生产部署（production deployment）</p>
+          </li>
+          <li class="item">
+            <p>Richard L. 指出，企业级 AI agent 遇到不确定或超出权限的情况时，应该把控制权交给人、而不是静默失败，人机交接是 agent 落地的关键一环。做企业 agent 的人可以看看这篇提醒。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7531352556250222592">Richard L.：企业 AI agent 需要人机交接，而不是静默失败</a>
+            <p class="keywords">关键词：人机交接（human handoff）、企业 agent（enterprise agents）、权限管理（permission management）</p>
+          </li>
+          <li class="item">
+            <p>Dr. Joerg Storm 提醒，把 agent 部署在不可靠的数据和不明确的责任边界上，只会让后果来得更快：agent 需要可靠的数据、清晰的边界和明确的业务负责人。正在推进 agent 落地的人值得读一读这篇判断。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7520068285212561408">Dr. Joerg Storm：agent 部署在不可靠数据上只会让后果来得更快</a>
+            <p class="keywords">关键词：agent 落地（agent deployment）、数据可靠性（data reliability）、责任边界（responsibility boundaries）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1125-2030">
         <header class="round-header">
           <h2 id="round-1125-2030">11 月 25 日 20:30 轮</h2>
@@ -9491,6 +9544,79 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1126-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1126-morning-academic">11 月 26 日 08:30 轮</h2>
+          <span class="count">13 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>作者：Charlie Griffin<br>核心价值问题：监控器能否发现 agent 的危险行为，业界常拿攻击策略生成的对话记录来评估漏报率，但评估结论对攻击策略的选择有多敏感，从没被认真检验过。<br>方法：以一个已下线的 OpenAI 生产监控器为案例，固定部署场景与控制任务，只改变攻击策略的生成方法与优化程度，对比基础提示、优化提示、强化学习、记录编辑四种攻击下的漏报率，并验证攻击向未见过的 GPT-5.4 目标监控器的迁移。<br>为什么值得看：同一 RL 攻击方法不同优化程度下漏报率从 0.5% 波动到 20.8%，不同方法最优水平下为 6.4% 至 23.0%，且所有攻击都迁移到了 GPT-5.4 监控器上——只用基础攻击评估会让人误以为监控器很强，评估结论要作为部署证据还需单独论证。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34934">Attack Policy Selection can Mislead Monitor Evaluators</a>
+            <p class="keywords">关键词：agent 监控（agent monitoring）、安全评估（safety evaluation）、攻击策略（attack policies）</p>
+          </li>
+          <li class="item">
+            <p>机构：TokenWave AI、东京大学、卡内基梅隆大学、西北大学、威尔康奈尔医学院、耶鲁大学、南洋理工大学、Monolith、斯坦福大学、加州理工学院、哈佛大学等<br>核心价值问题：科研 agent 能否持续改进既有科学方法，一直没有评估基准来衡量。<br>方法：REE 基准共 100 道开放式科研题、覆盖 5 大科学领域 23 个子域，每题均来自活跃研究并经领域专家逐题审核；agent 有 12 小时改进一个可运行的初始方案，按统一尺度与专家方案对比打分。<br>为什么值得看：前沿 agent 已大幅超越专家方案——Claude Opus 5.5 与 GPT-6.1 Sol 分别在 86% 和 81% 的题目上胜过专家，且平均在前 2 小时内就已超越，是&quot;agent 做科研&quot;能力的重要里程碑式评估。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34646">REE: A Scientific Research Entrance Exam for AI Agents</a>
+            <p class="keywords">关键词：科研 agent（research agents）、科学发现（scientific discovery）、评测基准（benchmark）</p>
+          </li>
+          <li class="item">
+            <p>机构：微软<br>核心价值问题：agent 补丁比开发者大就是过度编辑吗，补丁大不等于多余，一直缺实证拆解。<br>方法：提出 Delta Residue Attribution（DRA），重放轨迹、把补丁每个单元追溯到写入步骤、逐个回退并重跑测试判定是否必需；应用于 7,660 条已解决的 GitHub Copilot CLI 轨迹（18 个前沿模型，SWE-bench Verified 6,728 条 + DeepSWE 932 条）。<br>为什么值得看：结论反直觉——agent 多余编辑主要是测试（61%）和文档（13%），代码必需率均值 0.887 反而略高于开发者的 0.864，18 个模型中有 11 个留下的无用代码比开发者少；同时平均仍有 11% 的代码单元无用，其中 89% 会改变行为，作者建议基准在通过率之外同时报告代码必需率。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34875">How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches</a>
+            <p class="keywords">关键词：编程 agent（coding agents）、补丁分析（patch analysis）、SWE-bench</p>
+          </li>
+          <li class="item">
+            <p>机构：伦敦大学学院、南洋理工大学、南加州大学、加州大学圣迭戈分校、卡内基梅隆大学、约翰霍普金斯大学、香港中文大学、加州大学伯克利分校<br>核心价值问题：视频生成模型被越来越多地当作视觉推理器评估，但&quot;像素内推理&quot;是否真比符号化路径可靠，从未在同等条件下验证过。<br>方法：让编码 agent 与视频模型做同一批任务（相同首帧、提示与规则评估器），agent 写程序渲染出答案视频，在 500 例的 VBVR-Pro-Bench 上对照。<br>为什么值得看：三个闭源 agent（Codex + gpt-6-astra、Claude Code + Fable 5.1、Gemini CLI + Gemini 3.1 Pro）得分 0.923、0.894、0.893，均比最强视频模型高 0.22 以上；23 个可运行开源模型中最好的 GLM-5 得 0.572，除一个 RL 训练模型外也高于全部视频模型——对能算出答案的任务，程序合成目前是远比视频生成可靠的视觉推理路径。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34813">Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models</a>
+            <p class="keywords">关键词：视觉推理（visual reasoning）、编程 agent（coding agents）、视频生成（video generation）</p>
+          </li>
+          <li class="item">
+            <p>机构：北京航空航天大学<br>核心价值问题：agent 外部记忆&quot;用时幻觉&quot;——正确记忆已在提示词里，答案却与之矛盾，一直没有系统的定义与度量。<br>方法：先量化三种形态：忽略记忆（高达 46% 的查询）、误用记忆（高达 24%，检索结合权重编辑时达 49%）、版本混淆（53% 的修订事实问答仍断言旧值）；提出 TASK memory：文本笔记 + 激活 steering + 知识编辑共享同一模型内&quot;地址&quot;，一对 steering 向量逐查询决定采纳记忆还是保留模型自身答案。<br>为什么值得看：在冻结模型、预注册一次性测试协议下，TASK 把忽略记忆幻觉在全部 10 个模型-数据集组合中压到至多 1.5%，邻居误用从 39.2% 降至 7.5%，300 条记忆库上比 BM25 RAG 高 16.4 个百分点，多跳准确率在 MQuAKE 上 +7.5 个百分点。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34762">TASK Memory: Beyond Text-Only Memory with Activation Steering and Knowledge Editing against Memory Hallucination</a>
+            <p class="keywords">关键词：agent 记忆（agent memory）、记忆幻觉（memory hallucination）、激活 steering（activation steering）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港大学、浙江大学、南方科技大学、香港中文大学（深圳）、香港城市大学<br>核心价值问题：VLA 策略需大量人类演示、推理 agent 反复 deliberation 成本高，机器人自我改进一直缺闭环。<br>方法：提出&quot;推理-实践&quot;双向循环：策略失败引导编码 agent 搜索 Code、Code+ICL、Code+Policy 三条路线，沉淀为可复用技能与经验记忆；验证过的轨迹做监督训练，并用反事实偏好蒸馏教策略偏好成功修正。<br>为什么值得看：无需新增人类演示，LIBERO-PRO 上独立成功率从 11.0% 升至 84.1%，混合成功率从 30.4% 升至 90.5%，RoboTwin C2R 上类似提升且 agent 成本下降，Unitree G1-D 上混合成功率 95.0%。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34675">RoboEvo²: Recursive Robot Self-Improvement via Harness-Policy Co-Evolution</a>
+            <p class="keywords">关键词：机器人自我改进（robot self-improvement）、VLA、技能学习（skill learning）</p>
+          </li>
+          <li class="item">
+            <p>机构：上海交通大学、上海创新研究院、京东<br>核心价值问题：长程 agent 的完全在线在策略蒸馏昂贵，因每次更新都依赖新鲜环境 rollout；前缀重放虽高效，但只用教师轨迹会漏掉学生诱导的历史、固定位置调度抓不住任意深度的关键决策。<br>方法：提出 CARE-OPD：学生播种的教师补全 + 响应级置信度门控扩大历史覆盖并过滤不可靠更新，事后重放分配用下游执行证据挑选关键回合。<br>为什么值得看：长程 agent 训练效率是核心瓶颈，此工作效果与效率双提升——SWE-bench Verified 任务成功率达 59.5%，同时相对异步在线 OPD 端到端训练时间减少 45%、环境动作减少 44%。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34756">Collect for Coverage, Replay with Evidence: Adaptive and Efficient On-Policy Distillation for Long-Horizon Agents</a>
+            <p class="keywords">关键词：长程 agent（long-horizon agents）、在线策略蒸馏（on-policy distillation）、训练效率（training efficiency）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、腾讯<br>核心价值问题：现有深度研究 agent 基准只评报告质量、不评&quot;覆盖了哪些研究方向、挖得多深&quot;。<br>方法：推出以结构化知识覆盖为首要评估目标的 DRBench Pro：自动管线从 Wikipedia 构建局部知识树、采样子图生成研究问题与证据支撑的评分细则（每条细则对应知识树中的一条关系），共 144 个案例、24 个领域、44,102 条细则，用广度与深度几何均值算总覆盖率。<br>为什么值得看：评测 16 个深度研究 agent，最佳者总覆盖率仅 57.04%，细则判定与人类标注高度一致——首次把深度研究 agent 的知识覆盖结构化，揭示头部 agent 仍有近半覆盖缺口。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34852">DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents</a>
+            <p class="keywords">关键词：深度研究 agent（deep research agents）、知识覆盖（knowledge coverage）、评测基准（benchmark）</p>
+          </li>
+          <li class="item">
+            <p>作者：Alessio Devoto<br>核心价值问题：当前 agent 框架由 harness 在窗口满时触发压缩来管理上下文，模型自己通过上下文 API 决定何时、压缩什么，是否更好。<br>方法：在 NVIDIA 开源 agent 框架 NOOA 中给模型上下文控制权，在 8K 至 512K 上下文预算下对比文档研究与机器学习工程任务；另证明推理引擎复用编辑后未变后缀的 KV 缓存可降低 prefill 计算。<br>为什么值得看：会用 API 的模型准确率更高且输入 token 常更少，GPT 6.1 在 32K 预算下 OfficeQA Pro v2 得分从 21% 近乎翻三倍至 56%，Kimi 最多省 41% 输入 token；推理引擎侧每次请求 prefill 计算最多削减 15% 且准确率无可测变化，指向&quot;模型自主管理上下文 + 推理引擎协同设计&quot;的新方向。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34147">Letting Models Manage Their Own Context: Where We Stand</a>
+            <p class="keywords">关键词：上下文管理（context management）、agent 框架（agent frameworks）、KV 缓存（KV cache）</p>
+          </li>
+          <li class="item">
+            <p>机构：山东大学、西电、西安 Aegiston、南京大学、中央财经大学、华中科技大学<br>核心价值问题：agent 执行失败后自主重规划恢复时，&quot;功能恢复了、安全保护却被悄悄丢掉&quot;的风险从未被系统研究——与提示注入不同，无需篡改指令或工具定义。<br>方法：在可执行的 MCP/Skill 环境中做故障注入，覆盖 7 个 LLM、12 类任务模板、3 个安全敏感领域，系统评估&quot;工作流安全降级&quot;行为；提出 ARGUS 义务保持恢复框架（资源绑定的安全证据、隔离的恢复计划验证、执行时强制）。<br>为什么值得看：发现了一类新的 agent 安全失效模式（恢复即降级）；ARGUS 在独立的 864 次运行评估中阻止了全部观测到的保护丢失事件，同时相对单纯阻断提升了受保护任务完成率。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.33605">The Detour Is the Danger: Preserving Security During LLM Agent Recovery</a>
+            <p class="keywords">关键词：agent 安全（agent safety）、故障恢复（fault recovery）、MCP</p>
+          </li>
+          <li class="item">
+            <p>机构：新加坡国立大学、新加坡科技设计大学、多伦多大学、A*STAR 高级智能与计算研究院<br>核心价值问题：多 agent 系统中跨模型 KV 缓存传输（latent communication）让目标模型消费自己未编码过的上下文，其安全对齐是否还成立。<br>方法：提出 Chasm 框架刻画源模型、映射器、交接机制三处攻击面，实测 latent 交接对安全对齐与防注入能力的影响；并提出轻量目标侧缓存守卫作为缓解。<br>为什么值得看：数字触目惊心——目标模型原生仅跟随 0.4% 的基准提示注入，经映射器传输后跟随率升至 44.2%；越狱攻击成功率同家族内传输 alone 最高 +24.6 个百分点、零样本攻击 +69.2 个百分点，经映射器的白盒优化攻击成功率达 92.5%（同目标上普通 GCG 为 37.5%）。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34278">Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems</a>
+            <p class="keywords">关键词：多 agent 安全（multi-agent security）、KV 缓存传输（KV cache transfer）、越狱攻击（jailbreak attacks）</p>
+          </li>
+          <li class="item">
+            <p>机构：达卡大学、牛津大学、阿德莱德大学<br>核心价值问题：潜空间世界模型&quot;用预测终态与目标图像的潜距离评判规划&quot;在长程任务中失效，原因一直没被定位。<br>方法：先实测定位两种失效——远离目标时失去方向信号、权重偏向机械臂而非被操作物体，并证明目标图距离能预测闭环规划何时崩溃；提出 Graph Anchors：免训练的规划器，对冻结的潜世界模型，在其训练帧上一次性建稀疏图，每步瞄准沿最短路径前移数步的邻近节点。<br>为什么值得看：方法简单（免训练、建图一次）但提升巨大——长达 400 步的目标上，LeWM 在 PointMaze-Medium 成功率从 13% 升至 85%，PointMaze-Large 从 8% 升至 87%，Push-T 从 5% 升至 71%，而更强的向目标搜索反而失败。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34509">Long-Horizon Planning with Latent World Models via Graph Anchors</a>
+            <p class="keywords">关键词：潜世界模型（latent world models）、长程规划（long-horizon planning）、机器人导航（robot navigation）</p>
+          </li>
+          <li class="item">
+            <p>机构：俄勒冈大学、AWS AI Labs<br>核心价值问题：守卫拒绝 agent 动作时，固定拒绝让合法用户无法恢复、解释拒绝又会告诉攻击者下一步试什么——&quot;安全披露&quot;两难一直没有解法。<br>方法：提出 FORK，让守卫的自然语言决策与披露技能与一个能读到每条公开消息的攻击者共同演化：每条被利用的消息与每次宽松放行都成为无梯度修订技能库的证据。<br>为什么值得看：在 FORK-World 上三 agent 平均攻击成功率从 78.4% 降至 14.1% 且效用保持在 85% 以上；在训练未见环境与任务的 MT-AgentRisk 上，攻击成功率从 70.6% 降至 9.1%、良性效用 93.1%。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.33879">FORK: Co-Evolving Safe Disclosure and Decision Skills Against Attackers Who Read Every Refusal</a>
+            <p class="keywords">关键词：安全披露（safe disclosure）、守卫模型（guard models）、对抗演化（adversarial co-evolution）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1125-morning-academic">
         <header class="round-header">
           <h2 id="round-1125-morning-academic">11 月 25 日 08:30 轮</h2>
@@ -13198,7 +13324,7 @@ cursive self-improvement）、agent 优化（agent optimization）、基准（be
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 25 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 26 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
