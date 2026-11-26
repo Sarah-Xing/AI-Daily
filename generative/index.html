@@ -383,6 +383,29 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1126-morning">
+        <header class="round-header">
+          <h2 id="round-1126-morning">11 月 26 日 08:30 轮</h2>
+          <span class="count">3 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Kandinsky 6.5 提升分辨率至 2K、长度到 10 秒，强调多主体一致性与文字准确度，附带超分模型 SR 2.0 开源。值得看的是在商用可用性上的大幅前进，但官方发布页未找到，链接为俄主流商业媒体报道并已注明。</p>
+            <a class="source-link" href="https://www.vedomosti.ru/technology/news/2026/11/26/1415693-novie-modeli">Sber 发布新一代 GigaChat 与 Kandinsky 模型（Vedomosti 报道，媒体消息；未找到 Sber 官方发布页）</a>
+            <p class="keywords">关键词：文生图（text-to-image）、视频生成（video generation）、多主体一致性（multi-subject consistency）</p>
+          </li>
+          <li class="item">
+            <p>Brand Kit 允许上传品牌视觉与角色库，生成时自动套用，解决角色漂移问题。值得看的是企业级一致性能力首次产品化。</p>
+            <a class="source-link" href="https://lumalabs.ai/news/brand-kit-character-library">Luma 推出 Brand Kit 与 Character Library：让 AI 生成始终符合品牌（Luma 官方博客，一手）</a>
+            <p class="keywords">关键词：品牌一致性（brand consistency）、角色库（character library）、AI 视频生成（AI video generation）</p>
+          </li>
+          <li class="item">
+            <p>Vincent Granville 转发了对 bondingAI 的访谈，讲 xLLM 这种确定性大模型的起源与发展，以及它与现有 LLM 的不同。确定性 LLM 强调输出可复现、可验证，对可解释性和确定性有要求的场景是个值得了解的方向。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7531752764553588737">Vincent Granville 转发：xLLM 确定性大模型的起源与发展访谈</a>
+            <p class="keywords">关键词：确定性大模型（deterministic LLMs）、可复现性（reproducibility）、bondingAI</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1125-2030">
         <header class="round-header">
           <h2 id="round-1125-2030">11 月 25 日 20:30 轮</h2>
@@ -3965,6 +3988,74 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1126-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1126-morning-academic">11 月 26 日 08:30 轮</h2>
+          <span class="count">12 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：北京大学<br>核心价值问题：前沿文生图模型画质已难分高下，但输出是否还带有模型特有的&quot;指纹&quot;，从没被系统检验过。<br>方法：用标准 ResNet-50 对 HiDream-O1-Dev、FLUX.2-dev、HunyuanImage-3.0、Qwen-Image-2512 四个开源顶级模型做来源分类；从低层纹理统计、物体布局/深度/反照率、图像描述中的风格与背景偏好三个层面定位线索来源，并测人类判断与线索稳健性。<br>为什么值得看：来源分类在 held-out 提示上达到 100% 准确率，而人类成对判断仅 62.61%；线索在严重图像损坏和分布外提示下依然稳健——顶级 T2I 模型各有稳定可识别的视觉&quot;指纹&quot;，直接冲击人类偏好评测默认的&quot;匿名性&quot;假设。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34843">Probing Visual Idiosyncrasies in Text-to-Image Models</a>
+            <p class="keywords">关键词：文生图（text-to-image）、模型指纹（model fingerprints）、偏好评测（preference evaluation）</p>
+          </li>
+          <li class="item">
+            <p>机构：麻省理工学院、丰田研究院<br>核心价值问题：Guidance（CFG 等）为何有效一直缺乏解释，强度全靠手工调。<br>方法：发现实际使用的强度下 guidance 并未改善后验均值预测、反而使其变差，但样本变好了——原因是后验均值预测的方差小于真实数据，而 guidance 把方差补了回来；据此提出方差匹配 guidance：用闭式规则按&quot;引导后预测方差匹配数据方差&quot;选取强度，并按噪声水平逐层应用得到无超参调度。<br>为什么值得看：无需调参即复现了 11 个常用模型（覆盖图像、视频、音频、运动、世界生成）的手工选取强度；SD 3.5 Medium 上用户偏好优于手工调度；还验证了两个新推论：负 guidance 也能工作，用自身检查点引导比用独立训练模型引导需要更大强度。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34801">Guidance as Variance Matching</a>
+            <p class="keywords">关键词：guidance、扩散模型（diffusion models）、方差匹配（variance matching）</p>
+          </li>
+          <li class="item">
+            <p>机构：香港大学、中山大学、卡迪夫大学、剑桥大学<br>核心价值问题：预训练视觉表征能加速生成学习，但表征到像素的解码负担很重。<br>方法：提出&quot;生成即逆编码&quot;：以冻结编码器的中间表征为逐级生成目标，先生成深层语义表征，再生成保留外观与空间细节的浅层表征，最后解码到像素；HyC-DiT 用共享 DiT 主干加阶段条件注入统一学习各阶段跃迁，语义空间的原生匹配支持少步生成。<br>为什么值得看：ImageNet 256×256 上，690M 模型仅训练 5 个 epoch 即达 FID 1.96，1.55B 模型达 1.74；89M 解码器重建 PSNR 30.25 dB；经短暂原生匹配适配后，RevFlow-XL 每阶段单步采样即达 FID 2.85。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34782">Generation as Reverse Encoding</a>
+            <p class="keywords">关键词：图像生成（image generation）、视觉表征（visual representations）、扩散 transformer（diffusion transformers）</p>
+          </li>
+          <li class="item">
+            <p>机构：加州大学圣迭戈分校、地平线、南京大学、香港科技大学、浙江大学<br>核心价值问题：强视频先验已能生成视觉可信的未来，但不保证符合具体物理动作的后果；把视频先验转为动作条件世界模型到底要多少代价。<br>方法：Dianjing 提出极简配方：统一物理动作条件、在决定运动与布局的高噪声水平集中训练、原生历史条件；基于 33B 视频基础模型 MiniMax H3，冻结主干、仅训练 0.34% 参数，用约 65 小时双 embodiment 机器人视频，无额外机器人预训练或相机标定。<br>为什么值得看：在 WorldOracle（对照真实执行评估预测）上 5 个赛道 4 项最佳，AgiBot-Long 第二；消融表明训练在噪声水平上的分配比动作如何接入网络更重要——强视频先验已完成世界建模的大部分工作，轻量物理动作 grounding 即可释放其真实世界预测潜力。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34435">Most of the Way There: Turning a Strong Video Prior into an Action-Conditioned World Model</a>
+            <p class="keywords">关键词：世界模型（world models）、视频先验（video priors）、机器人预测（robot prediction）</p>
+          </li>
+          <li class="item">
+            <p>机构：小米机器人<br>核心价值问题：统一多模态自回归模型生成图像需按栅格顺序逐 token 解码，H×W 步是推理瓶颈。<br>方法：ScanAR 仅重定义视觉 token 的前驱关系：首行照常从左到右生成，之后每行一步并行生成（每个 token 由上一行垂直对齐的 token 预测），非视觉 token 保持标准自回归；不改主干、词表、输出头，不加参数，支持从头训练与轻量后训练，视觉解码深度从 HW 降至 H+W。<br>为什么值得看：在 Emu3.5-Image-34B 上后训练达 GenEval 82.36（同数据后训练加速方法中最佳），512×512 图像比栅格解码快 13.8 倍；ImageNet 从头训练在各尺寸吞吐最高、FID 与栅格 LlamaGen 相当；在 34B Xiaomi-Robotics-U0 上保持具身场景生成、图文交错生成与视频生成质量。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.33761">ScanAR: Parallel Row-Scan Decoding for Efficient Image Generation in Unified Autoregressive Models</a>
+            <p class="keywords">关键词：自回归图像生成（autoregressive image generation）、并行解码（parallel decoding）、推理加速（inference acceleration）</p>
+          </li>
+          <li class="item">
+            <p>机构：弗劳恩霍夫 HHI<br>核心价值问题：世界模型用于决策前评估候选动作，其可靠性取决于能否识别自身经验边界——认知不确定性正是这一信号，但两种主流范式的不确定性质量从没被受控对比过。<br>方法：在 10 个模拟视觉控制环境中，对 JEPA 架构的 LeWorldModel 与 RSSM 架构的 DreamerV3 做受控对比（事后不确定性估计：末层 Laplace 与集成），追踪受控状态扰动经过模型各阶段直至最终不确定性估计。<br>为什么值得看：发现 RSSM 通过两种机制衰减扰动——循环更新对上下文取平均、重建目标按像素占比加权实体致小物体丢失；JEPA 无这两种机制，扰动完整传导至不确定性。5 项不确定性相关下游任务上差距明显：RSSM 的不确定性会漏掉其自身后验已登记的偏差，而 JEPA 的不确定性如实报告模型所见。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34830">Not all world models can doubt: how training objective and architecture shape epistemic uncertainty in JEPA and RSSM world models</a>
+            <p class="keywords">关键词：世界模型（world models）、认知不确定性（epistemic uncertainty）、JEPA、DreamerV3</p>
+          </li>
+          <li class="item">
+            <p>机构：大湾区大学 GVC Lab、美团、香港科技大学、澳门大学<br>核心价值问题：视频扩散模型越来越快、越来越可流式化，但视频 VAE 仍是交互式生成与编辑管线的主要延迟瓶颈。<br>方法：分析预训练视频 VAE 的有效感受野，发现编解码一个 patch 几乎只依赖其时空邻域；据此提出基于因果窗口注意力的流式编解码器 LiveVAE，逐帧计算量下降、时序 KV 缓存有界；解耦的编解码器蒸馏加联合微调保留预训练潜空间，可作为原 VAE 的直接替代。<br>为什么值得看：在 MiniMax-H3 上，编码快 5.2–6.2 倍、解码快 3.0–3.3 倍且 PSNR 更高；配合专用推理基础设施可达 13.4 倍加速且几乎无质量损失，代码与模型将发布。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34912">LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE</a>
+            <p class="keywords">关键词：视频 VAE（video VAE）、流式生成（streaming generation）、推理加速（inference acceleration）</p>
+          </li>
+          <li class="item">
+            <p>机构：浙江大学、南京大学<br>核心价值问题：机器人场景对世界模型有更严格的细粒度物理要求，现有评测难以准确评估机器人运动与物体交互的物理细节。<br>方法：WorldPhy 包含 300 个任务（初始帧图像 + 任务指令），覆盖多样机器人场景、任务类别、视角与机器人配置；收集 12K+ 高质量人工标注，训练 WorldPhyReward，在 6 个细粒度物理维度与 1 个指令遵循维度上打分并给出理由，与人类评分的对齐优于通用 VLM 与现有奖励模型。<br>为什么值得看：系统评估 13 个前沿开闭源世界模型，结果显示当前模型难以在不同机器人场景下持续保持细粒度物理合理性——机器人世界模型亟需的细粒度物理评测基准，配套奖励模型可作后续评测工具。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34130">WorldPhy: Benchmarking Fine-Grained Physical Plausibility of World Models in Robotics</a>
+            <p class="keywords">关键词：世界模型评测（world model evaluation）、物理合理性（physical plausibility）、机器人（robotics）</p>
+          </li>
+          <li class="item">
+            <p>机构：清华大学、对外经济贸易大学、中国科学院大学、中国科学院自动化研究所<br>核心价值问题：预训练视觉表征可提升扩散 transformer 训练，但同时利用全局上下文与局部空间结构需要决定建模哪些语义状态、如何访问。<br>方法：SSR 联合去噪图像潜变量、编码图像级上下文的全局 CLS token、以及保留空间对应的紧凑 patch 状态；局部状态在输入处与对应图像 token 融合，全局状态经独立投影注入每个 transformer 块。<br>为什么值得看：ImageNet 256×256 上，SiT-XL/2 + SSR 以比 SiT、REPA、REG 参考 FID 少 100 倍、40 倍、2 倍的训练迭代达到或超越其 FID；无 guidance FID 1.78，CFG 下 1.34，CFG + autoguidance 下 1M 迭代达 FID 1.31（主对比表最佳）。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34279">Semantic State Reading for Joint Image-Semantic Diffusion Transformers</a>
+            <p class="keywords">关键词：扩散 transformer（diffusion transformers）、语义状态（semantic states）、图像生成（image generation）</p>
+          </li>
+          <li class="item">
+            <p>机构：英伟达、麻省理工学院、香港中文大学<br>核心价值问题：实时自回归视频生成器可流式生成数分钟视频并接受新提示，但长时交互故事中的人物、物体、地点一致性难以维持；离线 agent 系统有记忆但需预读全剧本、不适配直播流。<br>方法：Agentic LongLive 让记忆 agent 在独立 GPU 上异步运行，只读已揭示的提示（不读已生成视频），为每个人物、物体、场景维护文本状态与演化图像，合成全局图像与每镜头记忆图像，在下一镜头开始前预填入生成器的注意力 sink，并为提及实体的提示写实体卡；小型语言模型经 RL（以下游视频结果校准的图像奖励）决定下一提示到来前记住什么。<br>为什么值得看：首个带 LLM agent 文本 + 图像记忆的实时视频生成器；在新基准 LongStory-Online（25 个故事、857 镜头、逐镜头揭示）上，相对基底 LongLive-2.0，持续状态准确率 +26.3、主角身份 +44.9、重访地点一致性 +40.4，额外耗时约 1%；单 8×B200 节点以 34.3 FPS 快于实时流式传输，14 分钟故事画质稳定。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34907">Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation</a>
+            <p class="keywords">关键词：长视频生成（long video generation）、agent 记忆（agentic memory）、实时流式（real-time streaming）</p>
+          </li>
+          <li class="item">
+            <p>机构：英伟达<br>核心价值问题：长时视频生成需要几何一致性与准确相机控制，缺乏 3D grounding 难以实现。<br>方法：VivaWorld 构建组合式混合 3D 表征：重建点云保留已观测场景几何与外观，生成纹理网格提供 360° 新视角下的完整物体几何；连通区域过滤器去除不一致的漂浮成分；混合相机嵌入结合全局与物体锚定 Plücker 射线，捕捉场景级相机运动与相机-物体关系，经控制适配器与视觉引导一同注入视频生成模型。<br>为什么值得看：实验显示在视觉质量与相机控制上达 SOTA，支持可控新视角合成、长时场景探索与物理 AI，是长视频/世界模型方向的重要进展。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.33591">VivaWorld: Long-Horizon Video World Model With Compositional 3D Priors</a>
+            <p class="keywords">关键词：视频世界模型（video world models）、3D 先验（3D priors）、相机控制（camera control）</p>
+          </li>
+          <li class="item">
+            <p>机构：西电、香港科技大学（广州）、武汉大学<br>核心价值问题：图生 3D 在线服务用检查器审查上传图像防违规几何生成，但检查器只看图像可见内容——一张视觉上无害的图能否诱导生成违规 3D 几何。<br>方法：提出 PTA3D 针对性对抗攻击：前缀轨迹对齐（PTA）逐步对齐对抗轨迹与目标轨迹的 DiT 前缀输出（几何结构正在此处形成），预处理感知优化（PAO）让对抗优化暴露于多种图像变换之下；并建立前缀到输出的界与预处理感知迁移界。<br>为什么值得看：三个开源图生 3D 模型与三个在线服务上，PTA3D 在在线服务上攻击成功率达 41.5%–88.5%，白盒下 90.8%–94.6%；跨模型迁移中 PAO 把平均攻击成功率从 8.8% 提到 30.3%；作者另提 PSD 防御组件，可把在线服务的检测率平均提升 31.9%。</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34075">Hijacking 3D Generation: Targeted Adversarial Attacks against Image-to-3D Models via Prefix Trajectory Alignment</a>
+            <p class="keywords">关键词：图生 3D（image-to-3D）、对抗攻击（adversarial attacks）、模型安全（model security）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1125-morning-academic">
         <header class="round-header">
           <h2 id="round-1125-morning-academic">11 月 25 日 08:30 轮</h2>
@@ -6367,7 +6458,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 25 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 26 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
