@@ -383,6 +383,44 @@
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-industry" aria-labelledby="tab-industry">
+      <section class="round" aria-labelledby="round-1127-morning">
+        <header class="round-header">
+          <h2 id="round-1127-morning">11 月 27 日早报</h2>
+          <span class="count">6 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Sand.ai 的 MAGI-2 在 Artificial Analysis 图生视频榜上以 1163 Elo 排第一，与第二名 Seedance 2.5（1158 Elo）置信区间重叠、实为并列第一；X 上过去 24 小时相关帖子约 9079 条、为此前日均的 7.25 倍，Sunra 等平台跟进上架。值得看的是新模型上线两天即在独立盲测榜上与字节 Seedance 2.5 打平，且 API 价约 4.80 美元/分钟、仅为后者约七分之一；但榜单样本尚不足 6000 票、排名会随投票继续变动。</p>
+            <a class="source-link" href="https://artificialanalysis.ai/video/leaderboard/image-to-video">Artificial Analysis 图生视频排行榜 AA-Video-I2V v2.1：MAGI-2 以 1163 Elo 排第一（独立第三方榜单，一手）</a>
+            <p class="keywords">关键词：图生视频（image-to-video）、视频生成（video generation）、Elo 排名（Elo ranking）、MAGI-2、Seedance</p>
+          </li>
+          <li class="item">
+            <p>Andyson 在 Hugging Face 发布 LongLive-H3，把 33B 参数的 MiniMax-H3 加速适配器合并进主干，每 8 段视频每段只需 3 次采样即可生成 1344×768、24fps、配 32kHz 立体声音频的 5 秒片段。值得看的是它把 H3 的本地推理成本压下来，但须写清这是社区衍生检查点（非 MiniMax 官方）、权重约 66GB 且只支持首段生成、需另行下载原版文本编码器与 VAE。注意：与昨日早报研究进展的 Agentic LongLive 论文（arXiv:2611.34907，长视频记忆方法）不是同一件事。</p>
+            <a class="source-link" href="https://neyrolearn.cloud/en/news/andyson--longlive-h3/">LongLive-H3：3 步加速的 MiniMax-H3 音画生成模型（NeyroLearn 模型目录页，媒体；HF 仓库为 Andyson/LongLive-H3）</a>
+            <p class="keywords">关键词：视频生成（video generation）、模型加速（model acceleration）、MiniMax-H3、社区衍生模型（community checkpoint）</p>
+          </li>
+          <li class="item">
+            <p>CVC 2027 的 Generative AI &amp; Vision 分会第二轮投稿截止 2026 年 12 月 1 日，录用通知 12 月 20 日，会议 2027 年 4 月 15–16 日举行；征稿范围覆盖扩散/流模型、文生图/视频、视觉语言模型与生成式评估。值得看的是这是近期唯一与生成式直接相关的在征稿件，截稿只剩 4 天。</p>
+            <a class="source-link" href="https://SAIConference.com/CVC/CallforPapers/generative-ai-vision">Computer Vision Conference 2027 生成式 AI 与视觉分会征稿通知：第二轮截稿 2026 年 12 月 1 日（会议官网，一手）</a>
+            <p class="keywords">关键词：生成式 AI（generative AI）、计算机视觉（computer vision）、征稿（call for papers）、扩散模型（diffusion model）</p>
+          </li>
+          <li class="item">
+            <p>英伟达在 Hugging Face 上架 Nemotron-Labs-Image-30B-A3B 权重：30B 总参数、每 token 激活约 3B 的 MoE 自回归图像模型，用预测视觉 token 的方式逐 token 生成图片，而非扩散去噪；附带视觉 tokenizer 与推理代码。值得看的是它提供了扩散之外的主流替代路线，但须写清两点：一是媒体头条的高分属于完整 VisualCreation agent 系统（GenEval 92.86 等），可下载的单模型本身 GenEval 仅约 80.97；二是许可证仅限非商业研究与评估，完整 harness 与 VisionCode 模型仍待法律放行，未随权重发布。注：其技术报告论文 Nemotron-Labs-VisualCreation 已在 11-25 早报研究进展推过，本条只推权重上架这一产品事件。</p>
+            <a class="source-link" href="https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B">NVIDIA Nemotron-Labs-Image-30B-A3B 模型页（Hugging Face 官方仓库，一手）</a>
+            <p class="keywords">关键词：图像生成（image generation）、自回归模型（autoregressive model）、MoE、非商业许可（non-commercial license）</p>
+          </li>
+          <li class="item">
+            <p>蚂蚁 inclusionAI 发布 Ming-Image-0.2-Design：6B 扩散 Transformer，专攻电商主图、UI 草稿、海报与空间渲染，强调复杂构图、光影与图内文字渲染，MIT 协议开源；模型卡称其在 Artificial Analysis 文生图榜以 1095 Elo 排开源第一（总榜第 24）。值得看的是开源模型首次在该榜总榜上拿下开源头名，但排名为初步结果、样本约 4936 票且会继续浮动，配套的图层分解模型尚未发布（称下周开源），模型卡验证配置为单张 80GB 显存。</p>
+            <a class="source-link" href="https://github.com/inclusionAI/Ming-Image">Ming-Image 开源仓库（含 Ming-Image-0.2-Design 模型与推理代码）（GitHub 官方仓库，一手）</a>
+            <p class="keywords">关键词：文生图（text-to-image）、电商主图（e-commerce product image）、开源模型（open-source model）、MIT 协议（MIT license）</p>
+          </li>
+          <li class="item">
+            <p>商汤发布 SenseNova U1.6 开源权重（SenseNova-U1.6-8B-MoT，Apache 2.0）：同一模型先出图、再对照提示词自查、然后生成修正版，针对信息图里常见的错字、乱码数字与编号错误；商汤自测称 UltraTextBench 密集信息图任务从单次 86.04 分升至开启纠错后的 92.28 分。值得看的是“生成—自查—修正”闭环首次做到 8B 开源统一模型里，但分数为厂商自测、无独立验证，且纠错训练主要针对信息图，迁移到其他图类效果未证实。</p>
+            <a class="source-link" href="https://github.com/OpenSenseNova/SenseNova-U1">SenseNova-U1 开源仓库（U1.6 模型实现与文档）（GitHub 官方仓库，一手）</a>
+            <p class="keywords">关键词：文生图（text-to-image）、自查修正（self-check and correction）、信息图（infographic）、开源模型（open-source model）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1126-morning">
         <header class="round-header">
           <h2 id="round-1126-morning">11 月 26 日 08:30 轮</h2>
@@ -3988,6 +4026,32 @@
       </div>
 
       <div class="tabpanel hidden" role="tabpanel" id="panel-academic" aria-labelledby="tab-academic">
+      <section class="round" aria-labelledby="round-1127-0830-academic">
+        <header class="round-header">
+          <h2 id="round-1127-0830-academic">11 月 27 日 08:30 轮</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>Voxel51 的 Jason Corso 分享了一份视觉与物理 AI 现状调查，重点包括英伟达 Cosmos 3 的世界模拟、AnchorVLA4D 视觉-语言-动作模型，以及机器人团队的数据规范。做世界模型或具身智能的人可以看看这份调查的要点。</p>
+            <a class="source-link" href="https://www.linkedin.com/feed/update/urn:li:share:7532113263761862656">Jason Corso：视觉与物理 AI 现状——Cosmos 3 世界模拟与 AnchorVLA4D</a>
+            <p class="keywords">关键词：世界模型（world model）、视觉与物理 AI（vision and physical AI）、Cosmos 3、具身智能（embodied AI）</p>
+          </li>
+        </ol>
+      </section>
+      <section class="round" aria-labelledby="round-1127-morning-academic">
+        <header class="round-header">
+          <h2 id="round-1127-morning-academic">11 月 27 日早报</h2>
+          <span class="count">1 条</span>
+        </header>
+        <ol class="items">
+          <li class="item">
+            <p>机构：Yandex<br>核心价值问题：开源基础模型能否在推理、数学、编程与 agent 交互能力上追平甚至超过参数量大数倍的模型，同时保持小激活量带来的推理效率？<br>方法：80B 总参数、约 3B 激活参数的 MoE 模型，从头训练；Kimi Delta Attention 结合全注意力、Attention Residuals、Muon 优化器；17.5T tokens 通用预训练加两阶段上下文扩展，再加推理与 agentic 交互专训阶段；用 MoE 输出辅助损失稳定训练，并在预训练中引入 agent 轨迹数据；同时发布 WikiWebFacts 与 HardMultiQA 两个俄语事实知识评测。<br>为什么值得看：Apache 2.0 开源，权重已在 Hugging Face 发布；零样本推理在同级开源基础模型中领先（IMO-AnswerBench pass@8 88.7%、LiveCodeBench v5–v6 pass@8 82.9%），在 10 项事实/教育/专家知识评测中的 8 项排名第一，并在多项上超过参数量大得多的 DeepSeek-V4-Flash-Base（284B）与 Nemotron-3-Super（120B）；对关注开源大模型底座与 agent 底座的人有直接参考价值。（谨慎判断：这是基础模型而非指令微调版，agent 评测用的是统一 SFT 流程后的结果，直接拿来当 agent 用还需后训练；俄语事实评测占比较大，英文通用能力与 Qwen3.5-35B 相当、互有胜负。）</p>
+            <a class="source-link" href="https://arxiv.org/abs/2611.34529">AliceAI-Foundation-80B-A3B-Base</a>
+            <p class="keywords">关键词：开源基础模型（open-source foundation model）、MoE、推理能力（reasoning）、agent 底座（agent foundation）</p>
+          </li>
+        </ol>
+      </section>
       <section class="round" aria-labelledby="round-1126-2030-academic">
         <header class="round-header">
           <h2 id="round-1126-2030-academic">11 月 26 日 20:30 轮</h2>
@@ -6471,7 +6535,7 @@
       </details>
       </div>
 
-      <footer class="page-footer">内容快照 · 2026 年 11 月 26 日（America/Los_Angeles）</footer>
+      <footer class="page-footer">内容快照 · 2026 年 11 月 27 日（America/Los_Angeles）</footer>
     </main>
     <script>
       (function () {
